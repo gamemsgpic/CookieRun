@@ -4,6 +4,8 @@ using static Unity.Collections.Unicode;
 
 public class PlayerMovement : MonoBehaviour
 {
+    private Rigidbody2D rb;
+    private SpriteRenderer rbSprite;
     public int jumpCount;
     public int maxJumpCount = 2;
     public float jumpHeight = 5f;
@@ -12,16 +14,27 @@ public class PlayerMovement : MonoBehaviour
     public float fallingSpeed = 8f;
     public float fallingWaitTime = 0.2f;
     public bool isGrounded { get; private set; } = false;
-    private Rigidbody2D rb;
+    private bool invincibility = false;
     private bool isJumping = false;
     private bool highestHeight;
     private Coroutine currentJumpRoutine;
 
+    private float inviStartTime = 0f;
+    private float blinkStartTime = 0f;
+    public float blinkEndTime = 0.1f;
+    public float blinkReEndTime = 0.2f;
+    public float inviEndTime = 2.4f;
+    public Color color;
+    public Color originalColor;
+    //public Color color; 이거 나중에 쓰자
+
     private void Start()
     {
+        rbSprite = GetComponent<SpriteRenderer>();
         rb = GetComponent<Rigidbody2D>();
         rb.gravityScale = 0f;
         jumpCount = maxJumpCount;
+        originalColor = rbSprite.color;
     }
 
     private void Update()
@@ -38,6 +51,38 @@ public class PlayerMovement : MonoBehaviour
 
             currentJumpRoutine = StartCoroutine(JumpRoutine());
         }
+
+        if (invincibility)
+        {
+            inviStartTime += Time.deltaTime;
+            blinkStartTime += Time.deltaTime;
+
+            Debug.Log("시간이 돈다!");
+
+            if (blinkStartTime < blinkEndTime)
+            {
+                rbSprite.color = color;
+                Debug.Log("컬러가 바꼈다!");
+            }
+            else if (blinkStartTime > blinkEndTime && blinkStartTime < blinkReEndTime)
+            {
+                rbSprite.color = originalColor;
+                Debug.Log("컬러가 돌아왔다!");
+            }
+            else
+            {
+                blinkStartTime = 0f;
+            }
+
+            if (inviStartTime > inviEndTime)
+            {
+                rbSprite.color = originalColor;
+                invincibility = false;
+                inviStartTime = 0f;
+                blinkStartTime = 0f;
+            }
+        }
+
     }
 
     private IEnumerator JumpRoutine()
@@ -108,6 +153,24 @@ public class PlayerMovement : MonoBehaviour
         highestHeight = false;
         isJumping = false;
         currentJumpRoutine = null;
+    }
+
+    private void OnDamage()
+    {
+        Debug.Log("데미지 받았다!");
+    }
+
+    private void OnTriggerEnter2D(UnityEngine.Collider2D collision)
+    {
+        if (!invincibility)
+        {
+            if (collision.CompareTag("Trap"))
+            {
+                invincibility = true;
+                OnDamage();
+                Debug.Log("부딪쳤다!");
+            }
+        }
     }
 }
 
