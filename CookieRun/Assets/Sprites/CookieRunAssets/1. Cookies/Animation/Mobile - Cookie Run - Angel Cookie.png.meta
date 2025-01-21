@@ -43,7 +43,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -108,7 +108,1897 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Mobile - Cookie Run - Angel Cookie_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1611.6666
+        width: 322.13333
+        height: 322.33334
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de27b1f2c3baab8448e2ca1bef5cbdb1
+      internalID: 1240124367
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Cookie Run - Angel Cookie_1
+      rect:
+        serializedVersion: 2
+        x: 322
+        y: 1611.6666
+        width: 322.13333
+        height: 322.33334
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e15a56cf31b0e54a9cb7a8ba7dfda3d
+      internalID: -1364269361
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Cookie Run - Angel Cookie_2
+      rect:
+        serializedVersion: 2
+        x: 644
+        y: 1611.6666
+        width: 322.13333
+        height: 322.33334
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 985aede77bf0bdf438a00c0e09a64411
+      internalID: -1858313067
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Cookie Run - Angel Cookie_3
+      rect:
+        serializedVersion: 2
+        x: 966
+        y: 1611.6666
+        width: 322.13333
+        height: 322.33334
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a307b7de1f659ce45857144d0add7271
+      internalID: -1367002342
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Cookie Run - Angel Cookie_4
+      rect:
+        serializedVersion: 2
+        x: 1288
+        y: 1611.6666
+        width: 322.13333
+        height: 322.33334
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2faf22aa6a599854dadc767cd945060f
+      internalID: 1332901120
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Cookie Run - Angel Cookie_5
+      rect:
+        serializedVersion: 2
+        x: 1610
+        y: 1611.6666
+        width: 322.13333
+        height: 322.33334
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e1eb14957bdaf148adf645eaa041a9c
+      internalID: -1044251733
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Cookie Run - Angel Cookie_6
+      rect:
+        serializedVersion: 2
+        x: 1932
+        y: 1611.6666
+        width: 322.13333
+        height: 322.33334
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c865d67b6241a984d835ad8ada50af9d
+      internalID: 998809182
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Cookie Run - Angel Cookie_7
+      rect:
+        serializedVersion: 2
+        x: 2254
+        y: 1611.6666
+        width: 322.13333
+        height: 322.33334
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b24969e9768c1247a4644501eb63408
+      internalID: 575546477
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Cookie Run - Angel Cookie_8
+      rect:
+        serializedVersion: 2
+        x: 2576
+        y: 1611.6666
+        width: 322.13333
+        height: 322.33334
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e0bc42f3d1159ba4c8917302b0c9e6b3
+      internalID: -782606388
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Cookie Run - Angel Cookie_9
+      rect:
+        serializedVersion: 2
+        x: 2898
+        y: 1611.6666
+        width: 322.13333
+        height: 322.33334
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05a2e8e60c2bb9748b8efda2aab3cd04
+      internalID: -432871518
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Cookie Run - Angel Cookie_10
+      rect:
+        serializedVersion: 2
+        x: 3220
+        y: 1611.6666
+        width: 322.13333
+        height: 322.33334
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e20cd1c006b1084c866545b43ea3b98
+      internalID: 135130278
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Cookie Run - Angel Cookie_11
+      rect:
+        serializedVersion: 2
+        x: 3542
+        y: 1611.6666
+        width: 322.13333
+        height: 322.33334
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d56ce6a5f00ceb949a0c949ec1c0aeed
+      internalID: -1182882633
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Cookie Run - Angel Cookie_12
+      rect:
+        serializedVersion: 2
+        x: 3864
+        y: 1611.6666
+        width: 322.13333
+        height: 322.33334
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 199ddca98991f6445a7b67d39d7f65bd
+      internalID: 1970080141
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Cookie Run - Angel Cookie_13
+      rect:
+        serializedVersion: 2
+        x: 4186
+        y: 1611.6666
+        width: 322.13333
+        height: 322.33334
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eea8a3d1a91ea214bbdf0fff5c1de030
+      internalID: -646481602
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Cookie Run - Angel Cookie_14
+      rect:
+        serializedVersion: 2
+        x: 4508
+        y: 1611.6666
+        width: 322.13333
+        height: 322.33334
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b852ae037037d846a103305ba0658ef
+      internalID: 419080030
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Cookie Run - Angel Cookie_15
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1289.6666
+        width: 322.13333
+        height: 322.33334
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b4225002e7b37114895b36a21f885832
+      internalID: -71501488
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Cookie Run - Angel Cookie_16
+      rect:
+        serializedVersion: 2
+        x: 322
+        y: 1289.6666
+        width: 322.13333
+        height: 322.33334
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d4f85a55813385343a4ff19fdd993267
+      internalID: 1828232411
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Cookie Run - Angel Cookie_17
+      rect:
+        serializedVersion: 2
+        x: 644
+        y: 1289.6666
+        width: 322.13333
+        height: 322.33334
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 37ce43e7f528e4649a1901b99f5927cf
+      internalID: 63120820
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Cookie Run - Angel Cookie_18
+      rect:
+        serializedVersion: 2
+        x: 966
+        y: 1289.6666
+        width: 322.13333
+        height: 322.33334
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3059ee56bb1090248940dc463e18fe3e
+      internalID: 1825941639
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Cookie Run - Angel Cookie_19
+      rect:
+        serializedVersion: 2
+        x: 1288
+        y: 1289.6666
+        width: 322.13333
+        height: 322.33334
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e3a5f1bd50379ae4aa29ddea8a3184c4
+      internalID: 1710464801
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Cookie Run - Angel Cookie_20
+      rect:
+        serializedVersion: 2
+        x: 1610
+        y: 1289.6666
+        width: 322.13333
+        height: 322.33334
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df89a4769a666d244abf1cb9ece7065f
+      internalID: 468603978
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Cookie Run - Angel Cookie_21
+      rect:
+        serializedVersion: 2
+        x: 1932
+        y: 1289.6666
+        width: 322.13333
+        height: 322.33334
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e6761446201e1c04e8f09e8aa90be65b
+      internalID: 950410520
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Cookie Run - Angel Cookie_22
+      rect:
+        serializedVersion: 2
+        x: 2254
+        y: 1289.6666
+        width: 322.13333
+        height: 322.33334
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 39e030089e0f1f3459311c431abde990
+      internalID: -1910491434
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Cookie Run - Angel Cookie_23
+      rect:
+        serializedVersion: 2
+        x: 2576
+        y: 1289.6666
+        width: 322.13333
+        height: 322.33334
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b5b69ad68606ca4eb510a6c58f4d1bf
+      internalID: 1089947374
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Cookie Run - Angel Cookie_24
+      rect:
+        serializedVersion: 2
+        x: 2898
+        y: 1289.6666
+        width: 322.13333
+        height: 322.33334
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef39ea8d5be4565488735da4382c250b
+      internalID: 1332309040
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Cookie Run - Angel Cookie_25
+      rect:
+        serializedVersion: 2
+        x: 3220
+        y: 1289.6666
+        width: 322.13333
+        height: 322.33334
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a2743ee32f310f4298854fc97fa1c50
+      internalID: 1437151533
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Cookie Run - Angel Cookie_26
+      rect:
+        serializedVersion: 2
+        x: 3542
+        y: 1289.6666
+        width: 322.13333
+        height: 322.33334
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 229a53da74112a34c98851cff16b7493
+      internalID: 1380822942
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Cookie Run - Angel Cookie_27
+      rect:
+        serializedVersion: 2
+        x: 3864
+        y: 1289.6666
+        width: 322.13333
+        height: 322.33334
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d14ef834d65910c4d8654d09a78a99bb
+      internalID: -943602289
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Cookie Run - Angel Cookie_28
+      rect:
+        serializedVersion: 2
+        x: 4186
+        y: 1289.6666
+        width: 322.13333
+        height: 322.33334
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 39eb2ca08d31a5b4a882e176986e4a4d
+      internalID: 1874512476
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Cookie Run - Angel Cookie_29
+      rect:
+        serializedVersion: 2
+        x: 4508
+        y: 1289.6666
+        width: 322.13333
+        height: 322.33334
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf757764d5aade545b127e1983b79b8d
+      internalID: 603069552
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Cookie Run - Angel Cookie_30
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 967.6666
+        width: 322.13333
+        height: 322.33334
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ae921edc59b5e144aafca025f3da747
+      internalID: 1050974256
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Cookie Run - Angel Cookie_31
+      rect:
+        serializedVersion: 2
+        x: 322
+        y: 967.6666
+        width: 322.13333
+        height: 322.33334
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 167d228c72a51a444b4a3f65ac1a381f
+      internalID: -1033091532
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Cookie Run - Angel Cookie_32
+      rect:
+        serializedVersion: 2
+        x: 644
+        y: 967.6666
+        width: 322.13333
+        height: 322.33334
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 88f5be93956ead248b776203b85cc78a
+      internalID: 402399754
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Cookie Run - Angel Cookie_33
+      rect:
+        serializedVersion: 2
+        x: 966
+        y: 967.6666
+        width: 322.13333
+        height: 322.33334
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 29bf90ea314669d43bc8c2a6c7bfa678
+      internalID: 1328048482
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Cookie Run - Angel Cookie_34
+      rect:
+        serializedVersion: 2
+        x: 1288
+        y: 967.6666
+        width: 322.13333
+        height: 322.33334
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c737e5357fee3dc4aa3dfe4893eb588e
+      internalID: -659805464
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Cookie Run - Angel Cookie_35
+      rect:
+        serializedVersion: 2
+        x: 1610
+        y: 967.6666
+        width: 322.13333
+        height: 322.33334
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 495b08bcf3d23fc47bb45424659a76e8
+      internalID: -1795033090
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Cookie Run - Angel Cookie_36
+      rect:
+        serializedVersion: 2
+        x: 1932
+        y: 967.6666
+        width: 322.13333
+        height: 322.33334
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d219f1a5ae471934b86282902f4713ba
+      internalID: 1996108462
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Cookie Run - Angel Cookie_37
+      rect:
+        serializedVersion: 2
+        x: 2254
+        y: 967.6666
+        width: 322.13333
+        height: 322.33334
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 623084165489bb14ea1a307a0dcbd107
+      internalID: -47073315
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Cookie Run - Angel Cookie_38
+      rect:
+        serializedVersion: 2
+        x: 2576
+        y: 967.6666
+        width: 322.13333
+        height: 322.33334
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f7de26b6846b1c546bbffb5ae81c7e13
+      internalID: 1603604923
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Cookie Run - Angel Cookie_39
+      rect:
+        serializedVersion: 2
+        x: 2898
+        y: 967.6666
+        width: 322.13333
+        height: 322.33334
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c76d3e8ccc4c4924e9a9b4f76a7f0a0e
+      internalID: -2029388000
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Cookie Run - Angel Cookie_40
+      rect:
+        serializedVersion: 2
+        x: 3220
+        y: 967.6666
+        width: 322.13333
+        height: 322.33334
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec8f28eeb180c004ab29cb3ccbc01417
+      internalID: 202778411
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Cookie Run - Angel Cookie_41
+      rect:
+        serializedVersion: 2
+        x: 3542
+        y: 967.6666
+        width: 322.13333
+        height: 322.33334
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2bdbed8bf25f8b8479852726a9932fa9
+      internalID: 1524853732
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Cookie Run - Angel Cookie_42
+      rect:
+        serializedVersion: 2
+        x: 3864
+        y: 967.6666
+        width: 322.13333
+        height: 322.33334
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 13e33fefebafcd1408ab42b0d480c76e
+      internalID: -703826954
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Cookie Run - Angel Cookie_43
+      rect:
+        serializedVersion: 2
+        x: 4186
+        y: 967.6666
+        width: 322.13333
+        height: 322.33334
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f97b40c938460214c9588404d651c2bb
+      internalID: 1171772593
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Cookie Run - Angel Cookie_44
+      rect:
+        serializedVersion: 2
+        x: 4508
+        y: 967.6666
+        width: 322.13333
+        height: 322.33334
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc19883e90bffd8408d72a3d39f83edb
+      internalID: 1305244174
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Cookie Run - Angel Cookie_45
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 645.6666
+        width: 322.13333
+        height: 322.33334
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 350042759f55f444092e8d4f9bb98881
+      internalID: 101242519
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Cookie Run - Angel Cookie_46
+      rect:
+        serializedVersion: 2
+        x: 322
+        y: 645.6666
+        width: 322.13333
+        height: 322.33334
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2982b8101dd1b9147a2f5393a5c99d3e
+      internalID: 1344164386
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Cookie Run - Angel Cookie_47
+      rect:
+        serializedVersion: 2
+        x: 644
+        y: 645.6666
+        width: 322.13333
+        height: 322.33334
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb24e974081cf614487eeb2a3662a706
+      internalID: 385872872
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Cookie Run - Angel Cookie_48
+      rect:
+        serializedVersion: 2
+        x: 966
+        y: 645.6666
+        width: 322.13333
+        height: 322.33334
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb815bb77403e7c4bb108f9d548b8063
+      internalID: -1011219551
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Cookie Run - Angel Cookie_49
+      rect:
+        serializedVersion: 2
+        x: 1288
+        y: 645.6666
+        width: 322.13333
+        height: 322.33334
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a4a9bb00cf217b64194e21091d8d4086
+      internalID: -901745382
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Cookie Run - Angel Cookie_50
+      rect:
+        serializedVersion: 2
+        x: 1610
+        y: 645.6666
+        width: 322.13333
+        height: 322.33334
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eef90f8ac2c919c42b18c78b53b3a010
+      internalID: -534607755
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Cookie Run - Angel Cookie_51
+      rect:
+        serializedVersion: 2
+        x: 1932
+        y: 645.6666
+        width: 322.13333
+        height: 322.33334
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aee9be0e23d341d45866b7d55c35215c
+      internalID: -811181484
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Cookie Run - Angel Cookie_52
+      rect:
+        serializedVersion: 2
+        x: 2254
+        y: 645.6666
+        width: 322.13333
+        height: 322.33334
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f86df58d95888340ac3c1e655a728a1
+      internalID: 89758618
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Cookie Run - Angel Cookie_53
+      rect:
+        serializedVersion: 2
+        x: 2576
+        y: 645.6666
+        width: 322.13333
+        height: 322.33334
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 63bb427e55546874c81cf79ef577b797
+      internalID: 429148504
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Cookie Run - Angel Cookie_54
+      rect:
+        serializedVersion: 2
+        x: 2898
+        y: 645.6666
+        width: 322.13333
+        height: 322.33334
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 383234149a48ddf459d373850968d973
+      internalID: 850891095
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Cookie Run - Angel Cookie_55
+      rect:
+        serializedVersion: 2
+        x: 3220
+        y: 645.6666
+        width: 322.13333
+        height: 322.33334
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b2da5b2b7ef80c4b9bc423200bfd8ef
+      internalID: -1366131323
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Cookie Run - Angel Cookie_56
+      rect:
+        serializedVersion: 2
+        x: 3542
+        y: 645.6666
+        width: 322.13333
+        height: 322.33334
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c82c297f532d3749a47092e003ca294
+      internalID: 725052751
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Cookie Run - Angel Cookie_57
+      rect:
+        serializedVersion: 2
+        x: 3864
+        y: 645.6666
+        width: 322.13333
+        height: 322.33334
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 18a34db71a17a6749bec0a2801e4cf7e
+      internalID: 2108357841
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Cookie Run - Angel Cookie_58
+      rect:
+        serializedVersion: 2
+        x: 4186
+        y: 645.6666
+        width: 322.13333
+        height: 322.33334
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 174bb68472dca5641862bb242c2eca91
+      internalID: -34746891
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Cookie Run - Angel Cookie_59
+      rect:
+        serializedVersion: 2
+        x: 4508
+        y: 645.6666
+        width: 322.13333
+        height: 322.33334
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aff7272092f5fae42acab5d7e4dba635
+      internalID: -2069651433
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Cookie Run - Angel Cookie_60
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 323.66666
+        width: 322.13333
+        height: 322.33334
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a2ce9853c7c3324b80f636d51326cba
+      internalID: -1520950622
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Cookie Run - Angel Cookie_61
+      rect:
+        serializedVersion: 2
+        x: 322
+        y: 323.66666
+        width: 322.13333
+        height: 322.33334
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d3551f87046bc9d48903e6d48f3c2110
+      internalID: 245878273
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Cookie Run - Angel Cookie_62
+      rect:
+        serializedVersion: 2
+        x: 644
+        y: 323.66666
+        width: 322.13333
+        height: 322.33334
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40751c0d8b647e64da8b77fd4c627894
+      internalID: -982492999
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Cookie Run - Angel Cookie_63
+      rect:
+        serializedVersion: 2
+        x: 966
+        y: 323.66666
+        width: 322.13333
+        height: 322.33334
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 65bba35d777bec642ab7b77675147d0f
+      internalID: 793730844
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Cookie Run - Angel Cookie_64
+      rect:
+        serializedVersion: 2
+        x: 1288
+        y: 323.66666
+        width: 322.13333
+        height: 322.33334
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 229e56e22a5c71d4c8b3147a7877cd51
+      internalID: -311591261
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Cookie Run - Angel Cookie_65
+      rect:
+        serializedVersion: 2
+        x: 1610
+        y: 323.66666
+        width: 322.13333
+        height: 322.33334
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 65b5467a51dd8404b9fec41fe56f4aa4
+      internalID: 1007890586
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Cookie Run - Angel Cookie_66
+      rect:
+        serializedVersion: 2
+        x: 1932
+        y: 323.66666
+        width: 322.13333
+        height: 322.33334
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 329b6af0b76daad438c4d6b541f044bf
+      internalID: -711962409
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Cookie Run - Angel Cookie_67
+      rect:
+        serializedVersion: 2
+        x: 2254
+        y: 323.66666
+        width: 322.13333
+        height: 322.33334
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: beda8a384db913f4c888f0be781e19c7
+      internalID: 118670544
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Cookie Run - Angel Cookie_68
+      rect:
+        serializedVersion: 2
+        x: 2576
+        y: 323.66666
+        width: 322.13333
+        height: 322.33334
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd4bedcbb4f455a4780f9ceca4316531
+      internalID: -1840323411
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Cookie Run - Angel Cookie_69
+      rect:
+        serializedVersion: 2
+        x: 2898
+        y: 323.66666
+        width: 322.13333
+        height: 322.33334
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b6e615533da31b446a1e14832b9804e3
+      internalID: 1787666192
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Cookie Run - Angel Cookie_70
+      rect:
+        serializedVersion: 2
+        x: 3220
+        y: 323.66666
+        width: 322.13333
+        height: 322.33334
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 943fae345269ed54aa23b8bc9849d52c
+      internalID: -925913669
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Cookie Run - Angel Cookie_71
+      rect:
+        serializedVersion: 2
+        x: 3542
+        y: 323.66666
+        width: 322.13333
+        height: 322.33334
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a47c9069b2376e54e9a43fe25f5ed3ea
+      internalID: 1497079354
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Cookie Run - Angel Cookie_72
+      rect:
+        serializedVersion: 2
+        x: 3864
+        y: 323.66666
+        width: 322.13333
+        height: 322.33334
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d66e76a3208bed64780143f00b781b40
+      internalID: -607477416
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Cookie Run - Angel Cookie_73
+      rect:
+        serializedVersion: 2
+        x: 4186
+        y: 323.66666
+        width: 322.13333
+        height: 322.33334
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e21f3a5d19f8bd049b0a5323dea9aeda
+      internalID: 1171923287
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Cookie Run - Angel Cookie_74
+      rect:
+        serializedVersion: 2
+        x: 4508
+        y: 323.66666
+        width: 322.13333
+        height: 322.33334
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c9ce8bd39ffa3d45ba0f444022c8981
+      internalID: -834520006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Cookie Run - Angel Cookie_75
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1.6666565
+        width: 322.13333
+        height: 322.33334
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 547900909c0497446aeab90574d580d0
+      internalID: -369355919
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Cookie Run - Angel Cookie_76
+      rect:
+        serializedVersion: 2
+        x: 322
+        y: 1.6666565
+        width: 322.13333
+        height: 322.33334
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 397cb532f6126174f9e54311592d8aa4
+      internalID: -720384274
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Cookie Run - Angel Cookie_77
+      rect:
+        serializedVersion: 2
+        x: 644
+        y: 1.6666565
+        width: 322.13333
+        height: 322.33334
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5665ad992409ae845950b107d2cff055
+      internalID: -338067129
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Cookie Run - Angel Cookie_78
+      rect:
+        serializedVersion: 2
+        x: 966
+        y: 1.6666565
+        width: 322.13333
+        height: 322.33334
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 69e872f9e9e9bda4fab425a2fa64ca6d
+      internalID: 583178444
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Cookie Run - Angel Cookie_79
+      rect:
+        serializedVersion: 2
+        x: 1288
+        y: 1.6666565
+        width: 322.13333
+        height: 322.33334
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1328ed974792ad34eb60b26b6b95a6d2
+      internalID: -2023775879
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Cookie Run - Angel Cookie_80
+      rect:
+        serializedVersion: 2
+        x: 1610
+        y: 1.6666565
+        width: 322.13333
+        height: 322.33334
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eeed1142ccc58c544aa3a3b8be936383
+      internalID: -873635627
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Cookie Run - Angel Cookie_81
+      rect:
+        serializedVersion: 2
+        x: 1932
+        y: 1.6666565
+        width: 322.13333
+        height: 322.33334
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 972e9a5c74f8d364f97876428144a968
+      internalID: 773786169
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Cookie Run - Angel Cookie_82
+      rect:
+        serializedVersion: 2
+        x: 2254
+        y: 1.6666565
+        width: 322.13333
+        height: 322.33334
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 360775e42e6da364aa79c7fc91e343e8
+      internalID: 1254315798
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Cookie Run - Angel Cookie_83
+      rect:
+        serializedVersion: 2
+        x: 2576
+        y: 1.6666565
+        width: 322.13333
+        height: 322.33334
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: edcb2c90432667a428bb8eff69f281cf
+      internalID: -312877250
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Cookie Run - Angel Cookie_84
+      rect:
+        serializedVersion: 2
+        x: 2898
+        y: 1.6666565
+        width: 322.13333
+        height: 322.33334
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 29d0ee63d833b294d9270f028cad9350
+      internalID: -1077475418
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Cookie Run - Angel Cookie_85
+      rect:
+        serializedVersion: 2
+        x: 3220
+        y: 1.6666565
+        width: 322.13333
+        height: 322.33334
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf1f94bfa517ca145bc535beaaa88e7f
+      internalID: 1010190510
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Cookie Run - Angel Cookie_86
+      rect:
+        serializedVersion: 2
+        x: 3542
+        y: 1.6666565
+        width: 322.13333
+        height: 322.33334
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35a6b512c0ecb884095834c169d6fa0f
+      internalID: 9095605
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Cookie Run - Angel Cookie_87
+      rect:
+        serializedVersion: 2
+        x: 3864
+        y: 1.6666565
+        width: 322.13333
+        height: 322.33334
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee1cadf3ada34f3488513ead17d622ab
+      internalID: -431881035
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Cookie Run - Angel Cookie_88
+      rect:
+        serializedVersion: 2
+        x: 4186
+        y: 1.6666565
+        width: 322.13333
+        height: 322.33334
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c556687fe8c4a243a507ebb191853d1
+      internalID: 1851543505
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mobile - Cookie Run - Angel Cookie_89
+      rect:
+        serializedVersion: 2
+        x: 4508
+        y: 1.6666565
+        width: 322.13333
+        height: 322.33334
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e9e3439c2f2e37458c042378e823b85
+      internalID: 863175799
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -119,7 +2009,97 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Mobile - Cookie Run - Angel Cookie_0: 1240124367
+      Mobile - Cookie Run - Angel Cookie_1: -1364269361
+      Mobile - Cookie Run - Angel Cookie_10: 135130278
+      Mobile - Cookie Run - Angel Cookie_11: -1182882633
+      Mobile - Cookie Run - Angel Cookie_12: 1970080141
+      Mobile - Cookie Run - Angel Cookie_13: -646481602
+      Mobile - Cookie Run - Angel Cookie_14: 419080030
+      Mobile - Cookie Run - Angel Cookie_15: -71501488
+      Mobile - Cookie Run - Angel Cookie_16: 1828232411
+      Mobile - Cookie Run - Angel Cookie_17: 63120820
+      Mobile - Cookie Run - Angel Cookie_18: 1825941639
+      Mobile - Cookie Run - Angel Cookie_19: 1710464801
+      Mobile - Cookie Run - Angel Cookie_2: -1858313067
+      Mobile - Cookie Run - Angel Cookie_20: 468603978
+      Mobile - Cookie Run - Angel Cookie_21: 950410520
+      Mobile - Cookie Run - Angel Cookie_22: -1910491434
+      Mobile - Cookie Run - Angel Cookie_23: 1089947374
+      Mobile - Cookie Run - Angel Cookie_24: 1332309040
+      Mobile - Cookie Run - Angel Cookie_25: 1437151533
+      Mobile - Cookie Run - Angel Cookie_26: 1380822942
+      Mobile - Cookie Run - Angel Cookie_27: -943602289
+      Mobile - Cookie Run - Angel Cookie_28: 1874512476
+      Mobile - Cookie Run - Angel Cookie_29: 603069552
+      Mobile - Cookie Run - Angel Cookie_3: -1367002342
+      Mobile - Cookie Run - Angel Cookie_30: 1050974256
+      Mobile - Cookie Run - Angel Cookie_31: -1033091532
+      Mobile - Cookie Run - Angel Cookie_32: 402399754
+      Mobile - Cookie Run - Angel Cookie_33: 1328048482
+      Mobile - Cookie Run - Angel Cookie_34: -659805464
+      Mobile - Cookie Run - Angel Cookie_35: -1795033090
+      Mobile - Cookie Run - Angel Cookie_36: 1996108462
+      Mobile - Cookie Run - Angel Cookie_37: -47073315
+      Mobile - Cookie Run - Angel Cookie_38: 1603604923
+      Mobile - Cookie Run - Angel Cookie_39: -2029388000
+      Mobile - Cookie Run - Angel Cookie_4: 1332901120
+      Mobile - Cookie Run - Angel Cookie_40: 202778411
+      Mobile - Cookie Run - Angel Cookie_41: 1524853732
+      Mobile - Cookie Run - Angel Cookie_42: -703826954
+      Mobile - Cookie Run - Angel Cookie_43: 1171772593
+      Mobile - Cookie Run - Angel Cookie_44: 1305244174
+      Mobile - Cookie Run - Angel Cookie_45: 101242519
+      Mobile - Cookie Run - Angel Cookie_46: 1344164386
+      Mobile - Cookie Run - Angel Cookie_47: 385872872
+      Mobile - Cookie Run - Angel Cookie_48: -1011219551
+      Mobile - Cookie Run - Angel Cookie_49: -901745382
+      Mobile - Cookie Run - Angel Cookie_5: -1044251733
+      Mobile - Cookie Run - Angel Cookie_50: -534607755
+      Mobile - Cookie Run - Angel Cookie_51: -811181484
+      Mobile - Cookie Run - Angel Cookie_52: 89758618
+      Mobile - Cookie Run - Angel Cookie_53: 429148504
+      Mobile - Cookie Run - Angel Cookie_54: 850891095
+      Mobile - Cookie Run - Angel Cookie_55: -1366131323
+      Mobile - Cookie Run - Angel Cookie_56: 725052751
+      Mobile - Cookie Run - Angel Cookie_57: 2108357841
+      Mobile - Cookie Run - Angel Cookie_58: -34746891
+      Mobile - Cookie Run - Angel Cookie_59: -2069651433
+      Mobile - Cookie Run - Angel Cookie_6: 998809182
+      Mobile - Cookie Run - Angel Cookie_60: -1520950622
+      Mobile - Cookie Run - Angel Cookie_61: 245878273
+      Mobile - Cookie Run - Angel Cookie_62: -982492999
+      Mobile - Cookie Run - Angel Cookie_63: 793730844
+      Mobile - Cookie Run - Angel Cookie_64: -311591261
+      Mobile - Cookie Run - Angel Cookie_65: 1007890586
+      Mobile - Cookie Run - Angel Cookie_66: -711962409
+      Mobile - Cookie Run - Angel Cookie_67: 118670544
+      Mobile - Cookie Run - Angel Cookie_68: -1840323411
+      Mobile - Cookie Run - Angel Cookie_69: 1787666192
+      Mobile - Cookie Run - Angel Cookie_7: 575546477
+      Mobile - Cookie Run - Angel Cookie_70: -925913669
+      Mobile - Cookie Run - Angel Cookie_71: 1497079354
+      Mobile - Cookie Run - Angel Cookie_72: -607477416
+      Mobile - Cookie Run - Angel Cookie_73: 1171923287
+      Mobile - Cookie Run - Angel Cookie_74: -834520006
+      Mobile - Cookie Run - Angel Cookie_75: -369355919
+      Mobile - Cookie Run - Angel Cookie_76: -720384274
+      Mobile - Cookie Run - Angel Cookie_77: -338067129
+      Mobile - Cookie Run - Angel Cookie_78: 583178444
+      Mobile - Cookie Run - Angel Cookie_79: -2023775879
+      Mobile - Cookie Run - Angel Cookie_8: -782606388
+      Mobile - Cookie Run - Angel Cookie_80: -873635627
+      Mobile - Cookie Run - Angel Cookie_81: 773786169
+      Mobile - Cookie Run - Angel Cookie_82: 1254315798
+      Mobile - Cookie Run - Angel Cookie_83: -312877250
+      Mobile - Cookie Run - Angel Cookie_84: -1077475418
+      Mobile - Cookie Run - Angel Cookie_85: 1010190510
+      Mobile - Cookie Run - Angel Cookie_86: 9095605
+      Mobile - Cookie Run - Angel Cookie_87: -431881035
+      Mobile - Cookie Run - Angel Cookie_88: 1851543505
+      Mobile - Cookie Run - Angel Cookie_89: 863175799
+      Mobile - Cookie Run - Angel Cookie_9: -432871518
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
