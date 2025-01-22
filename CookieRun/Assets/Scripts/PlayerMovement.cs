@@ -6,16 +6,18 @@ public class PlayerMovement : MonoBehaviour
 {
     private Rigidbody2D rb;
     private SpriteRenderer rbSprite;
+    public int Score { get; private set; }
     public int jumpCount;
     public int maxJumpCount = 2;
     public float jumpHeight = 5f;
     public float JumpSpeed = 8f;
     public float deceleration = 20f;
-    public float fallingSpeed = 8f;
-    public float fallingWaitTime = 0.2f;
+    public float gravityVelue = 0f;
+    //public float fallingSpeed = 8f;
+    //public float fallingWaitTime = 0.2f;
     public bool isGrounded { get; private set; } = false;
+    public bool isJumping { get; private set; } = false;
     private bool invincibility = false;
-    private bool isJumping = false;
     private bool highestHeight;
     private Coroutine currentJumpRoutine;
 
@@ -32,7 +34,7 @@ public class PlayerMovement : MonoBehaviour
     {
         rbSprite = GetComponent<SpriteRenderer>();
         rb = GetComponent<Rigidbody2D>();
-        rb.gravityScale = 0f;
+        rb.gravityScale = gravityVelue;
         jumpCount = maxJumpCount;
         originalColor = rbSprite.color;
     }
@@ -87,6 +89,7 @@ public class PlayerMovement : MonoBehaviour
 
     private IEnumerator JumpRoutine()
     {
+        rb.gravityScale = 0f;
         rb.velocity = Vector2.zero;
         isJumping = true;
         jumpCount--;
@@ -111,21 +114,26 @@ public class PlayerMovement : MonoBehaviour
             yield return new WaitForFixedUpdate();
         }
 
-        if (highestHeight)
-        {
-            float waitTime = 0f;
-            waitTime += Time.deltaTime;
-            if (waitTime >= fallingWaitTime)
-            {
-                highestHeight = false;
-            }
-        }
-        else
-        {
-            rb.velocity = Vector2.down * fallingSpeed;
-            isJumping = false;
-            currentJumpRoutine = null;
-        }
+        //yield return new WaitForSeconds(0.08f);
+        //
+        //if (highestHeight)
+        //{
+        //    float waitTime = 0f;
+        //    waitTime += Time.deltaTime;
+        //    if (waitTime >= fallingWaitTime)
+        //    {
+        //        highestHeight = false;
+        //    }
+        //}
+        //else
+        //{
+        //    rb.velocity = Vector2.down * fallingSpeed;
+        //    isJumping = false;
+        //    currentJumpRoutine = null;
+        //}
+        rb.gravityScale = gravityVelue;
+        isJumping = false;
+        currentJumpRoutine = null;
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -135,6 +143,10 @@ public class PlayerMovement : MonoBehaviour
             isGrounded = true;
             jumpCount = maxJumpCount;
             ResetJumpState();
+        }
+        if (collision.gameObject.CompareTag("Coin"))
+        {
+            Score += 100;
         }
     }
 
