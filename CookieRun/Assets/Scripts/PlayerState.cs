@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class PlayerState : MonoBehaviour
@@ -6,6 +7,9 @@ public class PlayerState : MonoBehaviour
     public float hp { get; private set; }
     public int score { get; private set; }
     public int coins { get; private set; }
+
+    public bool onDeath { get; private set; } = false;
+    public UIManager uiManager;
     [SerializeField] private Slider hpSlider; // 인스펙터에서 슬라이더 연결
 
     private void Start()
@@ -18,6 +22,16 @@ public class PlayerState : MonoBehaviour
         {
             hpSlider.maxValue = hp;
             hpSlider.value = hp;
+        }
+    }
+
+    private void Update()
+    {
+        if (hp <= 0)
+        {
+            onDeath = true;
+            uiManager.ShowGameOver();
+            Time.timeScale = 0f;
         }
     }
 

@@ -24,22 +24,39 @@ public class PlayerSlide : MonoBehaviour
         slideColliderOffset = new Vector2(0f, 0.25f);
     }
 
-    private void Update()
+    //private void Update()
+    //{
+    //    if (Input.GetKey(KeyCode.DownArrow) && playerMovement.isGrounded)
+    //    {
+    //        isSlide = true;
+    //        animator.SetBool("Slide", isSlide);
+    //        boxCollider2D.size = slideSize;
+    //        boxCollider2D.offset = slideColliderOffset;
+    //    }
+    //    else
+    //    {
+    //        isSlide = false;
+    //        animator.SetBool("Slide", isSlide);
+    //        boxCollider2D.size = normalSize;
+    //        boxCollider2D.offset = normalColliderOffset;
+    //    }
+    //}
+
+    public void OnSlideButtonDown()
     {
-        if (Input.GetKey(KeyCode.DownArrow) && playerMovement.isGrounded)
+        if (playerMovement.isGrounded)
         {
             isSlide = true;
             animator.SetBool("Slide", isSlide);
             boxCollider2D.size = slideSize;
             boxCollider2D.offset = slideColliderOffset;
         }
-        else
-        {
-            isSlide = false;
-            animator.SetBool("Slide", isSlide);
-            boxCollider2D.size = normalSize;
-            boxCollider2D.offset = normalColliderOffset;
-        }
     }
-
+    public void OnSlideButtonUp()
+    {
+        isSlide = false;
+        animator.SetBool("Slide", isSlide);
+        boxCollider2D.size = normalSize;
+        boxCollider2D.offset = normalColliderOffset;
+    }
 }

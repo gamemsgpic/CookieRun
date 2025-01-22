@@ -74,6 +74,19 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
+    public void ButtonJump()
+    {
+        if (jumpCount > 0)
+        {
+            if (currentJumpRoutine != null)
+            {
+                StopCoroutine(currentJumpRoutine);
+                ResetJumpState();
+            }
+            currentJumpRoutine = StartCoroutine(JumpRoutine());
+        }
+    }
+
     private void HandleInvincibility()
     {
         inviStartTime += Time.deltaTime;
@@ -164,13 +177,15 @@ public class PlayerMovement : MonoBehaviour
     {
         if (!invincibility && collision.CompareTag("Trap"))
         {
+            Debug.Log("데미지 받았다!");
             invincibility = true; // 무적 상태 시작
             playerState.ReduceHp(10f); // 데미지로 HP 감소
         }
 
         if (collision.CompareTag("Coin"))
         {
-            CoinMoveTest coin = collision.gameObject.GetComponent<CoinMoveTest>();
+            Debug.Log("데미지 받았다?");
+            CoinMoveTest coin = collision.GetComponent<CoinMoveTest>();
             if (coin != null)
             {
                 playerState.AddScore(coin.Score);
