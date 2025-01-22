@@ -1,24 +1,25 @@
 ﻿using System.Collections;
 using UnityEngine;
-using static Unity.Collections.Unicode;
 
 public class PlayerMovement : MonoBehaviour
 {
     private Rigidbody2D rb;
     private SpriteRenderer rbSprite;
-    public int Score { get; private set; }
+    public GameManager gm;
+
+    public PlayerState playerState; // PlayerState 컴포넌트를 참조
     public int jumpCount;
     public int maxJumpCount = 2;
     public float jumpHeight = 5f;
     public float JumpSpeed = 8f;
     public float deceleration = 20f;
-    public float gravityVelue = 0f;
-    //public float fallingSpeed = 8f;
-    //public float fallingWaitTime = 0.2f;
+    public float startFallingSpeed = 8f;
+    public float fallingSpeed = 8f;
+    public float fallingWaitTime = 0.2f;
     public bool isGrounded { get; private set; } = false;
     public bool isJumping { get; private set; } = false;
-    private bool invincibility = false;
-    private bool highestHeight;
+
+    private bool invincibility = false; // 무적 상태 여부
     private Coroutine currentJumpRoutine;
 
     private float inviStartTime = 0f;
@@ -28,67 +29,81 @@ public class PlayerMovement : MonoBehaviour
     public float inviEndTime = 2.4f;
     public Color color;
     public Color originalColor;
-    //public Color color; 이거 나중에 쓰자
 
     private void Start()
     {
+        gm = GameManager.Instance;
         rbSprite = GetComponent<SpriteRenderer>();
         rb = GetComponent<Rigidbody2D>();
-        rb.gravityScale = gravityVelue;
+
+        // PlayerState를 찾거나 연결 확인
+        if (playerState == null)
+        {
+            playerState = GetComponent<PlayerState>();
+            if (playerState == null)
+            {
+                Debug.LogError("PlayerState가 연결되지 않았습니다. PlayerMovement에서 PlayerState를 확인하세요.");
+            }
+        }
+
         jumpCount = maxJumpCount;
         originalColor = rbSprite.color;
+        startFallingSpeed = fallingSpeed;
     }
 
     private void Update()
     {
+        // HP 감소 (테스트용)
+        playerState.ReduceHp(Time.deltaTime);
 
+        // 점프 처리
         if (Input.GetKeyDown(KeyCode.Space) && jumpCount > 0)
         {
-
             if (currentJumpRoutine != null)
             {
                 StopCoroutine(currentJumpRoutine);
                 ResetJumpState();
             }
-
             currentJumpRoutine = StartCoroutine(JumpRoutine());
         }
 
+        // 무적 상태 처리
         if (invincibility)
         {
-            inviStartTime += Time.deltaTime;
-            blinkStartTime += Time.deltaTime;
+            HandleInvincibility();
+        }
+    }
 
-            Debug.Log("시간이 돈다!");
+    private void HandleInvincibility()
+    {
+        inviStartTime += Time.deltaTime;
+        blinkStartTime += Time.deltaTime;
 
-            if (blinkStartTime < blinkEndTime)
-            {
-                rbSprite.color = color;
-                Debug.Log("컬러가 바꼈다!");
-            }
-            else if (blinkStartTime > blinkEndTime && blinkStartTime < blinkReEndTime)
-            {
-                rbSprite.color = originalColor;
-                Debug.Log("컬러가 돌아왔다!");
-            }
-            else
-            {
-                blinkStartTime = 0f;
-            }
-
-            if (inviStartTime > inviEndTime)
-            {
-                rbSprite.color = originalColor;
-                invincibility = false;
-                inviStartTime = 0f;
-                blinkStartTime = 0f;
-            }
+        if (blinkStartTime < blinkEndTime)
+        {
+            rbSprite.color = color; // 깜빡이는 색상 적용
+        }
+        else if (blinkStartTime > blinkEndTime && blinkStartTime < blinkReEndTime)
+        {
+            rbSprite.color = originalColor; // 원래 색상 복원
+        }
+        else
+        {
+            blinkStartTime = 0f; // 깜빡임 리셋
         }
 
+        if (inviStartTime > inviEndTime)
+        {
+            rbSprite.color = originalColor; // 원래 색상 복원
+            invincibility = false; // 무적 상태 종료
+            inviStartTime = 0f;
+            blinkStartTime = 0f;
+        }
     }
 
     private IEnumerator JumpRoutine()
     {
+        fallingSpeed = startFallingSpeed;
         rb.gravityScale = 0f;
         rb.velocity = Vector2.zero;
         isJumping = true;
@@ -104,7 +119,6 @@ public class PlayerMovement : MonoBehaviour
             if (nextY >= targetY)
             {
                 rb.position = new Vector2(rb.position.x, targetY);
-                highestHeight = true;
                 break;
             }
 
@@ -114,24 +128,8 @@ public class PlayerMovement : MonoBehaviour
             yield return new WaitForFixedUpdate();
         }
 
-        //yield return new WaitForSeconds(0.08f);
-        //
-        //if (highestHeight)
-        //{
-        //    float waitTime = 0f;
-        //    waitTime += Time.deltaTime;
-        //    if (waitTime >= fallingWaitTime)
-        //    {
-        //        highestHeight = false;
-        //    }
-        //}
-        //else
-        //{
-        //    rb.velocity = Vector2.down * fallingSpeed;
-        //    isJumping = false;
-        //    currentJumpRoutine = null;
-        //}
-        rb.gravityScale = gravityVelue;
+        fallingSpeed += fallingSpeed + 0.5f * Time.deltaTime;
+        rb.velocity = Vector2.down * fallingSpeed;
         isJumping = false;
         currentJumpRoutine = null;
     }
@@ -142,11 +140,8 @@ public class PlayerMovement : MonoBehaviour
         {
             isGrounded = true;
             jumpCount = maxJumpCount;
+            fallingSpeed = startFallingSpeed;
             ResetJumpState();
-        }
-        if (collision.gameObject.CompareTag("Coin"))
-        {
-            Score += 100;
         }
     }
 
@@ -160,30 +155,28 @@ public class PlayerMovement : MonoBehaviour
 
     private void ResetJumpState()
     {
-
         rb.velocity = Vector2.zero;
-        highestHeight = false;
         isJumping = false;
         currentJumpRoutine = null;
     }
 
-    private void OnDamage()
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log("데미지 받았다!");
-    }
-
-    private void OnTriggerEnter2D(UnityEngine.Collider2D collision)
-    {
-        if (!invincibility)
+        if (!invincibility && collision.CompareTag("Trap"))
         {
-            if (collision.CompareTag("Trap"))
+            invincibility = true; // 무적 상태 시작
+            playerState.ReduceHp(10f); // 데미지로 HP 감소
+        }
+
+        if (collision.CompareTag("Coin"))
+        {
+            CoinMoveTest coin = collision.gameObject.GetComponent<CoinMoveTest>();
+            if (coin != null)
             {
-                invincibility = true;
-                OnDamage();
-                Debug.Log("부딪쳤다!");
+                playerState.AddScore(coin.Score);
+                playerState.AddCoins(coin.Coins);
+                gm.UpdateScore(playerState.score);
             }
         }
     }
 }
-
-
