@@ -1,0 +1,286 @@
+fileFormatVersion: 2
+guid: bd0597a33b41ab644ac181807affb348
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Episode 1 - Escape from the Oven (b)_0
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 4384
+        width: 567
+        height: 319
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b4174bdc596f2c43a6518dcad45f3a5
+      internalID: -788579617
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Episode 1 - Escape from the Oven (b)_0: -788579617
+      Episode 1 - Escape from the Oven (b)_1: -303887390
+      Episode 1 - Escape from the Oven (b)_10: -1736499516
+      Episode 1 - Escape from the Oven (b)_100: -775207257
+      Episode 1 - Escape from the Oven (b)_101: -1422367161
+      Episode 1 - Escape from the Oven (b)_102: -1400326234
+      Episode 1 - Escape from the Oven (b)_103: -149863842
+      Episode 1 - Escape from the Oven (b)_104: 1354361852
+      Episode 1 - Escape from the Oven (b)_105: -195474582
+      Episode 1 - Escape from the Oven (b)_106: -249706293
+      Episode 1 - Escape from the Oven (b)_107: 1631389388
+      Episode 1 - Escape from the Oven (b)_108: -450876466
+      Episode 1 - Escape from the Oven (b)_109: 1268659614
+      Episode 1 - Escape from the Oven (b)_11: 818728790
+      Episode 1 - Escape from the Oven (b)_110: 1480311000
+      Episode 1 - Escape from the Oven (b)_111: 122278666
+      Episode 1 - Escape from the Oven (b)_112: -191855618
+      Episode 1 - Escape from the Oven (b)_113: -1430370429
+      Episode 1 - Escape from the Oven (b)_114: 1563850201
+      Episode 1 - Escape from the Oven (b)_115: 1811836294
+      Episode 1 - Escape from the Oven (b)_116: 562968595
+      Episode 1 - Escape from the Oven (b)_117: 1448973033
+      Episode 1 - Escape from the Oven (b)_118: 302100837
+      Episode 1 - Escape from the Oven (b)_119: 725083409
+      Episode 1 - Escape from the Oven (b)_12: 1789846680
+      Episode 1 - Escape from the Oven (b)_120: 1889562964
+      Episode 1 - Escape from the Oven (b)_121: 1184541271
+      Episode 1 - Escape from the Oven (b)_122: 566411542
+      Episode 1 - Escape from the Oven (b)_123: 1670017487
+      Episode 1 - Escape from the Oven (b)_124: -1888924290
+      Episode 1 - Escape from the Oven (b)_125: -1684714513
+      Episode 1 - Escape from the Oven (b)_126: -597678546
+      Episode 1 - Escape from the Oven (b)_127: -236404161
+      Episode 1 - Escape from the Oven (b)_128: 1132709761
+      Episode 1 - Escape from the Oven (b)_129: 610285953
+      Episode 1 - Escape from the Oven (b)_13: -1681474844
+      Episode 1 - Escape from the Oven (b)_130: -1314123208
+      Episode 1 - Escape from the Oven (b)_131: -1390253547
+      Episode 1 - Escape from the Oven (b)_132: 17609070
+      Episode 1 - Escape from the Oven (b)_133: 1353342953
+      Episode 1 - Escape from the Oven (b)_134: -1043259894
+      Episode 1 - Escape from the Oven (b)_135: 1333813058
+      Episode 1 - Escape from the Oven (b)_136: -1721687297
+      Episode 1 - Escape from the Oven (b)_137: -1484321243
+      Episode 1 - Escape from the Oven (b)_14: -1876284663
+      Episode 1 - Escape from the Oven (b)_15: 1889752318
+      Episode 1 - Escape from the Oven (b)_16: -876852136
+      Episode 1 - Escape from the Oven (b)_17: 1355956010
+      Episode 1 - Escape from the Oven (b)_18: -196908249
+      Episode 1 - Escape from the Oven (b)_19: 208648073
+      Episode 1 - Escape from the Oven (b)_2: -627770060
+      Episode 1 - Escape from the Oven (b)_20: 262075866
+      Episode 1 - Escape from the Oven (b)_21: -1298024290
+      Episode 1 - Escape from the Oven (b)_22: 1110020351
+      Episode 1 - Escape from the Oven (b)_23: -2049215329
+      Episode 1 - Escape from the Oven (b)_24: 1180592887
+      Episode 1 - Escape from the Oven (b)_25: 1856424347
+      Episode 1 - Escape from the Oven (b)_26: -722638378
+      Episode 1 - Escape from the Oven (b)_27: -483642063
+      Episode 1 - Escape from the Oven (b)_28: 1916407214
+      Episode 1 - Escape from the Oven (b)_29: 2123928461
+      Episode 1 - Escape from the Oven (b)_3: -97527838
+      Episode 1 - Escape from the Oven (b)_30: -932412449
+      Episode 1 - Escape from the Oven (b)_31: 1521018410
+      Episode 1 - Escape from the Oven (b)_32: 1830708942
+      Episode 1 - Escape from the Oven (b)_33: 420095334
+      Episode 1 - Escape from the Oven (b)_34: 1754612463
+      Episode 1 - Escape from the Oven (b)_35: -1090950416
+      Episode 1 - Escape from the Oven (b)_36: 759367153
+      Episode 1 - Escape from the Oven (b)_37: -643333129
+      Episode 1 - Escape from the Oven (b)_38: -1747244484
+      Episode 1 - Escape from the Oven (b)_39: -22988627
+      Episode 1 - Escape from the Oven (b)_4: -1431926431
+      Episode 1 - Escape from the Oven (b)_40: -1375458498
+      Episode 1 - Escape from the Oven (b)_41: -1033225619
+      Episode 1 - Escape from the Oven (b)_42: 218449468
+      Episode 1 - Escape from the Oven (b)_43: 2017129079
+      Episode 1 - Escape from the Oven (b)_44: 675053031
+      Episode 1 - Escape from the Oven (b)_45: 727651315
+      Episode 1 - Escape from the Oven (b)_46: -1448412354
+      Episode 1 - Escape from the Oven (b)_47: 793797286
+      Episode 1 - Escape from the Oven (b)_48: 1363570615
+      Episode 1 - Escape from the Oven (b)_49: -1115619002
+      Episode 1 - Escape from the Oven (b)_5: -1455195446
+      Episode 1 - Escape from the Oven (b)_50: -2122931834
+      Episode 1 - Escape from the Oven (b)_51: -962832704
+      Episode 1 - Escape from the Oven (b)_52: -2091590141
+      Episode 1 - Escape from the Oven (b)_53: 970467817
+      Episode 1 - Escape from the Oven (b)_54: 1173868739
+      Episode 1 - Escape from the Oven (b)_55: 2086024002
+      Episode 1 - Escape from the Oven (b)_56: 182314373
+      Episode 1 - Escape from the Oven (b)_57: -897347523
+      Episode 1 - Escape from the Oven (b)_58: 189830554
+      Episode 1 - Escape from the Oven (b)_59: -2107429615
+      Episode 1 - Escape from the Oven (b)_6: 712884083
+      Episode 1 - Escape from the Oven (b)_60: 1996415881
+      Episode 1 - Escape from the Oven (b)_61: 519412562
+      Episode 1 - Escape from the Oven (b)_62: -1315763251
+      Episode 1 - Escape from the Oven (b)_63: -1434989596
+      Episode 1 - Escape from the Oven (b)_64: -157094128
+      Episode 1 - Escape from the Oven (b)_65: 258814949
+      Episode 1 - Escape from the Oven (b)_66: -1738657991
+      Episode 1 - Escape from the Oven (b)_67: 346226608
+      Episode 1 - Escape from the Oven (b)_68: 911017234
+      Episode 1 - Escape from the Oven (b)_69: 898126101
+      Episode 1 - Escape from the Oven (b)_7: 924517407
+      Episode 1 - Escape from the Oven (b)_70: -1391214723
+      Episode 1 - Escape from the Oven (b)_71: 812394776
+      Episode 1 - Escape from the Oven (b)_72: -153056569
+      Episode 1 - Escape from the Oven (b)_73: -854377078
+      Episode 1 - Escape from the Oven (b)_74: -965934529
+      Episode 1 - Escape from the Oven (b)_75: 576546189
+      Episode 1 - Escape from the Oven (b)_76: 1236814768
+      Episode 1 - Escape from the Oven (b)_77: -1010937124
+      Episode 1 - Escape from the Oven (b)_78: -1088649750
+      Episode 1 - Escape from the Oven (b)_79: 1858436926
+      Episode 1 - Escape from the Oven (b)_8: 865519397
+      Episode 1 - Escape from the Oven (b)_80: 144878610
+      Episode 1 - Escape from the Oven (b)_81: 818003842
+      Episode 1 - Escape from the Oven (b)_82: -329109476
+      Episode 1 - Escape from the Oven (b)_83: 1873291334
+      Episode 1 - Escape from the Oven (b)_84: -304443762
+      Episode 1 - Escape from the Oven (b)_85: -608412796
+      Episode 1 - Escape from the Oven (b)_86: 167446872
+      Episode 1 - Escape from the Oven (b)_87: -336435528
+      Episode 1 - Escape from the Oven (b)_88: -1210800206
+      Episode 1 - Escape from the Oven (b)_89: -730842878
+      Episode 1 - Escape from the Oven (b)_9: -1363147325
+      Episode 1 - Escape from the Oven (b)_90: 1433991483
+      Episode 1 - Escape from the Oven (b)_91: -200632237
+      Episode 1 - Escape from the Oven (b)_92: 1192901284
+      Episode 1 - Escape from the Oven (b)_93: 212868725
+      Episode 1 - Escape from the Oven (b)_94: -1336317466
+      Episode 1 - Escape from the Oven (b)_95: 397939952
+      Episode 1 - Escape from the Oven (b)_96: -1436215103
+      Episode 1 - Escape from the Oven (b)_97: 367247314
+      Episode 1 - Escape from the Oven (b)_98: 1276724556
+      Episode 1 - Escape from the Oven (b)_99: 1973787874
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

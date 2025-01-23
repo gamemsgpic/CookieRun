@@ -1,0 +1,7299 @@
+fileFormatVersion: 2
+guid: 526839357e7c4f744b3cb4966d97e033
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Cookie Run - Jelly_0
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 2270
+        width: 142
+        height: 141
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 25d527470b3797b4f958146992f18e79
+      internalID: 173428800
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cookie Run - Jelly_1
+      rect:
+        serializedVersion: 2
+        x: 92
+        y: 2269
+        width: 45
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fafd5d4a091634c46a224d1a9fd6494f
+      internalID: 2129765828
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cookie Run - Jelly_2
+      rect:
+        serializedVersion: 2
+        x: 138
+        y: 2314
+        width: 43
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 49f0b2672fd2b5146aef3e5cc8577da1
+      internalID: 967346420
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cookie Run - Jelly_3
+      rect:
+        serializedVersion: 2
+        x: 187
+        y: 2314
+        width: 34
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3cd4258f90583ac4ab75ed3b15a49cbf
+      internalID: 1265688941
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cookie Run - Jelly_4
+      rect:
+        serializedVersion: 2
+        x: 230
+        y: 2314
+        width: 39
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4308358ccb9c04a4f8efbe995544e41e
+      internalID: -1356178530
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cookie Run - Jelly_5
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 2314
+        width: 90
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 13d0af2dd998811418be01976d0ef6a0
+      internalID: 505414843
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cookie Run - Jelly_6
+      rect:
+        serializedVersion: 2
+        x: 371
+        y: 2314
+        width: 26
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b2e07c3fde6e52b40a2fecce6c5b6808
+      internalID: -999572364
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cookie Run - Jelly_7
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 2182
+        width: 109
+        height: 83
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e42e42460d514b842aa98e60c2c04439
+      internalID: 1239094512
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cookie Run - Jelly_8
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 2181
+        width: 107
+        height: 83
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 73e4aecf9a8dab84b94f180e124df06e
+      internalID: -1749164596
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cookie Run - Jelly_9
+      rect:
+        serializedVersion: 2
+        x: 247
+        y: 2182
+        width: 106
+        height: 83
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 939247fd1e329fa44b38c586f1a89f9f
+      internalID: -1558657249
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cookie Run - Jelly_10
+      rect:
+        serializedVersion: 2
+        x: 365
+        y: 2182
+        width: 108
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 30c5886ba81a77447820633538c992f0
+      internalID: -503577483
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cookie Run - Jelly_11
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 2128
+        width: 31
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2cc46356e505184459548977635e2b29
+      internalID: -880794341
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cookie Run - Jelly_12
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 2128
+        width: 47
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 112bf89b552d2fe45b25b6add9e29646
+      internalID: 459825188
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cookie Run - Jelly_13
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 2133
+        width: 47
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b22cccf9b21e96b4b85181de78b570ee
+      internalID: 973113908
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cookie Run - Jelly_14
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 2062
+        width: 46
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 332e0128ecca06f40ad18772eb211b82
+      internalID: 678176735
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cookie Run - Jelly_15
+      rect:
+        serializedVersion: 2
+        x: 76
+        y: 2062
+        width: 48
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 460e47d2492e2c34cab34bd7c919e926
+      internalID: -1624529504
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cookie Run - Jelly_16
+      rect:
+        serializedVersion: 2
+        x: 145
+        y: 2062
+        width: 50
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c022b11e81435234aa3f69af2ef434b7
+      internalID: -155445660
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cookie Run - Jelly_17
+      rect:
+        serializedVersion: 2
+        x: 213
+        y: 2062
+        width: 46
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 216be204d70d90f438c437ba23c5f278
+      internalID: 1564223418
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cookie Run - Jelly_18
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 1990
+        width: 76
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8456123b3ad9c0a46a2ef8608b57a85e
+      internalID: -1261565011
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cookie Run - Jelly_19
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 1990
+        width: 75
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c82d843eb9797a4393990e03982d5f9
+      internalID: -1612737741
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cookie Run - Jelly_20
+      rect:
+        serializedVersion: 2
+        x: 153
+        y: 1990
+        width: 76
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c54555360a464764aa6e3aef6db6169e
+      internalID: 632945256
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cookie Run - Jelly_21
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 1859
+        width: 215
+        height: 126
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a67270a715d9bb4a953df891a7a1cd4
+      internalID: -1691715549
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cookie Run - Jelly_22
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 1780
+        width: 245
+        height: 78
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c43baaa0436a1f4c90ca8e2ba47f8e1
+      internalID: 379822703
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cookie Run - Jelly_23
+      rect:
+        serializedVersion: 2
+        x: 248
+        y: 1780
+        width: 81
+        height: 78
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 148de7c5589a10b458ad9eba6469f1e6
+      internalID: 273293711
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cookie Run - Jelly_24
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 1780
+        width: 245
+        height: 78
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a8a6b38fa4b33d9449123dcf46f4c5b4
+      internalID: 165734248
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cookie Run - Jelly_25
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 1780
+        width: 81
+        height: 78
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 24677d7e63b09144d9c11a8224d406e4
+      internalID: -1372620881
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cookie Run - Jelly_26
+      rect:
+        serializedVersion: 2
+        x: 658
+        y: 1780
+        width: 163
+        height: 78
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e8b050bedcaab4f43a6366aa786bff66
+      internalID: -1334135957
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cookie Run - Jelly_27
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 1715
+        width: 65
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6221ff84b4df0b64cb05a335819ef35a
+      internalID: 424721697
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cookie Run - Jelly_28
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 1715
+        width: 64
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c79e35e9801799842af545774bb4cc96
+      internalID: -855814550
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cookie Run - Jelly_29
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 1574
+        width: 61
+        height: 205
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ce385b0d7d5bcd4395f3ae482f71191
+      internalID: 56666159
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cookie Run - Jelly_30
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 1487
+        width: 86
+        height: 292
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 203eefe932e24bc43b9503f0b80ca9b0
+      internalID: -866485163
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cookie Run - Jelly_31
+      rect:
+        serializedVersion: 2
+        x: 254
+        y: 1486
+        width: 185
+        height: 293
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0916155de67d8174b9f882056623293c
+      internalID: 485336959
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cookie Run - Jelly_32
+      rect:
+        serializedVersion: 2
+        x: 376
+        y: 1665
+        width: 108
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ebc169f576c577149b90821043b4c8d3
+      internalID: -1999681200
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cookie Run - Jelly_33
+      rect:
+        serializedVersion: 2
+        x: 486
+        y: 1721
+        width: 62
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 988698b76efc7ed48a46d56e3a32ee08
+      internalID: 650828528
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cookie Run - Jelly_34
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 1742
+        width: 70
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b74d8cc61fd92e41ad676522c5ccc57
+      internalID: 121637161
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cookie Run - Jelly_35
+      rect:
+        serializedVersion: 2
+        x: 585
+        y: 1742
+        width: 33
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c769b054238334478591499789aab8a
+      internalID: -930293227
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cookie Run - Jelly_36
+      rect:
+        serializedVersion: 2
+        x: 620
+        y: 1742
+        width: 34
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2966e79402384e14ea6af0f7f5f285a8
+      internalID: 299861283
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cookie Run - Jelly_37
+      rect:
+        serializedVersion: 2
+        x: 657
+        y: 1742
+        width: 33
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 593901539992e6542b1152a826ca50d3
+      internalID: -1184543760
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cookie Run - Jelly_38
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 1529
+        width: 44
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ceed82e4a5b9be4439ce4b736d80a786
+      internalID: 959422863
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cookie Run - Jelly_39
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 1536
+        width: 39
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b759ff1ab38bb0842901ab8ec3022188
+      internalID: -1384614446
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cookie Run - Jelly_40
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 1487
+        width: 87
+        height: 87
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d72bd53542a9a24ebbab47cfcc89d1f
+      internalID: -921498361
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cookie Run - Jelly_41
+      rect:
+        serializedVersion: 2
+        x: 439
+        y: 1458
+        width: 117
+        height: 115
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 519240f0b3561164baa5711dd68e64d3
+      internalID: 1444486808
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cookie Run - Jelly_42
+      rect:
+        serializedVersion: 2
+        x: 557
+        y: 1458
+        width: 115
+        height: 115
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0eb7ca35e9fce44428b47936748b66e5
+      internalID: 73252947
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cookie Run - Jelly_43
+      rect:
+        serializedVersion: 2
+        x: 674
+        y: 1458
+        width: 115
+        height: 115
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f3c85b2f74135a4bb4e9401c1926821
+      internalID: -909071947
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cookie Run - Jelly_44
+      rect:
+        serializedVersion: 2
+        x: 791
+        y: 1458
+        width: 115
+        height: 115
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f31df9ced349764e9621784fc545401
+      internalID: -1655450211
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cookie Run - Jelly_45
+      rect:
+        serializedVersion: 2
+        x: 907
+        y: 1536
+        width: 47
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 70f2755f0049b3a4289b6c34fb10a6a8
+      internalID: -1464534970
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cookie Run - Jelly_46
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 1371
+        width: 77
+        height: 83
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ace40632268b68a47a8790f96cd39460
+      internalID: 419685149
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cookie Run - Jelly_47
+      rect:
+        serializedVersion: 2
+        x: 97
+        y: 1369
+        width: 88
+        height: 87
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8faf1afbbb21c5541bd8561b574b4a0b
+      internalID: -1284757493
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cookie Run - Jelly_48
+      rect:
+        serializedVersion: 2
+        x: 195
+        y: 1369
+        width: 77
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6945417ef1a16f54aa77458980d701c2
+      internalID: -387464461
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cookie Run - Jelly_49
+      rect:
+        serializedVersion: 2
+        x: 283
+        y: 1379
+        width: 79
+        height: 73
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7fb8cc671b16b9741a225c082f497388
+      internalID: -149806907
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cookie Run - Jelly_50
+      rect:
+        serializedVersion: 2
+        x: 367
+        y: 1379
+        width: 88
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2efe3418443c5d346a8e635359b52aac
+      internalID: -826987755
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cookie Run - Jelly_51
+      rect:
+        serializedVersion: 2
+        x: 457
+        y: 1377
+        width: 87
+        height: 78
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 742590a1cedf128498bec72ed6c3b89a
+      internalID: 490317047
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cookie Run - Jelly_52
+      rect:
+        serializedVersion: 2
+        x: 545
+        y: 1389
+        width: 79
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb61ba2bfa98a6c449465a12442169c8
+      internalID: -1426450340
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cookie Run - Jelly_53
+      rect:
+        serializedVersion: 2
+        x: 625
+        y: 1382
+        width: 158
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 609ed3a8318fbaa47a551269313d4182
+      internalID: -1287522539
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cookie Run - Jelly_54
+      rect:
+        serializedVersion: 2
+        x: 784
+        y: 1388
+        width: 74
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 64db8a2f110ab3d49a5f58a3deda91b2
+      internalID: 1110261279
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cookie Run - Jelly_55
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 1211
+        width: 156
+        height: 157
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c82bf2f7dee5bcf4eb6d25847438485f
+      internalID: 468516832
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cookie Run - Jelly_56
+      rect:
+        serializedVersion: 2
+        x: 169
+        y: 1208
+        width: 157
+        height: 154
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 15ef85fc2caa81d43a469ace89b18677
+      internalID: -2132497496
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cookie Run - Jelly_57
+      rect:
+        serializedVersion: 2
+        x: 338
+        y: 1205
+        width: 152
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 353902ad0a5b6374c9d6f56b02c0304d
+      internalID: -239621781
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cookie Run - Jelly_58
+      rect:
+        serializedVersion: 2
+        x: 495
+        y: 1208
+        width: 157
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4cb6bcfad2433ca4b8837de097fa60d0
+      internalID: -280987441
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cookie Run - Jelly_59
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 1102
+        width: 86
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 31e3585ac43faa946b1ef56d2ab014b1
+      internalID: -121974249
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cookie Run - Jelly_60
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 1102
+        width: 84
+        height: 79
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a87357641b41f7439257690b6e24f5c
+      internalID: -1768782650
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cookie Run - Jelly_61
+      rect:
+        serializedVersion: 2
+        x: 190
+        y: 1102
+        width: 85
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a8d31ca048e4834384a5919323887ca
+      internalID: -148520183
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cookie Run - Jelly_62
+      rect:
+        serializedVersion: 2
+        x: 281
+        y: 1102
+        width: 86
+        height: 79
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f42b86b8509b8d4ba7f61a3ad00021a
+      internalID: 1202121176
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cookie Run - Jelly_63
+      rect:
+        serializedVersion: 2
+        x: 371
+        y: 1115
+        width: 88
+        height: 87
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 94e3111aed5445a4e9fbf4599f3f885f
+      internalID: -474580668
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cookie Run - Jelly_64
+      rect:
+        serializedVersion: 2
+        x: 464
+        y: 1115
+        width: 87
+        height: 87
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a979000aa0360d54b9db12242d155e1a
+      internalID: -13737131
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cookie Run - Jelly_65
+      rect:
+        serializedVersion: 2
+        x: 556
+        y: 1115
+        width: 87
+        height: 87
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 535b45ff5e69db0498f238dcfd6e7695
+      internalID: 2145489846
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cookie Run - Jelly_66
+      rect:
+        serializedVersion: 2
+        x: 647
+        y: 1114
+        width: 88
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ece85b3cc088fc246a02329c11566f90
+      internalID: 590595733
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cookie Run - Jelly_67
+      rect:
+        serializedVersion: 2
+        x: 738
+        y: 1131
+        width: 73
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3aa6e7ee103020d44b8b110f21226f34
+      internalID: -477968800
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cookie Run - Jelly_68
+      rect:
+        serializedVersion: 2
+        x: 812
+        y: 1131
+        width: 73
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f840f1fe66f160647896bde885965aa1
+      internalID: -1879071882
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cookie Run - Jelly_69
+      rect:
+        serializedVersion: 2
+        x: 886
+        y: 1131
+        width: 73
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 393176c8cefc0374b9d6fce889058873
+      internalID: -422181652
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cookie Run - Jelly_70
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 1131
+        width: 73
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 81075f04495fa984cb3cc1d633674a24
+      internalID: -630152397
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cookie Run - Jelly_71
+      rect:
+        serializedVersion: 2
+        x: 1036
+        y: 1114
+        width: 87
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 408d77817b6aa1b49b3e57c8aac8f59e
+      internalID: -496658004
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cookie Run - Jelly_72
+      rect:
+        serializedVersion: 2
+        x: 1127
+        y: 1114
+        width: 88
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fbe9885b7cb761949837a199995d06c8
+      internalID: 1715704336
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cookie Run - Jelly_73
+      rect:
+        serializedVersion: 2
+        x: 1220
+        y: 1114
+        width: 87
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 952900a06a5c07a49901bf3256d1e343
+      internalID: 971832227
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cookie Run - Jelly_74
+      rect:
+        serializedVersion: 2
+        x: 1312
+        y: 1114
+        width: 87
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 39d5b2048942fa8439a0b6e26b393dd1
+      internalID: 426366278
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cookie Run - Jelly_75
+      rect:
+        serializedVersion: 2
+        x: 1401
+        y: 1114
+        width: 90
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 189f2b98e25cabd4aaf4a89088d5cb9f
+      internalID: 185790721
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cookie Run - Jelly_76
+      rect:
+        serializedVersion: 2
+        x: 1493
+        y: 1115
+        width: 90
+        height: 89
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb8ff7740d1636b49a129be59bba0a5b
+      internalID: -1780648837
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cookie Run - Jelly_77
+      rect:
+        serializedVersion: 2
+        x: 1585
+        y: 1115
+        width: 89
+        height: 89
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b88de49cd87ff724486aacdbc9c1f66c
+      internalID: -701246822
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cookie Run - Jelly_78
+      rect:
+        serializedVersion: 2
+        x: 1677
+        y: 1114
+        width: 90
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e2a415a2f95ba340a736169bd626e87
+      internalID: 807151946
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cookie Run - Jelly_79
+      rect:
+        serializedVersion: 2
+        x: 1772
+        y: 1113
+        width: 89
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14485d404b031dc48b1e717b4492ccb6
+      internalID: 1130287037
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cookie Run - Jelly_80
+      rect:
+        serializedVersion: 2
+        x: 1864
+        y: 1113
+        width: 89
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c2977f68e346864eb39f5383d08b465
+      internalID: 1162712712
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cookie Run - Jelly_81
+      rect:
+        serializedVersion: 2
+        x: 1955
+        y: 1113
+        width: 90
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c12386fafb694014eb52b181969f52d9
+      internalID: 1466497564
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cookie Run - Jelly_82
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 1113
+        width: 89
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3243db4565ce62d418aa77e5406eae03
+      internalID: -88737496
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cookie Run - Jelly_83
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 1011
+        width: 90
+        height: 89
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8fa6b5f7e9d3b4f4c81d52ee548e0ee9
+      internalID: 1788525983
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cookie Run - Jelly_84
+      rect:
+        serializedVersion: 2
+        x: 94
+        y: 1011
+        width: 90
+        height: 89
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff92cf78eeeb52545b5a4aa80738270c
+      internalID: -504992980
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cookie Run - Jelly_85
+      rect:
+        serializedVersion: 2
+        x: 186
+        y: 1011
+        width: 90
+        height: 89
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e284954171a09d49b67b20582aa47d4
+      internalID: 1328726972
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cookie Run - Jelly_86
+      rect:
+        serializedVersion: 2
+        x: 278
+        y: 1011
+        width: 90
+        height: 89
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc2151cb255ae9b4d8294e015afca8b6
+      internalID: -1660122513
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cookie Run - Jelly_87
+      rect:
+        serializedVersion: 2
+        x: 371
+        y: 1013
+        width: 88
+        height: 87
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9880d38843834b94d88f08c1f0ce9e86
+      internalID: 1621929807
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cookie Run - Jelly_88
+      rect:
+        serializedVersion: 2
+        x: 464
+        y: 1013
+        width: 87
+        height: 87
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 397f974be7f6dd04a8361556d75a133a
+      internalID: 1164345358
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cookie Run - Jelly_89
+      rect:
+        serializedVersion: 2
+        x: 556
+        y: 1013
+        width: 87
+        height: 87
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d43569636dabe63489db7765105e8697
+      internalID: 355959598
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cookie Run - Jelly_90
+      rect:
+        serializedVersion: 2
+        x: 647
+        y: 1011
+        width: 88
+        height: 89
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4055b046f0528cb4eba7c24827ce72b2
+      internalID: 513544767
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cookie Run - Jelly_91
+      rect:
+        serializedVersion: 2
+        x: 740
+        y: 1013
+        width: 86
+        height: 87
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f034082fef3eed449a138d1cd18671ca
+      internalID: 26188781
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cookie Run - Jelly_92
+      rect:
+        serializedVersion: 2
+        x: 832
+        y: 1013
+        width: 87
+        height: 87
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6880650fc81826a4988a5d740ef83ee4
+      internalID: -1647940393
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cookie Run - Jelly_93
+      rect:
+        serializedVersion: 2
+        x: 923
+        y: 1013
+        width: 88
+        height: 87
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c2eb5a5e897882498203d5e68e2b06a
+      internalID: -1330469699
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cookie Run - Jelly_94
+      rect:
+        serializedVersion: 2
+        x: 1016
+        y: 1011
+        width: 86
+        height: 89
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7946402c0d813b247a19f84285026eb9
+      internalID: -1452079648
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cookie Run - Jelly_95
+      rect:
+        serializedVersion: 2
+        x: 1108
+        y: 1013
+        width: 87
+        height: 87
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d988b20f45e74b2459dda105fbb9ce07
+      internalID: -63613421
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cookie Run - Jelly_96
+      rect:
+        serializedVersion: 2
+        x: 1199
+        y: 1013
+        width: 88
+        height: 87
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 34d49a15a13654046871b76b181f9d06
+      internalID: -268357550
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cookie Run - Jelly_97
+      rect:
+        serializedVersion: 2
+        x: 1292
+        y: 1013
+        width: 86
+        height: 87
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 444f5b5c6b5cf484996fc67a5617ed43
+      internalID: -572583806
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cookie Run - Jelly_98
+      rect:
+        serializedVersion: 2
+        x: 1384
+        y: 1011
+        width: 87
+        height: 89
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b5b12a300c30b041bde7d294f0c53b4
+      internalID: 1077929660
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cookie Run - Jelly_99
+      rect:
+        serializedVersion: 2
+        x: 1480
+        y: 963
+        width: 131
+        height: 136
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05a899c0a31440541a631b405d5c7f27
+      internalID: 257515762
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cookie Run - Jelly_100
+      rect:
+        serializedVersion: 2
+        x: 1620
+        y: 958
+        width: 143
+        height: 141
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a33e80aa7d9bd64095e9f378f5886f3
+      internalID: 480444301
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cookie Run - Jelly_101
+      rect:
+        serializedVersion: 2
+        x: 1765
+        y: 957
+        width: 146
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e9c188292152a0c4cae6558b78b03259
+      internalID: -841460209
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cookie Run - Jelly_102
+      rect:
+        serializedVersion: 2
+        x: 1912
+        y: 958
+        width: 143
+        height: 141
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 18657c6ede76ee549aa4e3fbc61fa5d6
+      internalID: 987676889
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cookie Run - Jelly_103
+      rect:
+        serializedVersion: 2
+        x: 2059
+        y: 1011
+        width: 88
+        height: 89
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 02ad952983ab66c41b91f0d50b5aa7bc
+      internalID: -877942971
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cookie Run - Jelly_104
+      rect:
+        serializedVersion: 2
+        x: 2152
+        y: 1011
+        width: 87
+        height: 89
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 95a8bff4f4a60a64eba5f60702c92f4e
+      internalID: -1584370068
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cookie Run - Jelly_105
+      rect:
+        serializedVersion: 2
+        x: 2244
+        y: 1011
+        width: 87
+        height: 89
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b00cc8b4324c9c4fb68c10d1dc83cc4
+      internalID: 1489716210
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cookie Run - Jelly_106
+      rect:
+        serializedVersion: 2
+        x: 2335
+        y: 1011
+        width: 88
+        height: 89
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 03b351d10050304429c5a711c155422f
+      internalID: -93171546
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cookie Run - Jelly_107
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 867
+        width: 87
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ddd41f0161fa5a42a80d926ae671d76
+      internalID: -2051389632
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cookie Run - Jelly_108
+      rect:
+        serializedVersion: 2
+        x: 95
+        y: 867
+        width: 88
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a48078d31226af9428ba101326d340c8
+      internalID: -424118237
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cookie Run - Jelly_109
+      rect:
+        serializedVersion: 2
+        x: 188
+        y: 867
+        width: 86
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d17a3c2bdaa6ac4dadc7bd5c88d25f1
+      internalID: 540795375
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cookie Run - Jelly_110
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 866
+        width: 87
+        height: 89
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d2dc6b079afc014297eb1cdf576ed3e
+      internalID: -1356964199
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cookie Run - Jelly_111
+      rect:
+        serializedVersion: 2
+        x: 371
+        y: 867
+        width: 88
+        height: 87
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac4d1184976b8594092507a77d620033
+      internalID: -207344524
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cookie Run - Jelly_112
+      rect:
+        serializedVersion: 2
+        x: 464
+        y: 867
+        width: 87
+        height: 87
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b20d981a4f3b3f6439747e9c1b648297
+      internalID: -494488403
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cookie Run - Jelly_113
+      rect:
+        serializedVersion: 2
+        x: 556
+        y: 867
+        width: 87
+        height: 87
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd20700c0c3f22a43936f2ac9f723247
+      internalID: 1958918618
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cookie Run - Jelly_114
+      rect:
+        serializedVersion: 2
+        x: 647
+        y: 867
+        width: 88
+        height: 87
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 57bb214514023df4399872296273f443
+      internalID: -2058531807
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cookie Run - Jelly_115
+      rect:
+        serializedVersion: 2
+        x: 739
+        y: 866
+        width: 89
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4f8e9de1e329f64f9b6c42c33548286
+      internalID: 1918666135
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cookie Run - Jelly_116
+      rect:
+        serializedVersion: 2
+        x: 831
+        y: 866
+        width: 89
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 21c6f5a08cfdd664bbf71d5ab8151604
+      internalID: -383084282
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cookie Run - Jelly_117
+      rect:
+        serializedVersion: 2
+        x: 922
+        y: 866
+        width: 90
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b7b651b8c2edad4bacade18ed45a825
+      internalID: 1945110921
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cookie Run - Jelly_118
+      rect:
+        serializedVersion: 2
+        x: 1015
+        y: 866
+        width: 87
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e692911e759e334f9fe0e92c7991636
+      internalID: 2059482195
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cookie Run - Jelly_119
+      rect:
+        serializedVersion: 2
+        x: 1108
+        y: 865
+        width: 89
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c9d9eccbd446e3440a3da07629c8cb2a
+      internalID: 124579003
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cookie Run - Jelly_120
+      rect:
+        serializedVersion: 2
+        x: 1199
+        y: 865
+        width: 90
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 953f5a6e2d07ec7428b57d138d1de3b7
+      internalID: 639760269
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cookie Run - Jelly_121
+      rect:
+        serializedVersion: 2
+        x: 1292
+        y: 865
+        width: 88
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ebdb2cb41543eba488d2e607705ccb9d
+      internalID: 6772512
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cookie Run - Jelly_122
+      rect:
+        serializedVersion: 2
+        x: 1384
+        y: 865
+        width: 89
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 82d40284194f8a24c9852437fd79d672
+      internalID: 1366002522
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cookie Run - Jelly_123
+      rect:
+        serializedVersion: 2
+        x: 1474
+        y: 811
+        width: 145
+        height: 141
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d2d02aeeb1ff27e4c99c7dade5241c56
+      internalID: -569343776
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cookie Run - Jelly_124
+      rect:
+        serializedVersion: 2
+        x: 1620
+        y: 811
+        width: 145
+        height: 141
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b3a541f3114739b4a8a21e1d378ea803
+      internalID: 235095071
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cookie Run - Jelly_125
+      rect:
+        serializedVersion: 2
+        x: 1766
+        y: 811
+        width: 145
+        height: 141
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 27872f2178ea02941b5bf866f3ce7a08
+      internalID: 366277319
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cookie Run - Jelly_126
+      rect:
+        serializedVersion: 2
+        x: 1912
+        y: 811
+        width: 145
+        height: 141
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c4807b0282e531a478809dd13450f309
+      internalID: -940347324
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cookie Run - Jelly_127
+      rect:
+        serializedVersion: 2
+        x: 2059
+        y: 867
+        width: 88
+        height: 87
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1be2351c1160249469fc388d8c24e82d
+      internalID: 773715498
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cookie Run - Jelly_128
+      rect:
+        serializedVersion: 2
+        x: 2149
+        y: 867
+        width: 89
+        height: 87
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f3a691b55dda804e8f50a3700257f16
+      internalID: 823384324
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cookie Run - Jelly_129
+      rect:
+        serializedVersion: 2
+        x: 2243
+        y: 867
+        width: 88
+        height: 87
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 10123d7256dd83c458fec04d399fe47c
+      internalID: 948071930
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cookie Run - Jelly_130
+      rect:
+        serializedVersion: 2
+        x: 2335
+        y: 867
+        width: 88
+        height: 87
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 50a1d9211c088c94ba3b4876d8c2955b
+      internalID: -933696606
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cookie Run - Jelly_131
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 719
+        width: 87
+        height: 89
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aefba9c4fd1ce4648b4d2010fba5806a
+      internalID: 1757029266
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cookie Run - Jelly_132
+      rect:
+        serializedVersion: 2
+        x: 97
+        y: 665
+        width: 486
+        height: 144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f337df308c94b94284b899cfad67aae
+      internalID: -2026559332
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cookie Run - Jelly_133
+      rect:
+        serializedVersion: 2
+        x: 556
+        y: 721
+        width: 87
+        height: 87
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa2b0453d437f8b4dafc1f51737e78ec
+      internalID: -650292216
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cookie Run - Jelly_134
+      rect:
+        serializedVersion: 2
+        x: 647
+        y: 721
+        width: 89
+        height: 87
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6e4e63438cc2254a8c900f0e59ac1ad
+      internalID: -857993349
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cookie Run - Jelly_135
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 666
+        width: 40
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c97d8be8215c6d43a4f1d786e2c4a16
+      internalID: -660411944
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cookie Run - Jelly_136
+      rect:
+        serializedVersion: 2
+        x: 41
+        y: 666
+        width: 40
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1db21547aaaca0c479c5907702a024a3
+      internalID: 261992588
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cookie Run - Jelly_137
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 666
+        width: 40
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e2c2f01775ad643439b970f932e18618
+      internalID: -101992027
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cookie Run - Jelly_138
+      rect:
+        serializedVersion: 2
+        x: 583
+        y: 666
+        width: 57
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 08b7bb797a5085b4fb2783f196a5ed08
+      internalID: -1279066211
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cookie Run - Jelly_139
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 666
+        width: 114
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d34dcb1ca919a47449bbb92834bd788e
+      internalID: 1926181972
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cookie Run - Jelly_140
+      rect:
+        serializedVersion: 2
+        x: 754
+        y: 666
+        width: 115
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d94a86e84a77d4d41a44aef5ddb02a79
+      internalID: -1478052635
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cookie Run - Jelly_141
+      rect:
+        serializedVersion: 2
+        x: 869
+        y: 665
+        width: 112
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0cb97e848dddc7c4f999cabe5ffab3dd
+      internalID: -1755608562
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cookie Run - Jelly_142
+      rect:
+        serializedVersion: 2
+        x: 981
+        y: 666
+        width: 57
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 47a95cd3bc3ba694e95e6e060bcb3c98
+      internalID: 392393833
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cookie Run - Jelly_143
+      rect:
+        serializedVersion: 2
+        x: 1039
+        y: 666
+        width: 56
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e424a10176a6f574098b9e81c9336f6b
+      internalID: 490783989
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cookie Run - Jelly_144
+      rect:
+        serializedVersion: 2
+        x: 1096
+        y: 666
+        width: 56
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 898444795f0766e48b3b7778041c136d
+      internalID: 752479325
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cookie Run - Jelly_145
+      rect:
+        serializedVersion: 2
+        x: 1153
+        y: 665
+        width: 57
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fdf7a92f80577954382bbc7555a4c133
+      internalID: 434562873
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cookie Run - Jelly_146
+      rect:
+        serializedVersion: 2
+        x: 1211
+        y: 671
+        width: 56
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d5c2ebc0e7ad6d41911be9cb83352d1
+      internalID: -626564706
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cookie Run - Jelly_147
+      rect:
+        serializedVersion: 2
+        x: 1268
+        y: 666
+        width: 56
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d3bcbd0b5ed15644ea4e408755f47ef9
+      internalID: 1369140527
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cookie Run - Jelly_148
+      rect:
+        serializedVersion: 2
+        x: 1324
+        y: 666
+        width: 57
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 539f60156005fa349b58e0914fff7e19
+      internalID: -497698882
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cookie Run - Jelly_149
+      rect:
+        serializedVersion: 2
+        x: 1382
+        y: 670
+        width: 55
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b51ef803f503ee4fa241b881c5ea7f3
+      internalID: 1222253889
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cookie Run - Jelly_150
+      rect:
+        serializedVersion: 2
+        x: 1439
+        y: 665
+        width: 169
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf3af6714513dc14ab45c0e7d4352fd0
+      internalID: 1910823255
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cookie Run - Jelly_151
+      rect:
+        serializedVersion: 2
+        x: 1609
+        y: 669
+        width: 50
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a325e7fe1bc02164e8af44a6a7ff5d95
+      internalID: 660196783
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cookie Run - Jelly_152
+      rect:
+        serializedVersion: 2
+        x: 1664
+        y: 669
+        width: 41
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 62036f7e61bab8d49936b8f71c5607a3
+      internalID: 677900876
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cookie Run - Jelly_153
+      rect:
+        serializedVersion: 2
+        x: 1728
+        y: 669
+        width: 13
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed8f4a5e078a5304db7b9da30e1a4ddc
+      internalID: 342487367
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cookie Run - Jelly_154
+      rect:
+        serializedVersion: 2
+        x: 1762
+        y: 669
+        width: 44
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 247060c1d7743164dbcfe213faa198f3
+      internalID: -2075120735
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cookie Run - Jelly_155
+      rect:
+        serializedVersion: 2
+        x: 1808
+        y: 658
+        width: 62
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1cc24de3a0543eb449540608e1a620e3
+      internalID: -768176931
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cookie Run - Jelly_156
+      rect:
+        serializedVersion: 2
+        x: 1873
+        y: 658
+        width: 51
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b095ede631fd9914eba2793ec639e50e
+      internalID: -1540942650
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cookie Run - Jelly_157
+      rect:
+        serializedVersion: 2
+        x: 1939
+        y: 658
+        width: 49
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f92a3f15777507443825ffd79e3fb714
+      internalID: 1038084674
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cookie Run - Jelly_158
+      rect:
+        serializedVersion: 2
+        x: 2010
+        y: 658
+        width: 21
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ecda31f1e7b62845874640963f4f503
+      internalID: 380352055
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cookie Run - Jelly_159
+      rect:
+        serializedVersion: 2
+        x: 2059
+        y: 658
+        width: 39
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f1975309a38eda64b96233c09ee9cee3
+      internalID: 690840927
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cookie Run - Jelly_160
+      rect:
+        serializedVersion: 2
+        x: 2115
+        y: 658
+        width: 50
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7052ca00aeda2ab43a3b7410b4cd8e08
+      internalID: 1335406477
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cookie Run - Jelly_161
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 621
+        width: 27
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e3ef3b78d4e4db440b37819d85140e67
+      internalID: 760264715
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cookie Run - Jelly_162
+      rect:
+        serializedVersion: 2
+        x: 28
+        y: 618
+        width: 31
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b07a0e7a078f0fa4ab85b6e67d4beeb1
+      internalID: 211654114
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cookie Run - Jelly_163
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 614
+        width: 34
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a4cb77233e36f0f42a3fafd2477f028e
+      internalID: 1661388727
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cookie Run - Jelly_164
+      rect:
+        serializedVersion: 2
+        x: 94
+        y: 613
+        width: 35
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 54ed59c708a0ab44091ff07ad9990f40
+      internalID: -599643932
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cookie Run - Jelly_165
+      rect:
+        serializedVersion: 2
+        x: 127
+        y: 612
+        width: 202
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f36b4c1f7cdbfb645bcaa092915f9866
+      internalID: -754303100
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cookie Run - Jelly_166
+      rect:
+        serializedVersion: 2
+        x: 332
+        y: 613
+        width: 51
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 920145cae4a32424ca50f779bd240bf9
+      internalID: 155000524
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cookie Run - Jelly_167
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 553
+        width: 38
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 37afc38c3b115de40a6ec07bdd8e033c
+      internalID: 897522809
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cookie Run - Jelly_168
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 551
+        width: 40
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a88295c0c6a0e154aab6edbb915bfe54
+      internalID: 274443029
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cookie Run - Jelly_169
+      rect:
+        serializedVersion: 2
+        x: 151
+        y: 550
+        width: 41
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f24c1db72e6c26642aedf38793550c6a
+      internalID: 275645658
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cookie Run - Jelly_170
+      rect:
+        serializedVersion: 2
+        x: 220
+        y: 550
+        width: 40
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa567d491d1ffc14abf81f4535da98e7
+      internalID: 529918682
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cookie Run - Jelly_171
+      rect:
+        serializedVersion: 2
+        x: 287
+        y: 551
+        width: 41
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c9d0e8748407d640b9a8259836ec44a
+      internalID: 196559416
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cookie Run - Jelly_172
+      rect:
+        serializedVersion: 2
+        x: 358
+        y: 549
+        width: 33
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d287a4cc2f3dc8a499681ad94fed74d8
+      internalID: 908710234
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cookie Run - Jelly_173
+      rect:
+        serializedVersion: 2
+        x: 420
+        y: 551
+        width: 48
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d8577adfdf258f43b3e9379d6411c01
+      internalID: 749152326
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cookie Run - Jelly_174
+      rect:
+        serializedVersion: 2
+        x: 486
+        y: 548
+        width: 51
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5fa9fd68e8355d14e8d2f6362127d5f2
+      internalID: -1777922357
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cookie Run - Jelly_175
+      rect:
+        serializedVersion: 2
+        x: 553
+        y: 549
+        width: 53
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 69c58196692900743b5b9b0f12b00aba
+      internalID: -322110018
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cookie Run - Jelly_176
+      rect:
+        serializedVersion: 2
+        x: 617
+        y: 556
+        width: 62
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b6303698aefc2947990886797bb85cb
+      internalID: -369456848
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cookie Run - Jelly_177
+      rect:
+        serializedVersion: 2
+        x: 692
+        y: 551
+        width: 48
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f5035575b41cce4193250d5ed4c2a77
+      internalID: -199792645
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cookie Run - Jelly_178
+      rect:
+        serializedVersion: 2
+        x: 761
+        y: 550
+        width: 47
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb6a2cab420defc48ae383d15c5186e7
+      internalID: -1971185522
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cookie Run - Jelly_179
+      rect:
+        serializedVersion: 2
+        x: 829
+        y: 550
+        width: 46
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f33c58270d86ee9458604f3654aeb590
+      internalID: 1639898207
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cookie Run - Jelly_180
+      rect:
+        serializedVersion: 2
+        x: 889
+        y: 551
+        width: 59
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 36c0af594283bf349ab5cd512d286f22
+      internalID: -1911975356
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cookie Run - Jelly_181
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 550
+        width: 51
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 20947fb67c4652b4cb675119cea9c980
+      internalID: -240160467
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cookie Run - Jelly_182
+      rect:
+        serializedVersion: 2
+        x: 1031
+        y: 550
+        width: 51
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d3372af07ea6e142ba4936838ac5cb9
+      internalID: -659029866
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cookie Run - Jelly_183
+      rect:
+        serializedVersion: 2
+        x: 1099
+        y: 551
+        width: 51
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 08db581d94acc9c4498bf791e635f5ab
+      internalID: -952717245
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cookie Run - Jelly_184
+      rect:
+        serializedVersion: 2
+        x: 1167
+        y: 548
+        width: 47
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee82269d7faf81046bfa0cbe67bd8d1d
+      internalID: 1651577449
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cookie Run - Jelly_185
+      rect:
+        serializedVersion: 2
+        x: 1235
+        y: 548
+        width: 47
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 016bc46a57ac09446ae5a4a2921427f8
+      internalID: 956915250
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cookie Run - Jelly_186
+      rect:
+        serializedVersion: 2
+        x: 1293
+        y: 549
+        width: 65
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b2172de419fee0e478997c38c6c9e7e2
+      internalID: -1877536063
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cookie Run - Jelly_187
+      rect:
+        serializedVersion: 2
+        x: 1366
+        y: 551
+        width: 57
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 21e5d114c037da74ab41984e119fcbb6
+      internalID: 855754773
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cookie Run - Jelly_188
+      rect:
+        serializedVersion: 2
+        x: 1437
+        y: 551
+        width: 54
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c418fb236ffe7947ab845165821f270
+      internalID: -1603711131
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cookie Run - Jelly_189
+      rect:
+        serializedVersion: 2
+        x: 1507
+        y: 550
+        width: 47
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2640516c58c84964b9831eed74ed2bda
+      internalID: -545783281
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cookie Run - Jelly_190
+      rect:
+        serializedVersion: 2
+        x: 1574
+        y: 550
+        width: 52
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f16d00d8d2f861f4c9114780510e2229
+      internalID: -1154118553
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cookie Run - Jelly_191
+      rect:
+        serializedVersion: 2
+        x: 1638
+        y: 550
+        width: 55
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2fc8e0f90f3a43545980d6ad900f16a9
+      internalID: -2108232142
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cookie Run - Jelly_192
+      rect:
+        serializedVersion: 2
+        x: 1710
+        y: 551
+        width: 51
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 50f13ef17ceb0894389e516b9cebbc13
+      internalID: -1617961184
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cookie Run - Jelly_193
+      rect:
+        serializedVersion: 2
+        x: 1773
+        y: 550
+        width: 61
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 28f91c3ebeed6d3449eaf2494332607d
+      internalID: -784309727
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cookie Run - Jelly_194
+      rect:
+        serializedVersion: 2
+        x: 1841
+        y: 553
+        width: 57
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa7f1217249bf074bbbe496c972fc96f
+      internalID: 2042311398
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cookie Run - Jelly_195
+      rect:
+        serializedVersion: 2
+        x: 1909
+        y: 550
+        width: 58
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a10f4b2694ba7e4db43efdb19503f65
+      internalID: -911337546
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cookie Run - Jelly_196
+      rect:
+        serializedVersion: 2
+        x: 1973
+        y: 549
+        width: 66
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8436339d61d40764aa1d25e233dd3ce0
+      internalID: -1959482449
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cookie Run - Jelly_197
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 480
+        width: 55
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8db279b659b908d458dda49eed0c5cc3
+      internalID: -919364670
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cookie Run - Jelly_198
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 480
+        width: 59
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d57534f753ec864c8ae8c69dfd4d883
+      internalID: -1929173288
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cookie Run - Jelly_199
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 480
+        width: 58
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c4907474bd02aee4b9c3b8078e4ba5eb
+      internalID: -607901784
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cookie Run - Jelly_200
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 479
+        width: 61
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec8a53e5a9d6b714695dc73ed6f00e0b
+      internalID: 1055439119
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cookie Run - Jelly_201
+      rect:
+        serializedVersion: 2
+        x: 274
+        y: 480
+        width: 65
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d191a86d034f614080c2f423df80831
+      internalID: -497865979
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cookie Run - Jelly_202
+      rect:
+        serializedVersion: 2
+        x: 343
+        y: 478
+        width: 64
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 93b1ba118c30ab04ca7b03d71163c6d4
+      internalID: -180877264
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cookie Run - Jelly_203
+      rect:
+        serializedVersion: 2
+        x: 410
+        y: 478
+        width: 66
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3808f5f8dfd8f4b43bf0bca2f9ed9b55
+      internalID: -1969569230
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cookie Run - Jelly_204
+      rect:
+        serializedVersion: 2
+        x: 484
+        y: 479
+        width: 58
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d53565f85614d44cbeddb80110afe28
+      internalID: -108309905
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cookie Run - Jelly_205
+      rect:
+        serializedVersion: 2
+        x: 551
+        y: 479
+        width: 60
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dac377863b9df82439f5acaba670c3aa
+      internalID: 1829892423
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cookie Run - Jelly_206
+      rect:
+        serializedVersion: 2
+        x: 619
+        y: 479
+        width: 59
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 52b2e8639ad14ad4a8f607f3d40fc661
+      internalID: 546919287
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cookie Run - Jelly_207
+      rect:
+        serializedVersion: 2
+        x: 684
+        y: 479
+        width: 62
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d697b56ff4d31114fbed4ffcfe06678f
+      internalID: 1549476882
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cookie Run - Jelly_208
+      rect:
+        serializedVersion: 2
+        x: 754
+        y: 478
+        width: 59
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 659d1c965cd098a438378ef79fd68523
+      internalID: -1984118571
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cookie Run - Jelly_209
+      rect:
+        serializedVersion: 2
+        x: 822
+        y: 478
+        width: 59
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8898fe9d876e9e44789fc1d995326f2a
+      internalID: -915169998
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cookie Run - Jelly_210
+      rect:
+        serializedVersion: 2
+        x: 889
+        y: 479
+        width: 60
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aed20e3f2e310ef4ba00eeac212e4fe0
+      internalID: -1412969667
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cookie Run - Jelly_211
+      rect:
+        serializedVersion: 2
+        x: 957
+        y: 482
+        width: 61
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 51f513495af5034489ddde92f3525232
+      internalID: -2032672973
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cookie Run - Jelly_212
+      rect:
+        serializedVersion: 2
+        x: 1025
+        y: 482
+        width: 62
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 47538c7e780ff8d42aaaf6275e29c807
+      internalID: 130291332
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cookie Run - Jelly_213
+      rect:
+        serializedVersion: 2
+        x: 1093
+        y: 482
+        width: 61
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 96a13674fd8912044ad86ea9f298642f
+      internalID: -1613889087
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cookie Run - Jelly_214
+      rect:
+        serializedVersion: 2
+        x: 1163
+        y: 478
+        width: 55
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5392076b38f182d43bba99ebe4ebe19f
+      internalID: -648919125
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cookie Run - Jelly_215
+      rect:
+        serializedVersion: 2
+        x: 1231
+        y: 480
+        width: 58
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b5d1ef43962d9940b8b5221216a4b64
+      internalID: -1006557638
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cookie Run - Jelly_216
+      rect:
+        serializedVersion: 2
+        x: 1301
+        y: 480
+        width: 56
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7077569817c2275458a755b40199bcac
+      internalID: 1485587307
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cookie Run - Jelly_217
+      rect:
+        serializedVersion: 2
+        x: 1366
+        y: 483
+        width: 58
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c15cac1629528345b6600f864a19a75
+      internalID: -299150820
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cookie Run - Jelly_218
+      rect:
+        serializedVersion: 2
+        x: 1435
+        y: 484
+        width: 57
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 01b8761619ad4594ebf2a1f12f5483eb
+      internalID: 795269541
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cookie Run - Jelly_219
+      rect:
+        serializedVersion: 2
+        x: 1503
+        y: 483
+        width: 58
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b2b5478961c416441a223cc63e1b583a
+      internalID: 386358167
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cookie Run - Jelly_220
+      rect:
+        serializedVersion: 2
+        x: 1571
+        y: 483
+        width: 57
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0cbe348773db76643bc58a51482dd1f5
+      internalID: -1454081060
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cookie Run - Jelly_221
+      rect:
+        serializedVersion: 2
+        x: 1639
+        y: 484
+        width: 58
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35695468f799fc445be56f421bbb48c5
+      internalID: 558255560
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cookie Run - Jelly_222
+      rect:
+        serializedVersion: 2
+        x: 1706
+        y: 483
+        width: 58
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f45f787833d525840ade726375304dcb
+      internalID: -1516978105
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cookie Run - Jelly_223
+      rect:
+        serializedVersion: 2
+        x: 1777
+        y: 480
+        width: 54
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 815d379bec586704688d7d06ea8025d4
+      internalID: 1899402294
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cookie Run - Jelly_224
+      rect:
+        serializedVersion: 2
+        x: 1845
+        y: 480
+        width: 54
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd15a216552c4284dbc5a7bf2f56f74b
+      internalID: 1871107530
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cookie Run - Jelly_225
+      rect:
+        serializedVersion: 2
+        x: 1911
+        y: 480
+        width: 58
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 072028c5cca7d4b4881e4ae8bc313f69
+      internalID: -1018817473
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cookie Run - Jelly_226
+      rect:
+        serializedVersion: 2
+        x: 1979
+        y: 484
+        width: 59
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 233aef98a5f8607468da964edbff61a6
+      internalID: 1556562339
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cookie Run - Jelly_227
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 412
+        width: 67
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9dfc0cc6a87affb40b274fa552247dfd
+      internalID: -799199246
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cookie Run - Jelly_228
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 408
+        width: 56
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 70ab25c9bdcc35d4b8a4ac5a58f80f2e
+      internalID: 214222346
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cookie Run - Jelly_229
+      rect:
+        serializedVersion: 2
+        x: 126
+        y: 411
+        width: 65
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a23d5536e81b33e4780fffc1ee464add
+      internalID: -283723119
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cookie Run - Jelly_230
+      rect:
+        serializedVersion: 2
+        x: 201
+        y: 412
+        width: 55
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3fddede40a436a4986561cbe4bbcc05
+      internalID: -642620603
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cookie Run - Jelly_231
+      rect:
+        serializedVersion: 2
+        x: 265
+        y: 409
+        width: 60
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1082f240ce65e2844b3203d013ce4717
+      internalID: 396132020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cookie Run - Jelly_232
+      rect:
+        serializedVersion: 2
+        x: 333
+        y: 409
+        width: 61
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 86ad5de0b7395884b897feafa7971ffb
+      internalID: -924256618
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cookie Run - Jelly_233
+      rect:
+        serializedVersion: 2
+        x: 401
+        y: 409
+        width: 60
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d1c5b03a106bfcb419fcddee53fc0028
+      internalID: 1214209472
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cookie Run - Jelly_234
+      rect:
+        serializedVersion: 2
+        x: 469
+        y: 409
+        width: 60
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 04003def8bb5cf440be62e40bb1b7416
+      internalID: 1418939827
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cookie Run - Jelly_235
+      rect:
+        serializedVersion: 2
+        x: 534
+        y: 394
+        width: 80
+        height: 81
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 49cef713e197da947a0d61563c790627
+      internalID: 1444750514
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cookie Run - Jelly_236
+      rect:
+        serializedVersion: 2
+        x: 616
+        y: 394
+        width: 80
+        height: 81
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c14deef0ac752bc42902ddd30bf26046
+      internalID: 777913468
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cookie Run - Jelly_237
+      rect:
+        serializedVersion: 2
+        x: 699
+        y: 394
+        width: 79
+        height: 81
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1406d9439962ccb43af27333f8b5728a
+      internalID: -22788428
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cookie Run - Jelly_238
+      rect:
+        serializedVersion: 2
+        x: 779
+        y: 408
+        width: 57
+        height: 68
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7899608f67bed0c459046bca5076003b
+      internalID: -529550423
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cookie Run - Jelly_239
+      rect:
+        serializedVersion: 2
+        x: 837
+        y: 415
+        width: 64
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce14a230926c28d4189f562c601311f5
+      internalID: 1116198038
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cookie Run - Jelly_240
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 347
+        width: 44
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 41f7dfd822ef50240b69219b29fbdec4
+      internalID: -1029304748
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cookie Run - Jelly_241
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 354
+        width: 43
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8773482c1cbe6274c90f1718ac780b02
+      internalID: 235619087
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cookie Run - Jelly_242
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 354
+        width: 39
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d62a773a57026344996098fe5e3bba0a
+      internalID: -1652964172
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cookie Run - Jelly_243
+      rect:
+        serializedVersion: 2
+        x: 163
+        y: 349
+        width: 41
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9514194b767a7b843a572c87c51e3020
+      internalID: 135034201
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cookie Run - Jelly_244
+      rect:
+        serializedVersion: 2
+        x: 212
+        y: 354
+        width: 43
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d315f611f3581ea4b8a8ac78c9fdba83
+      internalID: 1696871357
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cookie Run - Jelly_245
+      rect:
+        serializedVersion: 2
+        x: 267
+        y: 354
+        width: 39
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b094f490b3288d54eb971a2aa8108f89
+      internalID: 666878168
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cookie Run - Jelly_246
+      rect:
+        serializedVersion: 2
+        x: 319
+        y: 349
+        width: 42
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af72fed8ac4630048960282c6135cea1
+      internalID: -682189930
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cookie Run - Jelly_247
+      rect:
+        serializedVersion: 2
+        x: 368
+        y: 347
+        width: 42
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 26e91fcabb76a1841aff0f055267d7ef
+      internalID: 776505945
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cookie Run - Jelly_248
+      rect:
+        serializedVersion: 2
+        x: 423
+        y: 349
+        width: 41
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d7968d700d74356439f98c426809d4cd
+      internalID: -165617752
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cookie Run - Jelly_249
+      rect:
+        serializedVersion: 2
+        x: 471
+        y: 347
+        width: 44
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e39c4b1ca200ed46b9f6453225a7093
+      internalID: 37681713
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cookie Run - Jelly_250
+      rect:
+        serializedVersion: 2
+        x: 524
+        y: 354
+        width: 43
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 58c39b549bf045c45887d7a90d50956d
+      internalID: 928203817
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cookie Run - Jelly_251
+      rect:
+        serializedVersion: 2
+        x: 580
+        y: 354
+        width: 39
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e1303c797bb615c4d819d78f6b71a4b6
+      internalID: -897803770
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cookie Run - Jelly_252
+      rect:
+        serializedVersion: 2
+        x: 628
+        y: 347
+        width: 42
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b97fd49eeab44e4794e1d72d5406e73
+      internalID: 1732510970
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cookie Run - Jelly_253
+      rect:
+        serializedVersion: 2
+        x: 681
+        y: 354
+        width: 43
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c5483fbdc82502943a44b7340f156223
+      internalID: 244274263
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cookie Run - Jelly_254
+      rect:
+        serializedVersion: 2
+        x: 735
+        y: 354
+        width: 39
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 679c512b0d6b0354c94c6ce0fa1f46bf
+      internalID: 935845101
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cookie Run - Jelly_255
+      rect:
+        serializedVersion: 2
+        x: 785
+        y: 351
+        width: 44
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d0a262c8c8f07f4fad04f5d52442497
+      internalID: 515126834
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cookie Run - Jelly_256
+      rect:
+        serializedVersion: 2
+        x: 837
+        y: 354
+        width: 43
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb0d102a0622fb144b92d1c58262595f
+      internalID: -1035677568
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cookie Run - Jelly_257
+      rect:
+        serializedVersion: 2
+        x: 891
+        y: 354
+        width: 39
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0781c9a9d4090404ea222f9d93f7d250
+      internalID: 1865376050
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cookie Run - Jelly_258
+      rect:
+        serializedVersion: 2
+        x: 941
+        y: 351
+        width: 44
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ebd6951987616444dbd8be7b67e16ad7
+      internalID: 1005251401
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cookie Run - Jelly_259
+      rect:
+        serializedVersion: 2
+        x: 992
+        y: 347
+        width: 43
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7fb8ccc442266643a184d8eec6ce1e5
+      internalID: 486343681
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cookie Run - Jelly_260
+      rect:
+        serializedVersion: 2
+        x: 1045
+        y: 351
+        width: 43
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 90434fff14496b645ac6ed484d541f47
+      internalID: 1624279513
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cookie Run - Jelly_261
+      rect:
+        serializedVersion: 2
+        x: 1096
+        y: 347
+        width: 43
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c3aacdc440ada95439128dab338d2eca
+      internalID: 888649996
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cookie Run - Jelly_262
+      rect:
+        serializedVersion: 2
+        x: 1148
+        y: 354
+        width: 44
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3fe2c3827d7995f49bb3de0e7ad01967
+      internalID: 112609602
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cookie Run - Jelly_263
+      rect:
+        serializedVersion: 2
+        x: 1203
+        y: 354
+        width: 40
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f4036c8ef109685448620150e3bb6d61
+      internalID: -941958794
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cookie Run - Jelly_264
+      rect:
+        serializedVersion: 2
+        x: 1254
+        y: 347
+        width: 44
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8b0b4221a3f08e47a651477759de5c1
+      internalID: 1039828334
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cookie Run - Jelly_265
+      rect:
+        serializedVersion: 2
+        x: 1306
+        y: 354
+        width: 43
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7531ab64ede39384b8ee982ffbbe5c21
+      internalID: -261300019
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cookie Run - Jelly_266
+      rect:
+        serializedVersion: 2
+        x: 1358
+        y: 354
+        width: 41
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 127744a09a0b9f64a93cfd0f3118ab1a
+      internalID: 671585605
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cookie Run - Jelly_267
+      rect:
+        serializedVersion: 2
+        x: 1409
+        y: 351
+        width: 44
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1731f8dab1bbc244e836532493b6033d
+      internalID: 1336430553
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cookie Run - Jelly_268
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 252
+        width: 87
+        height: 87
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc396bbbd225ec444a56bd656717f7eb
+      internalID: -551507664
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cookie Run - Jelly_269
+      rect:
+        serializedVersion: 2
+        x: 95
+        y: 252
+        width: 88
+        height: 87
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c459eb6463fd9b940b45938b1f2c8d1c
+      internalID: -1029620517
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cookie Run - Jelly_270
+      rect:
+        serializedVersion: 2
+        x: 188
+        y: 252
+        width: 86
+        height: 87
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f95f5de677c91a24f849508e19b6336e
+      internalID: 1380918862
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cookie Run - Jelly_271
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 252
+        width: 87
+        height: 87
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 29e857216959792478a5c78410490080
+      internalID: 1554936142
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cookie Run - Jelly_272
+      rect:
+        serializedVersion: 2
+        x: 373
+        y: 249
+        width: 85
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a497b306e986faf4ca27c7fe1ec317ea
+      internalID: 1406725089
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cookie Run - Jelly_273
+      rect:
+        serializedVersion: 2
+        x: 465
+        y: 249
+        width: 84
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e5a88409423f0540966bfbff46b26bd
+      internalID: -1386108454
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cookie Run - Jelly_274
+      rect:
+        serializedVersion: 2
+        x: 557
+        y: 249
+        width: 84
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf5d86eac52dab24dbf1240482f94467
+      internalID: -508019295
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cookie Run - Jelly_275
+      rect:
+        serializedVersion: 2
+        x: 649
+        y: 249
+        width: 84
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 167be3b158d702e49909717d38e1a4f1
+      internalID: -1909491170
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cookie Run - Jelly_276
+      rect:
+        serializedVersion: 2
+        x: 742
+        y: 253
+        width: 84
+        height: 85
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0256a8037bcbfb444a667254d49c2c31
+      internalID: -833936626
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cookie Run - Jelly_277
+      rect:
+        serializedVersion: 2
+        x: 835
+        y: 253
+        width: 86
+        height: 86
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5fb69c9a4a8679f4981291cf4f45f209
+      internalID: 1406943372
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cookie Run - Jelly_278
+      rect:
+        serializedVersion: 2
+        x: 927
+        y: 253
+        width: 86
+        height: 85
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aab845094035db343b3458f4a5bc1a81
+      internalID: 1428121827
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cookie Run - Jelly_279
+      rect:
+        serializedVersion: 2
+        x: 1018
+        y: 253
+        width: 85
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab75a624146f68a4d969c5d92fa8d66a
+      internalID: 1052079856
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cookie Run - Jelly_280
+      rect:
+        serializedVersion: 2
+        x: 1105
+        y: 255
+        width: 260
+        height: 87
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8159e21065c3f884e8012fbf52055876
+      internalID: 27287837
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cookie Run - Jelly_281
+      rect:
+        serializedVersion: 2
+        x: 1366
+        y: 255
+        width: 87
+        height: 87
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 77f669b7fe3d49a45b96a994dbc8dfef
+      internalID: 1772607248
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cookie Run - Jelly_282
+      rect:
+        serializedVersion: 2
+        x: 1456
+        y: 277
+        width: 62
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b0b28351293f47548be646ea9416c9d7
+      internalID: 2125094404
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cookie Run - Jelly_283
+      rect:
+        serializedVersion: 2
+        x: 1525
+        y: 245
+        width: 92
+        height: 97
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ae9170e72066904a906b64386188907
+      internalID: -2060351252
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cookie Run - Jelly_284
+      rect:
+        serializedVersion: 2
+        x: 1622
+        y: 245
+        width: 92
+        height: 97
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f99df6cfa960f348a9390d5a64387c5
+      internalID: -998524395
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cookie Run - Jelly_285
+      rect:
+        serializedVersion: 2
+        x: 1719
+        y: 245
+        width: 92
+        height: 97
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3206f8db54854404aa97832166fbc736
+      internalID: -1970327658
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cookie Run - Jelly_286
+      rect:
+        serializedVersion: 2
+        x: 1816
+        y: 245
+        width: 92
+        height: 97
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a49469ae523d969498f2d67073ec421e
+      internalID: 1861712701
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cookie Run - Jelly_287
+      rect:
+        serializedVersion: 2
+        x: 1910
+        y: 274
+        width: 66
+        height: 68
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2825545f0b9dc924e839ad693930c7ae
+      internalID: -545507025
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cookie Run - Jelly_288
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 109
+        width: 133
+        height: 135
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf0e5e27562f7f747859e33a7d6f963f
+      internalID: 2103251270
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cookie Run - Jelly_289
+      rect:
+        serializedVersion: 2
+        x: 137
+        y: 107
+        width: 132
+        height: 133
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 13b767a489e2bdc41bad72e6405501df
+      internalID: -272306220
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cookie Run - Jelly_290
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 105
+        width: 133
+        height: 136
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 427e831fd9b86c34499d723b651b9b2c
+      internalID: -726807045
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cookie Run - Jelly_291
+      rect:
+        serializedVersion: 2
+        x: 407
+        y: 107
+        width: 133
+        height: 133
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0babcac0489eedd4bbe4799c0c1a6b9b
+      internalID: 271986323
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cookie Run - Jelly_292
+      rect:
+        serializedVersion: 2
+        x: 547
+        y: 153
+        width: 86
+        height: 87
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9563c869b413f16419c000ce75090a0b
+      internalID: -364024596
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cookie Run - Jelly_293
+      rect:
+        serializedVersion: 2
+        x: 644
+        y: 153
+        width: 87
+        height: 87
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d2f795478b05ff540ad7db2ad99243b3
+      internalID: 1221450980
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cookie Run - Jelly_294
+      rect:
+        serializedVersion: 2
+        x: 741
+        y: 153
+        width: 86
+        height: 87
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 123f4df4f68c75a428acc3070a2581d0
+      internalID: -881458600
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cookie Run - Jelly_295
+      rect:
+        serializedVersion: 2
+        x: 838
+        y: 153
+        width: 87
+        height: 87
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e3e8fae3c7ee75e458920cb0a19b54b7
+      internalID: -772432719
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cookie Run - Jelly_296
+      rect:
+        serializedVersion: 2
+        x: 928
+        y: 158
+        width: 348
+        height: 87
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7acfb29d80fe4bf41807e1113e6def43
+      internalID: 623116477
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cookie Run - Jelly_297
+      rect:
+        serializedVersion: 2
+        x: 1278
+        y: 109
+        width: 132
+        height: 135
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 707691f26efea4342a1e88d2722c11ac
+      internalID: 129501784
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cookie Run - Jelly_298
+      rect:
+        serializedVersion: 2
+        x: 1413
+        y: 107
+        width: 133
+        height: 133
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9423010d1642afd40b88573636f82fa3
+      internalID: 776649735
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cookie Run - Jelly_299
+      rect:
+        serializedVersion: 2
+        x: 1548
+        y: 105
+        width: 132
+        height: 136
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c08103a7fcdb2e438311d31ae0bd83b
+      internalID: 1786412375
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cookie Run - Jelly_300
+      rect:
+        serializedVersion: 2
+        x: 1683
+        y: 107
+        width: 133
+        height: 133
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 49a2aeda4ca754042bf5cd1c05d98a2b
+      internalID: -640064742
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cookie Run - Jelly_301
+      rect:
+        serializedVersion: 2
+        x: 1821
+        y: 209
+        width: 32
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 709a1b62d44349641bb224f1289515bb
+      internalID: -2087809695
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cookie Run - Jelly_302
+      rect:
+        serializedVersion: 2
+        x: 1862
+        y: 209
+        width: 32
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 774b3fe4071781e40861579a74a012a3
+      internalID: -1625871756
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cookie Run - Jelly_303
+      rect:
+        serializedVersion: 2
+        x: 1902
+        y: 209
+        width: 32
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 00b4d8c4d5db58e4e85d445b6606bd21
+      internalID: -1277411667
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cookie Run - Jelly_304
+      rect:
+        serializedVersion: 2
+        x: 1937
+        y: 157
+        width: 88
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d933360c1a932584bbc47262d958a562
+      internalID: 1697085818
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cookie Run - Jelly_305
+      rect:
+        serializedVersion: 2
+        x: 2026
+        y: 157
+        width: 87
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc60fbe3d6fd73a41afa5a242731a191
+      internalID: 1077163565
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cookie Run - Jelly_306
+      rect:
+        serializedVersion: 2
+        x: 2114
+        y: 157
+        width: 86
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2753d75f750c64c4bbcc66780eff9912
+      internalID: -870852806
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cookie Run - Jelly_307
+      rect:
+        serializedVersion: 2
+        x: 2202
+        y: 157
+        width: 87
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e5109141c092504b90252fff82d1c36
+      internalID: 1154881306
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cookie Run - Jelly_308
+      rect:
+        serializedVersion: 2
+        x: 2290
+        y: 195
+        width: 49
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f12bca6d068f5747bced606436b2857
+      internalID: -956316844
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cookie Run - Jelly_309
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 12
+        width: 86
+        height: 87
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b744915121e5e474891c5d758d1b3bb4
+      internalID: 679594181
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cookie Run - Jelly_310
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 12
+        width: 173
+        height: 87
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df1d768bce0d3594fb2b937ce07e283c
+      internalID: 52261816
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cookie Run - Jelly_311
+      rect:
+        serializedVersion: 2
+        x: 262
+        y: 11
+        width: 173
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 92f11f41a9ed9c94baf18e7706383f03
+      internalID: 246751400
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cookie Run - Jelly_312
+      rect:
+        serializedVersion: 2
+        x: 445
+        y: 11
+        width: 72
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dbdd8c25ae752f64c93bb57aeb76964a
+      internalID: 1385848305
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cookie Run - Jelly_313
+      rect:
+        serializedVersion: 2
+        x: 559
+        y: 11
+        width: 24
+        height: 87
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14391083b25c34d4cb450cf66f1f1596
+      internalID: -386813924
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cookie Run - Jelly_314
+      rect:
+        serializedVersion: 2
+        x: 623
+        y: 11
+        width: 72
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 24dce393429f40f4389495aed9e83bd9
+      internalID: -971471428
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cookie Run - Jelly_315
+      rect:
+        serializedVersion: 2
+        x: 704
+        y: 33
+        width: 63
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a2b278c3236d57c45bc469e8e54cd265
+      internalID: -525755649
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cookie Run - Jelly_316
+      rect:
+        serializedVersion: 2
+        x: 775
+        y: 7
+        width: 87
+        height: 87
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd1146566fcb66f43b907f840ee23566
+      internalID: -824457266
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cookie Run - Jelly_317
+      rect:
+        serializedVersion: 2
+        x: 872
+        y: 7
+        width: 88
+        height: 87
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5aefe0ba661b33c42a34df1b7533518c
+      internalID: -1240149134
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cookie Run - Jelly_318
+      rect:
+        serializedVersion: 2
+        x: 971
+        y: 7
+        width: 87
+        height: 87
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 083915d452fc5a44487ede370cffa101
+      internalID: -1382740639
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cookie Run - Jelly_319
+      rect:
+        serializedVersion: 2
+        x: 1069
+        y: 7
+        width: 87
+        height: 87
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 992452a60e95bc64e9305e297a0cd1bb
+      internalID: -1980083628
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cookie Run - Jelly_320
+      rect:
+        serializedVersion: 2
+        x: 1163
+        y: 30
+        width: 72
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 77cc9e6810ec44345ae08bbfbbd5201d
+      internalID: 240119104
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cookie Run - Jelly_321
+      rect:
+        serializedVersion: 2
+        x: 1237
+        y: 30
+        width: 75
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b875eaaf3014274488abc701f7af58ed
+      internalID: 266186235
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cookie Run - Jelly_322
+      rect:
+        serializedVersion: 2
+        x: 1313
+        y: 30
+        width: 76
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa0f6918a0e08614aacf1a0280f77a09
+      internalID: 1369126139
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cookie Run - Jelly_323
+      rect:
+        serializedVersion: 2
+        x: 1391
+        y: 28
+        width: 75
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a90530e516a464c48aaf8d6356180728
+      internalID: -1880405546
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cookie Run - Jelly_324
+      rect:
+        serializedVersion: 2
+        x: 1467
+        y: 28
+        width: 77
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8dd916bf93976204986bcd12d3f1d5a1
+      internalID: 737932745
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cookie Run - Jelly_325
+      rect:
+        serializedVersion: 2
+        x: 1545
+        y: 28
+        width: 78
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7aa5613fda11b90408d8a7d3ef4016a0
+      internalID: -1533828168
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 1537655665
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Cookie Run - Jelly_0: 173428800
+      Cookie Run - Jelly_1: 2129765828
+      Cookie Run - Jelly_10: -503577483
+      Cookie Run - Jelly_100: 480444301
+      Cookie Run - Jelly_101: -841460209
+      Cookie Run - Jelly_102: 987676889
+      Cookie Run - Jelly_103: -877942971
+      Cookie Run - Jelly_104: -1584370068
+      Cookie Run - Jelly_105: 1489716210
+      Cookie Run - Jelly_106: -93171546
+      Cookie Run - Jelly_107: -2051389632
+      Cookie Run - Jelly_108: -424118237
+      Cookie Run - Jelly_109: 540795375
+      Cookie Run - Jelly_11: -880794341
+      Cookie Run - Jelly_110: -1356964199
+      Cookie Run - Jelly_111: -207344524
+      Cookie Run - Jelly_112: -494488403
+      Cookie Run - Jelly_113: 1958918618
+      Cookie Run - Jelly_114: -2058531807
+      Cookie Run - Jelly_115: 1918666135
+      Cookie Run - Jelly_116: -383084282
+      Cookie Run - Jelly_117: 1945110921
+      Cookie Run - Jelly_118: 2059482195
+      Cookie Run - Jelly_119: 124579003
+      Cookie Run - Jelly_12: 459825188
+      Cookie Run - Jelly_120: 639760269
+      Cookie Run - Jelly_121: 6772512
+      Cookie Run - Jelly_122: 1366002522
+      Cookie Run - Jelly_123: -569343776
+      Cookie Run - Jelly_124: 235095071
+      Cookie Run - Jelly_125: 366277319
+      Cookie Run - Jelly_126: -940347324
+      Cookie Run - Jelly_127: 773715498
+      Cookie Run - Jelly_128: 823384324
+      Cookie Run - Jelly_129: 948071930
+      Cookie Run - Jelly_13: 973113908
+      Cookie Run - Jelly_130: -933696606
+      Cookie Run - Jelly_131: 1757029266
+      Cookie Run - Jelly_132: -2026559332
+      Cookie Run - Jelly_133: -650292216
+      Cookie Run - Jelly_134: -857993349
+      Cookie Run - Jelly_135: -660411944
+      Cookie Run - Jelly_136: 261992588
+      Cookie Run - Jelly_137: -101992027
+      Cookie Run - Jelly_138: -1279066211
+      Cookie Run - Jelly_139: 1926181972
+      Cookie Run - Jelly_14: 678176735
+      Cookie Run - Jelly_140: -1478052635
+      Cookie Run - Jelly_141: -1755608562
+      Cookie Run - Jelly_142: 392393833
+      Cookie Run - Jelly_143: 490783989
+      Cookie Run - Jelly_144: 752479325
+      Cookie Run - Jelly_145: 434562873
+      Cookie Run - Jelly_146: -626564706
+      Cookie Run - Jelly_147: 1369140527
+      Cookie Run - Jelly_148: -497698882
+      Cookie Run - Jelly_149: 1222253889
+      Cookie Run - Jelly_15: -1624529504
+      Cookie Run - Jelly_150: 1910823255
+      Cookie Run - Jelly_151: 660196783
+      Cookie Run - Jelly_152: 677900876
+      Cookie Run - Jelly_153: 342487367
+      Cookie Run - Jelly_154: -2075120735
+      Cookie Run - Jelly_155: -768176931
+      Cookie Run - Jelly_156: -1540942650
+      Cookie Run - Jelly_157: 1038084674
+      Cookie Run - Jelly_158: 380352055
+      Cookie Run - Jelly_159: 690840927
+      Cookie Run - Jelly_16: -155445660
+      Cookie Run - Jelly_160: 1335406477
+      Cookie Run - Jelly_161: 760264715
+      Cookie Run - Jelly_162: 211654114
+      Cookie Run - Jelly_163: 1661388727
+      Cookie Run - Jelly_164: -599643932
+      Cookie Run - Jelly_165: -754303100
+      Cookie Run - Jelly_166: 155000524
+      Cookie Run - Jelly_167: 897522809
+      Cookie Run - Jelly_168: 274443029
+      Cookie Run - Jelly_169: 275645658
+      Cookie Run - Jelly_17: 1564223418
+      Cookie Run - Jelly_170: 529918682
+      Cookie Run - Jelly_171: 196559416
+      Cookie Run - Jelly_172: 908710234
+      Cookie Run - Jelly_173: 749152326
+      Cookie Run - Jelly_174: -1777922357
+      Cookie Run - Jelly_175: -322110018
+      Cookie Run - Jelly_176: -369456848
+      Cookie Run - Jelly_177: -199792645
+      Cookie Run - Jelly_178: -1971185522
+      Cookie Run - Jelly_179: 1639898207
+      Cookie Run - Jelly_18: -1261565011
+      Cookie Run - Jelly_180: -1911975356
+      Cookie Run - Jelly_181: -240160467
+      Cookie Run - Jelly_182: -659029866
+      Cookie Run - Jelly_183: -952717245
+      Cookie Run - Jelly_184: 1651577449
+      Cookie Run - Jelly_185: 956915250
+      Cookie Run - Jelly_186: -1877536063
+      Cookie Run - Jelly_187: 855754773
+      Cookie Run - Jelly_188: -1603711131
+      Cookie Run - Jelly_189: -545783281
+      Cookie Run - Jelly_19: -1612737741
+      Cookie Run - Jelly_190: -1154118553
+      Cookie Run - Jelly_191: -2108232142
+      Cookie Run - Jelly_192: -1617961184
+      Cookie Run - Jelly_193: -784309727
+      Cookie Run - Jelly_194: 2042311398
+      Cookie Run - Jelly_195: -911337546
+      Cookie Run - Jelly_196: -1959482449
+      Cookie Run - Jelly_197: -919364670
+      Cookie Run - Jelly_198: -1929173288
+      Cookie Run - Jelly_199: -607901784
+      Cookie Run - Jelly_2: 967346420
+      Cookie Run - Jelly_20: 632945256
+      Cookie Run - Jelly_200: 1055439119
+      Cookie Run - Jelly_201: -497865979
+      Cookie Run - Jelly_202: -180877264
+      Cookie Run - Jelly_203: -1969569230
+      Cookie Run - Jelly_204: -108309905
+      Cookie Run - Jelly_205: 1829892423
+      Cookie Run - Jelly_206: 546919287
+      Cookie Run - Jelly_207: 1549476882
+      Cookie Run - Jelly_208: -1984118571
+      Cookie Run - Jelly_209: -915169998
+      Cookie Run - Jelly_21: -1691715549
+      Cookie Run - Jelly_210: -1412969667
+      Cookie Run - Jelly_211: -2032672973
+      Cookie Run - Jelly_212: 130291332
+      Cookie Run - Jelly_213: -1613889087
+      Cookie Run - Jelly_214: -648919125
+      Cookie Run - Jelly_215: -1006557638
+      Cookie Run - Jelly_216: 1485587307
+      Cookie Run - Jelly_217: -299150820
+      Cookie Run - Jelly_218: 795269541
+      Cookie Run - Jelly_219: 386358167
+      Cookie Run - Jelly_22: 379822703
+      Cookie Run - Jelly_220: -1454081060
+      Cookie Run - Jelly_221: 558255560
+      Cookie Run - Jelly_222: -1516978105
+      Cookie Run - Jelly_223: 1899402294
+      Cookie Run - Jelly_224: 1871107530
+      Cookie Run - Jelly_225: -1018817473
+      Cookie Run - Jelly_226: 1556562339
+      Cookie Run - Jelly_227: -799199246
+      Cookie Run - Jelly_228: 214222346
+      Cookie Run - Jelly_229: -283723119
+      Cookie Run - Jelly_23: 273293711
+      Cookie Run - Jelly_230: -642620603
+      Cookie Run - Jelly_231: 396132020
+      Cookie Run - Jelly_232: -924256618
+      Cookie Run - Jelly_233: 1214209472
+      Cookie Run - Jelly_234: 1418939827
+      Cookie Run - Jelly_235: 1444750514
+      Cookie Run - Jelly_236: 777913468
+      Cookie Run - Jelly_237: -22788428
+      Cookie Run - Jelly_238: -529550423
+      Cookie Run - Jelly_239: 1116198038
+      Cookie Run - Jelly_24: 165734248
+      Cookie Run - Jelly_240: -1029304748
+      Cookie Run - Jelly_241: 235619087
+      Cookie Run - Jelly_242: -1652964172
+      Cookie Run - Jelly_243: 135034201
+      Cookie Run - Jelly_244: 1696871357
+      Cookie Run - Jelly_245: 666878168
+      Cookie Run - Jelly_246: -682189930
+      Cookie Run - Jelly_247: 776505945
+      Cookie Run - Jelly_248: -165617752
+      Cookie Run - Jelly_249: 37681713
+      Cookie Run - Jelly_25: -1372620881
+      Cookie Run - Jelly_250: 928203817
+      Cookie Run - Jelly_251: -897803770
+      Cookie Run - Jelly_252: 1732510970
+      Cookie Run - Jelly_253: 244274263
+      Cookie Run - Jelly_254: 935845101
+      Cookie Run - Jelly_255: 515126834
+      Cookie Run - Jelly_256: -1035677568
+      Cookie Run - Jelly_257: 1865376050
+      Cookie Run - Jelly_258: 1005251401
+      Cookie Run - Jelly_259: 486343681
+      Cookie Run - Jelly_26: -1334135957
+      Cookie Run - Jelly_260: 1624279513
+      Cookie Run - Jelly_261: 888649996
+      Cookie Run - Jelly_262: 112609602
+      Cookie Run - Jelly_263: -941958794
+      Cookie Run - Jelly_264: 1039828334
+      Cookie Run - Jelly_265: -261300019
+      Cookie Run - Jelly_266: 671585605
+      Cookie Run - Jelly_267: 1336430553
+      Cookie Run - Jelly_268: -551507664
+      Cookie Run - Jelly_269: -1029620517
+      Cookie Run - Jelly_27: 424721697
+      Cookie Run - Jelly_270: 1380918862
+      Cookie Run - Jelly_271: 1554936142
+      Cookie Run - Jelly_272: 1406725089
+      Cookie Run - Jelly_273: -1386108454
+      Cookie Run - Jelly_274: -508019295
+      Cookie Run - Jelly_275: -1909491170
+      Cookie Run - Jelly_276: -833936626
+      Cookie Run - Jelly_277: 1406943372
+      Cookie Run - Jelly_278: 1428121827
+      Cookie Run - Jelly_279: 1052079856
+      Cookie Run - Jelly_28: -855814550
+      Cookie Run - Jelly_280: 27287837
+      Cookie Run - Jelly_281: 1772607248
+      Cookie Run - Jelly_282: 2125094404
+      Cookie Run - Jelly_283: -2060351252
+      Cookie Run - Jelly_284: -998524395
+      Cookie Run - Jelly_285: -1970327658
+      Cookie Run - Jelly_286: 1861712701
+      Cookie Run - Jelly_287: -545507025
+      Cookie Run - Jelly_288: 2103251270
+      Cookie Run - Jelly_289: -272306220
+      Cookie Run - Jelly_29: 56666159
+      Cookie Run - Jelly_290: -726807045
+      Cookie Run - Jelly_291: 271986323
+      Cookie Run - Jelly_292: -364024596
+      Cookie Run - Jelly_293: 1221450980
+      Cookie Run - Jelly_294: -881458600
+      Cookie Run - Jelly_295: -772432719
+      Cookie Run - Jelly_296: 623116477
+      Cookie Run - Jelly_297: 129501784
+      Cookie Run - Jelly_298: 776649735
+      Cookie Run - Jelly_299: 1786412375
+      Cookie Run - Jelly_3: 1265688941
+      Cookie Run - Jelly_30: -866485163
+      Cookie Run - Jelly_300: -640064742
+      Cookie Run - Jelly_301: -2087809695
+      Cookie Run - Jelly_302: -1625871756
+      Cookie Run - Jelly_303: -1277411667
+      Cookie Run - Jelly_304: 1697085818
+      Cookie Run - Jelly_305: 1077163565
+      Cookie Run - Jelly_306: -870852806
+      Cookie Run - Jelly_307: 1154881306
+      Cookie Run - Jelly_308: -956316844
+      Cookie Run - Jelly_309: 679594181
+      Cookie Run - Jelly_31: 485336959
+      Cookie Run - Jelly_310: 52261816
+      Cookie Run - Jelly_311: 246751400
+      Cookie Run - Jelly_312: 1385848305
+      Cookie Run - Jelly_313: -386813924
+      Cookie Run - Jelly_314: -971471428
+      Cookie Run - Jelly_315: -525755649
+      Cookie Run - Jelly_316: -824457266
+      Cookie Run - Jelly_317: -1240149134
+      Cookie Run - Jelly_318: -1382740639
+      Cookie Run - Jelly_319: -1980083628
+      Cookie Run - Jelly_32: -1999681200
+      Cookie Run - Jelly_320: 240119104
+      Cookie Run - Jelly_321: 266186235
+      Cookie Run - Jelly_322: 1369126139
+      Cookie Run - Jelly_323: -1880405546
+      Cookie Run - Jelly_324: 737932745
+      Cookie Run - Jelly_325: -1533828168
+      Cookie Run - Jelly_33: 650828528
+      Cookie Run - Jelly_34: 121637161
+      Cookie Run - Jelly_35: -930293227
+      Cookie Run - Jelly_36: 299861283
+      Cookie Run - Jelly_37: -1184543760
+      Cookie Run - Jelly_38: 959422863
+      Cookie Run - Jelly_39: -1384614446
+      Cookie Run - Jelly_4: -1356178530
+      Cookie Run - Jelly_40: -921498361
+      Cookie Run - Jelly_41: 1444486808
+      Cookie Run - Jelly_42: 73252947
+      Cookie Run - Jelly_43: -909071947
+      Cookie Run - Jelly_44: -1655450211
+      Cookie Run - Jelly_45: -1464534970
+      Cookie Run - Jelly_46: 419685149
+      Cookie Run - Jelly_47: -1284757493
+      Cookie Run - Jelly_48: -387464461
+      Cookie Run - Jelly_49: -149806907
+      Cookie Run - Jelly_5: 505414843
+      Cookie Run - Jelly_50: -826987755
+      Cookie Run - Jelly_51: 490317047
+      Cookie Run - Jelly_52: -1426450340
+      Cookie Run - Jelly_53: -1287522539
+      Cookie Run - Jelly_54: 1110261279
+      Cookie Run - Jelly_55: 468516832
+      Cookie Run - Jelly_56: -2132497496
+      Cookie Run - Jelly_57: -239621781
+      Cookie Run - Jelly_58: -280987441
+      Cookie Run - Jelly_59: -121974249
+      Cookie Run - Jelly_6: -999572364
+      Cookie Run - Jelly_60: -1768782650
+      Cookie Run - Jelly_61: -148520183
+      Cookie Run - Jelly_62: 1202121176
+      Cookie Run - Jelly_63: -474580668
+      Cookie Run - Jelly_64: -13737131
+      Cookie Run - Jelly_65: 2145489846
+      Cookie Run - Jelly_66: 590595733
+      Cookie Run - Jelly_67: -477968800
+      Cookie Run - Jelly_68: -1879071882
+      Cookie Run - Jelly_69: -422181652
+      Cookie Run - Jelly_7: 1239094512
+      Cookie Run - Jelly_70: -630152397
+      Cookie Run - Jelly_71: -496658004
+      Cookie Run - Jelly_72: 1715704336
+      Cookie Run - Jelly_73: 971832227
+      Cookie Run - Jelly_74: 426366278
+      Cookie Run - Jelly_75: 185790721
+      Cookie Run - Jelly_76: -1780648837
+      Cookie Run - Jelly_77: -701246822
+      Cookie Run - Jelly_78: 807151946
+      Cookie Run - Jelly_79: 1130287037
+      Cookie Run - Jelly_8: -1749164596
+      Cookie Run - Jelly_80: 1162712712
+      Cookie Run - Jelly_81: 1466497564
+      Cookie Run - Jelly_82: -88737496
+      Cookie Run - Jelly_83: 1788525983
+      Cookie Run - Jelly_84: -504992980
+      Cookie Run - Jelly_85: 1328726972
+      Cookie Run - Jelly_86: -1660122513
+      Cookie Run - Jelly_87: 1621929807
+      Cookie Run - Jelly_88: 1164345358
+      Cookie Run - Jelly_89: 355959598
+      Cookie Run - Jelly_9: -1558657249
+      Cookie Run - Jelly_90: 513544767
+      Cookie Run - Jelly_91: 26188781
+      Cookie Run - Jelly_92: -1647940393
+      Cookie Run - Jelly_93: -1330469699
+      Cookie Run - Jelly_94: -1452079648
+      Cookie Run - Jelly_95: -63613421
+      Cookie Run - Jelly_96: -268357550
+      Cookie Run - Jelly_97: -572583806
+      Cookie Run - Jelly_98: 1077929660
+      Cookie Run - Jelly_99: 257515762
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
