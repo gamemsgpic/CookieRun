@@ -1,38 +1,49 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class MapMove : MonoBehaviour
 {
-    public float moveSpeed = 5f;
-    private Renderer objectRenderer;
+    public float moveSpeed = 5f; // 이동 속도
     private MapManager mapManager;
-    private void Start()
+    public Transform startMapPos; // StartMapPos 참조
+    private Transform rightPivot; // 오른쪽 피봇 참조
+
+    void Start()
     {
-        objectRenderer = GetComponent<Renderer>();
+        // RightPivot을 자식 오브젝트에서 찾음
+        rightPivot = transform.Find("RightPivot");
         mapManager = FindObjectOfType<MapManager>();
+        if (mapManager != null)
+        {
+            startMapPos = mapManager.startMapPos;
+        }
+        else
+        {
+            Debug.LogError("MapManager를 찾을 수 없습니다! StartMapPos를 설정할 수 없습니다.");
+        }
     }
 
-    private void Update()
+    void Update()
     {
-        transform.Translate(Vector2.left * moveSpeed * Time.deltaTime);
+        // 왼쪽으로 이동
+        transform.Translate(Vector3.left * moveSpeed * Time.deltaTime);
 
-        if (!objectRenderer.isVisible && gameObject.activeSelf)
+        // RightPivot이 StartMapPos보다 왼쪽으로 가면 비활성화
+        if (rightPivot.position.x < startMapPos.position.x)
         {
             DeactivateSelf();
         }
     }
 
-    public void DeactivateSelf()
+    void DeactivateSelf()
     {
+        // GameObject를 비활성화
         gameObject.SetActive(false);
 
+        // MapManager에 알림
+        MapManager mapManager = FindObjectOfType<MapManager>();
         if (mapManager != null)
         {
             mapManager.DeactivatePrefab(gameObject);
         }
-
-
     }
 }
- 

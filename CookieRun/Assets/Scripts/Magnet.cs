@@ -8,7 +8,7 @@ public class Magnet : MonoBehaviour
     {
         if (collision.gameObject.layer == LayerMask.NameToLayer("Item"))
         {
-            CoinMoveTest item = collision.GetComponent<CoinMoveTest>();
+            ApplyItemMagnet item = collision.GetComponent<ApplyItemMagnet>();
             if (item != null && !item.isMovingToPlayer) // 이미 이동 중이 아닌 경우만 처리
             {
                 Debug.Log($"Magnet이 {collision.gameObject.name} 감지");
