@@ -1,23 +1,37 @@
 using UnityEngine;
 
-public class CoinMoveTest : MonoBehaviour
+public class ApplyItemMagnet : MonoBehaviour
 {
-    public float currentSpeed = 2f; // 기본 좌측 이동 속도
     public int Score = 100;
     public int Coins = 100;
 
     public bool isMovingToPlayer { get; private set; } = false; // Player로 이동 여부
-    private Vector3 startPosition; // 아이템 초기 위치
-    private Vector3 magnetStartPosition; // 아이템 초기 위치
+    private Vector3 magnetStartPosition;
     private Transform targetTransform; // 목표 위치 (플레이어 Transform)
     private float attractionSpeed = 5f; // Player를 향한 이동 속도
 
     private float currentTime = 0f;
     public float moveDuration = 0.5f; // 이동 시간 (Lerp 속도)
 
-    private void Start()
+    private Vector3 initialLocalPosition; // 아이템의 초기 로컬 위치
+
+    private void Awake()
     {
-        startPosition = transform.position; // 초기 위치 저장
+        // Awake에서 아이템의 초기 로컬 위치를 저장
+        initialLocalPosition = transform.localPosition;
+    }
+
+    private void OnEnable()
+    {
+        // 프리팹 재활성화 시 초기화
+        ResetItem();
+    }
+
+    public void ResetItem()
+    {
+        isMovingToPlayer = false; // 이동 상태 초기화
+        transform.localPosition = initialLocalPosition; // 저장된 초기 로컬 위치로 복원
+        gameObject.SetActive(true); // 아이템 활성화
     }
 
     // Magnet과 충돌 시 호출
@@ -42,26 +56,18 @@ public class CoinMoveTest : MonoBehaviour
             if (currentTime >= moveDuration)
             {
                 Debug.Log("Player에 도달!");
-                isMovingToPlayer = false; // 이동 상태 종료
-            }
-        }
-        else
-        {
-            // Magnet의 영향을 받지 않을 때 좌측으로 이동
-            transform.Translate(Vector2.left * currentSpeed * Time.deltaTime, Space.World);
-
-            // 화면 밖으로 나가면 초기 위치로 리셋
-            if (transform.position.x < -15f)
-            {
-                ResetPosition();
+                isMovingToPlayer = false;
             }
         }
     }
 
-    public void ResetPosition()
-    {
-        Debug.Log($"Item {gameObject.name} 초기화");
-        transform.position = startPosition;
-        isMovingToPlayer = false;
-    }
+    //// 플레이어와의 충돌 처리
+    //private void OnTriggerEnter2D(Collider2D collision)
+    //{
+    //    if (collision.CompareTag("Player")) // Player 태그 확인
+    //    {
+    //        Debug.Log("Player와 충돌, 아이템 비활성화!");
+    //        gameObject.SetActive(false); // 아이템 비활성화
+    //    }
+    //}
 }

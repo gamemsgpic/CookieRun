@@ -50,7 +50,7 @@ public class PlayerCrash : MonoBehaviour
         // Item 레이어와 충돌 확인
         if (collision.gameObject.layer == LayerMask.NameToLayer("Item"))
         {
-            CoinMoveTest item = collision.GetComponent<CoinMoveTest>();
+            ApplyItemMagnet item = collision.GetComponent<ApplyItemMagnet>();
             if (item != null && item.isMovingToPlayer) // Magnet에 의해 이동 중인 경우만 처리
             {
                 ApplyItemEffect(item);
@@ -58,13 +58,13 @@ public class PlayerCrash : MonoBehaviour
         }
     }
 
-    private void ApplyItemEffect(CoinMoveTest item)
+    private void ApplyItemEffect(ApplyItemMagnet item)
     {
         Debug.Log($"아이템 효과 적용: {item.gameObject.name}");
         playerState.AddScore(item.Score);
         playerState.AddCoins(item.Coins);
         gm.UpdateScore(playerState.score);
-        item.ResetPosition(); // 아이템 초기 위치로 리셋
+        item.gameObject.SetActive(false); // 아이템 비활성화
     }
 
     private void HandleInvincibility()

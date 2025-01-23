@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1462981655837894793}
   - component: {fileID: 9049477555416340445}
   - component: {fileID: 951168186463055458}
-  - component: {fileID: 6885246073900659200}
+  - component: {fileID: 4495966786503797970}
   m_Layer: 6
   m_Name: Coin (4)
   m_TagString: Coin
@@ -121,7 +121,7 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.5
---- !u!114 &6885246073900659200
+--- !u!114 &4495966786503797970
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -130,10 +130,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 174890899073018719}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6dc15c06d5e1bfc4b89294cfac1f6b76, type: 3}
+  m_Script: {fileID: 11500000, guid: 0ed76cd3f05f4c24eb2cc040424fbd8f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentSpeed: 5
   Score: 100
   Coins: 100
   moveDuration: 0.5
@@ -148,7 +147,7 @@ GameObject:
   - component: {fileID: 3867587706135588342}
   - component: {fileID: 5224164083064621332}
   - component: {fileID: 6189432051337485951}
-  - component: {fileID: 7676108317063202037}
+  - component: {fileID: 1604895373257958046}
   m_Layer: 6
   m_Name: Coin (16)
   m_TagString: Coin
@@ -258,7 +257,7 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.5
---- !u!114 &7676108317063202037
+--- !u!114 &1604895373257958046
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -267,10 +266,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 570224097666826863}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6dc15c06d5e1bfc4b89294cfac1f6b76, type: 3}
+  m_Script: {fileID: 11500000, guid: 0ed76cd3f05f4c24eb2cc040424fbd8f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentSpeed: 5
   Score: 100
   Coins: 100
   moveDuration: 0.5
@@ -285,7 +283,7 @@ GameObject:
   - component: {fileID: 9019353038413423030}
   - component: {fileID: 533594223906878764}
   - component: {fileID: 4488513096251233743}
-  - component: {fileID: 417665311325052899}
+  - component: {fileID: 5664675511293565336}
   m_Layer: 6
   m_Name: Coin (27)
   m_TagString: Coin
@@ -395,7 +393,7 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.5
---- !u!114 &417665311325052899
+--- !u!114 &5664675511293565336
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -404,10 +402,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 903441104120805727}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6dc15c06d5e1bfc4b89294cfac1f6b76, type: 3}
+  m_Script: {fileID: 11500000, guid: 0ed76cd3f05f4c24eb2cc040424fbd8f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentSpeed: 5
   Score: 100
   Coins: 100
   moveDuration: 0.5
@@ -422,7 +419,7 @@ GameObject:
   - component: {fileID: 2609426711111961039}
   - component: {fileID: 8343849879886657531}
   - component: {fileID: 408901976053462949}
-  - component: {fileID: 8036622319056718031}
+  - component: {fileID: 5364936568826745972}
   m_Layer: 6
   m_Name: Coin (26)
   m_TagString: Coin
@@ -532,7 +529,7 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.5
---- !u!114 &8036622319056718031
+--- !u!114 &5364936568826745972
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -541,10 +538,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 970869918104889119}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6dc15c06d5e1bfc4b89294cfac1f6b76, type: 3}
+  m_Script: {fileID: 11500000, guid: 0ed76cd3f05f4c24eb2cc040424fbd8f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentSpeed: 5
   Score: 100
   Coins: 100
   moveDuration: 0.5
@@ -559,7 +555,7 @@ GameObject:
   - component: {fileID: 7651268625515483038}
   - component: {fileID: 1414525007710036466}
   - component: {fileID: 2190536186747627683}
-  - component: {fileID: 6213523912399297815}
+  - component: {fileID: 5477966077625620375}
   m_Layer: 6
   m_Name: Coin (13)
   m_TagString: Coin
@@ -669,7 +665,7 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.5
---- !u!114 &6213523912399297815
+--- !u!114 &5477966077625620375
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -678,10 +674,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 1069790078291812996}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6dc15c06d5e1bfc4b89294cfac1f6b76, type: 3}
+  m_Script: {fileID: 11500000, guid: 0ed76cd3f05f4c24eb2cc040424fbd8f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentSpeed: 5
   Score: 100
   Coins: 100
   moveDuration: 0.5
@@ -696,7 +691,7 @@ GameObject:
   - component: {fileID: 7769027646273932915}
   - component: {fileID: 6493931712590627437}
   - component: {fileID: 2207870459393638541}
-  - component: {fileID: 622285384743186065}
+  - component: {fileID: 726752301841353880}
   m_Layer: 6
   m_Name: Coin (5)
   m_TagString: Coin
@@ -806,7 +801,7 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.5
---- !u!114 &622285384743186065
+--- !u!114 &726752301841353880
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -815,10 +810,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 1077701162655745981}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6dc15c06d5e1bfc4b89294cfac1f6b76, type: 3}
+  m_Script: {fileID: 11500000, guid: 0ed76cd3f05f4c24eb2cc040424fbd8f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentSpeed: 5
   Score: 100
   Coins: 100
   moveDuration: 0.5
@@ -833,7 +827,7 @@ GameObject:
   - component: {fileID: 7432853742315655519}
   - component: {fileID: 2131090354602517360}
   - component: {fileID: 2578159223232100777}
-  - component: {fileID: 7424723402817607338}
+  - component: {fileID: 3002436181658352650}
   m_Layer: 6
   m_Name: Coin (2)
   m_TagString: Coin
@@ -943,7 +937,7 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.5
---- !u!114 &7424723402817607338
+--- !u!114 &3002436181658352650
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -952,10 +946,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 1419059025042488195}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6dc15c06d5e1bfc4b89294cfac1f6b76, type: 3}
+  m_Script: {fileID: 11500000, guid: 0ed76cd3f05f4c24eb2cc040424fbd8f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentSpeed: 5
   Score: 100
   Coins: 100
   moveDuration: 0.5
@@ -969,7 +962,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8404927866699414031}
   m_Layer: 0
-  m_Name: GameObject (1)
+  m_Name: RightPivot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -984,7 +977,7 @@ Transform:
   m_GameObject: {fileID: 1495495544796694765}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0.7582428, z: -0, w: 0.65197223}
-  m_LocalPosition: {x: 0.501, y: 0.45, z: 0}
+  m_LocalPosition: {x: 0.5, y: -0.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1000,9 +993,11 @@ GameObject:
   m_Component:
   - component: {fileID: 3673256264001810646}
   - component: {fileID: 8372129841830129588}
+  - component: {fileID: 3258004645062416687}
+  - component: {fileID: 4116505121954686263}
   m_Layer: 0
-  m_Name: Square (1)
-  m_TagString: Untagged
+  m_Name: Square (1) 19
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1098,7 +1093,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.40447447, g: 0.4415095, b: 0.28573158, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -1108,6 +1103,65 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &3258004645062416687
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1730959087519886623}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e7231cbfef145348965bffb83d2a7ed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 5
+  startMapPos: {fileID: 0}
+--- !u!61 &4116505121954686263
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1730959087519886623}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
 --- !u!1 &2961192610104175676
 GameObject:
   m_ObjectHideFlags: 0
@@ -1119,7 +1173,7 @@ GameObject:
   - component: {fileID: 4546005625005903681}
   - component: {fileID: 5923090289896470986}
   - component: {fileID: 1694739832688633040}
-  - component: {fileID: 6358211053258970080}
+  - component: {fileID: 9222151032858432056}
   m_Layer: 6
   m_Name: Coin (28)
   m_TagString: Coin
@@ -1229,7 +1283,7 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.5
---- !u!114 &6358211053258970080
+--- !u!114 &9222151032858432056
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1238,10 +1292,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 2961192610104175676}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6dc15c06d5e1bfc4b89294cfac1f6b76, type: 3}
+  m_Script: {fileID: 11500000, guid: 0ed76cd3f05f4c24eb2cc040424fbd8f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentSpeed: 5
   Score: 100
   Coins: 100
   moveDuration: 0.5
@@ -1256,7 +1309,7 @@ GameObject:
   - component: {fileID: 8933445758890834974}
   - component: {fileID: 8430245665389288295}
   - component: {fileID: 6543565748698277290}
-  - component: {fileID: 763355202267696277}
+  - component: {fileID: 3423228983255292993}
   m_Layer: 6
   m_Name: Coin (6)
   m_TagString: Coin
@@ -1366,7 +1419,7 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.5
---- !u!114 &763355202267696277
+--- !u!114 &3423228983255292993
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1375,10 +1428,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 3159598063856644268}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6dc15c06d5e1bfc4b89294cfac1f6b76, type: 3}
+  m_Script: {fileID: 11500000, guid: 0ed76cd3f05f4c24eb2cc040424fbd8f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentSpeed: 5
   Score: 100
   Coins: 100
   moveDuration: 0.5
@@ -1393,7 +1445,6 @@ GameObject:
   - component: {fileID: 646499527032232833}
   - component: {fileID: 7766265348752632444}
   - component: {fileID: 2412499591013783269}
-  - component: {fileID: 5096283704650473766}
   m_Layer: 0
   m_Name: Trap (1)
   m_TagString: Trap
@@ -1503,19 +1554,6 @@ CapsuleCollider2D:
   m_Offset: {x: -0.0126571655, y: 0}
   m_Size: {x: 0.2790184, y: 0.99999994}
   m_Direction: 0
---- !u!114 &5096283704650473766
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3574538930745302557}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1e5f05dabd1bf374e9dc2744a21034d7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  currentSpeed: 5
 --- !u!1 &3757598942061028580
 GameObject:
   m_ObjectHideFlags: 0
@@ -1527,7 +1565,7 @@ GameObject:
   - component: {fileID: 8815705948657993955}
   - component: {fileID: 6039479910495362336}
   - component: {fileID: 2472833685387528283}
-  - component: {fileID: 5328891128159650876}
+  - component: {fileID: 8354185166948748762}
   m_Layer: 6
   m_Name: Coin (29)
   m_TagString: Coin
@@ -1637,7 +1675,7 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.5
---- !u!114 &5328891128159650876
+--- !u!114 &8354185166948748762
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1646,10 +1684,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 3757598942061028580}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6dc15c06d5e1bfc4b89294cfac1f6b76, type: 3}
+  m_Script: {fileID: 11500000, guid: 0ed76cd3f05f4c24eb2cc040424fbd8f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentSpeed: 5
   Score: 100
   Coins: 100
   moveDuration: 0.5
@@ -1664,7 +1701,7 @@ GameObject:
   - component: {fileID: 1799330433242111632}
   - component: {fileID: 6228402226320150380}
   - component: {fileID: 1603004536111468264}
-  - component: {fileID: 5138898070984230136}
+  - component: {fileID: 3349080970526956925}
   m_Layer: 6
   m_Name: Coin (7)
   m_TagString: Coin
@@ -1774,7 +1811,7 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.5
---- !u!114 &5138898070984230136
+--- !u!114 &3349080970526956925
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1783,10 +1820,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 3828393959177469118}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6dc15c06d5e1bfc4b89294cfac1f6b76, type: 3}
+  m_Script: {fileID: 11500000, guid: 0ed76cd3f05f4c24eb2cc040424fbd8f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentSpeed: 5
   Score: 100
   Coins: 100
   moveDuration: 0.5
@@ -1801,7 +1837,7 @@ GameObject:
   - component: {fileID: 6298134166784578036}
   - component: {fileID: 6418286558346842716}
   - component: {fileID: 7231398544637740647}
-  - component: {fileID: 7033998168446916876}
+  - component: {fileID: 59946978735660413}
   m_Layer: 6
   m_Name: Coin (9)
   m_TagString: Coin
@@ -1911,7 +1947,7 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.5
---- !u!114 &7033998168446916876
+--- !u!114 &59946978735660413
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1920,10 +1956,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 4118497932565209746}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6dc15c06d5e1bfc4b89294cfac1f6b76, type: 3}
+  m_Script: {fileID: 11500000, guid: 0ed76cd3f05f4c24eb2cc040424fbd8f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentSpeed: 5
   Score: 100
   Coins: 100
   moveDuration: 0.5
@@ -1938,7 +1973,7 @@ GameObject:
   - component: {fileID: 6535088122563928294}
   - component: {fileID: 8306909465907506111}
   - component: {fileID: 7511592726509244216}
-  - component: {fileID: 5987289654816414518}
+  - component: {fileID: 5643102172041049676}
   m_Layer: 6
   m_Name: Coin (11)
   m_TagString: Coin
@@ -2048,7 +2083,7 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.5
---- !u!114 &5987289654816414518
+--- !u!114 &5643102172041049676
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2057,10 +2092,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 4167071398367579128}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6dc15c06d5e1bfc4b89294cfac1f6b76, type: 3}
+  m_Script: {fileID: 11500000, guid: 0ed76cd3f05f4c24eb2cc040424fbd8f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentSpeed: 5
   Score: 100
   Coins: 100
   moveDuration: 0.5
@@ -2075,7 +2109,7 @@ GameObject:
   - component: {fileID: 5400545393902917135}
   - component: {fileID: 7057387946279092703}
   - component: {fileID: 5945172373354696311}
-  - component: {fileID: 3806742066452915393}
+  - component: {fileID: 2609474027566449499}
   m_Layer: 6
   m_Name: Coin (19)
   m_TagString: Coin
@@ -2185,7 +2219,7 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.5
---- !u!114 &3806742066452915393
+--- !u!114 &2609474027566449499
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2194,10 +2228,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 4350252734549204517}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6dc15c06d5e1bfc4b89294cfac1f6b76, type: 3}
+  m_Script: {fileID: 11500000, guid: 0ed76cd3f05f4c24eb2cc040424fbd8f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentSpeed: 5
   Score: 100
   Coins: 100
   moveDuration: 0.5
@@ -2212,7 +2245,7 @@ GameObject:
   - component: {fileID: 547253137445245238}
   - component: {fileID: 8691552813788444638}
   - component: {fileID: 4208883355126345350}
-  - component: {fileID: 3424755071155189886}
+  - component: {fileID: 6111742550685877989}
   m_Layer: 6
   m_Name: Coin (10)
   m_TagString: Coin
@@ -2322,7 +2355,7 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.5
---- !u!114 &3424755071155189886
+--- !u!114 &6111742550685877989
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2331,10 +2364,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 4399962753103297317}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6dc15c06d5e1bfc4b89294cfac1f6b76, type: 3}
+  m_Script: {fileID: 11500000, guid: 0ed76cd3f05f4c24eb2cc040424fbd8f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentSpeed: 5
   Score: 100
   Coins: 100
   moveDuration: 0.5
@@ -2349,7 +2381,7 @@ GameObject:
   - component: {fileID: 8764813315214728782}
   - component: {fileID: 2125331521537186461}
   - component: {fileID: 5484734852682618921}
-  - component: {fileID: 7872936331977906214}
+  - component: {fileID: 3302072520216766400}
   m_Layer: 6
   m_Name: Coin (20)
   m_TagString: Coin
@@ -2459,7 +2491,7 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.5
---- !u!114 &7872936331977906214
+--- !u!114 &3302072520216766400
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2468,10 +2500,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 4477002689749406258}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6dc15c06d5e1bfc4b89294cfac1f6b76, type: 3}
+  m_Script: {fileID: 11500000, guid: 0ed76cd3f05f4c24eb2cc040424fbd8f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentSpeed: 5
   Score: 100
   Coins: 100
   moveDuration: 0.5
@@ -2486,7 +2517,7 @@ GameObject:
   - component: {fileID: 1532807328723616962}
   - component: {fileID: 525324933185014884}
   - component: {fileID: 7663651591963841241}
-  - component: {fileID: 3522591064269897404}
+  - component: {fileID: 4755551751742883374}
   m_Layer: 6
   m_Name: Coin (22)
   m_TagString: Coin
@@ -2596,7 +2627,7 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.5
---- !u!114 &3522591064269897404
+--- !u!114 &4755551751742883374
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2605,10 +2636,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 4609783128514884050}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6dc15c06d5e1bfc4b89294cfac1f6b76, type: 3}
+  m_Script: {fileID: 11500000, guid: 0ed76cd3f05f4c24eb2cc040424fbd8f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentSpeed: 5
   Score: 100
   Coins: 100
   moveDuration: 0.5
@@ -2623,7 +2653,7 @@ GameObject:
   - component: {fileID: 1820902715374262751}
   - component: {fileID: 4505832837590215159}
   - component: {fileID: 8468249230124539648}
-  - component: {fileID: 6805762164435264457}
+  - component: {fileID: 1885593202129008260}
   m_Layer: 6
   m_Name: Coin (1)
   m_TagString: Coin
@@ -2733,7 +2763,7 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.5
---- !u!114 &6805762164435264457
+--- !u!114 &1885593202129008260
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2742,10 +2772,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 4649916516804726535}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6dc15c06d5e1bfc4b89294cfac1f6b76, type: 3}
+  m_Script: {fileID: 11500000, guid: 0ed76cd3f05f4c24eb2cc040424fbd8f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentSpeed: 5
   Score: 100
   Coins: 100
   moveDuration: 0.5
@@ -2760,7 +2789,7 @@ GameObject:
   - component: {fileID: 4006051180400324536}
   - component: {fileID: 8702656791333210089}
   - component: {fileID: 5490169696794558481}
-  - component: {fileID: 1036552573049306360}
+  - component: {fileID: 4624354275733001720}
   m_Layer: 6
   m_Name: Coin (14)
   m_TagString: Coin
@@ -2870,7 +2899,7 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.5
---- !u!114 &1036552573049306360
+--- !u!114 &4624354275733001720
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2879,10 +2908,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 4827220967797788114}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6dc15c06d5e1bfc4b89294cfac1f6b76, type: 3}
+  m_Script: {fileID: 11500000, guid: 0ed76cd3f05f4c24eb2cc040424fbd8f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentSpeed: 5
   Score: 100
   Coins: 100
   moveDuration: 0.5
@@ -2897,7 +2925,7 @@ GameObject:
   - component: {fileID: 7980392692126556548}
   - component: {fileID: 2185237524259636054}
   - component: {fileID: 2382923817196262065}
-  - component: {fileID: 2356357900440634229}
+  - component: {fileID: 6194986969717960186}
   m_Layer: 6
   m_Name: Coin (25)
   m_TagString: Coin
@@ -3007,7 +3035,7 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.5
---- !u!114 &2356357900440634229
+--- !u!114 &6194986969717960186
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3016,10 +3044,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 4843752355607266977}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6dc15c06d5e1bfc4b89294cfac1f6b76, type: 3}
+  m_Script: {fileID: 11500000, guid: 0ed76cd3f05f4c24eb2cc040424fbd8f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentSpeed: 5
   Score: 100
   Coins: 100
   moveDuration: 0.5
@@ -3034,7 +3061,7 @@ GameObject:
   - component: {fileID: 5906349139185044196}
   - component: {fileID: 6408913284733920970}
   - component: {fileID: 6470536901665427184}
-  - component: {fileID: 5275906521365645405}
+  - component: {fileID: 7873569760613614763}
   m_Layer: 6
   m_Name: Coin (17)
   m_TagString: Coin
@@ -3144,7 +3171,7 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.5
---- !u!114 &5275906521365645405
+--- !u!114 &7873569760613614763
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3153,10 +3180,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 4937233079804065865}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6dc15c06d5e1bfc4b89294cfac1f6b76, type: 3}
+  m_Script: {fileID: 11500000, guid: 0ed76cd3f05f4c24eb2cc040424fbd8f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentSpeed: 5
   Score: 100
   Coins: 100
   moveDuration: 0.5
@@ -3171,7 +3197,6 @@ GameObject:
   - component: {fileID: 7964593391111250714}
   - component: {fileID: 1765046838877134233}
   - component: {fileID: 4773622645334421295}
-  - component: {fileID: 9177696680886419110}
   m_Layer: 0
   m_Name: Trap (2)
   m_TagString: Trap
@@ -3281,19 +3306,6 @@ CapsuleCollider2D:
   m_Offset: {x: -0.0126571655, y: 0}
   m_Size: {x: 0.2790184, y: 0.99999994}
   m_Direction: 0
---- !u!114 &9177696680886419110
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4944295829498092884}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1e5f05dabd1bf374e9dc2744a21034d7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  currentSpeed: 5
 --- !u!1 &5214778750797455991
 GameObject:
   m_ObjectHideFlags: 0
@@ -3305,7 +3317,7 @@ GameObject:
   - component: {fileID: 6720208049386143788}
   - component: {fileID: 2048805985689424336}
   - component: {fileID: 1473457227732617096}
-  - component: {fileID: 5776356617549074105}
+  - component: {fileID: 7547447552488231797}
   m_Layer: 6
   m_Name: Coin (18)
   m_TagString: Coin
@@ -3415,7 +3427,7 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.5
---- !u!114 &5776356617549074105
+--- !u!114 &7547447552488231797
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3424,10 +3436,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 5214778750797455991}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6dc15c06d5e1bfc4b89294cfac1f6b76, type: 3}
+  m_Script: {fileID: 11500000, guid: 0ed76cd3f05f4c24eb2cc040424fbd8f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentSpeed: 5
   Score: 100
   Coins: 100
   moveDuration: 0.5
@@ -3441,7 +3452,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1733703708111457933}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: LeftPivot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3456,7 +3467,7 @@ Transform:
   m_GameObject: {fileID: 5304876218031636467}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.499, y: 0.41, z: 0}
+  m_LocalPosition: {x: -0.5, y: -0.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3473,7 +3484,7 @@ GameObject:
   - component: {fileID: 3189273604782169110}
   - component: {fileID: 4995331036507054756}
   - component: {fileID: 5088354111415361907}
-  - component: {fileID: 3753518007648108825}
+  - component: {fileID: 8766680354970904242}
   m_Layer: 6
   m_Name: Coin (3)
   m_TagString: Coin
@@ -3583,7 +3594,7 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.5
---- !u!114 &3753518007648108825
+--- !u!114 &8766680354970904242
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3592,10 +3603,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 5482908574595675222}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6dc15c06d5e1bfc4b89294cfac1f6b76, type: 3}
+  m_Script: {fileID: 11500000, guid: 0ed76cd3f05f4c24eb2cc040424fbd8f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentSpeed: 5
   Score: 100
   Coins: 100
   moveDuration: 0.5
@@ -3610,7 +3620,7 @@ GameObject:
   - component: {fileID: 6511465247138938205}
   - component: {fileID: 7079481340626574840}
   - component: {fileID: 8545947954128305017}
-  - component: {fileID: 5916214319364847733}
+  - component: {fileID: 577411703361824824}
   m_Layer: 6
   m_Name: Coin (15)
   m_TagString: Coin
@@ -3720,7 +3730,7 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.5
---- !u!114 &5916214319364847733
+--- !u!114 &577411703361824824
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3729,10 +3739,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 5581655446883651891}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6dc15c06d5e1bfc4b89294cfac1f6b76, type: 3}
+  m_Script: {fileID: 11500000, guid: 0ed76cd3f05f4c24eb2cc040424fbd8f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentSpeed: 5
   Score: 100
   Coins: 100
   moveDuration: 0.5
@@ -3747,7 +3756,7 @@ GameObject:
   - component: {fileID: 4453322368699353613}
   - component: {fileID: 1551933083254775752}
   - component: {fileID: 8683123334855162773}
-  - component: {fileID: 2573166049690672834}
+  - component: {fileID: 2771565381159721214}
   m_Layer: 6
   m_Name: Coin (21)
   m_TagString: Coin
@@ -3857,7 +3866,7 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.5
---- !u!114 &2573166049690672834
+--- !u!114 &2771565381159721214
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3866,10 +3875,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 6329893419704518269}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6dc15c06d5e1bfc4b89294cfac1f6b76, type: 3}
+  m_Script: {fileID: 11500000, guid: 0ed76cd3f05f4c24eb2cc040424fbd8f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentSpeed: 5
   Score: 100
   Coins: 100
   moveDuration: 0.5
@@ -3884,7 +3892,7 @@ GameObject:
   - component: {fileID: 6384686747542125163}
   - component: {fileID: 3898992421647795844}
   - component: {fileID: 3270238809769617467}
-  - component: {fileID: 3300632957698941675}
+  - component: {fileID: 2730061338499666555}
   m_Layer: 6
   m_Name: Coin (8)
   m_TagString: Coin
@@ -3994,7 +4002,7 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.5
---- !u!114 &3300632957698941675
+--- !u!114 &2730061338499666555
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -4003,10 +4011,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 7459236326609543485}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6dc15c06d5e1bfc4b89294cfac1f6b76, type: 3}
+  m_Script: {fileID: 11500000, guid: 0ed76cd3f05f4c24eb2cc040424fbd8f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentSpeed: 5
   Score: 100
   Coins: 100
   moveDuration: 0.5
@@ -4021,7 +4028,7 @@ GameObject:
   - component: {fileID: 656168534989368417}
   - component: {fileID: 3919591342170292933}
   - component: {fileID: 6837849132152402775}
-  - component: {fileID: 4192404001946948432}
+  - component: {fileID: 1034373347506221471}
   m_Layer: 6
   m_Name: Coin (23)
   m_TagString: Coin
@@ -4131,7 +4138,7 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.5
---- !u!114 &4192404001946948432
+--- !u!114 &1034373347506221471
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -4140,10 +4147,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 7935360013330542433}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6dc15c06d5e1bfc4b89294cfac1f6b76, type: 3}
+  m_Script: {fileID: 11500000, guid: 0ed76cd3f05f4c24eb2cc040424fbd8f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentSpeed: 5
   Score: 100
   Coins: 100
   moveDuration: 0.5
@@ -4158,7 +4164,7 @@ GameObject:
   - component: {fileID: 5311982915150185349}
   - component: {fileID: 6979997576410172833}
   - component: {fileID: 2118778616059897198}
-  - component: {fileID: 6941592040060161408}
+  - component: {fileID: 9110982751935982051}
   m_Layer: 6
   m_Name: Coin (24)
   m_TagString: Coin
@@ -4268,7 +4274,7 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.5
---- !u!114 &6941592040060161408
+--- !u!114 &9110982751935982051
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -4277,10 +4283,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 7941825824208754119}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6dc15c06d5e1bfc4b89294cfac1f6b76, type: 3}
+  m_Script: {fileID: 11500000, guid: 0ed76cd3f05f4c24eb2cc040424fbd8f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentSpeed: 5
   Score: 100
   Coins: 100
   moveDuration: 0.5
@@ -4295,7 +4300,7 @@ GameObject:
   - component: {fileID: 4273554293234226723}
   - component: {fileID: 2907857188518154355}
   - component: {fileID: 1551319371643493218}
-  - component: {fileID: 3539676755997591641}
+  - component: {fileID: 5807614435535685101}
   m_Layer: 6
   m_Name: Coin (12)
   m_TagString: Coin
@@ -4405,7 +4410,7 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.5
---- !u!114 &3539676755997591641
+--- !u!114 &5807614435535685101
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -4414,10 +4419,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 8057501764963517512}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6dc15c06d5e1bfc4b89294cfac1f6b76, type: 3}
+  m_Script: {fileID: 11500000, guid: 0ed76cd3f05f4c24eb2cc040424fbd8f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentSpeed: 5
   Score: 100
   Coins: 100
   moveDuration: 0.5
@@ -4432,7 +4436,7 @@ GameObject:
   - component: {fileID: 3282483454644127462}
   - component: {fileID: 309592576249487239}
   - component: {fileID: 933723449587952073}
-  - component: {fileID: 1734599404197180053}
+  - component: {fileID: 4414723943700812555}
   m_Layer: 6
   m_Name: Coin (30)
   m_TagString: Coin
@@ -4542,7 +4546,7 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.5
---- !u!114 &1734599404197180053
+--- !u!114 &4414723943700812555
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -4551,10 +4555,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 9007168325677062666}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6dc15c06d5e1bfc4b89294cfac1f6b76, type: 3}
+  m_Script: {fileID: 11500000, guid: 0ed76cd3f05f4c24eb2cc040424fbd8f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentSpeed: 5
   Score: 100
   Coins: 100
   moveDuration: 0.5
