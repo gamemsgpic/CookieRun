@@ -44,7 +44,7 @@ public class PlayerCrash : MonoBehaviour
         {
             Debug.Log("데미지 받았다!");
             invincibility = true; // 무적 상태 시작
-            playerState.ReduceHp(10f); // 데미지로 HP 감소
+            playerState.MinusHp(10f); // 데미지로 HP 감소
         }
 
         // Item 레이어와 충돌 확인

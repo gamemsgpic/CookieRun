@@ -37,6 +37,7 @@ public class UIManager : MonoBehaviour
     public void PauseOff()
     {
         Time.timeScale = 1;
+        HideGameOver();
     }
 
     // 재시작 버튼 클릭 처리

@@ -27,16 +27,22 @@ public class PlayerState : MonoBehaviour
 
     private void Update()
     {
+      
         if (hp <= 0)
         {
             onDeath = true;
             uiManager.ShowGameOver();
             Time.timeScale = 0f;
         }
+        else
+        {
+            hp -= Time.deltaTime;
+            UpdateHpSlider();
+        }
     }
 
     // HP 감소
-    public void ReduceHp(float amount)
+    public void MinusHp(float amount)
     {
         hp -= amount;
         if (hp < 0) hp = 0;
@@ -45,7 +51,7 @@ public class PlayerState : MonoBehaviour
     }
 
     // HP 증가
-    public void IncreaseHp(float amount)
+    public void PlusHp(float amount)
     {
         hp += amount;
         UpdateHpSlider();

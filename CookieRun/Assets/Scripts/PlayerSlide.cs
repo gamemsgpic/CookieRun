@@ -26,37 +26,45 @@ public class PlayerSlide : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKey(KeyCode.DownArrow) && playerMovement.isGrounded)
-        {
-            isSlide = true;
-            animator.SetBool("Slide", isSlide);
-            boxCollider2D.size = slideSize;
-            boxCollider2D.offset = slideColliderOffset;
-        }
-        else
-        {
-            isSlide = false;
-            animator.SetBool("Slide", isSlide);
-            boxCollider2D.size = normalSize;
-            boxCollider2D.offset = normalColliderOffset;
-        }
+        //if (Input.GetKey(KeyCode.DownArrow) && playerMovement.isGrounded)
+        //{
+        //    isSlide = true;
+        //    animator.SetBool("Slide", isSlide);
+        //    boxCollider2D.size = slideSize;
+        //    boxCollider2D.offset = slideColliderOffset;
+        //}
+        //else
+        //{
+        //    isSlide = false;
+        //    animator.SetBool("Slide", isSlide);
+        //    boxCollider2D.size = normalSize;
+        //    boxCollider2D.offset = normalColliderOffset;
+        //}
     }
 
     public void OnSlideButtonDown()
     {
+        Debug.Log("on");
         if (playerMovement.isGrounded)
         {
             isSlide = true;
+            Debug.Log("슬라이드 트루!");
             animator.SetBool("Slide", isSlide);
+            Debug.Log("슬라이드 애니메이션!");
             boxCollider2D.size = slideSize;
             boxCollider2D.offset = slideColliderOffset;
+            Debug.Log("원래 콜라이더!");
         }
     }
     public void OnSlideButtonUp()
     {
+        Debug.Log("off");
         isSlide = false;
+        Debug.Log("슬라이드 펄스!");
         animator.SetBool("Slide", isSlide);
+        Debug.Log("런 애니메이션!");
         boxCollider2D.size = normalSize;
         boxCollider2D.offset = normalColliderOffset;
+        Debug.Log("콜라이더 사이즈 변경");
     }
 }

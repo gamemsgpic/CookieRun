@@ -36,7 +36,7 @@ public class CoinMoveTest : MonoBehaviour
         {
             // Lerp를 사용해 부드럽게 이동
             currentTime += Time.deltaTime;
-            transform.position = Vector2.Lerp(magnetStartPosition, targetTransform.position, currentTime / moveDuration);
+            transform.position = Vector2.Lerp(magnetStartPosition, targetTransform.position + (Vector3.up * 1f), currentTime / moveDuration);
 
             // 이동 완료 조건
             if (currentTime >= moveDuration)
