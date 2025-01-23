@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
@@ -62,6 +63,7 @@ public class GameManager : MonoBehaviour
         // 씬 전환 후 UIManager와 PlayerState를 다시 참조
         FindUIManager();
         FindPlayerState();
+
     }
 
     private void FindUIManager()
@@ -111,12 +113,6 @@ public class GameManager : MonoBehaviour
         {
             Debug.LogError("UIManager가 null입니다. GameOver 화면을 표시할 수 없습니다.");
         }
-    }
-
-    public void Pause()
-    {
-        ShowGameOver();
-        Time.timeScale = 0;
     }
 
     public void RestartGame()

@@ -47,6 +47,12 @@ public class UIManager : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex); // 현재 씬 재로드
     }
 
+    public void Pause()
+    {
+        ShowGameOver();
+        Time.timeScale = 0;
+    }
+
     // GameOver 창 표시
     public void ShowGameOver()
     {
