@@ -7,13 +7,14 @@ using UnityEngine.SceneManagement;
 
 public class UIManager : MonoBehaviour
 {
-    public static readonly string scoreformat = "SCORE: {0}";
+    //public static readonly string scoreformat = "SCORE: {0}";
 
     [Tooltip("점수를 표시할 TextMeshProUGUI를 연결하세요.")]
     public TextMeshProUGUI scoreText;
 
     [Tooltip("GameOver 창을 연결하세요.")]
     public GameObject gameOverWindow;
+    public bool pause { get; private set; } = false;
 
     private void Start()
     {
@@ -25,7 +26,7 @@ public class UIManager : MonoBehaviour
     {
         if (scoreText != null)
         {
-            scoreText.text = string.Format(scoreformat, newScore);
+            scoreText.text = newScore.ToString();
         }
         else
         {
@@ -37,6 +38,7 @@ public class UIManager : MonoBehaviour
     public void PauseOff()
     {
         Time.timeScale = 1;
+        pause = false;
         HideGameOver();
     }
 
@@ -50,6 +52,7 @@ public class UIManager : MonoBehaviour
     public void Pause()
     {
         ShowGameOver();
+        pause = true;
         Time.timeScale = 0;
     }
 

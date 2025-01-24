@@ -1,10 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Playables;
 
 public class PlayerSlide : MonoBehaviour
 {
     private PlayerMovement playerMovement;
+    private PlayerState playerState;
+    public UIManager uiManager;
     private BoxCollider2D boxCollider2D;
     private Animator animator;
     private Vector2 normalSize;
@@ -16,6 +19,7 @@ public class PlayerSlide : MonoBehaviour
     private void Start()
     {
         playerMovement = GetComponent<PlayerMovement>();
+        playerState = GetComponent<PlayerState>();
         boxCollider2D = GetComponent<BoxCollider2D>();
         animator = GetComponent<Animator>();
         normalSize = boxCollider2D.size;
@@ -45,7 +49,7 @@ public class PlayerSlide : MonoBehaviour
     public void OnSlideButtonDown()
     {
         Debug.Log("on");
-        if (playerMovement.isGrounded)
+        if (!playerMovement.isJumping && !playerState.onDeath && !uiManager.pause)
         {
             isSlide = true;
             Debug.Log("슬라이드 트루!");
