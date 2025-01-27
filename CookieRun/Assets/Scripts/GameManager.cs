@@ -46,6 +46,12 @@ public class GameManager : MonoBehaviour
             // 초기 점수 설정
             uiManager.UpdateScoreText(player.score);
         }
+
+        if (uiManager != null && player != null)
+        {
+            // 초기 점수 설정
+            uiManager.UpdateCoinText(player.coins);
+        }
     }
 
     private void OnEnable()
@@ -95,6 +101,18 @@ public class GameManager : MonoBehaviour
         if (uiManager != null)
         {
             uiManager.UpdateScoreText(currentScore);
+        }
+        else
+        {
+            Debug.LogError("UIManager가 null입니다. 점수 업데이트에 실패했습니다.");
+        }
+    }
+
+    public void UpdateCoin(int currentCoin)
+    {
+        if (uiManager != null)
+        {
+            uiManager.UpdateCoinText(currentCoin);
         }
         else
         {

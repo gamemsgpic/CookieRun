@@ -64,6 +64,7 @@ public class PlayerCrash : MonoBehaviour
         playerState.AddScore(item.Score);
         playerState.AddCoins(item.Coins);
         gm.UpdateScore(playerState.score);
+        gm.UpdateCoin(playerState.coins);
         item.gameObject.SetActive(false); // 아이템 비활성화
     }
 

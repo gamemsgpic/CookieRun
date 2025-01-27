@@ -4,13 +4,16 @@ using UnityEngine.UI;
 
 public class PlayerState : MonoBehaviour
 {
+    public float wave { get; private set; }
+    public float upWave = 30f;
     public float hp { get; private set; }
     public int score { get; private set; }
     public int coins { get; private set; }
-
+    public int currentWave { get; private set; } = 1;
     public bool onDeath { get; private set; } = false;
     public UIManager uiManager;
     [SerializeField] private Slider hpSlider; // 인스펙터에서 슬라이더 연결
+    [SerializeField] private Slider waveSlider; // 인스펙터에서 슬라이더 연결
 
     private void Start()
     {
@@ -23,11 +26,31 @@ public class PlayerState : MonoBehaviour
             hpSlider.maxValue = hp;
             hpSlider.value = hp;
         }
+
+        if (waveSlider != null)
+        {
+            waveSlider.maxValue = upWave;
+            waveSlider.value = wave;
+        }
     }
 
     private void Update()
     {
-      
+        if (currentWave <= 4)
+        {
+            wave += Time.deltaTime;
+            UpdateWaveSlider();
+            if (wave >= upWave)
+            {
+                currentWave++;
+                wave = 0f;
+            }
+        }
+        else
+        {
+            wave = upWave;
+        }
+
         if (hp <= 0)
         {
             onDeath = true;
@@ -36,6 +59,7 @@ public class PlayerState : MonoBehaviour
         }
         else
         {
+            
             hp -= Time.deltaTime;
             UpdateHpSlider();
         }
@@ -75,6 +99,14 @@ public class PlayerState : MonoBehaviour
         if (hpSlider != null)
         {
             hpSlider.value = hp;
+        }
+    }
+
+    private void UpdateWaveSlider()
+    {
+        if (waveSlider != null)
+        {
+            waveSlider.value = wave;
         }
     }
 }

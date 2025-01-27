@@ -9,10 +9,8 @@ public class UIManager : MonoBehaviour
 {
     //public static readonly string scoreformat = "SCORE: {0}";
 
-    [Tooltip("점수를 표시할 TextMeshProUGUI를 연결하세요.")]
     public TextMeshProUGUI scoreText;
-
-    [Tooltip("GameOver 창을 연결하세요.")]
+    public TextMeshProUGUI coinText;
     public GameObject gameOverWindow;
     public bool pause { get; private set; } = false;
 
@@ -32,6 +30,20 @@ public class UIManager : MonoBehaviour
         {
             Debug.LogError("ScoreText가 연결되지 않았습니다!");
         }
+
+    }
+
+    public void UpdateCoinText(int newCoin)
+    {
+        if (coinText != null)
+        {
+            coinText.text = newCoin.ToString();
+        }
+        else
+        {
+            Debug.LogError("ScoreText가 연결되지 않았습니다!");
+        }
+
     }
 
     // 일시 정지 해제
