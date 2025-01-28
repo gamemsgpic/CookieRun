@@ -1,36 +1,39 @@
-using UnityEngine;
+ï»¿using UnityEngine;
+using UnityEngine.SocialPlatforms.Impl;
+using static UnityEditor.Progress;
 
 public class PlayerCrash : MonoBehaviour
 {
-    private GameManager gm;
+    public UIManager uiManager;
     private PlayerState playerState;
 
-    private bool invincibility = false; // ¹«Àû »óÅÂ ¿©ºÎ
+    private bool invincibility = false; // ë¬´ì  ìƒíƒœ ì—¬ë¶€
     private float inviStartTime = 0f;
     private float blinkStartTime = 0f;
     public float blinkEndTime = 0.1f;
     public float blinkReEndTime = 0.2f;
     public float inviEndTime = 2.4f;
+    public float damage = 5f;
     public Color color;
     public Color originalColor;
     private SpriteRenderer rbSprite;
 
     private void Start()
     {
-        gm = GameManager.Instance;
+
         playerState = GetComponent<PlayerState>();
         rbSprite = GetComponent<SpriteRenderer>();
 
         if (playerState == null)
         {
-            Debug.LogError("PlayerState°¡ ¿¬°áµÇÁö ¾Ê¾Ò½À´Ï´Ù.");
+            Debug.LogError("PlayerStateê°€ ì—°ê²°ë˜ì§€ ì•Šì•˜ìŠµë‹ˆë‹¤.");
         }
         originalColor = rbSprite.color;
     }
 
     private void Update()
     {
-        // ¹«Àû »óÅÂ Ã³¸®
+        // ë¬´ì  ìƒíƒœ ì²˜ë¦¬
         if (invincibility)
         {
             HandleInvincibility();
@@ -39,33 +42,78 @@ public class PlayerCrash : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        // ÇÃ·¹ÀÌ¾î°¡ Æ®·¦°ú Ãæµ¹ÇßÀ» ¶§
         if (!invincibility && collision.CompareTag("Trap"))
         {
-            Debug.Log("µ¥¹ÌÁö ¹Ş¾Ò´Ù!");
-            invincibility = true; // ¹«Àû »óÅÂ ½ÃÀÛ
-            playerState.MinusHp(10f); // µ¥¹ÌÁö·Î HP °¨¼Ò
+            invincibility = true;
+            playerState.MinusHp(damage);
         }
 
-        // Item ·¹ÀÌ¾î¿Í Ãæµ¹ È®ÀÎ
         if (collision.gameObject.layer == LayerMask.NameToLayer("Item"))
         {
             ApplyItemMagnet item = collision.GetComponent<ApplyItemMagnet>();
-            if (item != null && item.isMovingToPlayer) // Magnet¿¡ ÀÇÇØ ÀÌµ¿ ÁßÀÎ °æ¿ì¸¸ Ã³¸®
+
+            if (item != null)
             {
-                ApplyItemEffect(item);
+                if (collision.CompareTag("Magnet")) // ìì„ ì•„ì´í…œ íƒœê·¸ í™•ì¸
+                {
+                    playerState.OnOffMagnet(item.onItmeEffect); // ìì„ íš¨ê³¼ í™œì„±í™”
+                    ApplyItemEffect(item);
+                }
+
+                if (playerState.onMagnet)
+                {
+                    item.MoveTowardsPlayer(transform, item.moveDuration);
+                }
+                else if (!playerState.onMagnet) // ìì„ì´ ë¹„í™œì„±í™”ëœ ìƒíƒœì—ì„œë„ íš¨ê³¼ ì ìš©
+                {
+                    ApplyItemEffect(item);
+                }
+                else
+                {
+                    item.MoveTowardsPlayer(transform, 5f);
+                }
+
+
+                if (collision.CompareTag("Potion"))
+                {
+                    playerState.PlusHp(item.plusHp);
+                }
+
+                //if (collision.CompareTag("Potion"))
+                //{
+                //    playerState.PlusHp(item.plusHp);
+                //}
+
+                //if (collision.CompareTag("Potion"))
+                //{
+                //    playerState.PlusHp(item.plusHp);
+                //}
             }
         }
     }
 
-    private void ApplyItemEffect(ApplyItemMagnet item)
+
+
+
+    public void ApplyItemEffect(ApplyItemMagnet item)
     {
-        Debug.Log($"¾ÆÀÌÅÛ È¿°ú Àû¿ë: {item.gameObject.name}");
-        playerState.AddScore(item.Score);
-        playerState.AddCoins(item.Coins);
-        gm.UpdateScore(playerState.score);
-        gm.UpdateCoin(playerState.coins);
-        item.gameObject.SetActive(false); // ¾ÆÀÌÅÛ ºñÈ°¼ºÈ­
+
+        if (item.score == 0 && item.coins == 0)
+        {
+            Debug.LogError($"[ì˜¤ë¥˜] ì•„ì´í…œ {item.gameObject.name}ì˜ ì ìˆ˜ ë° ì½”ì¸ì´ 0ì…ë‹ˆë‹¤. ì•„ì´í…œ ì†ì„±ì„ í™•ì¸í•˜ì„¸ìš”!");
+        }
+
+        int previousScore = playerState.score;
+        int previousCoins = playerState.coins;
+
+        playerState.AddScore(item.score);
+        playerState.AddCoins(item.coins);
+        uiManager.UpdateScoreText(playerState.score);
+        uiManager.UpdateCoinText(playerState.coins);
+
+        item.gameObject.SetActive(false);
+
+
     }
 
     private void HandleInvincibility()
@@ -75,23 +123,136 @@ public class PlayerCrash : MonoBehaviour
 
         if (blinkStartTime < blinkEndTime)
         {
-            rbSprite.color = color; // ±ôºıÀÌ´Â »ö»ó Àû¿ë
+            rbSprite.color = color; // ê¹œë¹¡ì´ëŠ” ìƒ‰ìƒ ì ìš©
         }
         else if (blinkStartTime > blinkEndTime && blinkStartTime < blinkReEndTime)
         {
-            rbSprite.color = originalColor; // ¿ø·¡ »ö»ó º¹¿ø
+            rbSprite.color = originalColor; // ì›ë˜ ìƒ‰ìƒ ë³µì›
         }
         else
         {
-            blinkStartTime = 0f; // ±ôºıÀÓ ¸®¼Â
+            blinkStartTime = 0f; // ê¹œë¹¡ì„ ë¦¬ì…‹
         }
 
         if (inviStartTime > inviEndTime)
         {
-            rbSprite.color = originalColor; // ¿ø·¡ »ö»ó º¹¿ø
-            invincibility = false; // ¹«Àû »óÅÂ Á¾·á
+            rbSprite.color = originalColor; // ì›ë˜ ìƒ‰ìƒ ë³µì›
+            invincibility = false; // ë¬´ì  ìƒíƒœ ì¢…ë£Œ
             inviStartTime = 0f;
             blinkStartTime = 0f;
         }
     }
 }
+
+
+
+
+//using UnityEngine;
+
+//public class PlayerCrash : MonoBehaviour
+//{
+//    private GameManager gm;
+//    private PlayerState playerState;
+
+//    private bool invincibility = false;
+//    private float inviStartTime = 0f;
+//    private float blinkStartTime = 0f;
+//    public float blinkEndTime = 0.1f;
+//    public float blinkReEndTime = 0.2f;
+//    public float inviEndTime = 2.4f;
+//    public float damage = 5f;
+//    public Color color;
+//    public Color originalColor;
+//    private SpriteRenderer rbSprite;
+
+//    private void Start()
+//    {
+//        gm = GameManager.Instance;
+//        playerState = GetComponent<PlayerState>();
+//        rbSprite = GetComponent<SpriteRenderer>();
+
+//        if (playerState == null)
+//        {
+//            Debug.LogError("PlayerStateê°€ ì—°ê²°ë˜ì§€ ì•Šì•˜ìŠµë‹ˆë‹¤.");
+//        }
+//        originalColor = rbSprite.color;
+//    }
+
+//    private void Update()
+//    {
+//        if (invincibility)
+//        {
+//            HandleInvincibility();
+//        }
+//    }
+
+//    private void OnTriggerEnter2D(Collider2D collision)
+//    {
+//        if (!invincibility && collision.CompareTag("Trap"))
+//        {
+//            Debug.Log("ë°ë¯¸ì§€ ë°›ì•˜ë‹¤!");
+//            invincibility = true;
+//            playerState.MinusHp(damage);
+//        }
+
+//        if (collision.gameObject.layer == LayerMask.NameToLayer("Item"))
+//        {
+//            ApplyItemMagnet item = collision.GetComponent<ApplyItemMagnet>();
+
+//            if (item != null)
+//            {
+//                if (collision.CompareTag("Magnet"))
+//                {
+//                    Debug.Log("Magnet ì•„ì´í…œ íšë“! ìì„ í™œì„±í™”!");
+//                    playerState.OnOffMagnet(item.onItmeEffect);
+//                    item.gameObject.SetActive(false);
+//                }
+//                else if (!playerState.onMagnet) // ìì„ì´ ë¹„í™œì„±í™”ëœ ê²½ìš° ì¦‰ì‹œ íš¨ê³¼ ì ìš©
+//                {
+//                    ApplyItemEffect(item);
+//                }
+//                else
+//                {
+//                    item.MoveTowardsPlayer(transform, 5f); // ìì„ íš¨ê³¼ë¡œ ì´ë™
+//                }
+//            }
+//        }
+//    }
+
+//    public void ApplyItemEffect(ApplyItemMagnet item)
+//    {
+//        playerState.AddScore(item.score);
+//        playerState.AddCoins(item.coins);
+//        gm.UpdateScore(playerState.score);
+//        gm.UpdateCoin(playerState.coins);
+
+//        item.gameObject.SetActive(false);
+//    }
+
+//    private void HandleInvincibility()
+//    {
+//        inviStartTime += Time.deltaTime;
+//        blinkStartTime += Time.deltaTime;
+
+//        if (blinkStartTime < blinkEndTime)
+//        {
+//            rbSprite.color = color;
+//        }
+//        else if (blinkStartTime > blinkEndTime && blinkStartTime < blinkReEndTime)
+//        {
+//            rbSprite.color = originalColor;
+//        }
+//        else
+//        {
+//            blinkStartTime = 0f;
+//        }
+
+//        if (inviStartTime > inviEndTime)
+//        {
+//            rbSprite.color = originalColor;
+//            invincibility = false;
+//            inviStartTime = 0f;
+//            blinkStartTime = 0f;
+//        }
+//    }
+//}
