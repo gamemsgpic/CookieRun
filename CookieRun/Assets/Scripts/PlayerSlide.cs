@@ -25,7 +25,7 @@ public class PlayerSlide : MonoBehaviour
         normalSize = boxCollider2D.size;
         normalColliderOffset = boxCollider2D.offset;
         slideSize = new Vector2(0.7f, 0.6f);
-        slideColliderOffset = new Vector2(0f, 0.25f);
+        slideColliderOffset = new Vector2(0.16f, 0.44f);
     }
 
     private void Update()

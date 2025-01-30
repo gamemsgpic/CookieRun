@@ -10,6 +10,7 @@ TagManager:
   - Jelly
   - Magnet
   - Potion
+  - Giantization
   layers:
   - Default
   - TransparentFX

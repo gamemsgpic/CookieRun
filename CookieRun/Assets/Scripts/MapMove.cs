@@ -14,7 +14,7 @@ public class MapMove : MonoBehaviour
         mapManager = FindObjectOfType<MapManager>();
         if (mapManager != null)
         {
-            startMapPos = mapManager.startMapPos;
+            startMapPos = mapManager.StartMapPos;
         }
         else
         {

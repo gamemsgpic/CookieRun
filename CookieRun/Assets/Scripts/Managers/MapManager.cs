@@ -6,7 +6,8 @@ public class MapManager : MonoBehaviour
     public GameObject[] prefabPool; // 사용할 프리팹 목록
     public List<GameObject> activePrefabs = new List<GameObject>(); // 활성화된 프리팹
     private Dictionary<string, Queue<GameObject>> prefabPools = new Dictionary<string, Queue<GameObject>>(); // 오브젝트 풀
-    public Transform startMapPos; // StartMapPos 참조
+    public Transform StartMapPos; // StartMapPos 참조
+    public Transform startGroundRightPos; // StartMapPos 참조
     public int maxActivePrefabs = 5; // 활성화된 프리팹의 최대 개수
 
     void Start()
@@ -64,7 +65,7 @@ public class MapManager : MonoBehaviour
         if (activePrefabs.Count == 0)
         {
             // 첫 번째 프리팹: StartMapPos 기준으로 배치
-            prefabToActivate.transform.position = startMapPos.position;
+            prefabToActivate.transform.position = startGroundRightPos.position;
         }
         else
         {

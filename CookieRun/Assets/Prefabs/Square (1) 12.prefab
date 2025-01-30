@@ -137,6 +137,7 @@ MonoBehaviour:
   coins: 100
   onItmeEffect: 0
   plusHp: 0
+  giantization: {x: 0, y: 0, z: 0}
   moveDuration: 0.5
 --- !u!1 &570224097666826863
 GameObject:
@@ -275,6 +276,7 @@ MonoBehaviour:
   coins: 100
   onItmeEffect: 0
   plusHp: 0
+  giantization: {x: 0, y: 0, z: 0}
   moveDuration: 0.5
 --- !u!1 &903441104120805727
 GameObject:
@@ -413,6 +415,7 @@ MonoBehaviour:
   coins: 100
   onItmeEffect: 0
   plusHp: 0
+  giantization: {x: 0, y: 0, z: 0}
   moveDuration: 0.5
 --- !u!1 &970869918104889119
 GameObject:
@@ -551,6 +554,7 @@ MonoBehaviour:
   coins: 100
   onItmeEffect: 0
   plusHp: 0
+  giantization: {x: 0, y: 0, z: 0}
   moveDuration: 0.5
 --- !u!1 &1069790078291812996
 GameObject:
@@ -689,6 +693,7 @@ MonoBehaviour:
   coins: 100
   onItmeEffect: 0
   plusHp: 0
+  giantization: {x: 0, y: 0, z: 0}
   moveDuration: 0.5
 --- !u!1 &1077701162655745981
 GameObject:
@@ -827,6 +832,7 @@ MonoBehaviour:
   coins: 100
   onItmeEffect: 0
   plusHp: 0
+  giantization: {x: 0, y: 0, z: 0}
   moveDuration: 0.5
 --- !u!1 &1419059025042488195
 GameObject:
@@ -965,6 +971,7 @@ MonoBehaviour:
   coins: 100
   onItmeEffect: 0
   plusHp: 0
+  giantization: {x: 0, y: 0, z: 0}
   moveDuration: 0.5
 --- !u!1 &1495495544796694765
 GameObject:
@@ -1313,6 +1320,7 @@ MonoBehaviour:
   coins: 100
   onItmeEffect: 0
   plusHp: 0
+  giantization: {x: 0, y: 0, z: 0}
   moveDuration: 0.5
 --- !u!1 &3159598063856644268
 GameObject:
@@ -1451,6 +1459,7 @@ MonoBehaviour:
   coins: 100
   onItmeEffect: 0
   plusHp: 0
+  giantization: {x: 0, y: 0, z: 0}
   moveDuration: 0.5
 --- !u!1 &3574538930745302557
 GameObject:
@@ -1463,6 +1472,7 @@ GameObject:
   - component: {fileID: 646499527032232833}
   - component: {fileID: 7766265348752632444}
   - component: {fileID: 2412499591013783269}
+  - component: {fileID: 1924466172121963956}
   m_Layer: 0
   m_Name: Trap (1)
   m_TagString: Trap
@@ -1572,6 +1582,18 @@ CapsuleCollider2D:
   m_Offset: {x: -0.0126571655, y: 0}
   m_Size: {x: 0.2790184, y: 0.99999994}
   m_Direction: 0
+--- !u!114 &1924466172121963956
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3574538930745302557}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7cabd3054e0769a4fbbae4fbc89818e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3757598942061028580
 GameObject:
   m_ObjectHideFlags: 0
@@ -1709,6 +1731,7 @@ MonoBehaviour:
   coins: 100
   onItmeEffect: 0
   plusHp: 0
+  giantization: {x: 0, y: 0, z: 0}
   moveDuration: 0.5
 --- !u!1 &3828393959177469118
 GameObject:
@@ -1847,6 +1870,7 @@ MonoBehaviour:
   coins: 100
   onItmeEffect: 0
   plusHp: 0
+  giantization: {x: 0, y: 0, z: 0}
   moveDuration: 0.5
 --- !u!1 &4118497932565209746
 GameObject:
@@ -1985,6 +2009,7 @@ MonoBehaviour:
   coins: 100
   onItmeEffect: 0
   plusHp: 0
+  giantization: {x: 0, y: 0, z: 0}
   moveDuration: 0.5
 --- !u!1 &4167071398367579128
 GameObject:
@@ -2123,6 +2148,7 @@ MonoBehaviour:
   coins: 100
   onItmeEffect: 0
   plusHp: 0
+  giantization: {x: 0, y: 0, z: 0}
   moveDuration: 0.5
 --- !u!1 &4350252734549204517
 GameObject:
@@ -2261,6 +2287,7 @@ MonoBehaviour:
   coins: 100
   onItmeEffect: 0
   plusHp: 0
+  giantization: {x: 0, y: 0, z: 0}
   moveDuration: 0.5
 --- !u!1 &4399962753103297317
 GameObject:
@@ -2399,6 +2426,7 @@ MonoBehaviour:
   coins: 100
   onItmeEffect: 0
   plusHp: 0
+  giantization: {x: 0, y: 0, z: 0}
   moveDuration: 0.5
 --- !u!1 &4477002689749406258
 GameObject:
@@ -2537,6 +2565,7 @@ MonoBehaviour:
   coins: 100
   onItmeEffect: 0
   plusHp: 0
+  giantization: {x: 0, y: 0, z: 0}
   moveDuration: 0.5
 --- !u!1 &4609783128514884050
 GameObject:
@@ -2675,6 +2704,7 @@ MonoBehaviour:
   coins: 100
   onItmeEffect: 0
   plusHp: 0
+  giantization: {x: 0, y: 0, z: 0}
   moveDuration: 0.5
 --- !u!1 &4649916516804726535
 GameObject:
@@ -2813,6 +2843,7 @@ MonoBehaviour:
   coins: 100
   onItmeEffect: 0
   plusHp: 0
+  giantization: {x: 0, y: 0, z: 0}
   moveDuration: 0.5
 --- !u!1 &4827220967797788114
 GameObject:
@@ -2951,6 +2982,7 @@ MonoBehaviour:
   coins: 100
   onItmeEffect: 0
   plusHp: 0
+  giantization: {x: 0, y: 0, z: 0}
   moveDuration: 0.5
 --- !u!1 &4843752355607266977
 GameObject:
@@ -3089,6 +3121,7 @@ MonoBehaviour:
   coins: 100
   onItmeEffect: 0
   plusHp: 0
+  giantization: {x: 0, y: 0, z: 0}
   moveDuration: 0.5
 --- !u!1 &4937233079804065865
 GameObject:
@@ -3227,6 +3260,7 @@ MonoBehaviour:
   coins: 100
   onItmeEffect: 0
   plusHp: 0
+  giantization: {x: 0, y: 0, z: 0}
   moveDuration: 0.5
 --- !u!1 &4944295829498092884
 GameObject:
@@ -3239,6 +3273,7 @@ GameObject:
   - component: {fileID: 7964593391111250714}
   - component: {fileID: 1765046838877134233}
   - component: {fileID: 4773622645334421295}
+  - component: {fileID: 8489609737908736633}
   m_Layer: 0
   m_Name: Trap (2)
   m_TagString: Trap
@@ -3348,6 +3383,18 @@ CapsuleCollider2D:
   m_Offset: {x: -0.0126571655, y: 0}
   m_Size: {x: 0.2790184, y: 0.99999994}
   m_Direction: 0
+--- !u!114 &8489609737908736633
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4944295829498092884}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7cabd3054e0769a4fbbae4fbc89818e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5214778750797455991
 GameObject:
   m_ObjectHideFlags: 0
@@ -3485,6 +3532,7 @@ MonoBehaviour:
   coins: 100
   onItmeEffect: 0
   plusHp: 0
+  giantization: {x: 0, y: 0, z: 0}
   moveDuration: 0.5
 --- !u!1 &5304876218031636467
 GameObject:
@@ -3654,6 +3702,7 @@ MonoBehaviour:
   coins: 100
   onItmeEffect: 0
   plusHp: 0
+  giantization: {x: 0, y: 0, z: 0}
   moveDuration: 0.5
 --- !u!1 &5581655446883651891
 GameObject:
@@ -3792,6 +3841,7 @@ MonoBehaviour:
   coins: 100
   onItmeEffect: 0
   plusHp: 0
+  giantization: {x: 0, y: 0, z: 0}
   moveDuration: 0.5
 --- !u!1 &6329893419704518269
 GameObject:
@@ -3930,6 +3980,7 @@ MonoBehaviour:
   coins: 100
   onItmeEffect: 0
   plusHp: 0
+  giantization: {x: 0, y: 0, z: 0}
   moveDuration: 0.5
 --- !u!1 &7459236326609543485
 GameObject:
@@ -4068,6 +4119,7 @@ MonoBehaviour:
   coins: 100
   onItmeEffect: 0
   plusHp: 0
+  giantization: {x: 0, y: 0, z: 0}
   moveDuration: 0.5
 --- !u!1 &7935360013330542433
 GameObject:
@@ -4206,6 +4258,7 @@ MonoBehaviour:
   coins: 100
   onItmeEffect: 0
   plusHp: 0
+  giantization: {x: 0, y: 0, z: 0}
   moveDuration: 0.5
 --- !u!1 &7941825824208754119
 GameObject:
@@ -4344,6 +4397,7 @@ MonoBehaviour:
   coins: 100
   onItmeEffect: 0
   plusHp: 0
+  giantization: {x: 0, y: 0, z: 0}
   moveDuration: 0.5
 --- !u!1 &8057501764963517512
 GameObject:
@@ -4482,6 +4536,7 @@ MonoBehaviour:
   coins: 100
   onItmeEffect: 0
   plusHp: 0
+  giantization: {x: 0, y: 0, z: 0}
   moveDuration: 0.5
 --- !u!1 &9007168325677062666
 GameObject:
@@ -4620,4 +4675,5 @@ MonoBehaviour:
   coins: 100
   onItmeEffect: 0
   plusHp: 0
+  giantization: {x: 0, y: 0, z: 0}
   moveDuration: 0.5

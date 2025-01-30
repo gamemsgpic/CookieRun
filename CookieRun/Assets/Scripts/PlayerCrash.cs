@@ -42,10 +42,30 @@ public class PlayerCrash : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (!invincibility && collision.CompareTag("Trap"))
+        if (!playerState.giant)
         {
-            invincibility = true;
-            playerState.MinusHp(damage);
+
+            if (!invincibility && collision.CompareTag("Trap"))
+            {
+                invincibility = true;
+                playerState.MinusHp(damage);
+            }
+        }
+        else
+        {
+            if (collision.CompareTag("Trap"))
+            {
+                Trap trapScript = collision.GetComponent<Trap>();
+                if (trapScript != null)
+                {
+                    trapScript.LaunchTrap();
+                    Debug.Log("[디버그] 거인화 상태에서 트랩을 날림!");
+                }
+                else
+                {
+                    Debug.LogError("[오류] 트랩에 Trap 스크립트가 없습니다!");
+                }
+            }
         }
 
         if (collision.gameObject.layer == LayerMask.NameToLayer("Item"))
@@ -79,10 +99,10 @@ public class PlayerCrash : MonoBehaviour
                     playerState.PlusHp(item.plusHp);
                 }
 
-                //if (collision.CompareTag("Potion"))
-                //{
-                //    playerState.PlusHp(item.plusHp);
-                //}
+                if (collision.CompareTag("Giantization"))
+                {
+                    playerState.ChangeScale(item.giantization, true);
+                }
 
                 //if (collision.CompareTag("Potion"))
                 //{

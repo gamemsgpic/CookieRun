@@ -8,7 +8,7 @@ public class PlayerState : MonoBehaviour
     public float itemEffectTime = 3f;
     public float currentEffectTime = 0f;
     public bool onMagnet { get; set; } = false;
-    private bool giant = false;
+    public bool giant { get; private set; } = false;
 
     public float maxHp = 100f;
     public float upWave = 30f;
@@ -19,19 +19,21 @@ public class PlayerState : MonoBehaviour
     public int coins { get; private set; }
     public int currentWave { get; private set; } = 1;
     public bool onDeath { get; private set; } = false;
+    public Vector3 normalScale {  get; private set; }
     public UIManager uiManager;
     [SerializeField] private Slider hpSlider; // 인스펙터에서 슬라이더 연결
     [SerializeField] private Slider waveSlider; // 인스펙터에서 슬라이더 연결
 
     private void Start()
     {
+        normalScale = transform.localScale;
+
         OnOffMagnet(false);
         // HP 초기화
         hp = maxHp;
         wave = 0f;
 
         currentWave = 1;
-        resurrection = 3;
 
         // 슬라이더 초기화
         if (hpSlider != null)
@@ -49,6 +51,15 @@ public class PlayerState : MonoBehaviour
 
     private void Update()
     {
+        if (giant)
+        {
+            currentEffectTime += Time.deltaTime;
+            if (currentEffectTime >= itemEffectTime)
+            {
+                ChangeScale(normalScale, false);
+            }
+        }
+
         // [자석 아이템 효과 종료] onMagnet 상태를 올바르게 제어
         if (onMagnet)
         {
@@ -101,7 +112,9 @@ public class PlayerState : MonoBehaviour
             else
             {
                 onDeath = true;
-                uiManager.ShowGameOver();
+                Debug.Log("최종 점수: " + score + " | 최종 코인: " + coins);
+                uiManager.AnimateFinalStats(score, coins);
+                uiManager.ShowScoreBoardWindow();
                 Time.timeScale = 0f;
             }
         }
@@ -140,9 +153,16 @@ public class PlayerState : MonoBehaviour
     public void OnOffMagnet(bool om)
     {
         onMagnet = om;
-
+        currentEffectTime = 0f;
     }
 
+    public void ChangeScale(Vector3 setscals, bool setbool)
+    {
+        transform.localScale = setscals;
+        giant = setbool;
+        currentEffectTime = 0f;
+    }
+        
     // 슬라이더 업데이트
     private void UpdateHpSlider()
     {
@@ -159,6 +179,7 @@ public class PlayerState : MonoBehaviour
             waveSlider.value = wave;
         }
     }
+
 }
 
 
