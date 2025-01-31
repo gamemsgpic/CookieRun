@@ -64,17 +64,35 @@ public class MapManager : MonoBehaviour
         // 위치 설정
         if (activePrefabs.Count == 0)
         {
-            // 첫 번째 프리팹: StartMapPos 기준으로 배치
-            prefabToActivate.transform.position = startGroundRightPos.position;
+            // 첫 번째 프리팹: "LeftPivot"을 `startGroundRightPos`에 정확히 맞추기
+            Transform leftPivot = prefabToActivate.transform.Find("LeftPivot");
+            if (leftPivot != null)
+            {
+                Vector3 offset = startGroundRightPos.position - leftPivot.position;
+                prefabToActivate.transform.position += offset;
+            }
+            else
+            {
+                Debug.LogWarning("[MapManager] LeftPivot을 찾을 수 없습니다.");
+                prefabToActivate.transform.position = startGroundRightPos.position; // 기본 위치
+            }
         }
         else
         {
-            // 나머지 프리팹: 가장 오른쪽에 배치
+            // 나머지 프리팹: 마지막 프리팹의 "RightPivot"을 기준으로 배치
             GameObject lastActivePrefab = activePrefabs[activePrefabs.Count - 1];
             Transform rightPivot = lastActivePrefab.transform.Find("RightPivot");
+            Transform leftPivot = prefabToActivate.transform.Find("LeftPivot");
 
-            Vector3 offset = rightPivot.position - prefabToActivate.transform.Find("LeftPivot").position;
-            prefabToActivate.transform.position += offset;
+            if (rightPivot != null && leftPivot != null)
+            {
+                Vector3 offset = rightPivot.position - leftPivot.position;
+                prefabToActivate.transform.position += offset;
+            }
+            else
+            {
+                Debug.LogWarning("[MapManager] RightPivot 또는 LeftPivot을 찾을 수 없습니다.");
+            }
         }
 
         // 내부 자식 오브젝트 초기화
