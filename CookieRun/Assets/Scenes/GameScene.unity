@@ -3053,11 +3053,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   jumpCount: 2
   maxJumpCount: 2
-  jumpHeight: 7
+  jumpHeight: 8
   JumpSpeed: 30
-  deceleration: 220
-  startFallingSpeed: 8
-  fallingSpeed: 8
+  deceleration: 180
+  startFallingSpeed: 7
+  fallingSpeed: 7
   fallingWaitTime: 0.2
 --- !u!212 &861267945
 SpriteRenderer:
@@ -3238,7 +3238,7 @@ MonoBehaviour:
   magnetEffectTime: 0
   maxHp: 100
   upWave: 30
-  resurrection: 5
+  resurrection: 0
   uiManager: {fileID: 2119029743}
   hpSlider: {fileID: 296792550}
   waveSlider: {fileID: 617330717}

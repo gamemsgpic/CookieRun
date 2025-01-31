@@ -16,12 +16,13 @@ public class PlayerState : MonoBehaviour
     public float upWave = 30f;
     public float hp { get; set; }
     public float wave { get; private set; }
+    private int oneCall = 1;
     public int resurrection = 3;
     public int score { get; private set; }
     public int coins { get; private set; }
     public int currentWave { get; private set; } = 1;
     public bool onDeath { get; private set; } = false;
-    public Vector3 normalScale {  get; private set; }
+    public Vector3 normalScale { get; private set; }
     public UIManager uiManager;
     [SerializeField] private Slider hpSlider; // 인스펙터에서 슬라이더 연결
     [SerializeField] private Slider waveSlider; // 인스펙터에서 슬라이더 연결
@@ -116,9 +117,12 @@ public class PlayerState : MonoBehaviour
             {
                 onDeath = true;
                 Debug.Log("최종 점수: " + score + " | 최종 코인: " + coins);
-                uiManager.AnimateFinalStats(score, coins);
-                uiManager.ShowScoreBoardWindow();
                 Time.timeScale = 0f;
+                if (oneCall >= 1)
+                {
+                    uiManager.ShowScoreBoardWindow();
+                    oneCall--;
+                }
             }
         }
     }
