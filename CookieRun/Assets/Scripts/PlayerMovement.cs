@@ -12,6 +12,7 @@ public class PlayerMovement : MonoBehaviour
     public float deceleration = 20f;
     public float startFallingSpeed = 8f;
     public float fallingSpeed = 8f;
+    public float fallingPlus = 1f;
     public float fallingWaitTime = 0.2f;
     public bool isGrounded { get; private set; } = false;
     public bool isJumping { get; private set; } = false;
@@ -80,7 +81,7 @@ public class PlayerMovement : MonoBehaviour
             yield return new WaitForFixedUpdate();
         }
 
-        fallingSpeed += fallingSpeed + 0.5f * Time.deltaTime;
+        fallingSpeed += fallingSpeed + fallingPlus * Time.deltaTime;
         rb.velocity = Vector2.down * fallingSpeed;
         isJumping = false;
         currentJumpRoutine = null;

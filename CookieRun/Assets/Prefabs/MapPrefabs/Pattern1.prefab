@@ -450,7 +450,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5167474813277576234, guid: 3d85c32de763a174e81227a86b3b5151, type: 3}
       propertyPath: m_Name
-      value: Jelly (40)
+      value: Jelly
       objectReference: {fileID: 0}
     - target: {fileID: 7074479457313033380, guid: 3d85c32de763a174e81227a86b3b5151, type: 3}
       propertyPath: m_LocalPosition.x
@@ -698,7 +698,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5167474813277576234, guid: 3d85c32de763a174e81227a86b3b5151, type: 3}
       propertyPath: m_Name
-      value: Jelly (43)
+      value: Jelly (1)
       objectReference: {fileID: 0}
     - target: {fileID: 7074479457313033380, guid: 3d85c32de763a174e81227a86b3b5151, type: 3}
       propertyPath: m_LocalPosition.x
