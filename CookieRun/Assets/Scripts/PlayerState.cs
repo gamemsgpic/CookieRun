@@ -9,6 +9,7 @@ public class PlayerState : MonoBehaviour
     public float giantEffectTime = 0f;
     public float magnetEffectTime = 0f;
     public bool onMagnet { get; set; } = false;
+    public bool onAngelMagnet { get; set; } = false;
     public bool giant { get; private set; } = false;
     public bool invincibility { get; private set; } = false; // 무적 상태 여부
 
@@ -23,6 +24,9 @@ public class PlayerState : MonoBehaviour
     public int currentWave { get; private set; } = 1;
     public bool onDeath { get; private set; } = false;
     public Vector3 normalScale { get; private set; }
+    private float magnetRadius = 0f;
+    public float maxMagnetRadius = 6f;
+    public float angelMagnetRadius = 3f;
     public UIManager uiManager;
     [SerializeField] private Slider hpSlider; // 인스펙터에서 슬라이더 연결
     [SerializeField] private Slider waveSlider; // 인스펙터에서 슬라이더 연결
@@ -30,8 +34,16 @@ public class PlayerState : MonoBehaviour
     private void Start()
     {
         normalScale = transform.localScale;
-
-        OnOffMagnet(false);
+        magnetRadius = magnet.GetComponent<CircleCollider2D>().radius;
+        if (gameObject.name != "Angel")
+        {
+            OnOffMagnet(true, maxMagnetRadius, false);
+        }
+        else
+        {
+            magnet.SetActive(true);
+            OnOffMagnet(true, angelMagnetRadius, false);
+        }
         // HP 초기화
         hp = maxHp;
         wave = 0f;
@@ -65,20 +77,63 @@ public class PlayerState : MonoBehaviour
         }
 
         // [자석 아이템 효과 종료] onMagnet 상태를 올바르게 제어
-        if (onMagnet)
+        if (gameObject.name != "Angel")
         {
-            magnet.SetActive(true);
-            magnetEffectTime += Time.deltaTime;
-            if (magnetEffectTime >= itemEffectTime)
+            if (onMagnet)
             {
-                OnOffMagnet(false);
+                magnet.SetActive(true);
+                magnetEffectTime += Time.deltaTime;
+                if (magnetEffectTime >= itemEffectTime)
+                {
+                    OnOffMagnet(true, maxMagnetRadius, false);
+                }
+            }
+            else
+            {
+                magnet.SetActive(false);
+                magnetEffectTime = 0f; // 시간 초기화 (이전 시간이 누적되지 않도록)
             }
         }
         else
         {
-            magnet.SetActive(false);
-            magnetEffectTime = 0f; // 시간 초기화 (이전 시간이 누적되지 않도록)
+            if (onMagnet && onAngelMagnet)
+            {
+                if (!giant)
+                {
+                    magnet.SetActive(true);
+                    OnOffMagnet(true, maxMagnetRadius, true);
+                    magnetEffectTime += Time.deltaTime;
+                    if (magnetEffectTime >= itemEffectTime)
+                    {
+                        OnOffMagnet(true, angelMagnetRadius, false);
+                    }
+                }
+                else
+                {
+                    magnet.SetActive(true);
+                    OnOffMagnet(true, angelMagnetRadius * 0.5f, true);
+                    magnetEffectTime += Time.deltaTime;
+                    if (magnetEffectTime >= itemEffectTime)
+                    {
+                        OnOffMagnet(true, angelMagnetRadius * 0.5f, false);
+                    }
+                }
+            }
+            else
+            {
+                if (!giant)
+                {
+                    OnOffMagnet(true, angelMagnetRadius, false);
+                    magnetEffectTime = 0f;
+                }
+                else
+                {
+                    OnOffMagnet(true, angelMagnetRadius * 0.5f, false);
+                    magnetEffectTime = 0f;
+                }
+            }
         }
+
 
         // [웨이브 슬라이더가 빠르게 차는 문제 수정]
         if (currentWave <= 4)
@@ -157,10 +212,19 @@ public class PlayerState : MonoBehaviour
         coins += amount;
     }
 
-    public void OnOffMagnet(bool om)
+    public void OnOffMagnet(bool om, float radius, bool angelmagnet)
     {
-        onMagnet = om;
-        magnetEffectTime = 0f;
+        if (gameObject.name != "Angel")
+        {
+            onMagnet = om;
+            magnetEffectTime = 0f;
+        }
+        else
+        {
+            onMagnet = om;
+            magnet.GetComponent<CircleCollider2D>().radius = radius;
+            onAngelMagnet = angelmagnet;
+        }
     }
 
     public void ChangeScale(Vector3 setscals, bool setbool)

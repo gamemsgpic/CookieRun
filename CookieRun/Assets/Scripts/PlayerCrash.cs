@@ -75,7 +75,7 @@ public class PlayerCrash : MonoBehaviour
             {
                 if (collision.CompareTag("Magnet")) // 자석 아이템 태그 확인
                 {
-                    playerState.OnOffMagnet(item.onItmeEffect); // 자석 효과 활성화
+                    playerState.OnOffMagnet(item.onItmeEffect, playerState.maxMagnetRadius, true); // 자석 효과 활성화
                     ApplyItemEffect(item);
                 }
 
