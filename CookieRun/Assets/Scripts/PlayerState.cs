@@ -18,7 +18,7 @@ public class PlayerState : MonoBehaviour
     public float hp { get; set; }
     public float wave { get; private set; }
     private int oneCall = 1;
-    public int resurrection = 3;
+    public int resurrection = 0;
     public int score { get; private set; }
     public int coins { get; private set; }
     public int currentWave { get; private set; } = 1;
@@ -37,12 +37,22 @@ public class PlayerState : MonoBehaviour
         magnetRadius = magnet.GetComponent<CircleCollider2D>().radius;
         if (gameObject.name != "Angel")
         {
-            OnOffMagnet(true, maxMagnetRadius, false);
+            magnet.SetActive(false);
+            OnOffMagnet(false, maxMagnetRadius, false);
         }
         else
         {
             magnet.SetActive(true);
             OnOffMagnet(true, angelMagnetRadius, false);
+        }
+
+        if (gameObject.name == "Zombie")
+        {
+            resurrection = 2;
+        }
+        else
+        {
+            resurrection = 0;
         }
         // HP √ ±‚»≠
         hp = maxHp;
