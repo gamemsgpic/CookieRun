@@ -7,7 +7,6 @@ public class PlayerCrash : MonoBehaviour
     public UIManager uiManager;
     private PlayerState playerState;
 
-    private bool invincibility = false; // 무적 상태 여부
     private float inviStartTime = 0f;
     private float blinkStartTime = 0f;
     public float blinkEndTime = 0.1f;
@@ -34,7 +33,7 @@ public class PlayerCrash : MonoBehaviour
     private void Update()
     {
         // 무적 상태 처리
-        if (invincibility)
+        if (playerState.invincibility)
         {
             HandleInvincibility();
         }
@@ -45,9 +44,9 @@ public class PlayerCrash : MonoBehaviour
         if (!playerState.giant)
         {
 
-            if (!invincibility && collision.CompareTag("Trap"))
+            if (!playerState.invincibility && collision.CompareTag("Trap"))
             {
-                invincibility = true;
+                playerState.Oninvincibility(true);
                 playerState.MinusHp(damage);
             }
         }
@@ -157,7 +156,7 @@ public class PlayerCrash : MonoBehaviour
         if (inviStartTime > inviEndTime)
         {
             rbSprite.color = originalColor; // 원래 색상 복원
-            invincibility = false; // 무적 상태 종료
+            playerState.Oninvincibility(false); // 무적 상태 종료
             inviStartTime = 0f;
             blinkStartTime = 0f;
         }

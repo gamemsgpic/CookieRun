@@ -6,20 +6,23 @@ public class PlayerState : MonoBehaviour
 {
     public GameObject magnet;
     public float itemEffectTime = 3f;
-    public float currentEffectTime = 0f;
+    public float giantEffectTime = 0f;
+    public float magnetEffectTime = 0f;
     public bool onMagnet { get; set; } = false;
     public bool giant { get; private set; } = false;
+    public bool invincibility { get; private set; } = false; // 무적 상태 여부
 
     public float maxHp = 100f;
     public float upWave = 30f;
     public float hp { get; set; }
     public float wave { get; private set; }
+    private int oneCall = 1;
     public int resurrection = 3;
     public int score { get; private set; }
     public int coins { get; private set; }
     public int currentWave { get; private set; } = 1;
     public bool onDeath { get; private set; } = false;
-    public Vector3 normalScale {  get; private set; }
+    public Vector3 normalScale { get; private set; }
     public UIManager uiManager;
     [SerializeField] private Slider hpSlider; // 인스펙터에서 슬라이더 연결
     [SerializeField] private Slider waveSlider; // 인스펙터에서 슬라이더 연결
@@ -53,10 +56,11 @@ public class PlayerState : MonoBehaviour
     {
         if (giant)
         {
-            currentEffectTime += Time.deltaTime;
-            if (currentEffectTime >= itemEffectTime)
+            giantEffectTime += Time.deltaTime;
+            if (giantEffectTime >= itemEffectTime)
             {
                 ChangeScale(normalScale, false);
+                Oninvincibility(true);
             }
         }
 
@@ -64,8 +68,8 @@ public class PlayerState : MonoBehaviour
         if (onMagnet)
         {
             magnet.SetActive(true);
-            currentEffectTime += Time.deltaTime;
-            if (currentEffectTime >= itemEffectTime)
+            magnetEffectTime += Time.deltaTime;
+            if (magnetEffectTime >= itemEffectTime)
             {
                 OnOffMagnet(false);
             }
@@ -73,7 +77,7 @@ public class PlayerState : MonoBehaviour
         else
         {
             magnet.SetActive(false);
-            currentEffectTime = 0f; // 시간 초기화 (이전 시간이 누적되지 않도록)
+            magnetEffectTime = 0f; // 시간 초기화 (이전 시간이 누적되지 않도록)
         }
 
         // [웨이브 슬라이더가 빠르게 차는 문제 수정]
@@ -113,9 +117,12 @@ public class PlayerState : MonoBehaviour
             {
                 onDeath = true;
                 Debug.Log("최종 점수: " + score + " | 최종 코인: " + coins);
-                uiManager.AnimateFinalStats(score, coins);
-                uiManager.ShowScoreBoardWindow();
                 Time.timeScale = 0f;
+                if (oneCall >= 1)
+                {
+                    uiManager.ShowScoreBoardWindow();
+                    oneCall--;
+                }
             }
         }
     }
@@ -153,16 +160,21 @@ public class PlayerState : MonoBehaviour
     public void OnOffMagnet(bool om)
     {
         onMagnet = om;
-        currentEffectTime = 0f;
+        magnetEffectTime = 0f;
     }
 
     public void ChangeScale(Vector3 setscals, bool setbool)
     {
         transform.localScale = setscals;
         giant = setbool;
-        currentEffectTime = 0f;
+        giantEffectTime = 0f;
     }
-        
+
+    public void Oninvincibility(bool setinvi)
+    {
+        invincibility = setinvi;
+    }
+
     // 슬라이더 업데이트
     private void UpdateHpSlider()
     {
@@ -192,7 +204,7 @@ public class PlayerState : MonoBehaviour
 //{
 //    public GameObject magnet;
 //    public float itemEffectTime = 3f;
-//    public float currentEffectTime = 0f;
+//    public float magnetEffectTime = 0f;
 //    public bool onMagnet { get; set; } = false;
 //    private bool giant = false;
 
@@ -234,8 +246,8 @@ public class PlayerState : MonoBehaviour
 //    {
 //        if (onMagnet)
 //        {
-//            currentEffectTime += Time.deltaTime;
-//            if (currentEffectTime >= itemEffectTime)
+//            magnetEffectTime += Time.deltaTime;
+//            if (magnetEffectTime >= itemEffectTime)
 //            {
 //                OnOffMagnet(false);
 //            }
@@ -309,7 +321,7 @@ public class PlayerState : MonoBehaviour
 //    {
 //        magnet.SetActive(om);
 //        onMagnet = om;
-//        currentEffectTime = 0f;
+//        magnetEffectTime = 0f;
 
 //    }
 
