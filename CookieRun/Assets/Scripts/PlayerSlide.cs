@@ -24,8 +24,21 @@ public class PlayerSlide : MonoBehaviour
         animator = GetComponent<Animator>();
         normalSize = boxCollider2D.size;
         normalColliderOffset = boxCollider2D.offset;
-        slideSize = new Vector2(0.7f, 0.6f);
-        slideColliderOffset = new Vector2(0.16f, 0.44f);
+        if (gameObject.name == "Angel")
+        {
+            slideSize = new Vector2(0.7f, 0.6f);
+            slideColliderOffset = new Vector2(0.16f, 0.25f);
+        }
+        if (gameObject.name == "Brave")
+        {
+            slideSize = new Vector2(0.7f, 0.6f);
+            slideColliderOffset = new Vector2(0.16f, 0.25f);
+        }
+        if (gameObject.name == "Zombie")
+        {
+            slideSize = new Vector2(0.7f, 0.6f);
+            slideColliderOffset = new Vector2(0.16f, 0.25f);
+        }
     }
 
     private void Update()
