@@ -138,4 +138,4 @@ MonoBehaviour:
   onItmeEffect: 0
   plusHp: 0
   giantization: {x: 0, y: 0, z: 0}
-  moveDuration: 0.5
+  moveDuration: 0.3

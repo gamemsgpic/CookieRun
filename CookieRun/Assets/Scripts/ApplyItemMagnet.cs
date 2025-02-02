@@ -13,7 +13,7 @@ public class ApplyItemMagnet : MonoBehaviour
     private Transform targetTransform; // 목표 위치 (플레이어 Transform)
 
     private float currentTime = 0f;
-    public float moveDuration = 0.2f; // 이동 시간 (Lerp 속도)
+    public float moveDuration = 0.1f; // 이동 시간 (Lerp 속도)
 
     private Vector3 initialLocalPosition; // 아이템의 초기 로컬 위치
 

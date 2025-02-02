@@ -97,7 +97,7 @@ Animator:
   m_GameObject: {fileID: 5167474813277576234}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: eb22c7ac2e3c0bb4fb13b254ff30c78e, type: 2}
+  m_Controller: {fileID: 9100000, guid: 70bb5e360c2bdee4faae44aec6d9cdb8, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -160,4 +160,4 @@ MonoBehaviour:
   onItmeEffect: 1
   plusHp: 0
   giantization: {x: 0, y: 0, z: 0}
-  moveDuration: 0.5
+  moveDuration: 0.3

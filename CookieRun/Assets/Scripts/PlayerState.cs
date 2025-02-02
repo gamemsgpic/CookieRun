@@ -8,10 +8,14 @@ public class PlayerState : MonoBehaviour
     public float itemEffectTime = 3f;
     public float giantEffectTime = 0f;
     public float magnetEffectTime = 0f;
+    public float resurrectionWaitTime = 0f;
     public bool onMagnet { get; set; } = false;
     public bool onAngelMagnet { get; set; } = false;
+    public bool onNormalMagnet { get; set; } = false;
     public bool giant { get; private set; } = false;
     public bool invincibility { get; private set; } = false; // 무적 상태 여부
+    public bool DamageEffect { get; private set; } = false;
+    public bool resurrectionWait { get; private set; } = false;
 
     public float maxHp = 100f;
     public float upWave = 30f;
@@ -76,6 +80,18 @@ public class PlayerState : MonoBehaviour
 
     private void Update()
     {
+        if (resurrectionWait)
+        {
+            resurrectionWaitTime += Time.unscaledDeltaTime;
+            Time.timeScale = 0f;
+            if (resurrectionWaitTime >= 2f)
+            {
+                Time.timeScale = 1f;
+                resurrectionWaitTime = 0f;
+                resurrectionWait = false;
+            }
+        }
+
         if (giant)
         {
             giantEffectTime += Time.deltaTime;
@@ -87,24 +103,11 @@ public class PlayerState : MonoBehaviour
         }
 
         // [자석 아이템 효과 종료] onMagnet 상태를 올바르게 제어
-        if (gameObject.name != "Angel")
-        {
-            if (onMagnet)
-            {
-                magnet.SetActive(true);
-                magnetEffectTime += Time.deltaTime;
-                if (magnetEffectTime >= itemEffectTime)
-                {
-                    OnOffMagnet(true, maxMagnetRadius, false);
-                }
-            }
-            else
-            {
-                magnet.SetActive(false);
-                magnetEffectTime = 0f; // 시간 초기화 (이전 시간이 누적되지 않도록)
-            }
-        }
-        else
+
+
+
+
+        if (gameObject.name == "Angel")
         {
             if (onMagnet && onAngelMagnet)
             {
@@ -143,6 +146,37 @@ public class PlayerState : MonoBehaviour
                 }
             }
         }
+        else
+        {
+            if (onMagnet)
+            {
+                if (!giant)
+                {
+                    magnet.SetActive(true);
+                    ChangeMagnetSize(maxMagnetRadius);
+                    magnetEffectTime += Time.deltaTime;
+                    if (magnetEffectTime >= itemEffectTime)
+                    {
+                        magnet.SetActive(false);
+                        onMagnet = false;
+                        magnetEffectTime = 0f;
+                    }
+                }
+                else
+                {
+                    magnet.SetActive(true);
+                    ChangeMagnetSize(angelMagnetRadius * 0.5f);
+                    magnetEffectTime += Time.deltaTime;
+                    if (magnetEffectTime >= itemEffectTime)
+                    {
+                        magnet.SetActive(false);
+                        ChangeMagnetSize(maxMagnetRadius);
+                        onMagnet = false;
+                        magnetEffectTime = 0f;
+                    }
+                }
+            }
+        }
 
 
         // [웨이브 슬라이더가 빠르게 차는 문제 수정]
@@ -174,6 +208,7 @@ public class PlayerState : MonoBehaviour
             if (resurrection > 0)
             {
                 resurrection--;
+                ResurrectionWait(true);
                 hp = maxHp; // HP 완전 회복
                 UpdateHpSlider();
                 return; // 부활 후 추가적인 HP 감소 방지
@@ -192,7 +227,10 @@ public class PlayerState : MonoBehaviour
         }
     }
 
-
+    private void ResurrectionWait(bool wait)
+    {
+        resurrectionWait = wait;
+    }
 
     // HP 감소
     public void MinusHp(float amount)
@@ -207,6 +245,10 @@ public class PlayerState : MonoBehaviour
     public void PlusHp(float amount)
     {
         hp += amount;
+        if (hp > maxHp)
+        {
+            hp = maxHp;
+        }
         UpdateHpSlider();
     }
 
@@ -222,12 +264,17 @@ public class PlayerState : MonoBehaviour
         coins += amount;
     }
 
+    private void ChangeMagnetSize(float radius)
+    {
+        magnet.GetComponent<CircleCollider2D>().radius = radius;
+    }
+
     public void OnOffMagnet(bool om, float radius, bool angelmagnet)
     {
         if (gameObject.name != "Angel")
         {
             onMagnet = om;
-            magnetEffectTime = 0f;
+            magnet.GetComponent<CircleCollider2D>().radius = radius;
         }
         else
         {
@@ -247,6 +294,11 @@ public class PlayerState : MonoBehaviour
     public void Oninvincibility(bool setinvi)
     {
         invincibility = setinvi;
+    }
+
+    public void OnDamageEffect(bool damageeffect)
+    {
+        DamageEffect = damageeffect;
     }
 
     // 슬라이더 업데이트

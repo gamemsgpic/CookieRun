@@ -4,6 +4,7 @@ using UnityEngine.SocialPlatforms.Impl;
 public class PlayerCrash : MonoBehaviour
 {
     public UIManager uiManager;
+    public GameObject damageEffectPanel;
     private PlayerState playerState;
 
     private float inviStartTime = 0f;
@@ -12,6 +13,8 @@ public class PlayerCrash : MonoBehaviour
     public float blinkReEndTime = 0.2f;
     public float inviEndTime = 2.4f;
     public float damage = 5f;
+    private float damageEftStartTime = 0f;
+    public float damageEftEndTime = 0.2f;
     public Color color;
     public Color originalColor;
     private SpriteRenderer rbSprite;
@@ -21,7 +24,7 @@ public class PlayerCrash : MonoBehaviour
 
         playerState = GetComponent<PlayerState>();
         rbSprite = GetComponent<SpriteRenderer>();
-
+        damageEffectPanel.SetActive(false);
         if (playerState == null)
         {
             Debug.LogError("PlayerState가 연결되지 않았습니다.");
@@ -36,6 +39,11 @@ public class PlayerCrash : MonoBehaviour
         {
             HandleInvincibility();
         }
+
+        if (playerState.DamageEffect)
+        {
+            HandleDamageEffect();
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -46,6 +54,7 @@ public class PlayerCrash : MonoBehaviour
             if (!playerState.invincibility && collision.CompareTag("Trap"))
             {
                 playerState.Oninvincibility(true);
+                playerState.OnDamageEffect(true);
                 playerState.MinusHp(damage);
             }
         }
@@ -133,6 +142,31 @@ public class PlayerCrash : MonoBehaviour
 
 
     }
+
+    private void HandleDamageEffect()
+    {
+        damageEftStartTime += Time.unscaledDeltaTime;
+
+        if (damageEftStartTime < damageEftEndTime)
+        {
+            damageEffectPanel.SetActive(true);
+            Time.timeScale = 0;
+            Time.timeScale += Time.unscaledDeltaTime;
+        }
+        else
+        {
+            damageEffectPanel.SetActive(false);
+            Time.timeScale += Time.unscaledDeltaTime;
+        }
+
+        if (damageEftStartTime > damageEftEndTime * 5f)
+        {
+            playerState.OnDamageEffect(false);
+            Time.timeScale = 1;
+            damageEftStartTime = 0f;
+        }
+    }
+
 
     private void HandleInvincibility()
     {

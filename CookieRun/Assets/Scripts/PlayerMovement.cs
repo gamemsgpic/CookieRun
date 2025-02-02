@@ -80,11 +80,20 @@ public class PlayerMovement : MonoBehaviour
 
             yield return new WaitForFixedUpdate();
         }
-
-        fallingSpeed += fallingSpeed + fallingPlus * Time.deltaTime;
-        rb.velocity = Vector2.down * fallingSpeed;
-        isJumping = false;
-        currentJumpRoutine = null;
+        if (jumpCount == 1)
+        {
+            fallingSpeed += fallingSpeed * Time.deltaTime;
+            rb.velocity = Vector2.down * fallingSpeed * fallingPlus;
+            isJumping = false;
+            currentJumpRoutine = null;
+        }
+        else if (jumpCount <= 0)
+        {
+            fallingSpeed += fallingSpeed * Time.deltaTime;
+            rb.velocity = Vector2.down * fallingSpeed * (fallingPlus + fallingPlus);
+            isJumping = false;
+            currentJumpRoutine = null;
+        }
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
