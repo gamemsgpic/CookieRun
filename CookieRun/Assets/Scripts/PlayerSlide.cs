@@ -8,7 +8,7 @@ public class PlayerSlide : MonoBehaviour
     private PlayerMovement playerMovement;
     private PlayerState playerState;
     public UIManager uiManager;
-    private BoxCollider2D boxCollider2D;
+    private CapsuleCollider2D boxCollider2D;
     private Animator animator;
     private Vector2 normalSize;
     private Vector2 slideSize;
@@ -20,7 +20,7 @@ public class PlayerSlide : MonoBehaviour
     {
         playerMovement = GetComponent<PlayerMovement>();
         playerState = GetComponent<PlayerState>();
-        boxCollider2D = GetComponent<BoxCollider2D>();
+        boxCollider2D = GetComponent<CapsuleCollider2D>();
         animator = GetComponent<Animator>();
         normalSize = boxCollider2D.size;
         normalColliderOffset = boxCollider2D.offset;
@@ -62,26 +62,19 @@ public class PlayerSlide : MonoBehaviour
     public void OnSlideButtonDown()
     {
         Debug.Log("on");
-        if (!playerMovement.isJumping && !playerState.onDeath && !uiManager.pause)
+        if (playerMovement.isGrounded && !playerMovement.isJumping && !playerState.onDeath && !uiManager.pause)
         {
             isSlide = true;
-            Debug.Log("슬라이드 트루!");
             animator.SetBool("Slide", isSlide);
-            Debug.Log("슬라이드 애니메이션!");
             boxCollider2D.size = slideSize;
             boxCollider2D.offset = slideColliderOffset;
-            Debug.Log("원래 콜라이더!");
         }
     }
     public void OnSlideButtonUp()
     {
-        Debug.Log("off");
         isSlide = false;
-        Debug.Log("슬라이드 펄스!");
         animator.SetBool("Slide", isSlide);
-        Debug.Log("런 애니메이션!");
         boxCollider2D.size = normalSize;
         boxCollider2D.offset = normalColliderOffset;
-        Debug.Log("콜라이더 사이즈 변경");
     }
 }

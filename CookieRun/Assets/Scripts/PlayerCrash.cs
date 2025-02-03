@@ -66,7 +66,6 @@ public class PlayerCrash : MonoBehaviour
                 if (trapScript != null)
                 {
                     trapScript.LaunchTrap();
-                    Debug.Log("[디버그] 거인화 상태에서 트랩을 날림!");
                 }
                 else
                 {

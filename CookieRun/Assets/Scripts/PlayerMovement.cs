@@ -29,6 +29,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void Update()
     {
+        Debug.Log($"{gameObject.name}, 땅인지{isGrounded}, 점프중{isJumping}");
         // 점프 처리
         if (Input.GetKeyDown(KeyCode.Space) && jumpCount > 0)
         {
@@ -38,6 +39,14 @@ public class PlayerMovement : MonoBehaviour
                 ResetJumpState();
             }
             currentJumpRoutine = StartCoroutine(JumpRoutine());
+        }
+
+        if (!isGrounded && !isJumping)
+        {
+            fallingSpeed += fallingSpeed * Time.deltaTime;
+            rb.velocity = Vector2.down * fallingSpeed * (fallingPlus + fallingPlus);
+            isJumping = false;
+            currentJumpRoutine = null;
         }
     }
 

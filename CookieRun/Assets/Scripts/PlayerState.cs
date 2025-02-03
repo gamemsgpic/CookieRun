@@ -216,7 +216,6 @@ public class PlayerState : MonoBehaviour
             else
             {
                 onDeath = true;
-                Debug.Log("최종 점수: " + score + " | 최종 코인: " + coins);
                 Time.timeScale = 0f;
                 if (oneCall >= 1)
                 {

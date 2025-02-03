@@ -29,6 +29,7 @@ public class SelectCharacters : MonoBehaviour
 
     public void SelectAngel()
     {
+        Time.timeScale = 1f;
         characters[0].SetActive(true);
         characters[1].SetActive(false);
         characters[2].SetActive(false);
@@ -37,6 +38,7 @@ public class SelectCharacters : MonoBehaviour
 
     public void SelectBrave()
     {
+        Time.timeScale = 1f;
         characters[0].SetActive(false);
         characters[1].SetActive(true);
         characters[2].SetActive(false);
@@ -45,6 +47,7 @@ public class SelectCharacters : MonoBehaviour
 
     public void SelectZombie()
     {
+        Time.timeScale = 1f;
         characters[0].SetActive(false);
         characters[1].SetActive(false);
         characters[2].SetActive(true);
