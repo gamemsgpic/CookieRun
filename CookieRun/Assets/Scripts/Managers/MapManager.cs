@@ -57,37 +57,45 @@ public class MapManager : MonoBehaviour
         }
         else
         {
-            // 풀에 남아있는 오브젝트가 없으면 새로 생성
+            // 풀에 남은 오브젝트가 없으면 새로 생성
             prefabToActivate = Instantiate(selectedPrefab);
         }
 
-        // 위치 설정
+        // 오브젝트 풀에서 재사용하는 경우, 이전에 적용된 위치 정보를 초기화
+        // (프리팹의 기본 위치가 (0,0,0)이라 가정하거나, 별도의 초기 위치를 저장해두었다면 그 값을 사용)
+        prefabToActivate.transform.position = Vector3.zero;
+
+        // 프리팹 내부의 LeftPivot을 찾음 (이 값은 로컬 좌표임)
+        Transform leftPivot = prefabToActivate.transform.Find("LeftPivot");
+
         if (activePrefabs.Count == 0)
         {
-            // 첫 번째 프리팹: "LeftPivot"을 `startGroundRightPos`에 정확히 맞추기
-            Transform leftPivot = prefabToActivate.transform.Find("LeftPivot");
+            // 첫 번째 프리팹의 경우: startGroundRightPos의 위치에 맞춰 배치
             if (leftPivot != null)
             {
-                Vector3 offset = startGroundRightPos.position - leftPivot.position;
-                prefabToActivate.transform.position += offset;
+                // 새 프리팹의 LeftPivot이 startGroundRightPos와 일치하도록 위치 계산
+                // leftPivot.localPosition는 프리팹 내부의 로컬 좌표이므로, 이를 빼주면 올바른 월드 좌표가 계산됩니다.
+                Vector3 newPos = startGroundRightPos.position - leftPivot.localPosition;
+                prefabToActivate.transform.position = newPos;
             }
             else
             {
                 Debug.LogWarning("[MapManager] LeftPivot을 찾을 수 없습니다.");
-                prefabToActivate.transform.position = startGroundRightPos.position; // 기본 위치
+                prefabToActivate.transform.position = startGroundRightPos.position;
             }
         }
         else
         {
-            // 나머지 프리팹: 마지막 프리팹의 "RightPivot"을 기준으로 배치
+            // 두 번째 이후의 프리팹: 마지막 활성 프리팹의 RightPivot의 위치를 기준으로 배치
             GameObject lastActivePrefab = activePrefabs[activePrefabs.Count - 1];
             Transform rightPivot = lastActivePrefab.transform.Find("RightPivot");
-            Transform leftPivot = prefabToActivate.transform.Find("LeftPivot");
 
             if (rightPivot != null && leftPivot != null)
             {
-                Vector3 offset = rightPivot.position - leftPivot.position;
-                prefabToActivate.transform.position += offset;
+                // 마지막 프리팹의 RightPivot은 월드 좌표로 얻을 수 있으므로,
+                // 새 프리팹의 LeftPivot이 해당 위치와 일치하도록 배치합니다.
+                Vector3 newPos = rightPivot.position - leftPivot.localPosition;
+                prefabToActivate.transform.position = newPos;
             }
             else
             {
@@ -95,7 +103,7 @@ public class MapManager : MonoBehaviour
             }
         }
 
-        // 내부 자식 오브젝트 초기화
+        // 내부 자식 오브젝트 초기화 (예를 들어, ApplyItemMagnet 초기화)
         foreach (Transform child in prefabToActivate.transform)
         {
             var itemMagnet = child.GetComponent<ApplyItemMagnet>();
@@ -105,8 +113,9 @@ public class MapManager : MonoBehaviour
             }
         }
 
-        // 활성화 및 리스트 추가
+        // 프리팹 활성화 후 activePrefabs 리스트에 추가
         prefabToActivate.SetActive(true);
         activePrefabs.Add(prefabToActivate);
     }
+
 }

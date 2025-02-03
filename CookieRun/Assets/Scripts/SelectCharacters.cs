@@ -6,6 +6,7 @@ public class SelectCharacters : MonoBehaviour
 {
     public GameObject[] characters;
     public GameObject currentCharacter;
+    public UIManager uiManager;
 
     private void Start()
     {
@@ -29,29 +30,38 @@ public class SelectCharacters : MonoBehaviour
 
     public void SelectAngel()
     {
-        Time.timeScale = 1f;
-        characters[0].SetActive(true);
-        characters[1].SetActive(false);
-        characters[2].SetActive(false);
-        currentCharacter = characters[0];
+        if (!uiManager.pause)
+        {
+            Time.timeScale = 1f;
+            characters[0].SetActive(true);
+            characters[1].SetActive(false);
+            characters[2].SetActive(false);
+            currentCharacter = characters[0];
+        }
     }
 
     public void SelectBrave()
     {
-        Time.timeScale = 1f;
-        characters[0].SetActive(false);
-        characters[1].SetActive(true);
-        characters[2].SetActive(false);
-        currentCharacter = characters[1];
+        if (!uiManager.pause)
+        {
+            Time.timeScale = 1f;
+            characters[0].SetActive(false);
+            characters[1].SetActive(true);
+            characters[2].SetActive(false);
+            currentCharacter = characters[1];
+        }
     }
 
     public void SelectZombie()
     {
-        Time.timeScale = 1f;
-        characters[0].SetActive(false);
-        characters[1].SetActive(false);
-        characters[2].SetActive(true);
-        currentCharacter = characters[2];
+        if (!uiManager.pause)
+        {
+            Time.timeScale = 1f;
+            characters[0].SetActive(false);
+            characters[1].SetActive(false);
+            characters[2].SetActive(true);
+            currentCharacter = characters[2];
+        }
     }
 
     public void Jump()
