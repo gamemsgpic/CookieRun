@@ -315,8 +315,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 1056.1027, y: -136.42857}
-  m_SizeDelta: {x: 1912.2053, y: 0}
+  m_AnchoredPosition: {x: 1115.6086, y: -136.42857}
+  m_SizeDelta: {x: 2031.2173, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &58796458
 MonoBehaviour:
@@ -2757,7 +2757,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 208.21854, y: -50}
+  m_AnchoredPosition: {x: 220.11972, y: -50}
   m_SizeDelta: {x: 65.01, y: 0}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!114 &626167854
@@ -4680,6 +4680,7 @@ MonoBehaviour:
   - {fileID: 665385643}
   - {fileID: 920552770}
   currentCharacter: {fileID: 0}
+  uiManager: {fileID: 2119029743}
 --- !u!1 &1178137610
 GameObject:
   m_ObjectHideFlags: 0
@@ -5131,7 +5132,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 714.32117, y: -50}
+  m_AnchoredPosition: {x: 785.7284, y: -50}
   m_SizeDelta: {x: 65.01, y: 0}
   m_Pivot: {x: 1, y: 0.5}
 --- !u!114 &1261192704
@@ -5570,7 +5571,7 @@ MonoBehaviour:
   activePrefabs: []
   StartMapPos: {fileID: 1914284202}
   startGroundRightPos: {fileID: 1606968975}
-  maxActivePrefabs: 20
+  maxActivePrefabs: 5
 --- !u!4 &1395935400
 Transform:
   m_ObjectHideFlags: 0
@@ -8229,6 +8230,10 @@ PrefabInstance:
       propertyPath: waveSlider
       value: 
       objectReference: {fileID: 617330717}
+    - target: {fileID: 2331384255370031573, guid: 408cfe2c3b7fbc64ea5ab9bbf3c5fe59, type: 3}
+      propertyPath: m_GravityScale
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4713746603498425777, guid: 408cfe2c3b7fbc64ea5ab9bbf3c5fe59, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1.1856441
@@ -8395,6 +8400,10 @@ PrefabInstance:
       propertyPath: waveSlider
       value: 
       objectReference: {fileID: 617330717}
+    - target: {fileID: 2331384255370031573, guid: bc43d80b51e1e6f45bfe5addf2f36e39, type: 3}
+      propertyPath: m_GravityScale
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4713746603498425777, guid: bc43d80b51e1e6f45bfe5addf2f36e39, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1.2156444
