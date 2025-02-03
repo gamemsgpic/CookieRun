@@ -40,14 +40,6 @@ public class PlayerMovement : MonoBehaviour
             }
             currentJumpRoutine = StartCoroutine(JumpRoutine());
         }
-
-        if (!isGrounded && !isJumping)
-        {
-            fallingSpeed += fallingSpeed * Time.deltaTime;
-            rb.velocity = Vector2.down * fallingSpeed * (fallingPlus + fallingPlus);
-            isJumping = false;
-            currentJumpRoutine = null;
-        }
     }
 
     public void ButtonJump()

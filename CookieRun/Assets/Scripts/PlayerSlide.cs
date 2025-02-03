@@ -8,7 +8,8 @@ public class PlayerSlide : MonoBehaviour
     private PlayerMovement playerMovement;
     private PlayerState playerState;
     public UIManager uiManager;
-    private CapsuleCollider2D boxCollider2D;
+    private BoxCollider2D boxCollider2D;
+    private CapsuleCollider2D capsuleCollider2D;
     private Animator animator;
     private Vector2 normalSize;
     private Vector2 slideSize;
@@ -20,7 +21,8 @@ public class PlayerSlide : MonoBehaviour
     {
         playerMovement = GetComponent<PlayerMovement>();
         playerState = GetComponent<PlayerState>();
-        boxCollider2D = GetComponent<CapsuleCollider2D>();
+        boxCollider2D = GetComponent<BoxCollider2D>();
+        capsuleCollider2D = GetComponent<CapsuleCollider2D>();
         animator = GetComponent<Animator>();
         normalSize = boxCollider2D.size;
         normalColliderOffset = boxCollider2D.offset;
@@ -57,6 +59,7 @@ public class PlayerSlide : MonoBehaviour
         //    boxCollider2D.size = normalSize;
         //    boxCollider2D.offset = normalColliderOffset;
         //}
+
     }
 
     public void OnSlideButtonDown()
