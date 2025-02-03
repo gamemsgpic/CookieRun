@@ -29,7 +29,6 @@ public class PlayerMovement : MonoBehaviour
 
     private void Update()
     {
-        Debug.Log($"{gameObject.name}, 땅인지{isGrounded}, 점프중{isJumping}");
         // 점프 처리
         if (Input.GetKeyDown(KeyCode.Space) && jumpCount > 0)
         {
@@ -40,6 +39,32 @@ public class PlayerMovement : MonoBehaviour
             }
             currentJumpRoutine = StartCoroutine(JumpRoutine());
         }
+
+        float rayLength = 0.2f;
+        Vector2 rayOrigin = new Vector2(transform.position.x, transform.position.y - 0.5f);
+        RaycastHit2D hit = Physics2D.Raycast(rayOrigin, Vector2.down, rayLength, LayerMask.GetMask("Ground"));
+
+        if (hit.collider != null)
+        {
+            isGrounded = true;
+            //Debug.DrawRay(rayOrigin, Vector2.down * rayLength, Color.green);
+            //Debug.Log("[PlayerMovement] Raycast로 땅 감지 성공!");
+        }
+        else
+        {
+            isGrounded = false;
+            //Debug.DrawRay(rayOrigin, Vector2.down * rayLength, Color.red);
+            //Debug.Log("[PlayerMovement] Raycast로 땅 감지 실패...");
+        }
+
+        if (!isGrounded && !isJumping)
+        {
+            rb.gravityScale = 3f;
+        }
+        else
+        {
+            rb.gravityScale = 1f;
+        }    
     }
 
     public void ButtonJump()
@@ -99,9 +124,12 @@ public class PlayerMovement : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
+        //Debug.Log($"[PlayerMovement] 충돌 감지: {collision.gameObject.name}");
         if (collision.gameObject.CompareTag("Ground"))
         {
+            //Debug.Log("[PlayerMovement] 땅과 충돌: isGrounded = true");
             isGrounded = true;
+            isJumping = false;
             jumpCount = maxJumpCount;
             fallingSpeed = startFallingSpeed;
             ResetJumpState();

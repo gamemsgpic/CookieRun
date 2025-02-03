@@ -26,21 +26,11 @@ public class PlayerSlide : MonoBehaviour
         animator = GetComponent<Animator>();
         normalSize = boxCollider2D.size;
         normalColliderOffset = boxCollider2D.offset;
-        if (gameObject.name == "Angel")
-        {
-            slideSize = new Vector2(0.7f, 0.6f);
-            slideColliderOffset = new Vector2(0.16f, 0.25f);
-        }
-        if (gameObject.name == "Brave")
-        {
-            slideSize = new Vector2(0.7f, 0.6f);
-            slideColliderOffset = new Vector2(0.16f, 0.25f);
-        }
-        if (gameObject.name == "Zombie")
-        {
-            slideSize = new Vector2(0.7f, 0.6f);
-            slideColliderOffset = new Vector2(0.16f, 0.25f);
-        }
+
+        slideSize = new Vector2(0.7f, 0.6f);
+        slideColliderOffset = new Vector2(0f, 0.25f);
+
+
     }
 
     private void Update()
@@ -64,13 +54,20 @@ public class PlayerSlide : MonoBehaviour
 
     public void OnSlideButtonDown()
     {
-        Debug.Log("on");
-        if (playerMovement.isGrounded && !playerMovement.isJumping && !playerState.onDeath && !uiManager.pause)
+        if (playerMovement.isGrounded && !playerState.onDeath && !uiManager.pause)
         {
             isSlide = true;
             animator.SetBool("Slide", isSlide);
-            boxCollider2D.size = slideSize;
-            boxCollider2D.offset = slideColliderOffset;
+            if (!playerState.giant)
+            {
+                boxCollider2D.size = slideSize;
+                boxCollider2D.offset = slideColliderOffset;
+            }
+            else
+            {
+                boxCollider2D.size = normalSize;
+                boxCollider2D.offset = normalColliderOffset;
+            }
         }
     }
     public void OnSlideButtonUp()

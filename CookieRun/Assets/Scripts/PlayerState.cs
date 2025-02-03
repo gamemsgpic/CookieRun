@@ -215,7 +215,7 @@ public class PlayerState : MonoBehaviour
             }
             else
             {
-                onDeath = true;
+                SetOnDeath(true);
                 Time.timeScale = 0f;
                 if (oneCall >= 1)
                 {
@@ -249,6 +249,11 @@ public class PlayerState : MonoBehaviour
             hp = maxHp;
         }
         UpdateHpSlider();
+    }
+
+    public void SetOnDeath(bool death)
+    {
+        onDeath = death;
     }
 
     // 점수 증가

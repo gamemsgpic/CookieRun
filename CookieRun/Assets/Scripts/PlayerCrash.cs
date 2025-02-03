@@ -116,6 +116,12 @@ public class PlayerCrash : MonoBehaviour
                 //}
             }
         }
+
+        if (collision.CompareTag("DeadZone"))
+        {
+            playerState.SetOnDeath(true);
+            uiManager.ShowScoreBoardWindow();
+        }
     }
 
 
