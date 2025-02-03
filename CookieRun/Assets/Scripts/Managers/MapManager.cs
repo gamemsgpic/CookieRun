@@ -116,10 +116,7 @@ public class MapManager : MonoBehaviour
         pendingAdjustmentPrefab = prefabToActivate;
     }
 
-    /// <summary>
-    /// 모든 Update 호출이 끝난 후 보정 처리.
-    /// (코루틴 대신 LateUpdate를 활용)
-    /// </summary>
+    // 업데이트 이후에 한번 더 위치보정
     void LateUpdate()
     {
         if (pendingAdjustmentPrefab != null)
