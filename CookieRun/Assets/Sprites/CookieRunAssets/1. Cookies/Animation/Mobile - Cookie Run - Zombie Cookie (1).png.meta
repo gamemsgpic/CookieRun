@@ -110,27 +110,6 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Mobile - Cookie Run - Zombie Cookie (1)_0
-      rect:
-        serializedVersion: 2
-        x: 95
-        y: 1743
-        width: 14
-        height: 13
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f93672dc5acd4b94ba9fbd7e87927df4
-      internalID: 1008299241
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: Mobile - Cookie Run - Zombie Cookie (1)_1
       rect:
         serializedVersion: 2
@@ -257,27 +236,6 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Mobile - Cookie Run - Zombie Cookie (1)_7
-      rect:
-        serializedVersion: 2
-        x: 3354
-        y: 1731
-        width: 11
-        height: 16
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 54fb65ea252e9b1498b2b3257a3b18b5
-      internalID: 1032792193
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: Mobile - Cookie Run - Zombie Cookie (1)_8
       rect:
         serializedVersion: 2
@@ -362,55 +320,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Mobile - Cookie Run - Zombie Cookie (1)_12
-      rect:
-        serializedVersion: 2
-        x: 2687
-        y: 1707
-        width: 7
-        height: 7
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b3e54f64401e92c489679ea65a9f6b52
-      internalID: 1453743582
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Mobile - Cookie Run - Zombie Cookie (1)_13
-      rect:
-        serializedVersion: 2
-        x: 2990
-        y: 1702
-        width: 8
-        height: 7
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ab7e092e5012ac846a939d184d6b600e
-      internalID: -1530082787
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: Mobile - Cookie Run - Zombie Cookie (1)_14
       rect:
         serializedVersion: 2
         x: 3314
         y: 1614
-        width: 129
-        height: 127
+        width: 137
+        height: 133
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -431,7 +347,7 @@ TextureImporter:
         x: 2630
         y: 1614
         width: 183
-        height: 90
+        height: 99
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -452,7 +368,7 @@ TextureImporter:
         x: 2952
         y: 1614
         width: 182
-        height: 90
+        height: 95
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -462,27 +378,6 @@ TextureImporter:
       bones: []
       spriteID: baedb5bec063bc145b04193b25814a2f
       internalID: 2130497048
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Mobile - Cookie Run - Zombie Cookie (1)_17
-      rect:
-        serializedVersion: 2
-        x: 3443
-        y: 1664
-        width: 9
-        height: 12
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b6b3543f9d8257541b1f0cbf06b32eb2
-      internalID: -408771037
       vertices: []
       indices: 
       edges: []
@@ -572,33 +467,12 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Mobile - Cookie Run - Zombie Cookie (1)_22
-      rect:
-        serializedVersion: 2
-        x: 1364
-        y: 1397
-        width: 11
-        height: 9
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e29df9238ad8c1941b6966162dfd7434
-      internalID: -1877305031
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: Mobile - Cookie Run - Zombie Cookie (1)_23
       rect:
         serializedVersion: 2
-        x: 1376
+        x: 1320
         y: 1289
-        width: 140
+        width: 196
         height: 149
       alignment: 7
       pivot: {x: 0.5, y: 0}
@@ -617,9 +491,9 @@ TextureImporter:
       name: Mobile - Cookie Run - Zombie Cookie (1)_24
       rect:
         serializedVersion: 2
-        x: 1685
+        x: 1661
         y: 1289
-        width: 148
+        width: 172
         height: 154
       alignment: 7
       pivot: {x: 0.5, y: 0}
@@ -635,33 +509,12 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Mobile - Cookie Run - Zombie Cookie (1)_25
-      rect:
-        serializedVersion: 2
-        x: 2011
-        y: 1397
-        width: 9
-        height: 9
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 62157b064b5181e4cbcfc29b7aef28d2
-      internalID: 1825075953
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: Mobile - Cookie Run - Zombie Cookie (1)_26
       rect:
         serializedVersion: 2
-        x: 2021
+        x: 1969
         y: 1292
-        width: 135
+        width: 187
         height: 146
       alignment: 7
       pivot: {x: 0.5, y: 0}
@@ -693,153 +546,6 @@ TextureImporter:
       bones: []
       spriteID: 6c34929ddb14b8c42897536d66047a2c
       internalID: 1243531767
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Mobile - Cookie Run - Zombie Cookie (1)_28
-      rect:
-        serializedVersion: 2
-        x: 1318
-        y: 1356
-        width: 13
-        height: 11
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ed1f3600d5d56f144b717cb8e8f95fd9
-      internalID: 670444641
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Mobile - Cookie Run - Zombie Cookie (1)_29
-      rect:
-        serializedVersion: 2
-        x: 1660
-        y: 1361
-        width: 13
-        height: 9
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8f8be362d1eea2b4da81b6a89c45314d
-      internalID: -656366283
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Mobile - Cookie Run - Zombie Cookie (1)_30
-      rect:
-        serializedVersion: 2
-        x: 1999
-        y: 1348
-        width: 15
-        height: 14
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 85e24fbc63e218148b0d2998f77a5acd
-      internalID: -1857341559
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Mobile - Cookie Run - Zombie Cookie (1)_31
-      rect:
-        serializedVersion: 2
-        x: 1344
-        y: 1340
-        width: 17
-        height: 8
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 92b95124126177c42bbd989c17a810df
-      internalID: -1305397521
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Mobile - Cookie Run - Zombie Cookie (1)_32
-      rect:
-        serializedVersion: 2
-        x: 1967
-        y: 1336
-        width: 12
-        height: 12
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a65cf992a756da84aaf48740c0455ee8
-      internalID: -1432596378
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Mobile - Cookie Run - Zombie Cookie (1)_33
-      rect:
-        serializedVersion: 2
-        x: 1468
-        y: 1110
-        width: 28
-        height: 39
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 699c38df4d7a55646a2f9ffd9b10630c
-      internalID: -1350813523
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Mobile - Cookie Run - Zombie Cookie (1)_34
-      rect:
-        serializedVersion: 2
-        x: 1778
-        y: 1131
-        width: 38
-        height: 47
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 07ef8863d723efd489451d0dab57fcb6
-      internalID: 1695359111
       vertices: []
       indices: 
       edges: []
@@ -913,7 +619,7 @@ TextureImporter:
         serializedVersion: 2
         x: 765
         y: 972
-        width: 88
+        width: 100
         height: 148
       alignment: 7
       pivot: {x: 0.5, y: 0}
@@ -932,9 +638,9 @@ TextureImporter:
       name: Mobile - Cookie Run - Zombie Cookie (1)_39
       rect:
         serializedVersion: 2
-        x: 1081
+        x: 1072
         y: 968
-        width: 119
+        width: 141
         height: 159
       alignment: 7
       pivot: {x: 0.5, y: 0}
@@ -953,10 +659,10 @@ TextureImporter:
       name: Mobile - Cookie Run - Zombie Cookie (1)_40
       rect:
         serializedVersion: 2
-        x: 1376
+        x: 1369
         y: 969
-        width: 126
-        height: 156
+        width: 184
+        height: 179
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -971,34 +677,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Mobile - Cookie Run - Zombie Cookie (1)_41
-      rect:
-        serializedVersion: 2
-        x: 1703
-        y: 1109
-        width: 10
-        height: 15
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6daf877ac9a184c4fb72fa867f3a46de
-      internalID: -1099525418
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: Mobile - Cookie Run - Zombie Cookie (1)_42
       rect:
         serializedVersion: 2
-        x: 1712
+        x: 1667
         y: 967
-        width: 109
-        height: 159
+        width: 207
+        height: 210
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1008,27 +693,6 @@ TextureImporter:
       bones: []
       spriteID: f196e53c950dc9640996338503906c96
       internalID: -1128912870
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Mobile - Cookie Run - Zombie Cookie (1)_43
-      rect:
-        serializedVersion: 2
-        x: 1822
-        y: 1081
-        width: 12
-        height: 32
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5d096bf20f9517048a2d81b5ec39ae38
-      internalID: 1480360463
       vertices: []
       indices: 
       edges: []
@@ -1055,69 +719,6 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Mobile - Cookie Run - Zombie Cookie (1)_45
-      rect:
-        serializedVersion: 2
-        x: 1193
-        y: 1044
-        width: 23
-        height: 21
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3759b7c77b7f1b84eb428713597b6508
-      internalID: -849461037
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Mobile - Cookie Run - Zombie Cookie (1)_46
-      rect:
-        serializedVersion: 2
-        x: 1515
-        y: 1061
-        width: 38
-        height: 24
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0d87dba167af44d4eaa1352039a7a731
-      internalID: -1438810989
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Mobile - Cookie Run - Zombie Cookie (1)_47
-      rect:
-        serializedVersion: 2
-        x: 1665
-        y: 1021
-        width: 47
-        height: 68
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 456e9ca448e4f3c4fa5dfceebe89cabd
-      internalID: 29533896
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: Mobile - Cookie Run - Zombie Cookie (1)_48
       rect:
         serializedVersion: 2
@@ -1134,111 +735,6 @@ TextureImporter:
       bones: []
       spriteID: 89d16092bd7438f4cb90cb058bdb4257
       internalID: -1021538873
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Mobile - Cookie Run - Zombie Cookie (1)_49
-      rect:
-        serializedVersion: 2
-        x: 851
-        y: 1027
-        width: 13
-        height: 17
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7042a6d54e82b8745a47360425544dfe
-      internalID: -2048322484
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Mobile - Cookie Run - Zombie Cookie (1)_50
-      rect:
-        serializedVersion: 2
-        x: 1836
-        y: 988
-        width: 39
-        height: 47
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ea14b9778e89d41439f4ad861e98a4fc
-      internalID: 373325904
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Mobile - Cookie Run - Zombie Cookie (1)_51
-      rect:
-        serializedVersion: 2
-        x: 1069
-        y: 976
-        width: 25
-        height: 29
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 96109a9b6fd22a74fac55f09e78e3ba8
-      internalID: 1381166006
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Mobile - Cookie Run - Zombie Cookie (1)_52
-      rect:
-        serializedVersion: 2
-        x: 1369
-        y: 1000
-        width: 14
-        height: 12
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a054af735f179bf48a1a70353719ac18
-      internalID: -1241351372
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Mobile - Cookie Run - Zombie Cookie (1)_53
-      rect:
-        serializedVersion: 2
-        x: 1509
-        y: 1000
-        width: 30
-        height: 25
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: eb6a2a9da76e4744aaccfae69c5a8491
-      internalID: 158442247
       vertices: []
       indices: 
       edges: []
@@ -1559,54 +1055,12 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Mobile - Cookie Run - Zombie Cookie (1)_69
-      rect:
-        serializedVersion: 2
-        x: 178
-        y: 423
-        width: 53
-        height: 87
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5fe41da3b9864db43b18f6b99a7ce7a4
-      internalID: -475477068
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Mobile - Cookie Run - Zombie Cookie (1)_70
-      rect:
-        serializedVersion: 2
-        x: 464
-        y: 482
-        width: 85
-        height: 48
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8e92fc0e3d066e947b1bfcff1e231a62
-      internalID: 1372309417
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: Mobile - Cookie Run - Zombie Cookie (1)_71
       rect:
         serializedVersion: 2
         x: 745
         y: 325
-        width: 113
+        width: 135
         height: 164
       alignment: 7
       pivot: {x: 0.5, y: 0}
@@ -1628,7 +1082,7 @@ TextureImporter:
         x: 99
         y: 329
         width: 155
-        height: 139
+        height: 180
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1648,8 +1102,8 @@ TextureImporter:
         serializedVersion: 2
         x: 417
         y: 336
-        width: 123
-        height: 139
+        width: 153
+        height: 194
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1659,48 +1113,6 @@ TextureImporter:
       bones: []
       spriteID: 57c0d5e594452dd47827bd53b78125d8
       internalID: -1162073048
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Mobile - Cookie Run - Zombie Cookie (1)_74
-      rect:
-        serializedVersion: 2
-        x: 530
-        y: 409
-        width: 43
-        height: 35
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5ae57c3f51fb5974caec4f960773c8bc
-      internalID: 1486817112
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Mobile - Cookie Run - Zombie Cookie (1)_75
-      rect:
-        serializedVersion: 2
-        x: 835
-        y: 416
-        width: 46
-        height: 27
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f528892e525b58440b3f53ac196ee470
-      internalID: -1133308057
       vertices: []
       indices: 
       edges: []
@@ -1790,48 +1202,6 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Mobile - Cookie Run - Zombie Cookie (1)_80
-      rect:
-        serializedVersion: 2
-        x: 854
-        y: 402
-        width: 17
-        height: 13
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 011a8e27f4f23c544bb20005829c859b
-      internalID: 467851859
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Mobile - Cookie Run - Zombie Cookie (1)_81
-      rect:
-        serializedVersion: 2
-        x: 844
-        y: 362
-        width: 32
-        height: 39
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2fbb347e06a0d4149b3e27f3936523c3
-      internalID: -890056602
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: Mobile - Cookie Run - Zombie Cookie (1)_82
       rect:
         serializedVersion: 2
@@ -1895,33 +1265,12 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Mobile - Cookie Run - Zombie Cookie (1)_85
-      rect:
-        serializedVersion: 2
-        x: 92
-        y: 187
-        width: 14
-        height: 13
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d7599f7bd0c0e6a40ae970637b3141b2
-      internalID: -364283741
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: Mobile - Cookie Run - Zombie Cookie (1)_86
       rect:
         serializedVersion: 2
-        x: 94
+        x: 93
         y: 61
-        width: 124
+        width: 125
         height: 158
       alignment: 7
       pivot: {x: 0.5, y: 0}
@@ -1979,27 +1328,6 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Mobile - Cookie Run - Zombie Cookie (1)_89
-      rect:
-        serializedVersion: 2
-        x: 1144
-        y: 106
-        width: 53
-        height: 87
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4c95ceb20bc46b84397153682e5964f0
-      internalID: 650285529
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: Mobile - Cookie Run - Zombie Cookie (1)_90
       rect:
         serializedVersion: 2
@@ -2027,7 +1355,7 @@ TextureImporter:
         x: 1065
         y: 11
         width: 155
-        height: 138
+        height: 181
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}

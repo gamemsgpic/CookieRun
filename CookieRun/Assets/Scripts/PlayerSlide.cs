@@ -32,13 +32,6 @@ public class PlayerSlide : MonoBehaviour
         slideSize = new Vector2(0.7f, 0.6f);
         slideColliderOffset = new Vector2(0f, 0.25f);
 
-        if (gameObject.name == "Angel")
-        {
-            slideSize = new Vector2(0.7f, 0.6f);
-            slideColliderOffset = new Vector2(0f, 0.75f);
-        }
-
-
     }
 
     private void Update()

@@ -54,6 +54,7 @@ public class PlayerCrash : MonoBehaviour
 
             if (!playerItemEffcts.invincibility && collision.CompareTag("Trap"))
             {
+                playerState.PlayHitAni();
                 playerState.Oninvincibility(true);
                 playerItemEffcts.OnDamageEffect(true);
                 playerState.MinusHp(damage);
@@ -122,6 +123,7 @@ public class PlayerCrash : MonoBehaviour
         {
             playerState.SetOnDeath(true);
             uiManager.ShowScoreBoardWindow();
+            Time.timeScale = 0f;
         }
     }
 
@@ -152,32 +154,35 @@ public class PlayerCrash : MonoBehaviour
     private void HandleDamageEffect()
     {
         damageEftStartTime += Time.unscaledDeltaTime;
+        if (!playerState.onDeath)
+        {
 
-        if (damageEftStartTime < damageEftEndTime)
-        {
-            damageEffectPanel.SetActive(true);
-            Time.timeScale = 0;
-            Time.timeScale += Time.unscaledDeltaTime;
-        }
-        else
-        {
-            damageEffectPanel.SetActive(false);
-            Time.timeScale += Time.unscaledDeltaTime;
-        }
+            if (damageEftStartTime < damageEftEndTime)
+            {
+                damageEffectPanel.SetActive(true);
+                Time.timeScale = 0;
+                Time.timeScale += Time.unscaledDeltaTime;
+            }
+            else
+            {
+                damageEffectPanel.SetActive(false);
+                Time.timeScale += Time.unscaledDeltaTime;
+            }
 
-        if (damageEftStartTime > damageEftEndTime * 5f)
-        {
-            playerState.OnDamageEffect(false);
-            Time.timeScale = 1;
-            damageEftStartTime = 0f;
+            if (damageEftStartTime > damageEftEndTime * 5f)
+            {
+                playerState.OnDamageEffect(false);
+                Time.timeScale = playerState.timeScale;
+                damageEftStartTime = 0f;
+            }
         }
     }
 
 
     private void HandleInvincibility()
     {
-        inviStartTime += Time.deltaTime;
-        blinkStartTime += Time.deltaTime;
+        inviStartTime += Time.unscaledDeltaTime;
+        blinkStartTime += Time.unscaledDeltaTime;
 
         if (blinkStartTime < blinkEndTime)
         {

@@ -315,8 +315,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 1251.6246, y: -140.021}
-  m_SizeDelta: {x: 2303.2493, y: 0}
+  m_AnchoredPosition: {x: 1036.9619, y: -140.021}
+  m_SizeDelta: {x: 1873.9238, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &58796458
 MonoBehaviour:
@@ -2647,7 +2647,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 247.32292, y: -50}
+  m_AnchoredPosition: {x: 204.39038, y: -50}
   m_SizeDelta: {x: 65.01, y: 0}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!114 &626167854
@@ -2687,7 +2687,7 @@ MonoBehaviour:
   m_text: 0
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 264c7bccd3828e14e9cd75d9af1f0397, type: 2}
-  m_sharedMaterial: {fileID: -3741313030167739456, guid: 264c7bccd3828e14e9cd75d9af1f0397, type: 2}
+  m_sharedMaterial: {fileID: 824574461090548039, guid: 264c7bccd3828e14e9cd75d9af1f0397, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -5022,7 +5022,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 948.9475, y: -50}
+  m_AnchoredPosition: {x: 691.3523, y: -50}
   m_SizeDelta: {x: 65.01, y: 0}
   m_Pivot: {x: 1, y: 0.5}
 --- !u!114 &1261192704
@@ -5048,7 +5048,7 @@ MonoBehaviour:
   m_text: 0
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 264c7bccd3828e14e9cd75d9af1f0397, type: 2}
-  m_sharedMaterial: {fileID: -3741313030167739456, guid: 264c7bccd3828e14e9cd75d9af1f0397, type: 2}
+  m_sharedMaterial: {fileID: 824574461090548039, guid: 264c7bccd3828e14e9cd75d9af1f0397, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -5280,7 +5280,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &1307278704
@@ -6830,7 +6830,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &1837459558
@@ -8198,10 +8198,6 @@ PrefabInstance:
       propertyPath: waveSlider
       value: 
       objectReference: {fileID: 617330717}
-    - target: {fileID: 2331384255370031573, guid: 408cfe2c3b7fbc64ea5ab9bbf3c5fe59, type: 3}
-      propertyPath: m_GravityScale
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 4713746603498425777, guid: 408cfe2c3b7fbc64ea5ab9bbf3c5fe59, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1.1856441
@@ -8242,33 +8238,9 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6397256138029828092, guid: 408cfe2c3b7fbc64ea5ab9bbf3c5fe59, type: 3}
-      propertyPath: JumpSpeed
-      value: 22
-      objectReference: {fileID: 0}
-    - target: {fileID: 6397256138029828092, guid: 408cfe2c3b7fbc64ea5ab9bbf3c5fe59, type: 3}
-      propertyPath: fallingPlus
-      value: 1.7
-      objectReference: {fileID: 0}
-    - target: {fileID: 6397256138029828092, guid: 408cfe2c3b7fbc64ea5ab9bbf3c5fe59, type: 3}
-      propertyPath: deceleration
-      value: 90
-      objectReference: {fileID: 0}
-    - target: {fileID: 6397256138029828092, guid: 408cfe2c3b7fbc64ea5ab9bbf3c5fe59, type: 3}
-      propertyPath: fallingSpeed
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 6397256138029828092, guid: 408cfe2c3b7fbc64ea5ab9bbf3c5fe59, type: 3}
-      propertyPath: startFallingSpeed
-      value: 6
-      objectReference: {fileID: 0}
     - target: {fileID: 7305268901531569200, guid: 408cfe2c3b7fbc64ea5ab9bbf3c5fe59, type: 3}
       propertyPath: m_Name
       value: Brave
-      objectReference: {fileID: 0}
-    - target: {fileID: 7305268901531569200, guid: 408cfe2c3b7fbc64ea5ab9bbf3c5fe59, type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8786415577939217991, guid: 408cfe2c3b7fbc64ea5ab9bbf3c5fe59, type: 3}
       propertyPath: uiManager
@@ -8347,26 +8319,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6397256138029828092, guid: 1127ee61c1e64124fb028e1ab6ac7349, type: 3}
-      propertyPath: JumpSpeed
-      value: 22
-      objectReference: {fileID: 0}
-    - target: {fileID: 6397256138029828092, guid: 1127ee61c1e64124fb028e1ab6ac7349, type: 3}
-      propertyPath: fallingPlus
-      value: 1.7
-      objectReference: {fileID: 0}
-    - target: {fileID: 6397256138029828092, guid: 1127ee61c1e64124fb028e1ab6ac7349, type: 3}
-      propertyPath: deceleration
-      value: 90
-      objectReference: {fileID: 0}
-    - target: {fileID: 6397256138029828092, guid: 1127ee61c1e64124fb028e1ab6ac7349, type: 3}
-      propertyPath: fallingSpeed
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 6397256138029828092, guid: 1127ee61c1e64124fb028e1ab6ac7349, type: 3}
-      propertyPath: startFallingSpeed
-      value: 6
-      objectReference: {fileID: 0}
     - target: {fileID: 7305268901531569200, guid: 1127ee61c1e64124fb028e1ab6ac7349, type: 3}
       propertyPath: m_Name
       value: Angel
@@ -8397,6 +8349,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2119029743}
     - target: {fileID: 2030026848129091530, guid: bc43d80b51e1e6f45bfe5addf2f36e39, type: 3}
+      propertyPath: maxHp
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2030026848129091530, guid: bc43d80b51e1e6f45bfe5addf2f36e39, type: 3}
       propertyPath: hpSlider
       value: 
       objectReference: {fileID: 296792550}
@@ -8408,10 +8364,6 @@ PrefabInstance:
       propertyPath: waveSlider
       value: 
       objectReference: {fileID: 617330717}
-    - target: {fileID: 2331384255370031573, guid: bc43d80b51e1e6f45bfe5addf2f36e39, type: 3}
-      propertyPath: m_GravityScale
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 4713746603498425777, guid: bc43d80b51e1e6f45bfe5addf2f36e39, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1.2156444
@@ -8452,33 +8404,9 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6397256138029828092, guid: bc43d80b51e1e6f45bfe5addf2f36e39, type: 3}
-      propertyPath: JumpSpeed
-      value: 22
-      objectReference: {fileID: 0}
-    - target: {fileID: 6397256138029828092, guid: bc43d80b51e1e6f45bfe5addf2f36e39, type: 3}
-      propertyPath: fallingPlus
-      value: 1.7
-      objectReference: {fileID: 0}
-    - target: {fileID: 6397256138029828092, guid: bc43d80b51e1e6f45bfe5addf2f36e39, type: 3}
-      propertyPath: deceleration
-      value: 90
-      objectReference: {fileID: 0}
-    - target: {fileID: 6397256138029828092, guid: bc43d80b51e1e6f45bfe5addf2f36e39, type: 3}
-      propertyPath: fallingSpeed
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 6397256138029828092, guid: bc43d80b51e1e6f45bfe5addf2f36e39, type: 3}
-      propertyPath: startFallingSpeed
-      value: 6
-      objectReference: {fileID: 0}
     - target: {fileID: 7305268901531569200, guid: bc43d80b51e1e6f45bfe5addf2f36e39, type: 3}
       propertyPath: m_Name
       value: Zombie
-      objectReference: {fileID: 0}
-    - target: {fileID: 7305268901531569200, guid: bc43d80b51e1e6f45bfe5addf2f36e39, type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8786415577939217991, guid: bc43d80b51e1e6f45bfe5addf2f36e39, type: 3}
       propertyPath: uiManager

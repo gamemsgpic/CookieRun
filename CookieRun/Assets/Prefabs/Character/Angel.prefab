@@ -221,7 +221,7 @@ MonoBehaviour:
   JumpSpeed: 22
   deceleration: 90
   startFallingSpeed: 6
-  fallingSpeed: 6
+  fallingSpeed: 0
   fallingPlus: 1.7
   fallingWaitTime: 0.2
 --- !u!114 &2030026848129091530
@@ -240,7 +240,7 @@ MonoBehaviour:
   itemEffectTime: 3
   maxHp: 100
   upWave: 30
-  resurrection: 99
+  resurrection: 0
   uiManager: {fileID: 0}
   hpSlider: {fileID: 0}
   waveSlider: {fileID: 0}
@@ -418,6 +418,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d6f4e150f75e5d40a75e98cacb82a2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  magnet: {fileID: 6258357431784894151}
   itemEffectTime: 3
   giantEffectTime: 0
   magnetEffectTime: 0

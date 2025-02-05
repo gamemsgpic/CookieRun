@@ -1,8 +1,10 @@
+using System.Collections;
 using UnityEngine;
 
 public class PlayerItemEffects : MonoBehaviour
 {
     public GameObject magnet;
+    private Animator animator;
     public float itemEffectTime = 3f;
     public float giantEffectTime = 0f;
     public float magnetEffectTime = 0f;
@@ -22,6 +24,7 @@ public class PlayerItemEffects : MonoBehaviour
 
     public void InitializeEffects(GameObject magnetObject)
     {
+        animator = GetComponent<Animator>();
         magnet = magnetObject;
         normalScale = transform.localScale;
         magnetRadius = magnet.GetComponent<CircleCollider2D>().radius;
@@ -38,15 +41,17 @@ public class PlayerItemEffects : MonoBehaviour
         }
     }
 
-    public void UpdateItemEffects()
+    public void UpdateItemEffects(float timescale)
     {
         if (resurrectionWait)
         {
-            resurrectionWaitTime += Time.unscaledDeltaTime;
-            Time.timeScale = 0f;
-            if (resurrectionWaitTime >= 2f)
+            PlayUnscaledAnimation("Resurrection");
+            resurrectionWaitTime += Time.unscaledDeltaTime * 0.5f;
+            Time.timeScale = resurrectionWaitTime;
+            if (resurrectionWaitTime >= 1f)
             {
-                Time.timeScale = 1f;
+                Time.timeScale = timescale;
+                Oninvincibility(true);
                 resurrectionWaitTime = 0f;
                 resurrectionWait = false;
             }
@@ -54,7 +59,7 @@ public class PlayerItemEffects : MonoBehaviour
 
         if (giant)
         {
-            giantEffectTime += Time.deltaTime;
+            giantEffectTime += Time.unscaledDeltaTime;
             if (giantEffectTime >= itemEffectTime)
             {
                 ChangeScale(normalScale, false);
@@ -70,7 +75,7 @@ public class PlayerItemEffects : MonoBehaviour
                 {
                     magnet.SetActive(true);
                     OnOffMagnet(true, maxMagnetRadius, true);
-                    magnetEffectTime += Time.deltaTime;
+                    magnetEffectTime += Time.unscaledDeltaTime;
                     if (magnetEffectTime >= itemEffectTime)
                     {
                         OnOffMagnet(true, angelMagnetRadius, false);
@@ -80,7 +85,7 @@ public class PlayerItemEffects : MonoBehaviour
                 {
                     magnet.SetActive(true);
                     OnOffMagnet(true, angelMagnetRadius * 0.5f, true);
-                    magnetEffectTime += Time.deltaTime;
+                    magnetEffectTime += Time.unscaledDeltaTime;
                     if (magnetEffectTime >= itemEffectTime)
                     {
                         OnOffMagnet(true, angelMagnetRadius * 0.5f, false);
@@ -108,7 +113,7 @@ public class PlayerItemEffects : MonoBehaviour
                 {
                     magnet.SetActive(true);
                     OnOffMagnet(true, maxMagnetRadius, false);
-                    magnetEffectTime += Time.deltaTime;
+                    magnetEffectTime += Time.unscaledDeltaTime;
                     if (magnetEffectTime >= itemEffectTime)
                     {
                         DisableMagnet(); // 마그넷 끄기 추가
@@ -118,7 +123,7 @@ public class PlayerItemEffects : MonoBehaviour
                 {
                     magnet.SetActive(true);
                     OnOffMagnet(true, angelMagnetRadius * 0.5f, false);
-                    magnetEffectTime += Time.deltaTime;
+                    magnetEffectTime += Time.unscaledDeltaTime;
                     if (magnetEffectTime >= itemEffectTime)
                     {
                         DisableMagnet(); // 마그넷 끄기 추가
@@ -126,6 +131,19 @@ public class PlayerItemEffects : MonoBehaviour
                 }
             }
         }
+    }
+
+    public void PlayUnscaledAnimation(string animationName)
+    {
+        animator.updateMode = AnimatorUpdateMode.UnscaledTime; // 타임스케일 영향 안 받음
+        animator.SetTrigger("Resurrection");
+        StartCoroutine(ResetAnimatorMode());
+    }
+
+    private IEnumerator ResetAnimatorMode()
+    {
+        yield return new WaitForSecondsRealtime(animator.GetCurrentAnimatorStateInfo(0).length);
+        animator.updateMode = AnimatorUpdateMode.Normal; // 다시 기본 설정으로 복구
     }
 
     public void DisableMagnet() // 일반 캐릭터에서 마그넷을 확실히 끄기

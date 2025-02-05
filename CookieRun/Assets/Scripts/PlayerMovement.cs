@@ -4,6 +4,7 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     private Rigidbody2D rb;
+    private Animator animator;
     private SpriteRenderer rbSprite;
     private PlayerSlide playerSlide;
     public int jumpCount;
@@ -17,11 +18,13 @@ public class PlayerMovement : MonoBehaviour
     public float fallingWaitTime = 0.2f;
     public bool isGrounded { get; private set; } = false;
     public bool isJumping { get; private set; } = false;
+    public bool isfalling { get; private set; } = false;
 
     private Coroutine currentJumpRoutine;
 
     private void Start()
     {
+        animator = GetComponent<Animator>();
         playerSlide = GetComponent<PlayerSlide>();
         rbSprite = GetComponent<SpriteRenderer>();
         rb = GetComponent<Rigidbody2D>();
@@ -63,10 +66,30 @@ public class PlayerMovement : MonoBehaviour
         {
             rb.gravityScale = 3f;
         }
-        else
+        else if (isGrounded)
         {
+            animator.SetTrigger("Ground");
+            animator.SetBool("Jump", false);
+            animator.SetBool("DoubleJump", false);
             rb.gravityScale = 1f;
-        }    
+        }
+
+        if (jumpCount == 1)
+        {
+            animator.SetBool("Jump", true);
+            animator.SetBool("DoubleJump", false);
+        }
+        else if (jumpCount == 0)
+        {
+            animator.SetBool("Jump", false);
+            animator.SetBool("DoubleJump", true);
+        }
+
+        // **하강 감지 및 isfalling 애니메이션 적용**
+        if (isfalling) // 최고점을 지나 하강 시작
+        {
+            animator.SetTrigger("Falling");
+        }
     }
 
     public void ButtonJump()
@@ -88,6 +111,7 @@ public class PlayerMovement : MonoBehaviour
         rb.gravityScale = 0f;
         rb.velocity = Vector2.zero;
         isJumping = true;
+        isfalling = false;
         jumpCount--;
         float currentSpeed = JumpSpeed;
         float startY = transform.position.y;
@@ -113,6 +137,7 @@ public class PlayerMovement : MonoBehaviour
             fallingSpeed += fallingSpeed * Time.deltaTime;
             rb.velocity = Vector2.down * fallingSpeed * fallingPlus;
             isJumping = false;
+            isfalling = true;
             currentJumpRoutine = null;
         }
         else if (jumpCount <= 0)
@@ -120,6 +145,7 @@ public class PlayerMovement : MonoBehaviour
             fallingSpeed += fallingSpeed * Time.deltaTime;
             rb.velocity = Vector2.down * fallingSpeed * (fallingPlus + fallingPlus);
             isJumping = false;
+            isfalling = true;
             currentJumpRoutine = null;
         }
     }
@@ -132,6 +158,7 @@ public class PlayerMovement : MonoBehaviour
             //Debug.Log("[PlayerMovement] 땅과 충돌: isGrounded = true");
             isGrounded = true;
             isJumping = false;
+            isfalling = false;
             jumpCount = maxJumpCount;
             fallingSpeed = startFallingSpeed;
             ResetJumpState();

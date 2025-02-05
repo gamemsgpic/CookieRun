@@ -261,7 +261,7 @@ Animator:
   m_GameObject: {fileID: 7305268901531569200}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: d228976b9606da944876828a5c3b5e32, type: 2}
+  m_Controller: {fileID: 9100000, guid: 2bc3fb5b3e09ae7488472b095bada1d1, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -418,6 +418,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d6f4e150f75e5d40a75e98cacb82a2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  magnet: {fileID: 6258357431784894151}
   itemEffectTime: 3
   giantEffectTime: 0
   magnetEffectTime: 0
