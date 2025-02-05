@@ -5,6 +5,7 @@ public class PlayerCrash : MonoBehaviour
 {
     public UIManager uiManager;
     public GameObject damageEffectPanel;
+    private PlayerItemEffects playerItemEffcts;
     private PlayerState playerState;
 
     private float inviStartTime = 0f;
@@ -21,7 +22,7 @@ public class PlayerCrash : MonoBehaviour
 
     private void Start()
     {
-
+        playerItemEffcts = GetComponent<PlayerItemEffects>();
         playerState = GetComponent<PlayerState>();
         rbSprite = GetComponent<SpriteRenderer>();
         damageEffectPanel.SetActive(false);
@@ -35,12 +36,12 @@ public class PlayerCrash : MonoBehaviour
     private void Update()
     {
         // 무적 상태 처리
-        if (playerState.invincibility)
+        if (playerItemEffcts.invincibility)
         {
             HandleInvincibility();
         }
 
-        if (playerState.DamageEffect)
+        if (playerItemEffcts.DamageEffect)
         {
             HandleDamageEffect();
         }
@@ -48,13 +49,13 @@ public class PlayerCrash : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (!playerState.giant)
+        if (!playerItemEffcts.giant)
         {
 
-            if (!playerState.invincibility && collision.CompareTag("Trap"))
+            if (!playerItemEffcts.invincibility && collision.CompareTag("Trap"))
             {
                 playerState.Oninvincibility(true);
-                playerState.OnDamageEffect(true);
+                playerItemEffcts.OnDamageEffect(true);
                 playerState.MinusHp(damage);
             }
         }
@@ -82,15 +83,15 @@ public class PlayerCrash : MonoBehaviour
             {
                 if (collision.CompareTag("Magnet")) // 자석 아이템 태그 확인
                 {
-                    playerState.OnOffMagnet(item.onItmeEffect, playerState.maxMagnetRadius, true); // 자석 효과 활성화
+                    playerItemEffcts.OnOffMagnet(item.onItmeEffect, playerItemEffcts.maxMagnetRadius, true); // 자석 효과 활성화
                     ApplyItemEffect(item);
                 }
 
-                if (playerState.onMagnet)
+                if (playerItemEffcts.onMagnet)
                 {
                     item.MoveTowardsPlayer(transform, item.moveDuration);
                 }
-                else if (!playerState.onMagnet) // 자석이 비활성화된 상태에서도 효과 적용
+                else if (!playerItemEffcts.onMagnet) // 자석이 비활성화된 상태에서도 효과 적용
                 {
                     ApplyItemEffect(item);
                 }
@@ -107,7 +108,7 @@ public class PlayerCrash : MonoBehaviour
 
                 if (collision.CompareTag("Giantization"))
                 {
-                    playerState.ChangeScale(item.giantization, true);
+                    playerItemEffcts.ChangeScale(item.giantization, true);
                 }
 
                 //if (collision.CompareTag("Potion"))

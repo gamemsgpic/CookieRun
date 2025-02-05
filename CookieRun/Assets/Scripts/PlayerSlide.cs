@@ -6,6 +6,7 @@ using UnityEngine.Playables;
 public class PlayerSlide : MonoBehaviour
 {
     private PlayerMovement playerMovement;
+    private PlayerItemEffects playerItemEffects;
     private PlayerState playerState;
     public UIManager uiManager;
     private BoxCollider2D boxCollider2D;
@@ -15,10 +16,11 @@ public class PlayerSlide : MonoBehaviour
     private Vector2 slideSize;
     private Vector2 normalColliderOffset;
     private Vector2 slideColliderOffset;
-    private bool isSlide = false;
+    public bool isSlide { get; private set; } = false;
 
     private void Start()
     {
+        playerItemEffects = GetComponent<PlayerItemEffects>();
         playerMovement = GetComponent<PlayerMovement>();
         playerState = GetComponent<PlayerState>();
         boxCollider2D = GetComponent<BoxCollider2D>();
@@ -29,6 +31,12 @@ public class PlayerSlide : MonoBehaviour
 
         slideSize = new Vector2(0.7f, 0.6f);
         slideColliderOffset = new Vector2(0f, 0.25f);
+
+        if (gameObject.name == "Angel")
+        {
+            slideSize = new Vector2(0.7f, 0.6f);
+            slideColliderOffset = new Vector2(0f, 0.75f);
+        }
 
 
     }
@@ -58,7 +66,7 @@ public class PlayerSlide : MonoBehaviour
         {
             isSlide = true;
             animator.SetBool("Slide", isSlide);
-            if (!playerState.giant)
+            if (!playerItemEffects.giant)
             {
                 boxCollider2D.size = slideSize;
                 boxCollider2D.offset = slideColliderOffset;

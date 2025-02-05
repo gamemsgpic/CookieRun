@@ -127,13 +127,14 @@ GameObject:
   - component: {fileID: 1153810171244572193}
   - component: {fileID: 4014653845220003523}
   - component: {fileID: 5217965110876835606}
+  - component: {fileID: 1941278413335687488}
   m_Layer: 0
   m_Name: Brave
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &4713746603498425777
 Transform:
   m_ObjectHideFlags: 0
@@ -217,11 +218,11 @@ MonoBehaviour:
   jumpCount: 2
   maxJumpCount: 2
   jumpHeight: 8
-  JumpSpeed: 24
-  deceleration: 120
+  JumpSpeed: 22
+  deceleration: 90
   startFallingSpeed: 6
   fallingSpeed: 6
-  fallingPlus: 1.3
+  fallingPlus: 1.7
   fallingWaitTime: 0.2
 --- !u!50 &2331384255370031573
 Rigidbody2D:
@@ -285,14 +286,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   magnet: {fileID: 6258357431784894151}
   itemEffectTime: 3
-  giantEffectTime: 0
-  magnetEffectTime: 0
-  resurrectionWaitTime: 0
   maxHp: 100
   upWave: 30
   resurrection: 0
-  maxMagnetRadius: 6
-  angelMagnetRadius: 3
   uiManager: {fileID: 0}
   hpSlider: {fileID: 0}
   waveSlider: {fileID: 0}
@@ -410,3 +406,21 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.37131056, y: 2.2333333}
   m_EdgeRadius: 0
+--- !u!114 &1941278413335687488
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7305268901531569200}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d6f4e150f75e5d40a75e98cacb82a2b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemEffectTime: 3
+  giantEffectTime: 0
+  magnetEffectTime: 0
+  resurrectionWaitTime: 0
+  maxMagnetRadius: 6
+  angelMagnetRadius: 3

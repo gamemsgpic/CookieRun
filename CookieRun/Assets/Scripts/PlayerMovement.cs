@@ -5,6 +5,7 @@ public class PlayerMovement : MonoBehaviour
 {
     private Rigidbody2D rb;
     private SpriteRenderer rbSprite;
+    private PlayerSlide playerSlide;
     public int jumpCount;
     public int maxJumpCount = 2;
     public float jumpHeight = 5f;
@@ -21,6 +22,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void Start()
     {
+        playerSlide = GetComponent<PlayerSlide>();
         rbSprite = GetComponent<SpriteRenderer>();
         rb = GetComponent<Rigidbody2D>();
 
@@ -30,7 +32,7 @@ public class PlayerMovement : MonoBehaviour
     private void Update()
     {
         // 점프 처리
-        if (Input.GetKeyDown(KeyCode.Space) && jumpCount > 0)
+        if (Input.GetKeyDown(KeyCode.Space) && jumpCount > 0 && !playerSlide.isSlide)
         {
             if (currentJumpRoutine != null)
             {
@@ -69,7 +71,7 @@ public class PlayerMovement : MonoBehaviour
 
     public void ButtonJump()
     {
-        if (jumpCount > 0)
+        if (jumpCount > 0 && !playerSlide.isSlide)
         {
             if (currentJumpRoutine != null)
             {

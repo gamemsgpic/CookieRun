@@ -1,364 +1,70 @@
-using UnityEngine;
-using UnityEngine.SceneManagement;
-using UnityEngine.UI;
-
-public class PlayerState : MonoBehaviour
-{
-    public GameObject magnet;
-    public float itemEffectTime = 3f;
-    public float giantEffectTime = 0f;
-    public float magnetEffectTime = 0f;
-    public float resurrectionWaitTime = 0f;
-    public bool onMagnet { get; set; } = false;
-    public bool onAngelMagnet { get; set; } = false;
-    public bool onNormalMagnet { get; set; } = false;
-    public bool giant { get; private set; } = false;
-    public bool invincibility { get; private set; } = false; // 무적 상태 여부
-    public bool DamageEffect { get; private set; } = false;
-    public bool resurrectionWait { get; private set; } = false;
-
-    public float maxHp = 100f;
-    public float upWave = 30f;
-    public float hp { get; set; }
-    public float wave { get; private set; }
-    private int oneCall = 1;
-    public int resurrection = 0;
-    public int score { get; private set; }
-    public int coins { get; private set; }
-    public int currentWave { get; private set; } = 1;
-    public bool onDeath { get; private set; } = false;
-    public Vector3 normalScale { get; private set; }
-    private float magnetRadius = 0f;
-    public float maxMagnetRadius = 6f;
-    public float angelMagnetRadius = 3f;
-    public UIManager uiManager;
-    [SerializeField] private Slider hpSlider; // 인스펙터에서 슬라이더 연결
-    [SerializeField] private Slider waveSlider; // 인스펙터에서 슬라이더 연결
-
-    private void Start()
-    {
-        normalScale = transform.localScale;
-        magnetRadius = magnet.GetComponent<CircleCollider2D>().radius;
-        if (gameObject.name != "Angel")
-        {
-            magnet.SetActive(false);
-            OnOffMagnet(false, maxMagnetRadius, false);
-        }
-        else
-        {
-            magnet.SetActive(true);
-            OnOffMagnet(true, angelMagnetRadius, false);
-        }
-
-        if (gameObject.name == "Zombie")
-        {
-            resurrection = 2;
-        }
-        else
-        {
-            resurrection = 0;
-        }
-        // HP 초기화
-        hp = maxHp;
-        wave = 0f;
-
-        currentWave = 1;
-
-        // 슬라이더 초기화
-        if (hpSlider != null)
-        {
-            hpSlider.maxValue = maxHp;
-            hpSlider.value = hp;
-        }
-
-        if (waveSlider != null)
-        {
-            waveSlider.maxValue = upWave;
-            waveSlider.value = wave;
-        }
-    }
-
-    private void Update()
-    {
-        if (resurrectionWait)
-        {
-            resurrectionWaitTime += Time.unscaledDeltaTime;
-            Time.timeScale = 0f;
-            if (resurrectionWaitTime >= 2f)
-            {
-                Time.timeScale = 1f;
-                resurrectionWaitTime = 0f;
-                resurrectionWait = false;
-            }
-        }
-
-        if (giant)
-        {
-            giantEffectTime += Time.deltaTime;
-            if (giantEffectTime >= itemEffectTime)
-            {
-                ChangeScale(normalScale, false);
-                Oninvincibility(true);
-            }
-        }
-
-        // [자석 아이템 효과 종료] onMagnet 상태를 올바르게 제어
-
-
-
-
-        if (gameObject.name == "Angel")
-        {
-            if (onMagnet && onAngelMagnet)
-            {
-                if (!giant)
-                {
-                    magnet.SetActive(true);
-                    OnOffMagnet(true, maxMagnetRadius, true);
-                    magnetEffectTime += Time.deltaTime;
-                    if (magnetEffectTime >= itemEffectTime)
-                    {
-                        OnOffMagnet(true, angelMagnetRadius, false);
-                    }
-                }
-                else
-                {
-                    magnet.SetActive(true);
-                    OnOffMagnet(true, angelMagnetRadius * 0.5f, true);
-                    magnetEffectTime += Time.deltaTime;
-                    if (magnetEffectTime >= itemEffectTime)
-                    {
-                        OnOffMagnet(true, angelMagnetRadius * 0.5f, false);
-                    }
-                }
-            }
-            else
-            {
-                if (!giant)
-                {
-                    OnOffMagnet(true, angelMagnetRadius, false);
-                    magnetEffectTime = 0f;
-                }
-                else
-                {
-                    OnOffMagnet(true, angelMagnetRadius * 0.5f, false);
-                    magnetEffectTime = 0f;
-                }
-            }
-        }
-        else
-        {
-            if (onMagnet)
-            {
-                if (!giant)
-                {
-                    magnet.SetActive(true);
-                    ChangeMagnetSize(maxMagnetRadius);
-                    magnetEffectTime += Time.deltaTime;
-                    if (magnetEffectTime >= itemEffectTime)
-                    {
-                        magnet.SetActive(false);
-                        onMagnet = false;
-                        magnetEffectTime = 0f;
-                    }
-                }
-                else
-                {
-                    magnet.SetActive(true);
-                    ChangeMagnetSize(angelMagnetRadius * 0.5f);
-                    magnetEffectTime += Time.deltaTime;
-                    if (magnetEffectTime >= itemEffectTime)
-                    {
-                        magnet.SetActive(false);
-                        ChangeMagnetSize(maxMagnetRadius);
-                        onMagnet = false;
-                        magnetEffectTime = 0f;
-                    }
-                }
-            }
-        }
-
-
-        // [웨이브 슬라이더가 빠르게 차는 문제 수정]
-        if (currentWave <= 4)
-        {
-            wave += Time.deltaTime; // 증가 속도를 안정적으로 조절
-            UpdateWaveSlider();
-            if (wave >= upWave)
-            {
-                currentWave++;
-                wave = 0f; // 웨이브가 증가할 때 초기화 (이전 값 누적 방지)
-            }
-        }
-        else
-        {
-            wave = upWave;
-        }
-
-        // [HP가 갑자기 확 떨어지는 문제 수정]
-        if (hp > 0)
-        {
-            hp -= Time.deltaTime * 5f; // 자연스럽게 감소하도록 속도 조정
-            UpdateHpSlider();
-        }
-
-        // [부활이 적용되지 않는 문제 해결]
-        if (hp <= 0)
-        {
-            if (resurrection > 0)
-            {
-                resurrection--;
-                ResurrectionWait(true);
-                hp = maxHp; // HP 완전 회복
-                UpdateHpSlider();
-                return; // 부활 후 추가적인 HP 감소 방지
-            }
-            else
-            {
-                SetOnDeath(true);
-                Time.timeScale = 0f;
-                if (oneCall >= 1)
-                {
-                    uiManager.ShowScoreBoardWindow();
-                    oneCall--;
-                }
-            }
-        }
-    }
-
-    private void ResurrectionWait(bool wait)
-    {
-        resurrectionWait = wait;
-    }
-
-    // HP 감소
-    public void MinusHp(float amount)
-    {
-        hp -= amount;
-        if (hp < 0) hp = 0;
-
-        UpdateHpSlider();
-    }
-
-    // HP 증가
-    public void PlusHp(float amount)
-    {
-        hp += amount;
-        if (hp > maxHp)
-        {
-            hp = maxHp;
-        }
-        UpdateHpSlider();
-    }
-
-    public void SetOnDeath(bool death)
-    {
-        onDeath = death;
-    }
-
-    // 점수 증가
-    public void AddScore(int amount)
-    {
-        score += amount;
-    }
-
-    // 코인 증가
-    public void AddCoins(int amount)
-    {
-        coins += amount;
-    }
-
-    private void ChangeMagnetSize(float radius)
-    {
-        magnet.GetComponent<CircleCollider2D>().radius = radius;
-    }
-
-    public void OnOffMagnet(bool om, float radius, bool angelmagnet)
-    {
-        if (gameObject.name != "Angel")
-        {
-            onMagnet = om;
-            magnet.GetComponent<CircleCollider2D>().radius = radius;
-        }
-        else
-        {
-            onMagnet = om;
-            magnet.GetComponent<CircleCollider2D>().radius = radius;
-            onAngelMagnet = angelmagnet;
-        }
-    }
-
-    public void ChangeScale(Vector3 setscals, bool setbool)
-    {
-        transform.localScale = setscals;
-        giant = setbool;
-        giantEffectTime = 0f;
-    }
-
-    public void Oninvincibility(bool setinvi)
-    {
-        invincibility = setinvi;
-    }
-
-    public void OnDamageEffect(bool damageeffect)
-    {
-        DamageEffect = damageeffect;
-    }
-
-    // 슬라이더 업데이트
-    private void UpdateHpSlider()
-    {
-        if (hpSlider != null)
-        {
-            hpSlider.value = hp;
-        }
-    }
-
-    private void UpdateWaveSlider()
-    {
-        if (waveSlider != null)
-        {
-            waveSlider.value = wave;
-        }
-    }
-
-}
-
-
-
-
 //using UnityEngine;
+//using UnityEngine.SceneManagement;
 //using UnityEngine.UI;
 
 //public class PlayerState : MonoBehaviour
 //{
 //    public GameObject magnet;
 //    public float itemEffectTime = 3f;
+//    public float giantEffectTime = 0f;
 //    public float magnetEffectTime = 0f;
+//    public float resurrectionWaitTime = 0f;
 //    public bool onMagnet { get; set; } = false;
-//    private bool giant = false;
+//    public bool onAngelMagnet { get; set; } = false;
+//    public bool onNormalMagnet { get; set; } = false;
+//    public bool giant { get; private set; } = false;
+//    public bool invincibility { get; private set; } = false; // 무적 상태 여부
+//    public bool DamageEffect { get; private set; } = false;
+//    public bool resurrectionWait { get; private set; } = false;
 
 //    public float maxHp = 100f;
 //    public float upWave = 30f;
 //    public float hp { get; set; }
 //    public float wave { get; private set; }
-//    public int resurrection = 3;
+//    private int oneCall = 1;
+//    public int resurrection = 0;
 //    public int score { get; private set; }
 //    public int coins { get; private set; }
 //    public int currentWave { get; private set; } = 1;
 //    public bool onDeath { get; private set; } = false;
+//    public Vector3 normalScale { get; private set; }
+//    private float magnetRadius = 0f;
+//    public float maxMagnetRadius = 6f;
+//    public float angelMagnetRadius = 3f;
 //    public UIManager uiManager;
-//    [SerializeField] private Slider hpSlider;
-//    [SerializeField] private Slider waveSlider;
+//    [SerializeField] private Slider hpSlider; // 인스펙터에서 슬라이더 연결
+//    [SerializeField] private Slider waveSlider; // 인스펙터에서 슬라이더 연결
 
 //    private void Start()
 //    {
-//        OnOffMagnet(onMagnet);
+//        normalScale = transform.localScale;
+//        magnetRadius = magnet.GetComponent<CircleCollider2D>().radius;
+//        if (gameObject.name != "Angel")
+//        {
+//            magnet.SetActive(false);
+//            OnOffMagnet(false, maxMagnetRadius, false);
+//        }
+//        else
+//        {
+//            magnet.SetActive(true);
+//            OnOffMagnet(true, angelMagnetRadius, false);
+//        }
+
+//        if (gameObject.name == "Zombie")
+//        {
+//            resurrection = 2;
+//        }
+//        else
+//        {
+//            resurrection = 0;
+//        }
+//        // HP 초기화
 //        hp = maxHp;
 //        wave = 0f;
-//        currentWave = 1;
-//        resurrection = 3;
 
+//        currentWave = 1;
+
+//        // 슬라이더 초기화
 //        if (hpSlider != null)
 //        {
 //            hpSlider.maxValue = maxHp;
@@ -374,23 +80,114 @@ public class PlayerState : MonoBehaviour
 
 //    private void Update()
 //    {
-//        if (onMagnet)
+//        if (resurrectionWait)
 //        {
-//            magnetEffectTime += Time.deltaTime;
-//            if (magnetEffectTime >= itemEffectTime)
+//            resurrectionWaitTime += Time.unscaledDeltaTime;
+//            Time.timeScale = 0f;
+//            if (resurrectionWaitTime >= 2f)
 //            {
-//                OnOffMagnet(false);
+//                Time.timeScale = 1f;
+//                resurrectionWaitTime = 0f;
+//                resurrectionWait = false;
 //            }
 //        }
 
+//        if (giant)
+//        {
+//            giantEffectTime += Time.deltaTime;
+//            if (giantEffectTime >= itemEffectTime)
+//            {
+//                ChangeScale(normalScale, false);
+//                Oninvincibility(true);
+//            }
+//        }
+
+//        // [자석 아이템 효과 종료] onMagnet 상태를 올바르게 제어
+
+
+
+
+//        if (gameObject.name == "Angel")
+//        {
+//            if (onMagnet && onAngelMagnet)
+//            {
+//                if (!giant)
+//                {
+//                    magnet.SetActive(true);
+//                    OnOffMagnet(true, maxMagnetRadius, true);
+//                    magnetEffectTime += Time.deltaTime;
+//                    if (magnetEffectTime >= itemEffectTime)
+//                    {
+//                        OnOffMagnet(true, angelMagnetRadius, false);
+//                    }
+//                }
+//                else
+//                {
+//                    magnet.SetActive(true);
+//                    OnOffMagnet(true, angelMagnetRadius * 0.5f, true);
+//                    magnetEffectTime += Time.deltaTime;
+//                    if (magnetEffectTime >= itemEffectTime)
+//                    {
+//                        OnOffMagnet(true, angelMagnetRadius * 0.5f, false);
+//                    }
+//                }
+//            }
+//            else
+//            {
+//                if (!giant)
+//                {
+//                    OnOffMagnet(true, angelMagnetRadius, false);
+//                    magnetEffectTime = 0f;
+//                }
+//                else
+//                {
+//                    OnOffMagnet(true, angelMagnetRadius * 0.5f, false);
+//                    magnetEffectTime = 0f;
+//                }
+//            }
+//        }
+//        else
+//        {
+//            if (onMagnet)
+//            {
+//                if (!giant)
+//                {
+//                    magnet.SetActive(true);
+//                    ChangeMagnetSize(maxMagnetRadius);
+//                    magnetEffectTime += Time.deltaTime;
+//                    if (magnetEffectTime >= itemEffectTime)
+//                    {
+//                        magnet.SetActive(false);
+//                        onMagnet = false;
+//                        magnetEffectTime = 0f;
+//                    }
+//                }
+//                else
+//                {
+//                    magnet.SetActive(true);
+//                    ChangeMagnetSize(angelMagnetRadius * 0.5f);
+//                    magnetEffectTime += Time.deltaTime;
+//                    if (magnetEffectTime >= itemEffectTime)
+//                    {
+//                        magnet.SetActive(false);
+//                        ChangeMagnetSize(maxMagnetRadius);
+//                        onMagnet = false;
+//                        magnetEffectTime = 0f;
+//                    }
+//                }
+//            }
+//        }
+
+
+//        // [웨이브 슬라이더가 빠르게 차는 문제 수정]
 //        if (currentWave <= 4)
 //        {
-//            wave += Time.deltaTime;
+//            wave += Time.deltaTime; // 증가 속도를 안정적으로 조절
 //            UpdateWaveSlider();
 //            if (wave >= upWave)
 //            {
 //                currentWave++;
-//                wave = 0f;
+//                wave = 0f; // 웨이브가 증가할 때 초기화 (이전 값 누적 방지)
 //            }
 //        }
 //        else
@@ -398,63 +195,117 @@ public class PlayerState : MonoBehaviour
 //            wave = upWave;
 //        }
 
+//        // [HP가 갑자기 확 떨어지는 문제 수정]
 //        if (hp > 0)
 //        {
-//            hp -= Time.deltaTime * 5f;
+//            hp -= Time.deltaTime * 5f; // 자연스럽게 감소하도록 속도 조정
 //            UpdateHpSlider();
 //        }
 
+//        // [부활이 적용되지 않는 문제 해결]
 //        if (hp <= 0)
 //        {
 //            if (resurrection > 0)
 //            {
 //                resurrection--;
-//                hp = maxHp;
+//                ResurrectionWait(true);
+//                hp = maxHp; // HP 완전 회복
 //                UpdateHpSlider();
-//                return;
+//                return; // 부활 후 추가적인 HP 감소 방지
 //            }
 //            else
 //            {
-//                onDeath = true;
-//                uiManager.ShowGameOver();
+//                SetOnDeath(true);
 //                Time.timeScale = 0f;
+//                if (oneCall >= 1)
+//                {
+//                    uiManager.ShowScoreBoardWindow();
+//                    oneCall--;
+//                }
 //            }
 //        }
 //    }
 
+//    private void ResurrectionWait(bool wait)
+//    {
+//        resurrectionWait = wait;
+//    }
+
+//    // HP 감소
 //    public void MinusHp(float amount)
 //    {
 //        hp -= amount;
 //        if (hp < 0) hp = 0;
+
 //        UpdateHpSlider();
 //    }
 
+//    // HP 증가
 //    public void PlusHp(float amount)
 //    {
 //        hp += amount;
+//        if (hp > maxHp)
+//        {
+//            hp = maxHp;
+//        }
 //        UpdateHpSlider();
 //    }
 
+//    public void SetOnDeath(bool death)
+//    {
+//        onDeath = death;
+//    }
+
+//    // 점수 증가
 //    public void AddScore(int amount)
 //    {
 //        score += amount;
-//        uiManager.UpdateScoreText(score);
 //    }
 
+//    // 코인 증가
 //    public void AddCoins(int amount)
 //    {
 //        coins += amount;
-//        uiManager.UpdateCoinText(coins);
 //    }
 
-//    public void OnOffMagnet(bool om)
+//    private void ChangeMagnetSize(float radius)
 //    {
-//        magnet.SetActive(om);
-//        onMagnet = om;
-//        magnetEffectTime = 0f;
-
+//        magnet.GetComponent<CircleCollider2D>().radius = radius;
 //    }
 
+//    public void OnOffMagnet(bool om, float radius, bool angelmagnet)
+//    {
+//        if (gameObject.name != "Angel")
+//        {
+//            onMagnet = om;
+//            magnet.GetComponent<CircleCollider2D>().radius = radius;
+//        }
+//        else
+//        {
+//            onMagnet = om;
+//            magnet.GetComponent<CircleCollider2D>().radius = radius;
+//            onAngelMagnet = angelmagnet;
+//        }
+//    }
+
+//    public void ChangeScale(Vector3 setscals, bool setbool)
+//    {
+//        transform.localScale = setscals;
+//        giant = setbool;
+//        giantEffectTime = 0f;
+//    }
+
+//    public void Oninvincibility(bool setinvi)
+//    {
+//        invincibility = setinvi;
+//    }
+
+//    public void OnDamageEffect(bool damageeffect)
+//    {
+//        DamageEffect = damageeffect;
+//    }
+
+//    // 슬라이더 업데이트
 //    private void UpdateHpSlider()
 //    {
 //        if (hpSlider != null)
@@ -470,4 +321,162 @@ public class PlayerState : MonoBehaviour
 //            waveSlider.value = wave;
 //        }
 //    }
+
 //}
+
+
+using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
+
+public class PlayerState : MonoBehaviour
+{
+    public GameObject magnet;
+    public float itemEffectTime = 3f;
+    public float maxHp = 100f;
+    public float upWave = 30f;
+    public float hp { get; set; }
+    public float wave { get; private set; }
+    private int oneCall = 1;
+    public int resurrection = 0;
+    public int score { get; private set; }
+    public int coins { get; private set; }
+    public int currentWave { get; private set; } = 1;
+    public bool onDeath { get; private set; } = false;
+    public bool DamageEffect { get; private set; } = false;
+
+    public UIManager uiManager;
+    [SerializeField] private Slider hpSlider;
+    [SerializeField] private Slider waveSlider;
+
+    private PlayerItemEffects itemEffects;
+
+    private void Start()
+    {
+        itemEffects = GetComponent<PlayerItemEffects>();
+        itemEffects.InitializeEffects(magnet);
+
+        hp = maxHp;
+        wave = 0f;
+        currentWave = 1;
+
+        if (hpSlider != null)
+        {
+            hpSlider.maxValue = maxHp;
+            hpSlider.value = hp;
+        }
+
+        if (waveSlider != null)
+        {
+            waveSlider.maxValue = upWave;
+            waveSlider.value = wave;
+        }
+    }
+
+    private void Update()
+    {
+        itemEffects.UpdateItemEffects();
+
+        if (currentWave <= 4)
+        {
+            wave += Time.deltaTime;
+            UpdateWaveSlider();
+            if (wave >= upWave)
+            {
+                currentWave++;
+                wave = 0f;
+            }
+        }
+        else
+        {
+            wave = upWave;
+        }
+
+        if (hp > 0)
+        {
+            hp -= Time.deltaTime * 5f;
+            UpdateHpSlider();
+        }
+
+        if (hp <= 0)
+        {
+            if (resurrection > 0)
+            {
+                resurrection--;
+                itemEffects.ResurrectionWait(true);
+                hp = maxHp;
+                UpdateHpSlider();
+                return;
+            }
+            else
+            {
+                SetOnDeath(true);
+                Time.timeScale = 0f;
+                if (oneCall >= 1)
+                {
+                    uiManager.ShowScoreBoardWindow();
+                    oneCall--;
+                }
+            }
+        }
+    }
+
+    public void MinusHp(float amount)
+    {
+        hp -= amount;
+        if (hp < 0) hp = 0;
+        UpdateHpSlider();
+    }
+
+    public void PlusHp(float amount)
+    {
+        hp += amount;
+        if (hp > maxHp)
+        {
+            hp = maxHp;
+        }
+        UpdateHpSlider();
+    }
+
+    public void SetOnDeath(bool death)
+    {
+        onDeath = death;
+    }
+
+    public void AddScore(int amount)
+    {
+        score += amount;
+    }
+
+    public void AddCoins(int amount)
+    {
+        coins += amount;
+    }
+
+    public void OnDamageEffect(bool damageEffect)
+    {
+        DamageEffect = damageEffect;
+        itemEffects.OnDamageEffect(damageEffect);
+    }
+
+    public void Oninvincibility(bool setinvi)
+    {
+        itemEffects.Oninvincibility(setinvi);
+    }
+
+    private void UpdateHpSlider()
+    {
+        if (hpSlider != null)
+        {
+            hpSlider.value = hp;
+        }
+    }
+
+    private void UpdateWaveSlider()
+    {
+        if (waveSlider != null)
+        {
+            waveSlider.value = wave;
+        }
+    }
+}
