@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8652581052045266363}
   - component: {fileID: 5466823699444135551}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: StartMap1
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -382,7 +382,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3666455717632273721}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: RightPivot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -414,7 +414,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8265388535371454501}
   - component: {fileID: 8917581345371258597}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Grid
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -458,7 +458,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4202605813755930767}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: LeftPivot
   m_TagString: Untagged
   m_Icon: {fileID: 0}

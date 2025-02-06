@@ -218,11 +218,11 @@ MonoBehaviour:
   jumpCount: 2
   maxJumpCount: 2
   jumpHeight: 8
-  JumpSpeed: 22
-  deceleration: 90
-  startFallingSpeed: 6
-  fallingSpeed: 6
-  fallingPlus: 1.7
+  JumpSpeed: 23
+  deceleration: 100
+  startFallingSpeed: 2
+  fallingSpeed: 2
+  fallingPlus: 3
   fallingWaitTime: 0.2
 --- !u!50 &2331384255370031573
 Rigidbody2D:
@@ -285,6 +285,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   magnet: {fileID: 6258357431784894151}
+  mapManager: {fileID: 0}
   itemEffectTime: 3
   maxHp: 100
   upWave: 30
@@ -393,7 +394,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 1.1166672}
+  m_Offset: {x: 0, y: 1.1}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0}
@@ -404,7 +405,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.35712352, y: 2.2333333}
+  m_Size: {x: 1, y: 2.2}
   m_EdgeRadius: 0
 --- !u!114 &3149612881108249447
 MonoBehaviour:
