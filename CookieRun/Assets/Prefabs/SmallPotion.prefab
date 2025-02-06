@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: -2659175264646435936}
   - component: {fileID: 115354410031442567}
   m_Layer: 6
-  m_Name: Potion
+  m_Name: SmallPotion
   m_TagString: Potion
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -76,7 +76,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 257515762, guid: 526839357e7c4f744b3cb4966d97e033, type: 3}
+  m_Sprite: {fileID: -63613421, guid: 526839357e7c4f744b3cb4966d97e033, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
