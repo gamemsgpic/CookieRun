@@ -116,7 +116,7 @@ TextureImporter:
         x: 3
         y: 4384
         width: 567
-        height: 319
+        height: 318
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -126,6 +126,111 @@ TextureImporter:
       bones: []
       spriteID: 6b4174bdc596f2c43a6518dcad45f3a5
       internalID: -788579617
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Episode 1 - Escape from the Oven (b)_1
+      rect:
+        serializedVersion: 2
+        x: 579
+        y: 4384
+        width: 848
+        height: 318
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ecb8a4f15271e34d99105fc6fbbb0d6
+      internalID: -303887390
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Episode 1 - Escape from the Oven (b)_2
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 3710
+        width: 588
+        height: 318
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 59790d02c9a543f4f9db63ba583a6a27
+      internalID: -627770060
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Episode 1 - Escape from the Oven (b)_3
+      rect:
+        serializedVersion: 2
+        x: 624
+        y: 4047
+        width: 860
+        height: 318
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 34c9d80c1b1e3b0439190e6b09bc215c
+      internalID: -97527838
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Episode 1 - Escape from the Oven (b)_4
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 4047
+        width: 617
+        height: 318
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f54132841c15f424eb6fc8fb75ad400e
+      internalID: -1431926431
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Episode 1 - Escape from the Oven (b)_5
+      rect:
+        serializedVersion: 2
+        x: 609
+        y: 3710
+        width: 775
+        height: 318
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: efc56619a4e4c454d8c5f2603503ddfb
+      internalID: -1455195446
       vertices: []
       indices: 
       edges: []
