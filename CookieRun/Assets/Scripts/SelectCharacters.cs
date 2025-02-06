@@ -72,6 +72,12 @@ public class SelectCharacters : MonoBehaviour
     public void Jump()
     {
         currentCharacter.GetComponent<PlayerMovement>().ButtonJump();
+        currentCharacter.GetComponent<PlayerMovement>().SetJumpKeyHeld(true);
+    }
+
+    public void UpJumpButton(bool isHeld)
+    {
+        currentCharacter.GetComponent<PlayerMovement>().SetJumpKeyHeld(false);
     }
 
     public void ButtonDown()

@@ -315,8 +315,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 855.4701, y: -140.021}
-  m_SizeDelta: {x: 1510.9402, y: 0}
+  m_AnchoredPosition: {x: 1255.8878, y: -140.021}
+  m_SizeDelta: {x: 2311.7756, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &58796458
 MonoBehaviour:
@@ -1194,63 +1194,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1001 &306438377
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 5167474813277576234, guid: 5b11548cf15dfd1458fdc740a2a6fe6d, type: 3}
-      propertyPath: m_Name
-      value: Jelly
-      objectReference: {fileID: 0}
-    - target: {fileID: 7074479457313033380, guid: 5b11548cf15dfd1458fdc740a2a6fe6d, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7074479457313033380, guid: 5b11548cf15dfd1458fdc740a2a6fe6d, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7074479457313033380, guid: 5b11548cf15dfd1458fdc740a2a6fe6d, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7074479457313033380, guid: 5b11548cf15dfd1458fdc740a2a6fe6d, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7074479457313033380, guid: 5b11548cf15dfd1458fdc740a2a6fe6d, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7074479457313033380, guid: 5b11548cf15dfd1458fdc740a2a6fe6d, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7074479457313033380, guid: 5b11548cf15dfd1458fdc740a2a6fe6d, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7074479457313033380, guid: 5b11548cf15dfd1458fdc740a2a6fe6d, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7074479457313033380, guid: 5b11548cf15dfd1458fdc740a2a6fe6d, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7074479457313033380, guid: 5b11548cf15dfd1458fdc740a2a6fe6d, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 5b11548cf15dfd1458fdc740a2a6fe6d, type: 3}
 --- !u!1 &351499561
 GameObject:
   m_ObjectHideFlags: 0
@@ -3028,7 +2971,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 168.09201, y: -50}
+  m_AnchoredPosition: {x: 248.17557, y: -50}
   m_SizeDelta: {x: 65.01, y: 0}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!114 &626167854
@@ -5755,7 +5698,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 473.56213, y: -50}
+  m_AnchoredPosition: {x: 954.0635, y: -50}
   m_SizeDelta: {x: 65.01, y: 0}
   m_Pivot: {x: 1, y: 0.5}
 --- !u!114 &1261192704
@@ -6550,6 +6493,22 @@ MonoBehaviour:
             m_FloatArgument: 0
             m_StringArgument: 
             m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 3
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1169701797}
+          m_TargetAssemblyTypeName: SelectCharacters, Assembly-CSharp
+          m_MethodName: UpJumpButton
+          m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 1
           m_CallState: 2
 --- !u!114 &1469841792
 MonoBehaviour:
@@ -9751,4 +9710,3 @@ SceneRoots:
   - {fileID: 296078774}
   - {fileID: 1634680571}
   - {fileID: 1950727436}
-  - {fileID: 306438377}
