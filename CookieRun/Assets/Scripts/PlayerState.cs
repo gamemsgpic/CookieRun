@@ -5,6 +5,7 @@ using UnityEngine.UI;
 public class PlayerState : MonoBehaviour
 {
     public GameObject magnet;
+    public MapManager mapManager;
     private Animator animator;
     public float itemEffectTime = 3f;
     public float maxHp = 100f;
@@ -66,6 +67,7 @@ public class PlayerState : MonoBehaviour
             {
                 currentWave++;
                 wave = 0f;
+                mapManager.StartWave(currentWave);
                 timeScale += 0.1f;
                 Time.timeScale = timeScale;
             }
