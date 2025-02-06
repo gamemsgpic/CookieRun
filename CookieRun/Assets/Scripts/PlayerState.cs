@@ -13,6 +13,7 @@ public class PlayerState : MonoBehaviour
     public float hp { get; set; }
     private float wave = 0f;
     private bool oneCall = true;
+    private bool oneCall2 = true;
     public int resurrection = 0;
     public int score { get; private set; }
     public int coins { get; private set; }
@@ -80,7 +81,7 @@ public class PlayerState : MonoBehaviour
             wave = upWave;
         }
 
-        if (hp > 0 && Time.timeScale > 0f) // 타임스케일이 0이면 HP 감소 중지
+        if (hp > -1f && Time.timeScale > 0f) // 타임스케일이 0이면 HP 감소 중지
         {
             float baseHpDecreaseRate = 1f; // 기본 HP 감소 속도
             float adjustedDeltaTime = Time.unscaledDeltaTime * (1f / Time.timeScale); // 보정된 DeltaTime
@@ -185,8 +186,12 @@ public class PlayerState : MonoBehaviour
 
     public void ShowScoreBoard()
     {
-        uiManager.ShowScoreBoardWindow();
-        Debug.Log("된다");
+        if (oneCall2)
+        {
+            uiManager.ShowScoreBoardWindow();
+            Debug.Log("된다");
+            oneCall2 = false;
+        }
     }
 
     public void StopAllAni(float vel)
