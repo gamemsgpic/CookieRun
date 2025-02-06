@@ -27,21 +27,8 @@ public class MapMove : MonoBehaviour
         // 왼쪽으로 이동
         transform.Translate(Vector3.left * moveSpeed * Time.deltaTime);
 
-        // RightPivot이 StartMapPos보다 왼쪽으로 가면 비활성화
-        if (rightPivot.position.x < startMapPos.position.x)
-        {
-            DeactivateSelf();
-        }
-    }
-
-    void DeactivateSelf()
-    {
-        // GameObject를 비활성화
-        gameObject.SetActive(false);
-
-        // MapManager에 알림
-        MapManager mapManager = FindObjectOfType<MapManager>();
-        if (mapManager != null)
+        // RightPivot이 StartMapPos보다 왼쪽으로 가면 MapManager에 비활성화 요청
+        if (mapManager != null && rightPivot.position.x < mapManager.StartMapPos.position.x)
         {
             mapManager.DeactivatePrefab(gameObject);
         }
