@@ -20,6 +20,8 @@ public class PlayerState : MonoBehaviour
     public bool onDeath { get; private set; } = false;
     public bool DamageEffect { get; private set; } = false;
 
+    public float speedUpControl = 0.1f;
+
     private float normalTimeScale = 1f;
     public float timeScale { get; private set; } = 1f;
     public UIManager uiManager;
@@ -53,6 +55,7 @@ public class PlayerState : MonoBehaviour
         timeScale = 1f;
         Time.timeScale = normalTimeScale;
 
+        animator.updateMode = AnimatorUpdateMode.UnscaledTime;
     }
 
     private void Update()
@@ -68,7 +71,7 @@ public class PlayerState : MonoBehaviour
                 currentWave++;
                 wave = 0f;
                 mapManager.StartWave(currentWave);
-                timeScale += 0.1f;
+                timeScale += speedUpControl;
                 Time.timeScale = timeScale;
             }
         }
@@ -77,9 +80,12 @@ public class PlayerState : MonoBehaviour
             wave = upWave;
         }
 
-        if (hp > 0)
+        if (hp > 0 && Time.timeScale > 0f) // 타임스케일이 0이면 HP 감소 중지
         {
-            hp -= Time.unscaledDeltaTime;
+            float baseHpDecreaseRate = 1f; // 기본 HP 감소 속도
+            float adjustedDeltaTime = Time.unscaledDeltaTime * (1f / Time.timeScale); // 보정된 DeltaTime
+
+            hp -= baseHpDecreaseRate * adjustedDeltaTime;
             UpdateHpSlider();
         }
 
@@ -181,5 +187,10 @@ public class PlayerState : MonoBehaviour
     {
         uiManager.ShowScoreBoardWindow();
         Debug.Log("된다");
+    }
+
+    public void StopAllAni(float vel)
+    {
+        animator.speed = vel;
     }
 }

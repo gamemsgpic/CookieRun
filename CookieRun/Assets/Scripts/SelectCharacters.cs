@@ -11,6 +11,8 @@ public class SelectCharacters : MonoBehaviour
     private void Start()
     {
         currentCharacter = characters[0];
+        SetCurrentPlayer();
+
     }
     private void Update()
     {
@@ -37,6 +39,7 @@ public class SelectCharacters : MonoBehaviour
             characters[1].SetActive(false);
             characters[2].SetActive(false);
             currentCharacter = characters[0];
+            SetCurrentPlayer();
         }
     }
 
@@ -49,6 +52,7 @@ public class SelectCharacters : MonoBehaviour
             characters[1].SetActive(true);
             characters[2].SetActive(false);
             currentCharacter = characters[1];
+            SetCurrentPlayer();
         }
     }
 
@@ -61,6 +65,7 @@ public class SelectCharacters : MonoBehaviour
             characters[1].SetActive(false);
             characters[2].SetActive(true);
             currentCharacter = characters[2];
+            SetCurrentPlayer();
         }
     }
 
@@ -77,5 +82,10 @@ public class SelectCharacters : MonoBehaviour
     public void ButtonUp()
     {
         currentCharacter.GetComponent<PlayerSlide>().OnSlideButtonUp();
+    }
+
+    private void SetCurrentPlayer()
+    {
+        uiManager.player = currentCharacter;
     }
 }

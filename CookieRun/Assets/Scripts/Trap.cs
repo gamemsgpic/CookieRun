@@ -3,7 +3,7 @@ using System.Collections;
 
 public class Trap : MonoBehaviour
 {
-    private Vector3 initialLocalPosition; // 원래 위치 저장
+    public Vector3 initialLocalPosition; // 원래 위치 저장
     private Vector3 startPosition;
     private Vector3 targetPosition;
     private float lerpTime = 0f;
@@ -15,6 +15,15 @@ public class Trap : MonoBehaviour
     {
         initialLocalPosition = transform.localPosition; // 처음 생성될 때 로컬 포지션 저장
     }
+
+    private void OnEnable()
+    {
+        // 활성화될 때 원래 위치로 복귀
+        transform.localPosition = initialLocalPosition;
+        isFlying = false;
+        lerpTime = 0f;
+    }
+
 
     public void LaunchTrap()
     {
