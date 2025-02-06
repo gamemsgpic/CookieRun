@@ -371,10 +371,8 @@ public class MapManager : MonoBehaviour
         prefab.transform.rotation = Quaternion.identity;
         prefab.transform.localScale = Vector3.one;
 
-        // 부모를 먼저 활성화
         prefab.SetActive(true);
 
-        // 모든 자식들도 활성화
         foreach (Transform child in prefab.transform)
         {
             child.gameObject.SetActive(true);
@@ -383,6 +381,11 @@ public class MapManager : MonoBehaviour
             {
                 itemMagnet.ResetItem();
             }
+            else if (child.TryGetComponent<Trap>(out var trap))
+            {
+                trap.gameObject.SetActive(true); // 트랩 활성화
+                trap.transform.localPosition = trap.initialLocalPosition; // 원래 위치로 복귀
+            }
             else
             {
                 child.localPosition = Vector3.zero;
@@ -390,6 +393,7 @@ public class MapManager : MonoBehaviour
             }
         }
     }
+
 
     void LateUpdate()
     {

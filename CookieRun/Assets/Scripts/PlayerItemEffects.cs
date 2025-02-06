@@ -22,9 +22,14 @@ public class PlayerItemEffects : MonoBehaviour
     public float angelMagnetRadius = 3f;
     private Vector3 normalScale;
 
-    public void InitializeEffects(GameObject magnetObject)
+    public void Start()
     {
         animator = GetComponent<Animator>();
+        animator.updateMode = AnimatorUpdateMode.UnscaledTime;
+    }
+
+    public void InitializeEffects(GameObject magnetObject)
+    {
         magnet = magnetObject;
         normalScale = transform.localScale;
         magnetRadius = magnet.GetComponent<CircleCollider2D>().radius;

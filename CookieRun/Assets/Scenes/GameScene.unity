@@ -9379,6 +9379,7 @@ MonoBehaviour:
   finalCoinText: {fileID: 1151385657}
   finalExpText: {fileID: 480456931}
   ScoreBoardWindow: {fileID: 1372330387}
+  player: {fileID: 1169701795}
 --- !u!1 &2145302992
 GameObject:
   m_ObjectHideFlags: 0

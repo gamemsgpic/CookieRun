@@ -101,6 +101,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using UnityEngine.SceneManagement;
+using UnityEngine.Playables;
 
 public class UIManager : MonoBehaviour
 {
@@ -124,6 +125,8 @@ public class UIManager : MonoBehaviour
     private int targetExp = 0;
 
     private float animationDuration = 1f;
+
+    public GameObject player;
 
     private void Start()
     {
@@ -244,11 +247,21 @@ public class UIManager : MonoBehaviour
     {
         ShowGameOver();
         pause = true;
+        if (player != null)
+        {
+            var playerState = player.GetComponent<PlayerState>();
+            playerState.StopAllAni(0f);
+        }
         Time.timeScale = 0;
     }
 
     public void PauseOff()
     {
+        if (player != null)
+        {
+            var playerState = player.GetComponent<PlayerState>();
+            playerState.StopAllAni(1f);
+        }
         Time.timeScale = 1;
         pause = false;
         HideGameOver();
