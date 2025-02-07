@@ -14,7 +14,7 @@ public class CharacterSelectManager : MonoBehaviour
 
     void Start()
     {
-        ShowCharacter(currentIndex); // 첫 번째 캐릭터 표시
+        //ShowCharacter(currentIndex); // 첫 번째 캐릭터 표시
     }
 
     public void ShowCharacter(int index)
@@ -39,7 +39,7 @@ public class CharacterSelectManager : MonoBehaviour
         string[] characterDescriptions = { "용감한 쿠키\n 능력치가 기본인 쿠키",
             "천사 쿠키\n 작은 범위의 자석이 계속 활성화 되어있습니다.\n 자석 아이템을 먹으면 범위가 넓어집니다.", 
             "좀비 쿠키\n 목숨이 여러개 있습니다.\n 사망시 잠시 멈추고 일정시간 후 부활 합니다." };
-        characterInfoText.text = characterDescriptions[index];
+        //characterInfoText.text = characterDescriptions[index];
     }
 
     public void NextCharacter()
