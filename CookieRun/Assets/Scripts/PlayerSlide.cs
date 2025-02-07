@@ -18,6 +18,8 @@ public class PlayerSlide : MonoBehaviour
     private Vector2 slideColliderOffset;
     public bool isSlide { get; private set; } = false;
 
+    private bool slideKeyHeld = false; // 슬라이드 버튼이 눌린 상태인지 저장
+
     private void Start()
     {
         playerItemEffects = GetComponent<PlayerItemEffects>();
@@ -31,51 +33,57 @@ public class PlayerSlide : MonoBehaviour
 
         slideSize = new Vector2(0.7f, 0.6f);
         slideColliderOffset = new Vector2(0f, 0.25f);
-
-    }
-
-    private void Update()
-    {
-        //if (Input.GetKey(KeyCode.DownArrow) && playerMovement.isGrounded)
-        //{
-        //    isSlide = true;
-        //    animator.SetBool("Slide", isSlide);
-        //    boxCollider2D.size = slideSize;
-        //    boxCollider2D.offset = slideColliderOffset;
-        //}
-        //else
-        //{
-        //    isSlide = false;
-        //    animator.SetBool("Slide", isSlide);
-        //    boxCollider2D.size = normalSize;
-        //    boxCollider2D.offset = normalColliderOffset;
-        //}
-
     }
 
     public void OnSlideButtonDown()
     {
+        slideKeyHeld = true; // 슬라이드 버튼을 누른 상태 저장
+
         if (playerMovement.isGrounded && !playerState.onDeath && !uiManager.pause)
         {
-            isSlide = true;
-            animator.SetBool("Slide", isSlide);
-            if (!playerItemEffects.giant)
-            {
-                boxCollider2D.size = slideSize;
-                boxCollider2D.offset = slideColliderOffset;
-            }
-            else
-            {
-                boxCollider2D.size = normalSize;
-                boxCollider2D.offset = normalColliderOffset;
-            }
+            StartSlide();
         }
     }
+
     public void OnSlideButtonUp()
+    {
+        slideKeyHeld = false; // 슬라이드 버튼을 뗀 상태 저장
+        StopSlide();
+    }
+
+    private void StartSlide()
+    {
+        isSlide = true;
+        animator.SetBool("Slide", isSlide);
+        if (!playerItemEffects.giant)
+        {
+            boxCollider2D.size = slideSize;
+            boxCollider2D.offset = slideColliderOffset;
+        }
+        else
+        {
+            boxCollider2D.size = normalSize;
+            boxCollider2D.offset = normalColliderOffset;
+        }
+    }
+
+    private void StopSlide()
     {
         isSlide = false;
         animator.SetBool("Slide", isSlide);
         boxCollider2D.size = normalSize;
         boxCollider2D.offset = normalColliderOffset;
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Ground"))
+        {
+            // 착지 시, 슬라이드 버튼이 눌린 상태라면 자동으로 슬라이드 실행
+            if (slideKeyHeld && !playerState.onDeath && !uiManager.pause)
+            {
+                StartSlide();
+            }
+        }
     }
 }

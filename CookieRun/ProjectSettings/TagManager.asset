@@ -12,6 +12,7 @@ TagManager:
   - Potion
   - Giantization
   - DeadZone
+  - DropArea
   layers:
   - Default
   - TransparentFX
