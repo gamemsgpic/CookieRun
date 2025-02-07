@@ -23,7 +23,7 @@ using UnityEngine;
 
 public class Magnet : MonoBehaviour
 {
-    public float attractionSpeed = 2f;
+    public float attractionSpeed = 10f;
 
     private void OnTriggerStay2D(Collider2D collision)
     {

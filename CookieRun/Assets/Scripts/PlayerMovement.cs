@@ -34,6 +34,9 @@ public class PlayerMovement : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
 
         jumpCount = maxJumpCount;
+
+        jumpKeyHeld = false;
+        jumpKeyUsed = false;
     }
 
     private void Update()
