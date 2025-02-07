@@ -260,7 +260,9 @@ public class UIManager : MonoBehaviour
         if (player != null)
         {
             var playerState = player.GetComponent<PlayerState>();
+            var playerMovement = player.GetComponent<PlayerMovement>();
             playerState.StopAllAni(1f);
+            playerMovement.ResetJumpKeyHeld();
         }
         Time.timeScale = 1;
         pause = false;
