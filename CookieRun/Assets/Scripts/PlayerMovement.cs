@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using UnityEngine;
+using UnityEngine.EventSystems; // UI 이벤트 처리를 위해 필요
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -22,6 +23,9 @@ public class PlayerMovement : MonoBehaviour
 
     private Coroutine currentJumpRoutine;
 
+    private bool jumpKeyHeld = false; // 점프 키가 눌린 상태 저장
+    private bool jumpKeyUsed = false;
+
     private void Start()
     {
         animator = GetComponent<Animator>();
@@ -34,33 +38,20 @@ public class PlayerMovement : MonoBehaviour
 
     private void Update()
     {
+        // 키보드 입력도 감지하여 유지
+        jumpKeyHeld = Input.GetKey(KeyCode.Space) || jumpKeyHeld;
+
         // 점프 처리
         if (Input.GetKeyDown(KeyCode.Space) && jumpCount > 0 && !playerSlide.isSlide)
         {
-            if (currentJumpRoutine != null)
-            {
-                StopCoroutine(currentJumpRoutine);
-                ResetJumpState();
-            }
-            currentJumpRoutine = StartCoroutine(JumpRoutine());
+            PerformJump();
         }
 
         float rayLength = 0.2f;
         Vector2 rayOrigin = new Vector2(transform.position.x, transform.position.y - 0.5f);
         RaycastHit2D hit = Physics2D.Raycast(rayOrigin, Vector2.down, rayLength, LayerMask.GetMask("Ground"));
 
-        if (hit.collider != null)
-        {
-            isGrounded = true;
-            //Debug.DrawRay(rayOrigin, Vector2.down * rayLength, Color.green);
-            //Debug.Log("[PlayerMovement] Raycast로 땅 감지 성공!");
-        }
-        else
-        {
-            isGrounded = false;
-            //Debug.DrawRay(rayOrigin, Vector2.down * rayLength, Color.red);
-            //Debug.Log("[PlayerMovement] Raycast로 땅 감지 실패...");
-        }
+        isGrounded = hit.collider != null;
 
         if (!isGrounded && !isJumping)
         {
@@ -85,8 +76,7 @@ public class PlayerMovement : MonoBehaviour
             animator.SetBool("DoubleJump", true);
         }
 
-        // **하강 감지 및 isfalling 애니메이션 적용**
-        if (isfalling) // 최고점을 지나 하강 시작
+        if (isfalling)
         {
             animator.SetTrigger("Falling");
         }
@@ -96,13 +86,18 @@ public class PlayerMovement : MonoBehaviour
     {
         if (jumpCount > 0 && !playerSlide.isSlide)
         {
-            if (currentJumpRoutine != null)
-            {
-                StopCoroutine(currentJumpRoutine);
-                ResetJumpState();
-            }
-            currentJumpRoutine = StartCoroutine(JumpRoutine());
+            PerformJump();
         }
+    }
+
+    private void PerformJump()
+    {
+        if (currentJumpRoutine != null)
+        {
+            StopCoroutine(currentJumpRoutine);
+            ResetJumpState();
+        }
+        currentJumpRoutine = StartCoroutine(JumpRoutine());
     }
 
     private IEnumerator JumpRoutine()
@@ -132,6 +127,7 @@ public class PlayerMovement : MonoBehaviour
 
             yield return new WaitForFixedUpdate();
         }
+
         if (jumpCount == 1)
         {
             fallingSpeed += fallingSpeed * Time.deltaTime;
@@ -152,16 +148,21 @@ public class PlayerMovement : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        //Debug.Log($"[PlayerMovement] 충돌 감지: {collision.gameObject.name}");
         if (collision.gameObject.CompareTag("Ground"))
         {
-            //Debug.Log("[PlayerMovement] 땅과 충돌: isGrounded = true");
             isGrounded = true;
             isJumping = false;
             isfalling = false;
             jumpCount = maxJumpCount;
             fallingSpeed = startFallingSpeed;
             ResetJumpState();
+
+            // 버튼 또는 키보드가 눌린 상태라면 자동으로 점프
+            if (jumpKeyHeld && !jumpKeyUsed)
+            {
+                PerformJump();
+                jumpKeyUsed = true;
+            }
         }
     }
 
@@ -178,5 +179,12 @@ public class PlayerMovement : MonoBehaviour
         rb.velocity = Vector2.zero;
         isJumping = false;
         currentJumpRoutine = null;
+    }
+
+    // 버튼 누를 때 호출 (UI 버튼에 연결)
+    public void SetJumpKeyHeld(bool isHeld)
+    {
+        jumpKeyHeld = isHeld;
+        jumpKeyUsed = false;
     }
 }

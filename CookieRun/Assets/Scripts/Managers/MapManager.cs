@@ -314,6 +314,9 @@ public class MapManager : MonoBehaviour
             prefabToActivate = Instantiate(selectedPrefab);
         }
 
+        // 부모 활성화
+        prefabToActivate.SetActive(true);
+
         prefabToActivate.transform.position = Vector3.zero;
         prefabToActivate.transform.rotation = Quaternion.identity;
         prefabToActivate.transform.localScale = Vector3.one;
@@ -335,17 +338,27 @@ public class MapManager : MonoBehaviour
             }
         }
 
-        // 부모 활성화
-        prefabToActivate.SetActive(true);
-
-        // 모든 자식도 활성화
+        // 모든 자식 오브젝트 활성화
         foreach (Transform child in prefabToActivate.transform)
         {
             child.gameObject.SetActive(true);
+
+            var tableObj = child.GetComponent<TableObjectSC>();
+            if (tableObj != null)
+            {
+                tableObj.Init();
+            }
+
+            var itemMagnet = child.GetComponent<ApplyItemMagnet>();
+            if (itemMagnet != null)
+            {
+                itemMagnet.ResetItem();
+            }
         }
 
         activePrefabs.Add(prefabToActivate);
     }
+
 
 
     private List<GameObject> GetCurrentWavePrefabs()

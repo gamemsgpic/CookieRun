@@ -221,7 +221,7 @@ MonoBehaviour:
   JumpSpeed: 23
   deceleration: 100
   startFallingSpeed: 2
-  fallingSpeed: 2
+  fallingSpeed: 4
   fallingPlus: 3
   fallingWaitTime: 0.2
 --- !u!50 &2331384255370031573
@@ -239,7 +239,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 5
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -290,6 +290,7 @@ MonoBehaviour:
   maxHp: 100
   upWave: 30
   resurrection: 2
+  speedUpControl: 0.1
   uiManager: {fileID: 0}
   hpSlider: {fileID: 0}
   waveSlider: {fileID: 0}

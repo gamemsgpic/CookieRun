@@ -6494,6 +6494,22 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+  - eventID: 3
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1169701797}
+          m_TargetAssemblyTypeName: SelectCharacters, Assembly-CSharp
+          m_MethodName: UpJumpButton
+          m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 1
+          m_CallState: 2
 --- !u!114 &1469841792
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9577,10 +9593,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6397256138029828092, guid: 1127ee61c1e64124fb028e1ab6ac7349, type: 3}
-      propertyPath: fallingSpeed
-      value: 4
-      objectReference: {fileID: 0}
     - target: {fileID: 7305268901531569200, guid: 1127ee61c1e64124fb028e1ab6ac7349, type: 3}
       propertyPath: m_Name
       value: Angel
@@ -9630,10 +9642,6 @@ PrefabInstance:
       propertyPath: waveSlider
       value: 
       objectReference: {fileID: 617330717}
-    - target: {fileID: 2331384255370031573, guid: bc43d80b51e1e6f45bfe5addf2f36e39, type: 3}
-      propertyPath: m_GravityScale
-      value: 5
-      objectReference: {fileID: 0}
     - target: {fileID: 4713746603498425777, guid: bc43d80b51e1e6f45bfe5addf2f36e39, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1.2156444
@@ -9673,14 +9681,6 @@ PrefabInstance:
     - target: {fileID: 4713746603498425777, guid: bc43d80b51e1e6f45bfe5addf2f36e39, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6397256138029828092, guid: bc43d80b51e1e6f45bfe5addf2f36e39, type: 3}
-      propertyPath: deceleration
-      value: 100
-      objectReference: {fileID: 0}
-    - target: {fileID: 6397256138029828092, guid: bc43d80b51e1e6f45bfe5addf2f36e39, type: 3}
-      propertyPath: fallingSpeed
-      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 7305268901531569200, guid: bc43d80b51e1e6f45bfe5addf2f36e39, type: 3}
       propertyPath: m_Name

@@ -16,28 +16,44 @@ public class ApplyItemMagnet : MonoBehaviour
     public float moveDuration = 0.1f; // 이동 시간 (Lerp 속도)
 
     private Vector3 initialLocalPosition; // 아이템의 초기 로컬 위치
+    private TableObjectSC data; // CSV 데이터 관리 스크립트
 
     private void Awake()
     {
         // Awake에서 아이템의 초기 로컬 위치를 저장
         initialLocalPosition = transform.localPosition;
+
+        // TableObjectSC가 존재하는지 확인
+        data = GetComponentInChildren<TableObjectSC>();
+
+        // TableObjectSC가 없는 경우에도 오류 없이 진행되도록 처리
+        if (data == null)
+        {
+            //Debug.Log($"[ApplyItemMagnet] No TableObjectSC attached to {gameObject.name}, skipping table initialization.", gameObject);
+        }
     }
 
     private void OnEnable()
     {
-        // 프리팹 재활성화 시 초기화
         ResetItem();
     }
 
     public void ResetItem()
     {
+        // 기본적으로 모든 프리팹을 활성화
         isMovingToPlayer = false; // 이동 상태 초기화
         transform.localPosition = initialLocalPosition; // 저장된 초기 로컬 위치로 복원
-        gameObject.SetActive(true); // 아이템 활성화
+        gameObject.SetActive(true); // 프리팹 활성화 (TableObjectSC가 없어도 실행됨)
 
-        //// ResetItem() 실행 시 점수 값이 변경되는지 확인
-        //Debug.Log($"[디버그] ResetItem() 호출 - 점수: {score}, 코인: {coins}");
+        // TableObjectSC가 있는 경우에만 데이터를 적용
+        if (data != null)
+        {
+            score = data.Score;
+            coins = (int)data.Coin;
+            gameObject.GetComponentInChildren<TableObjectSC>().gameObject.SetActive(true);
+        }
     }
+
 
     // Magnet과 충돌 시 호출
     public void MoveTowardsPlayer(Transform target, float speed)
@@ -59,17 +75,10 @@ public class ApplyItemMagnet : MonoBehaviour
             {
                 isMovingToPlayer = false;
 
-                //// 이동 완료 후 효과 적용 여부 확인
-                //Debug.Log($"[디버그] {gameObject.name} 아이템 이동 완료, ApplyItemEffect 호출");
-
                 PlayerCrash playerCrash = targetTransform.GetComponent<PlayerCrash>();
                 if (playerCrash != null)
                 {
                     playerCrash.ApplyItemEffect(this);
-                }
-                else
-                {
-                    //Debug.LogError("[오류] PlayerCrash를 찾을 수 없습니다!");
                 }
 
                 gameObject.SetActive(false);
@@ -79,11 +88,9 @@ public class ApplyItemMagnet : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        // 아이템이 직접 플레이어와 충돌했을 때 로그 출력
+        // 아이템이 직접 플레이어와 충돌했을 때 효과 적용
         if (collision.CompareTag("Player"))
         {
-            //Debug.Log($"[디버그] {gameObject.name} 충돌, ApplyItemEffect 호출");
-
             PlayerCrash playerCrash = collision.GetComponent<PlayerCrash>();
             if (playerCrash != null)
             {
@@ -93,6 +100,3 @@ public class ApplyItemMagnet : MonoBehaviour
         }
     }
 }
-
-
-

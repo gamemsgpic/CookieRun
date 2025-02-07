@@ -221,7 +221,7 @@ MonoBehaviour:
   JumpSpeed: 23
   deceleration: 100
   startFallingSpeed: 2
-  fallingSpeed: 2
+  fallingSpeed: 4
   fallingPlus: 3
   fallingWaitTime: 0.2
 --- !u!114 &2030026848129091530
@@ -242,6 +242,7 @@ MonoBehaviour:
   maxHp: 100
   upWave: 30
   resurrection: 0
+  speedUpControl: 0.1
   uiManager: {fileID: 0}
   hpSlider: {fileID: 0}
   waveSlider: {fileID: 0}
