@@ -8,6 +8,7 @@ public class PlayerMovement : MonoBehaviour
     private Animator animator;
     private SpriteRenderer rbSprite;
     private PlayerSlide playerSlide;
+    private PlayerItemEffects playerItemEffects;
     public int jumpCount;
     public int maxJumpCount = 2;
     public float jumpHeight = 5f;
@@ -26,8 +27,11 @@ public class PlayerMovement : MonoBehaviour
     private bool jumpKeyHeld = false; // 점프 키가 눌린 상태 저장
     private bool jumpKeyUsed = false;
 
+    private bool oneCall = true;
+
     private void Start()
     {
+        playerItemEffects = GetComponent<PlayerItemEffects>();
         animator = GetComponent<Animator>();
         playerSlide = GetComponent<PlayerSlide>();
         rbSprite = GetComponent<SpriteRenderer>();
@@ -178,6 +182,40 @@ public class PlayerMovement : MonoBehaviour
                 PerformJump();
                 jumpKeyUsed = true;
             }
+        }
+    }
+
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("DropArea"))
+        {
+            if (jumpCount == 2 && !isGrounded && !isJumping && !playerItemEffects.giant )
+            {
+                rb.isKinematic = true;
+                fallingSpeed += fallingSpeed * Time.deltaTime;
+                rb.velocity = Vector2.down * fallingSpeed * (fallingPlus + fallingPlus);
+                isJumping = false;
+                isfalling = true;
+                currentJumpRoutine = null;
+            }
+            else
+            {
+                if (oneCall)
+                {
+                    rb.velocity = Vector2.zero;
+                    oneCall = false;
+                }
+                rb.isKinematic = false;
+            }
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("DropArea"))
+        {
+            oneCall = true;
+            rb.isKinematic = false;
         }
     }
 

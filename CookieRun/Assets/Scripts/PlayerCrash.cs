@@ -114,7 +114,7 @@ public class PlayerCrash : MonoBehaviour
 
                 //if (collision.CompareTag("Potion"))
                 //{
-                //    playerState.PlusHp(item.plusHp);
+                //    playerItemEffects.PlusHp(item.plusHp);
                 //}
             }
         }
@@ -215,7 +215,7 @@ public class PlayerCrash : MonoBehaviour
 //public class PlayerCrash : MonoBehaviour
 //{
 //    private GameManager gm;
-//    private PlayerState playerState;
+//    private PlayerState playerItemEffects;
 
 //    private bool invincibility = false;
 //    private float inviStartTime = 0f;
@@ -231,10 +231,10 @@ public class PlayerCrash : MonoBehaviour
 //    private void Start()
 //    {
 //        gm = GameManager.Instance;
-//        playerState = GetComponent<PlayerState>();
+//        playerItemEffects = GetComponent<PlayerState>();
 //        rbSprite = GetComponent<SpriteRenderer>();
 
-//        if (playerState == null)
+//        if (playerItemEffects == null)
 //        {
 //            Debug.LogError("PlayerState가 연결되지 않았습니다.");
 //        }
@@ -255,7 +255,7 @@ public class PlayerCrash : MonoBehaviour
 //        {
 //            Debug.Log("데미지 받았다!");
 //            invincibility = true;
-//            playerState.MinusHp(damage);
+//            playerItemEffects.MinusHp(damage);
 //        }
 
 //        if (collision.gameObject.layer == LayerMask.NameToLayer("Item"))
@@ -267,10 +267,10 @@ public class PlayerCrash : MonoBehaviour
 //                if (collision.CompareTag("Magnet"))
 //                {
 //                    Debug.Log("Magnet 아이템 획득! 자석 활성화!");
-//                    playerState.OnOffMagnet(item.onItmeEffect);
+//                    playerItemEffects.OnOffMagnet(item.onItmeEffect);
 //                    item.gameObject.SetActive(false);
 //                }
-//                else if (!playerState.onMagnet) // 자석이 비활성화된 경우 즉시 효과 적용
+//                else if (!playerItemEffects.onMagnet) // 자석이 비활성화된 경우 즉시 효과 적용
 //                {
 //                    ApplyItemEffect(item);
 //                }
@@ -284,10 +284,10 @@ public class PlayerCrash : MonoBehaviour
 
 //    public void ApplyItemEffect(ApplyItemMagnet item)
 //    {
-//        playerState.AddScore(item.score);
-//        playerState.AddCoins(item.coins);
-//        gm.UpdateScore(playerState.score);
-//        gm.UpdateCoin(playerState.coins);
+//        playerItemEffects.AddScore(item.score);
+//        playerItemEffects.AddCoins(item.coins);
+//        gm.UpdateScore(playerItemEffects.score);
+//        gm.UpdateCoin(playerItemEffects.coins);
 
 //        item.gameObject.SetActive(false);
 //    }
