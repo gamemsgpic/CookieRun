@@ -39,6 +39,12 @@ public class PlayerMovement : MonoBehaviour
         jumpKeyUsed = false;
     }
 
+    public void ResetJumpKeyHeld()
+    {
+        jumpKeyHeld = false;
+        jumpKeyUsed = true;
+    }
+
     private void Update()
     {
         // 키보드 입력도 감지하여 유지
@@ -48,6 +54,12 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space) && jumpCount > 0 && !playerSlide.isSlide)
         {
             PerformJump();
+            jumpKeyUsed = false;
+
+        }
+        else if (Input.GetKeyUp(KeyCode.Space))
+        {
+            jumpKeyUsed = true;
         }
 
         float rayLength = 0.2f;
