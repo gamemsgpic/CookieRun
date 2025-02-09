@@ -343,7 +343,7 @@ public class MapManager : MonoBehaviour
         {
             child.gameObject.SetActive(true);
 
-            var tableObj = child.GetComponent<TableObjectSC>();
+            var tableObj = child.GetComponent<SampleTableObjectSC>();
             if (tableObj != null)
             {
                 tableObj.Init();

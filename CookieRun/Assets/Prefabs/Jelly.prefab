@@ -33,7 +33,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children:
-  - {fileID: 6792595830626517251}
+  - {fileID: 4389670348473876377}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &8990278398580715628
@@ -162,7 +162,7 @@ MonoBehaviour:
   plusHp: 0
   giantization: {x: 0, y: 0, z: 0}
   moveDuration: 0.3
---- !u!1001 &4023196155485951016
+--- !u!1001 &6159336121259502258
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -170,33 +170,25 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 7074479457313033380}
     m_Modifications:
-    - target: {fileID: 3485776958277665663, guid: a7a1df89ec6275140ba151b7a91030b2, type: 3}
-      propertyPath: Id
-      value: 102
-      objectReference: {fileID: 0}
-    - target: {fileID: 3485776958277665663, guid: a7a1df89ec6275140ba151b7a91030b2, type: 3}
+    - target: {fileID: 1914485622034053674, guid: a7a1df89ec6275140ba151b7a91030b2, type: 3}
       propertyPath: Coin
       value: 3.3
       objectReference: {fileID: 0}
-    - target: {fileID: 3485776958277665663, guid: a7a1df89ec6275140ba151b7a91030b2, type: 3}
-      propertyPath: Flag
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3485776958277665663, guid: a7a1df89ec6275140ba151b7a91030b2, type: 3}
+    - target: {fileID: 1914485622034053674, guid: a7a1df89ec6275140ba151b7a91030b2, type: 3}
       propertyPath: Name
       value: Jelly
       objectReference: {fileID: 0}
-    - target: {fileID: 3485776958277665663, guid: a7a1df89ec6275140ba151b7a91030b2, type: 3}
+    - target: {fileID: 1914485622034053674, guid: a7a1df89ec6275140ba151b7a91030b2, type: 3}
       propertyPath: Path
-      value: 
+      value: ss
       objectReference: {fileID: 0}
-    - target: {fileID: 3485776958277665663, guid: a7a1df89ec6275140ba151b7a91030b2, type: 3}
+    - target: {fileID: 1914485622034053674, guid: a7a1df89ec6275140ba151b7a91030b2, type: 3}
       propertyPath: Score
       value: 500
       objectReference: {fileID: 0}
     - target: {fileID: 4663999451304257584, guid: a7a1df89ec6275140ba151b7a91030b2, type: 3}
       propertyPath: m_Name
-      value: JellyTable
+      value: JellyTableObject
       objectReference: {fileID: 0}
     - target: {fileID: 7606973933706679595, guid: a7a1df89ec6275140ba151b7a91030b2, type: 3}
       propertyPath: m_LocalPosition.x
@@ -243,8 +235,8 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a7a1df89ec6275140ba151b7a91030b2, type: 3}
---- !u!4 &6792595830626517251 stripped
+--- !u!4 &4389670348473876377 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7606973933706679595, guid: a7a1df89ec6275140ba151b7a91030b2, type: 3}
-  m_PrefabInstance: {fileID: 4023196155485951016}
+  m_PrefabInstance: {fileID: 6159336121259502258}
   m_PrefabAsset: {fileID: 0}

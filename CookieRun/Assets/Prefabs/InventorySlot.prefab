@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 6233878975829787065}
   - component: {fileID: 7501768069998917361}
   - component: {fileID: 582334328613127374}
+  - component: {fileID: 7748555596834071003}
   m_Layer: 5
   m_Name: Image
   m_TagString: Untagged
@@ -89,13 +90,29 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_IgnoreLayout: 0
-  m_MinWidth: 10
-  m_MinHeight: 10
-  m_PreferredWidth: 200
-  m_PreferredHeight: 200
+  m_MinWidth: 20
+  m_MinHeight: 20
+  m_PreferredWidth: 2000
+  m_PreferredHeight: 2000
   m_FlexibleWidth: -1
   m_FlexibleHeight: -1
   m_LayoutPriority: 1
+--- !u!114 &7748555596834071003
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1616713852315820613}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b1843f7709cc2e459039c773fdf5817, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemID: 0
+  itemName: 
+  spriteRenderer: {fileID: 0}
+  uiImage: {fileID: 0}
 --- !u!1 &4008749522074507255
 GameObject:
   m_ObjectHideFlags: 0

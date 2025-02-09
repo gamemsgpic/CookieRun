@@ -1,0 +1,25 @@
+ID,Name,Level,Hp,Cost,UpgradeCost,Explain_ID,Value,Image
+111501,BraveCookie,1,115,0,1000,0,0,Characters/GingerBrave
+212001,BraveCookie,2,120,0,1300,0,0,Characters/GingerBrave
+312501,BraveCookie,3,125,0,1600,0,0,Characters/GingerBrave
+413001,BraveCookie,4,130,0,1900,0,0,Characters/GingerBrave
+513501,BraveCookie,5,135,0,2200,0,0,Characters/GingerBrave
+614001,BraveCookie,6,140,0,2600,0,0,Characters/GingerBrave
+714501,BraveCookie,7,145,0,3000,0,0,Characters/GingerBrave
+815001,BraveCookie,8,150,0,0,0,0,Characters/GingerBrave
+112502,AngelCookie,1,125,0,2000,0,1,Characters/Angel Cookie
+213002,AngelCookie,2,130,0,2600,0,1,Characters/Angel Cookie
+313502,AngelCookie,3,135,0,3200,0,2,Characters/Angel Cookie
+414002,AngelCookie,4,140,0,3800,0,2,Characters/Angel Cookie
+514502,AngelCookie,5,145,0,4400,0,3,Characters/Angel Cookie
+615002,AngelCookie,6,150,0,5200,0,3,Characters/Angel Cookie
+715502,AngelCookie,7,155,0,6000,0,4,Characters/Angel Cookie
+816002,AngelCookie,8,160,0,0,0,4,Characters/Angel Cookie
+113503,ZombieCookie,1,135,0,2000,0,4,Characters/Zombie Cookie
+214003,ZombieCookie,2,140,0,2600,0,4,Characters/Zombie Cookie
+314503,ZombieCookie,3,145,0,3200,0,5,Characters/Zombie Cookie
+415003,ZombieCookie,4,150,0,3800,0,5,Characters/Zombie Cookie
+515503,ZombieCookie,5,155,0,4400,0,6,Characters/Zombie Cookie
+616003,ZombieCookie,6,160,0,5200,0,8,Characters/Zombie Cookie
+716503,ZombieCookie,7,165,0,6000,0,9,Characters/Zombie Cookie
+817003,ZombieCookie,8,170,0,0,0,10,Characters/Zombie Cookie

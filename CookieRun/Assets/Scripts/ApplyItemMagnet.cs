@@ -16,7 +16,7 @@ public class ApplyItemMagnet : MonoBehaviour
     public float moveDuration = 0.05f; // 이동 시간 (Lerp 속도)
 
     private Vector3 initialLocalPosition; // 아이템의 초기 로컬 위치
-    private TableObjectSC data; // CSV 데이터 관리 스크립트
+    private SampleTableObjectSC data; // CSV 데이터 관리 스크립트
 
     private void Awake()
     {
@@ -24,7 +24,7 @@ public class ApplyItemMagnet : MonoBehaviour
         initialLocalPosition = transform.localPosition;
 
         // TableObjectSC가 존재하는지 확인
-        data = GetComponentInChildren<TableObjectSC>();
+        data = GetComponentInChildren<SampleTableObjectSC>();
 
         // TableObjectSC가 없는 경우에도 오류 없이 진행되도록 처리
         if (data == null)
@@ -50,7 +50,7 @@ public class ApplyItemMagnet : MonoBehaviour
         {
             score = data.Score;
             coins = (int)data.Coin;
-            gameObject.GetComponentInChildren<TableObjectSC>().gameObject.SetActive(true);
+            gameObject.GetComponentInChildren<SampleTableObjectSC>().gameObject.SetActive(true);
         }
     }
 

@@ -1,0 +1,4 @@
+Id,Name,Velue,Radius,Speed,Path
+100,HpPlus,50,0,0,UI/icon_ingameMysteryBox1
+101,RadiusPlus,0,7,0,UI/icon_ingameMysteryBox2
+102,SpeedPlus,0,0,1,UI/icon_ingameMysteryBox3
