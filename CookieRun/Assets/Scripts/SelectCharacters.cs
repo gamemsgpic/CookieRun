@@ -10,7 +10,19 @@ public class SelectCharacters : MonoBehaviour
 
     private void Start()
     {
-        currentCharacter = characters[0];
+        if (GameData.characterName == "BraveCookie")
+        {
+            SelectBrave();
+        }
+        else if (GameData.characterName == "AngelCookie")
+        {
+            SelectAngel();
+        }
+        else if (GameData.characterName == "ZombieCookie")
+        {
+            SelectZombie();
+        }
+
         SetCurrentPlayer();
 
     }

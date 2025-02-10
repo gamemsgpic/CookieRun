@@ -3,17 +3,11 @@ using UnityEngine.UI;
 
 public class EquipmentTreasure : MonoBehaviour
 {
-    private Image treasureImage; // public 제거하고 private으로 변경
-    private Treasure treasureData; // 현재 장착된 아이템 데이터
-
-    private void Start()
-    {
-        treasureImage.color = new Color(1, 1, 1, 0);
-    }
+    public Treasure treasureData; // 현재 장착된 아이템 데이터
+    private Image treasureImage; // 아이템 이미지
 
     private void Awake()
     {
-        // 자신이 가진 Image 컴포넌트를 자동으로 찾기
         treasureImage = GetComponent<Image>();
 
         if (treasureImage == null)
@@ -22,17 +16,22 @@ public class EquipmentTreasure : MonoBehaviour
         }
     }
 
+    private void Start()
+    {
+        treasureImage.color = new Color(1, 1, 1, 0); // 초기에는 투명 처리
+    }
+
+    /// **아이템 장착 시 데이터 적용**
     public void ApplyTreasureData(Treasure data)
     {
         if (data == null)
         {
-            Debug.LogError("[EquipmentTreasure] 장착할 데이터가 null입니다!");
+            Debug.LogError("[EquipmentTreasure] 적용할 데이터가 없습니다!");
             return;
         }
 
         treasureData = data;
 
-        // 스프라이트 변경
         if (treasureImage != null)
         {
             treasureImage.sprite = treasureData.treasureIcon;
@@ -40,9 +39,17 @@ public class EquipmentTreasure : MonoBehaviour
         }
 
         Debug.Log($"[EquipmentTreasure] {treasureData.treasureName} 스프라이트 적용됨");
+
+        // **데이터 값들 적용 (GameData에서 불러온 값이 제대로 반영)**
+        treasureData.treasureID = data.treasureID;
+        treasureData.treasureName = data.treasureName;
+        treasureData.treasureVelue = data.treasureVelue;
+        treasureData.treasureRadius = data.treasureRadius;
+        treasureData.treasureSpeed = data.treasureSpeed;
+        treasureData.treasurePath = data.treasurePath;
     }
 
-
+    /// **아이템 장착 해제**
     public void ClearTreasure()
     {
         treasureData = null;
@@ -50,7 +57,7 @@ public class EquipmentTreasure : MonoBehaviour
         if (treasureImage != null)
         {
             treasureImage.sprite = null; // 스프라이트 제거
-            treasureImage.color = new Color(1, 1, 1, 0); // 이미지의 알파값을 0으로 설정 (투명)
+            treasureImage.color = new Color(1, 1, 1, 0); // 투명 처리
         }
 
         Debug.Log("[EquipmentTreasure] 장착 해제됨, UI 초기화 완료");

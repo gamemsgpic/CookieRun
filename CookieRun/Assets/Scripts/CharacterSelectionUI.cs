@@ -9,6 +9,8 @@ public class CharacterSelectionUI : MonoBehaviour
     public Image characterImage;
     public TextMeshProUGUI characterNameText;
     public TextMeshProUGUI characterLevelText;
+    public TextMeshProUGUI characterHpText;
+    public TextMeshProUGUI characterAbilityText;
     public Button prevButton;
     public Button nextButton;
     public Button equipButton;
@@ -19,9 +21,19 @@ public class CharacterSelectionUI : MonoBehaviour
 
     private void Start()
     {
-        characterInfo = GetComponent<CharacterInfo>();
+        if (characterInfo == null)
+        {
+            characterInfo = FindObjectOfType<CharacterInfo>();
+            if (characterInfo == null)
+            {
+                Debug.LogError("[CharacterSelectionUI] characterInfo가 초기화되지 않았습니다.");
+                return;
+            }
+        }
 
         LoadCharacterData();
+        ApplyGameDataToCharacter();
+        UpdateCharacterUI();
 
         prevButton.onClick.AddListener(GetPreviousCharacter);
         nextButton.onClick.AddListener(GetNextCharacter);
@@ -37,9 +49,24 @@ public class CharacterSelectionUI : MonoBehaviour
             characterList = new List<CharacterTable>();
             return;
         }
-
         Debug.Log($"[CharacterSelectionUI] {characterList.Count}개의 기본 캐릭터 데이터 로드 완료.");
-        UpdateCharacterUI();
+    }
+
+    private void ApplyGameDataToCharacter()
+    {
+        // GameData에서 불러온 값 적용
+        characterInfo.SetCharacterData(
+            GameData.characterId,
+            GameData.characterName,
+            GameData.characterLevel,
+            GameData.characterHp,
+            GameData.characterCost,
+            GameData.characterUpgradeCost,
+            GameData.characterExplain_ID,
+            GameData.characterValue,
+            GameData.characterAbility,
+            GameData.characterImage
+        );
     }
 
     private void GetNextCharacter()
@@ -48,12 +75,7 @@ public class CharacterSelectionUI : MonoBehaviour
         if (index != -1)
         {
             index = (index + 1) % characterList.Count;
-            characterInfo.currentCharacterName = characterList[index].Name;
-            characterInfo.currentCharacterLevel = GameData.GetCharacterLevel(characterInfo.currentCharacterName);
-
-            // GameData 업데이트
-            GameData.SetCharacter(characterInfo.currentCharacterName, characterInfo.currentCharacterLevel);
-
+            characterInfo.SetCharacterData(characterList[index]);
             UpdateCharacterUI();
         }
     }
@@ -64,12 +86,7 @@ public class CharacterSelectionUI : MonoBehaviour
         if (index != -1)
         {
             index = (index - 1 + characterList.Count) % characterList.Count;
-            characterInfo.currentCharacterName = characterList[index].Name;
-            characterInfo.currentCharacterLevel = GameData.GetCharacterLevel(characterInfo.currentCharacterName);
-
-            // GameData 업데이트
-            GameData.SetCharacter(characterInfo.currentCharacterName, characterInfo.currentCharacterLevel);
-
+            characterInfo.SetCharacterData(characterList[index]);
             UpdateCharacterUI();
         }
     }
@@ -84,12 +101,13 @@ public class CharacterSelectionUI : MonoBehaviour
         }
 
         // GameData에 선택된 캐릭터 정보 저장
-        GameData.EquipCharacter(selectedCharacter.Id, selectedCharacter.Name, selectedCharacter.Level,
+        GameData.EquipCharacter(
+            selectedCharacter.ID, selectedCharacter.Name, selectedCharacter.Level,
             selectedCharacter.Hp, selectedCharacter.Cost, selectedCharacter.UpgradeCost,
-            selectedCharacter.Explain_ID, selectedCharacter.Value, selectedCharacter.Image);
+            selectedCharacter.Explain_ID, selectedCharacter.Value, selectedCharacter.Ability, selectedCharacter.Image
+        );
 
-        Debug.Log($"[CharacterSelectionUI] {selectedCharacter.Name} (레벨 {selectedCharacter.Level}) 착용 완료.");
-
+        Debug.Log($"[CharacterSelectionUI] {selectedCharacter.Name} (레벨 {characterInfo.currentCharacterLevel}) 착용 완료.");
         UpdateCharacterUI();
     }
 
@@ -104,8 +122,17 @@ public class CharacterSelectionUI : MonoBehaviour
 
         characterNameText.text = currentCharacter.Name;
         characterLevelText.text = $"레벨 {currentCharacter.Level}";
+        characterHpText.text = currentCharacter.Hp.ToString();
+        characterAbilityText.text = currentCharacter.Ability;
 
-        string imagePath = currentCharacter.Image.Trim().Replace(".png", "");
+        // **이미지 로드 (경로 확인 및 디버깅 추가)**
+        string imagePath = currentCharacter.Image?.Trim().Replace(".png", ""); // 널 체크
+        if (string.IsNullOrEmpty(imagePath))
+        {
+            Debug.LogError($"[CharacterSelectionUI] 이미지 경로가 비어있습니다. ({currentCharacter.Name})");
+            return;
+        }
+
         characterImage.sprite = Resources.Load<Sprite>(imagePath);
 
         if (characterImage.sprite == null)
@@ -116,4 +143,5 @@ public class CharacterSelectionUI : MonoBehaviour
         upgradeCostText.text = $"{currentCharacter.UpgradeCost:N0}";
         equipButtonText.text = (GameData.characterName == currentCharacter.Name) ? "착용중" : "착용";
     }
+
 }

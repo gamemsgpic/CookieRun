@@ -102,33 +102,34 @@ public class InventoryUI : MonoBehaviour
     // 아이템을 장착하는 메서드
     public void EquipSelectedItem()
     {
-        if (selectedItem == null)
-        {
-            Debug.LogError("[InventoryUI] 선택된 아이템이 없습니다!");
-            return;
-        }
-
-        if (selectedItem.treasureData == null)
-        {
-            Debug.LogError("[InventoryUI] 선택된 아이템의 데이터가 없습니다!");
-            return;
-        }
-
         if (selectedSlot == null)
         {
             Debug.LogError("[InventoryUI] 선택된 슬롯이 없습니다! 먼저 슬롯을 클릭하세요.");
             return;
         }
 
-        selectedSlot.ReceiveTreasureData(selectedItem.treasureData); // 슬롯에 데이터 전달
-        selectedItem.SetEquipStatus(true);
+        if (selectedItem == null)
+        {
+            Debug.LogError("[InventoryUI] 선택된 아이템이 없습니다!");
+            return;
+        }
+
+        // 선택한 슬롯의 자식 EquipmentTreasure에 데이터 적용
+        selectedSlot.equipmentTreasure.ApplyTreasureData(selectedItem.treasureData);
+
         Debug.Log($"[InventoryUI] {selectedItem.treasureData.treasureName} 장착됨");
     }
 
     public void OpenInventoryForSlot(EquipmentSlot slot)
     {
-        selectedSlot = slot; // 클릭한 슬롯을 저장
-        Debug.Log($"[InventoryUI] 슬롯 {slot.slotIndex} 선택됨");
+        if (slot == null)
+        {
+            Debug.LogError("[InventoryUI] 선택한 슬롯이 없습니다!");
+            return;
+        }
+
+        selectedSlot = slot; // 선택한 슬롯을 저장
+        Debug.Log($"[InventoryUI] 슬롯 {selectedSlot.slotIndex} 선택됨");
         gameObject.SetActive(true); // 인벤토리 UI 활성화
     }
 
@@ -141,8 +142,7 @@ public class InventoryUI : MonoBehaviour
             return;
         }
 
-        selectedSlot.ClearSlot(); // 선택된 슬롯을 해제
-
+        selectedSlot.UnequipTreasure();
         Debug.Log("[InventoryUI] 선택된 슬롯이 정상적으로 해제됨.");
     }
 

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 using UnityEngine.UI;
+using static GameData;
 
 public class InventoryManager : MonoBehaviour
 {
@@ -107,8 +108,17 @@ public class InventoryManager : MonoBehaviour
         for (int i = 0; i < equipmentSlots.Count; i++)
         {
             Treasure equippedItem = equipmentSlots[i].GetEquippedItem();
-            string itemId = (equippedItem != null) ? equippedItem.treasureID.ToString() : "None";
-            GameData.SetEquipmentSlot(i, itemId);
+            EquipmentSlotData slotData = (equippedItem != null)
+                ? new EquipmentSlotData(
+                    equippedItem.treasureID,
+                    equippedItem.treasureName,
+                    equippedItem.treasureVelue,
+                    equippedItem.treasureRadius,
+                    equippedItem.treasureSpeed,
+                    equippedItem.treasurePath)
+                : new EquipmentSlotData(0, "", 0, 0f, 0f, "");
+
+            GameData.SetEquipmentSlot(i, slotData);
         }
 
         Debug.Log("[InventoryManager] 현재 슬롯 정보를 GameData에 저장 완료.");
@@ -124,19 +134,18 @@ public class InventoryManager : MonoBehaviour
 
         for (int i = 0; i < equipmentSlots.Count; i++)
         {
-            string loadedItemId = GameData.GetEquipmentSlot(i);
-            if (!string.IsNullOrEmpty(loadedItemId) && loadedItemId != "None")
+            EquipmentSlotData loadedItemData = GameData.GetEquipmentSlot(i);
+            if (!string.IsNullOrEmpty(loadedItemData.treasureName))
             {
-                Treasure treasure = GetTreasureById(loadedItemId);
+                Treasure treasure = GetTreasureById(loadedItemData.treasureID.ToString());
                 if (treasure != null)
                 {
-                    // 슬롯의 자식 오브젝트(EquipmentTreasure)에도 반영
-                    equipmentSlots[i].ReceiveTreasureData(treasure);
+                    equipmentSlots[i].EquipTreasure(treasure);
                     Debug.Log($"[InventoryManager] 슬롯 {i}에 {treasure.treasureName} 반영 완료");
                 }
                 else
                 {
-                    Debug.LogWarning($"[InventoryManager] ID {loadedItemId}에 해당하는 Treasure를 찾을 수 없음");
+                    Debug.LogWarning($"[InventoryManager] ID {loadedItemData.treasureID}에 해당하는 Treasure를 찾을 수 없음");
                 }
             }
         }

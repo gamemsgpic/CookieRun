@@ -1,6 +1,6 @@
 using System;
-using System.Collections.Generic;
 using System.IO;
+using System.Collections.Generic;
 using UnityEngine;
 
 public static class GameData
@@ -8,47 +8,38 @@ public static class GameData
     [Serializable]
     public struct EquipmentSlotData
     {
-        public string treasureID;
+        public int treasureID;
         public string treasureName;
-        public int treasureValue;
+        public int treasureVelue;
         public float treasureRadius;
         public float treasureSpeed;
         public string treasurePath;
 
-        public EquipmentSlotData(string id, string name, int value, float radius, float speed, string path)
+        public EquipmentSlotData(int id, string name, int velue, float radius, float speed, string path)
         {
             treasureID = id;
             treasureName = name;
-            treasureValue = value;
+            treasureVelue = velue;
             treasureRadius = radius;
             treasureSpeed = speed;
             treasurePath = path;
         }
     }
 
-    // 캐릭터 정보 저장 변수
-    public static string characterId { get; private set; } = "1";
-    public static string characterName { get; private set; } = "BraveCookie";
-    public static int characterLevel { get; private set; } = 1;
-    public static int characterHp { get; private set; } = 100;
-    public static int characterCost { get; private set; } = 1000;
-    public static int characterUpgradeCost { get; private set; } = 500;
-    public static int characterExplain_ID { get; private set; } = 1;
-    public static int characterValue { get; private set; } = 10;
-    public static string characterImage { get; private set; } = "Character/BraveCookie";
+    public static int characterId;
+    public static string characterName;
+    public static int characterLevel;
+    public static int characterHp;
+    public static int characterCost;
+    public static int characterUpgradeCost;
+    public static int characterExplain_ID;
+    public static int characterValue;
+    public static string characterAbility;
+    public static string characterImage;
 
-    // 장비 슬롯 정보 (3개)
-    private static EquipmentSlotData[] equippedSlots = new EquipmentSlotData[3];
+    public static EquipmentSlotData[] equippedSlots = new EquipmentSlotData[3];
 
-    // 기타 게임 데이터
-    public static int BestScore { get; private set; } = 0;
-    public static int Coin { get; private set; } = 1000;
-    public static int Gem { get; private set; } = 1000;
-    public static bool IsDataLoaded { get; private set; } = false;
-
-    /*** 캐릭터 정보 저장 및 불러오기 ***/
-    public static void EquipCharacter(
-        string id, string name, int level, int hp, int cost, int upgradeCost, int explainID, int value, string image)
+    public static void EquipCharacter(int id, string name, int level, int hp, int cost, int upgradeCost, int explainID, int value, string ability, string image)
     {
         characterId = id;
         characterName = name;
@@ -58,98 +49,145 @@ public static class GameData
         characterUpgradeCost = upgradeCost;
         characterExplain_ID = explainID;
         characterValue = value;
+        characterAbility = ability;
         characterImage = image;
         SaveGameData();
     }
 
-    /*** 장비 슬롯 저장 및 불러오기 ***/
-    public static void SetEquipmentSlot(int slotIndex, EquipmentSlotData data)
+    public static void SetEquipmentSlot(int slotIndex, EquipmentSlotData slotData)
     {
         if (slotIndex < 0 || slotIndex >= equippedSlots.Length) return;
-        equippedSlots[slotIndex] = data;
+        equippedSlots[slotIndex] = slotData;
         SaveGameData();
     }
 
     public static EquipmentSlotData GetEquipmentSlot(int slotIndex)
     {
-        return (slotIndex >= 0 && slotIndex < equippedSlots.Length) ? equippedSlots[slotIndex] : new EquipmentSlotData("None", "", 0, 0f, 0f, "");
+        if (slotIndex < 0 || slotIndex >= equippedSlots.Length)
+            return new EquipmentSlotData(0, "", 0, 0f, 0f, "");
+
+        return equippedSlots[slotIndex];
     }
 
-    /*** 게임 데이터 저장 ***/
+
     public static void SaveGameData()
     {
-        PlayerPrefs.SetString("Character_ID", characterId);
-        PlayerPrefs.SetString("Character_Name", characterName);
-        PlayerPrefs.SetInt("Character_Level", characterLevel);
-        PlayerPrefs.SetInt("Character_Hp", characterHp);
-        PlayerPrefs.SetInt("Character_Cost", characterCost);
-        PlayerPrefs.SetInt("Character_UpgradeCost", characterUpgradeCost);
-        PlayerPrefs.SetInt("Character_Explain_ID", characterExplain_ID);
-        PlayerPrefs.SetInt("Character_Value", characterValue);
-        PlayerPrefs.SetString("Character_Image", characterImage);
+        PlayerPrefs.SetInt("CharacterId", characterId);
+        PlayerPrefs.SetString("CharacterName", characterName);
+        PlayerPrefs.SetInt("CharacterLevel", characterLevel);
+        PlayerPrefs.SetInt("CharacterHp", characterHp);
+        PlayerPrefs.SetInt("CharacterCost", characterCost);
+        PlayerPrefs.SetInt("CharacterUpgradeCost", characterUpgradeCost);
+        PlayerPrefs.SetInt("CharacterExplainID", characterExplain_ID);
+        PlayerPrefs.SetInt("CharacterValue", characterValue);
+        PlayerPrefs.SetString("CharacterAbility", characterAbility);
+        PlayerPrefs.SetString("CharacterImage", characterImage);
 
         for (int i = 0; i < equippedSlots.Length; i++)
         {
-            PlayerPrefs.SetString($"EquipmentSlot_{i}_ID", equippedSlots[i].treasureID);
+            PlayerPrefs.SetInt($"EquipmentSlot_{i}_ID", equippedSlots[i].treasureID);
             PlayerPrefs.SetString($"EquipmentSlot_{i}_Name", equippedSlots[i].treasureName);
-            PlayerPrefs.SetInt($"EquipmentSlot_{i}_Value", equippedSlots[i].treasureValue);
+            PlayerPrefs.SetInt($"EquipmentSlot_{i}_Value", equippedSlots[i].treasureVelue);
             PlayerPrefs.SetFloat($"EquipmentSlot_{i}_Radius", equippedSlots[i].treasureRadius);
             PlayerPrefs.SetFloat($"EquipmentSlot_{i}_Speed", equippedSlots[i].treasureSpeed);
             PlayerPrefs.SetString($"EquipmentSlot_{i}_Path", equippedSlots[i].treasurePath);
         }
 
-        PlayerPrefs.SetInt("BestScore", BestScore);
-        PlayerPrefs.SetInt("Coin", Coin);
-        PlayerPrefs.SetInt("Gem", Gem);
         PlayerPrefs.Save();
-
         SaveGameDataToCSV();
     }
 
-    /*** CSV 파일 저장 ***/
     public static void SaveGameDataToCSV()
     {
         string savePath = Application.persistentDataPath + "/Save/GameData.csv";
         List<string> csvLines = new List<string>
         {
-            "CharacterID,CharacterName,CharacterLevel,CharacterHp,CharacterCost,CharacterUpgradeCost,CharacterExplainID,CharacterValue,CharacterImage",
-            $"{characterId},{characterName},{characterLevel},{characterHp},{characterCost},{characterUpgradeCost},{characterExplain_ID},{characterValue},{characterImage}",
-
-            "BestScore,Coin,Gem",
-            $"{BestScore},{Coin},{Gem}",
-
-            "EquipmentSlot1,EquipmentSlot2,EquipmentSlot3",
-            $"{equippedSlots[0].treasureID},{equippedSlots[1].treasureID},{equippedSlots[2].treasureID}"
+            "CharacterId,CharacterName,CharacterLevel,CharacterHp,CharacterCost,CharacterUpgradeCost,CharacterExplainID,CharacterValue,CharacterImage",
+            $"{characterId},{characterName},{characterLevel},{characterHp},{characterCost},{characterUpgradeCost},{characterExplain_ID},{characterValue},{characterImage}"
         };
+
+        csvLines.Add("EquipmentSlot1,EquipmentSlot2,EquipmentSlot3");
+        csvLines.Add(
+            $"{equippedSlots[0].treasureID},{equippedSlots[1].treasureID},{equippedSlots[2].treasureID}"
+        );
 
         File.WriteAllLines(savePath, csvLines);
     }
 
-    /*** 게임 데이터 불러오기 ***/
     public static void LoadGameData()
     {
-        characterId = PlayerPrefs.GetString("Character_ID", "1");
-        characterName = PlayerPrefs.GetString("Character_Name", "BraveCookie");
-        characterLevel = PlayerPrefs.GetInt("Character_Level", 1);
-        characterHp = PlayerPrefs.GetInt("Character_Hp", 100);
-        characterCost = PlayerPrefs.GetInt("Character_Cost", 1000);
-        characterUpgradeCost = PlayerPrefs.GetInt("Character_UpgradeCost", 500);
-        characterExplain_ID = PlayerPrefs.GetInt("Character_Explain_ID", 1);
-        characterValue = PlayerPrefs.GetInt("Character_Value", 10);
-        characterImage = PlayerPrefs.GetString("Character_Image", "Character/BraveCookie");
+        characterId = PlayerPrefs.GetInt("CharacterId", 0);
+        characterName = PlayerPrefs.GetString("CharacterName", "");
+        characterLevel = PlayerPrefs.GetInt("CharacterLevel", 1);
+        characterHp = PlayerPrefs.GetInt("CharacterHp", 100);
+        characterCost = PlayerPrefs.GetInt("CharacterCost", 0);
+        characterUpgradeCost = PlayerPrefs.GetInt("CharacterUpgradeCost", 0);
+        characterExplain_ID = PlayerPrefs.GetInt("CharacterExplainID", 0);
+        characterValue = PlayerPrefs.GetInt("CharacterValue", 0);
+        characterAbility = PlayerPrefs.GetString("CharacterAbility", "");
+        characterImage = PlayerPrefs.GetString("CharacterImage", "");
+
+        // **데이터가 비어 있으면 기본 캐릭터("용기쿠키") 설정**
+        if (string.IsNullOrEmpty(characterName))
+        {
+            SetDefaultCharacter();
+        }
 
         for (int i = 0; i < equippedSlots.Length; i++)
         {
-            equippedSlots[i] = new EquipmentSlotData(
-                PlayerPrefs.GetString($"EquipmentSlot_{i}_ID", "None"),
-                PlayerPrefs.GetString($"EquipmentSlot_{i}_Name", ""),
-                PlayerPrefs.GetInt($"EquipmentSlot_{i}_Value", 0),
-                PlayerPrefs.GetFloat($"EquipmentSlot_{i}_Radius", 0f),
-                PlayerPrefs.GetFloat($"EquipmentSlot_{i}_Speed", 0f),
-                PlayerPrefs.GetString($"EquipmentSlot_{i}_Path", "")
-            );
+            equippedSlots[i].treasureID = PlayerPrefs.GetInt($"EquipmentSlot_{i}_ID", 0);
+            equippedSlots[i].treasureName = PlayerPrefs.GetString($"EquipmentSlot_{i}_Name", "");
+            equippedSlots[i].treasureVelue = PlayerPrefs.GetInt($"EquipmentSlot_{i}_Value", 0);
+            equippedSlots[i].treasureRadius = PlayerPrefs.GetFloat($"EquipmentSlot_{i}_Radius", 0);
+            equippedSlots[i].treasureSpeed = PlayerPrefs.GetFloat($"EquipmentSlot_{i}_Speed", 0);
+            equippedSlots[i].treasurePath = PlayerPrefs.GetString($"EquipmentSlot_{i}_Path", "");
+        }
+    }
+
+    public static void ResetSaveGameData()
+    {
+        characterId = 0;
+        characterName = "";
+        characterLevel = 1;
+        characterHp = 100;
+        characterCost = 0;
+        characterUpgradeCost = 0;
+        characterExplain_ID = 0;
+        characterValue = 0;
+        characterAbility = "";
+        characterImage = "";
+
+        for (int i = 0; i < equippedSlots.Length; i++)
+        {
+            equippedSlots[i] = new EquipmentSlotData(0, "", 0, 0f, 0f, "");
         }
 
-        IsDataLoaded = true;
+        SaveGameData();
+    }
+
+
+    public static void SetDefaultCharacter()
+    {
+        var defaultCharacter = CharacterTableObjectSC.GetCharacterData("BraveCookie", 1);
+
+        if (defaultCharacter != null)
+        {
+            characterId = defaultCharacter.ID;
+            characterName = defaultCharacter.Name;
+            characterLevel = defaultCharacter.Level;
+            characterHp = defaultCharacter.Hp;
+            characterCost = defaultCharacter.Cost;
+            characterUpgradeCost = defaultCharacter.UpgradeCost;
+            characterExplain_ID = defaultCharacter.Explain_ID;
+            characterValue = defaultCharacter.Value;
+            characterAbility = defaultCharacter.Ability;
+            characterImage = defaultCharacter.Image;
+        }
+        else
+        {
+            Debug.LogError("[GameData] 기본 캐릭터 데이터를 찾을 수 없습니다! (용기쿠키 레벨 1)");
+        }
+
+        SaveGameData();
     }
 }

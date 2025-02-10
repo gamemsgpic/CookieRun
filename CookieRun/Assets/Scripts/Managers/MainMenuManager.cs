@@ -56,6 +56,6 @@ public class MainMenuManager : MonoBehaviour
 
     public void OnResetSave()
     {
-        GameData.ResetSaveGameData();
+        //GameData.ResetSaveGameData();
     }
 }

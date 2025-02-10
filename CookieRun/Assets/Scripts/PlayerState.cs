@@ -39,6 +39,8 @@ public class PlayerState : MonoBehaviour
         itemEffects = GetComponent<PlayerItemEffects>();
         itemEffects.InitializeEffects(magnet);
 
+        SetGameDataToPlayerState();
+
         hp = maxHp;
         wave = 0f;
         currentWave = 1;
@@ -205,5 +207,10 @@ public class PlayerState : MonoBehaviour
     public void StopAllAni(float vel)
     {
         animator.speed = vel;
+    }
+
+    private void SetGameDataToPlayerState()
+    {
+        maxHp = GameData.characterHp;
     }
 }
