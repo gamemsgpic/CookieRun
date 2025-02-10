@@ -148,6 +148,7 @@
 
 using UnityEngine;
 using System.Collections.Generic;
+using UnityEngine.Tilemaps;
 
 public class MapManager : MonoBehaviour
 {
@@ -156,6 +157,8 @@ public class MapManager : MonoBehaviour
     {
         public List<GameObject> prefabs;
     }
+
+    public Sprite[] tileSprite;
 
     public List<WavePrefabList> wavePrefabs = new List<WavePrefabList>(); // 웨이브별 프리팹 리스트
     public List<GameObject> clearMapPrefabs = new List<GameObject>(); // 클리어맵 프리팹 리스트
@@ -167,7 +170,7 @@ public class MapManager : MonoBehaviour
     public Transform startGroundRightPos; // 첫 프리팹 배치 위치
     public Transform clearPivot; // 클리어 피봇 (프리팹 제거 기준)
     public int maxActivePrefabs = 5; // 최대 활성 프리팹 개수
-    private int currentWave = 0; // 현재 웨이브
+    public int currentWave { get; private set; } = 0; // 현재 웨이브
 
     void Start()
     {
@@ -245,6 +248,7 @@ public class MapManager : MonoBehaviour
         {
             return;
         }
+
 
         GameObject clearPrefab = Instantiate(clearMapPrefabs[Random.Range(0, clearMapPrefabs.Count)]);
         Transform clearLeftPivot = clearPrefab.transform.Find("LeftPivot");
@@ -357,6 +361,22 @@ public class MapManager : MonoBehaviour
         }
 
         activePrefabs.Add(prefabToActivate);
+        if (currentWave == 0)
+        {
+            ChangeAllTilemapSprites(prefabToActivate, tileSprite[0]);
+        }
+        else if (currentWave == 1)
+        {
+            ChangeAllTilemapSprites(prefabToActivate, tileSprite[1]);
+        }
+        else if (currentWave == 2)
+        {
+            ChangeAllTilemapSprites(prefabToActivate, tileSprite[2]);
+        }
+        else if (currentWave == 3)
+        {
+            ChangeAllTilemapSprites(prefabToActivate, tileSprite[3]);
+        }
     }
 
 
@@ -431,5 +451,35 @@ public class MapManager : MonoBehaviour
             ActivatePrefab();
         }
     }
+
+    void ChangeAllTilemapSprites(GameObject prefab, Sprite newSprite)
+    {
+        Tilemap[] tilemaps = prefab.GetComponentsInChildren<Tilemap>();
+
+        foreach (Tilemap tilemap in tilemaps)
+        {
+            BoundsInt bounds = tilemap.cellBounds;
+            TileBase[] allTiles = tilemap.GetTilesBlock(bounds);
+
+            Tile[] newTiles = new Tile[allTiles.Length];
+
+            for (int i = 0; i < allTiles.Length; i++)
+            {
+                if (allTiles[i] is Tile oldTile)
+                {
+                    Tile newTile = ScriptableObject.CreateInstance<Tile>(); // 새로운 타일 객체 생성
+                    newTile.sprite = newSprite; // 스프라이트 변경
+                    newTiles[i] = newTile;
+                }
+                else
+                {
+                    newTiles[i] = null;
+                }
+            }
+
+            tilemap.SetTilesBlock(bounds, newTiles); // 한 번에 변경
+        }
+    }
+
 
 }

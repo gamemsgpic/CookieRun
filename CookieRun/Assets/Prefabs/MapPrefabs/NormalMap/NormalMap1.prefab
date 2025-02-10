@@ -139,6 +139,7 @@ GameObject:
   - component: {fileID: 5845475230012339899}
   - component: {fileID: 3224597658807139288}
   - component: {fileID: 7719149024131165234}
+  - component: {fileID: 4239395167175790472}
   m_Layer: 7
   m_Name: Tilemap
   m_TagString: Ground
@@ -511,6 +512,24 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 38.148804, y: 1.9116211}
   m_EdgeRadius: 0
+--- !u!114 &4239395167175790472
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3177872890963312856}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a68975e9b87ea9346b4a02dcbd39877c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tile: {fileID: 11400000, guid: 9ee4d2d5fc8f4d84db1526b04a446d6a, type: 2}
+  sprite:
+  - {fileID: 21300000, guid: 1d442b90649621f478e940e3b002c3c2, type: 3}
+  - {fileID: 21300000, guid: 59ca8759621157f40b8d0373a2259eac, type: 3}
+  - {fileID: 21300000, guid: 59eb47d2187fe93439a5aff3aca49682, type: 3}
+  - {fileID: 21300000, guid: 993c6e90293ced144a89a46d4b9985de, type: 3}
 --- !u!1 &6386800705398459538
 GameObject:
   m_ObjectHideFlags: 0

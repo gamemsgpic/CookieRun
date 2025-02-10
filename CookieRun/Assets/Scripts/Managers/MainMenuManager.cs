@@ -53,4 +53,9 @@ public class MainMenuManager : MonoBehaviour
         Debug.Log("[UIManager] 수동 저장 버튼 클릭됨");
         GameData.SaveGameData();
     }
+
+    public void OnResetSave()
+    {
+        GameData.ResetSaveGameData();
+    }
 }

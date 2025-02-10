@@ -21,6 +21,8 @@ public class PlayerState : MonoBehaviour
     public bool onDeath { get; private set; } = false;
     public bool DamageEffect { get; private set; } = false;
 
+
+    private bool maxWave = false;
     public float speedUpControl = 0.1f;
 
     private float normalTimeScale = 1f;
@@ -40,6 +42,7 @@ public class PlayerState : MonoBehaviour
         hp = maxHp;
         wave = 0f;
         currentWave = 1;
+        maxWave = false;
 
         if (hpSlider != null)
         {
@@ -63,17 +66,22 @@ public class PlayerState : MonoBehaviour
     {
         itemEffects.UpdateItemEffects(timeScale);
 
-        if (currentWave <= 4)
+        if (currentWave <= 4 && !maxWave)
         {
             wave += Time.deltaTime;
             UpdateWaveSlider();
             if (wave >= upWave)
             {
-                currentWave++;
-                wave = 0f;
                 mapManager.StartWave(currentWave);
                 timeScale += speedUpControl;
                 Time.timeScale = timeScale;
+                if (currentWave >= 4)
+                {
+                    maxWave = true;
+                    return;
+                }
+                currentWave++;
+                wave = 0f;
             }
         }
         else

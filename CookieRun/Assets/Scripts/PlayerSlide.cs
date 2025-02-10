@@ -53,6 +53,7 @@ public class PlayerSlide : MonoBehaviour
 
     private void StartSlide()
     {
+        playerMovement.SetGrounded(true);
         isSlide = true;
         animator.SetBool("Slide", isSlide);
         if (!playerItemEffects.giant)

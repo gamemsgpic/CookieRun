@@ -51,20 +51,20 @@ public class PlayerMovement : MonoBehaviour
 
     private void Update()
     {
-        // 키보드 입력도 감지하여 유지
-        jumpKeyHeld = Input.GetKey(KeyCode.Space) || jumpKeyHeld;
+        //// 키보드 입력도 감지하여 유지
+        //jumpKeyHeld = Input.GetKey(KeyCode.Space) || jumpKeyHeld;
 
-        // 점프 처리
-        if (Input.GetKeyDown(KeyCode.Space) && jumpCount > 0 && !playerSlide.isSlide)
-        {
-            PerformJump();
-            jumpKeyUsed = false;
+        //// 점프 처리
+        //if (Input.GetKeyDown(KeyCode.Space) && jumpCount > 0 && !playerSlide.isSlide)
+        //{
+        //    PerformJump();
+        //    jumpKeyUsed = false;
 
-        }
-        else if (Input.GetKeyUp(KeyCode.Space))
-        {
-            jumpKeyUsed = true;
-        }
+        //}
+        //else if (Input.GetKeyUp(KeyCode.Space))
+        //{
+        //    jumpKeyUsed = true;
+        //}
 
         float rayLength = 0.2f;
         Vector2 rayOrigin = new Vector2(transform.position.x, transform.position.y - 0.5f);
@@ -224,6 +224,7 @@ public class PlayerMovement : MonoBehaviour
         if (collision.gameObject.CompareTag("Ground"))
         {
             isGrounded = false;
+            jumpKeyUsed = true;
         }
     }
 
@@ -239,5 +240,10 @@ public class PlayerMovement : MonoBehaviour
     {
         jumpKeyHeld = isHeld;
         jumpKeyUsed = false;
+    }
+
+    public void SetGrounded(bool isGround)
+    {
+        isGrounded = isGround;
     }
 }

@@ -1,6 +1,6 @@
 using System;
-using System.IO;
 using System.Collections.Generic;
+using System.IO;
 using UnityEngine;
 
 public static class GameData
@@ -8,70 +8,94 @@ public static class GameData
     [Serializable]
     public struct EquipmentSlotData
     {
-        public string ItemId;
+        public string treasureID;
+        public string treasureName;
+        public int treasureValue;
+        public float treasureRadius;
+        public float treasureSpeed;
+        public string treasurePath;
 
-        public EquipmentSlotData(string itemId)
+        public EquipmentSlotData(string id, string name, int value, float radius, float speed, string path)
         {
-            ItemId = itemId;
+            treasureID = id;
+            treasureName = name;
+            treasureValue = value;
+            treasureRadius = radius;
+            treasureSpeed = speed;
+            treasurePath = path;
         }
     }
 
-    public static string EquippedCharacterName { get; private set; } = "BraveCookie";
-    public static int EquippedCharacterLevel { get; private set; } = 1;
-    public static Dictionary<string, int> CharacterLevels = new Dictionary<string, int>();
+    // 캐릭터 정보 저장 변수
+    public static string characterId { get; private set; } = "1";
+    public static string characterName { get; private set; } = "BraveCookie";
+    public static int characterLevel { get; private set; } = 1;
+    public static int characterHp { get; private set; } = 100;
+    public static int characterCost { get; private set; } = 1000;
+    public static int characterUpgradeCost { get; private set; } = 500;
+    public static int characterExplain_ID { get; private set; } = 1;
+    public static int characterValue { get; private set; } = 10;
+    public static string characterImage { get; private set; } = "Character/BraveCookie";
+
+    // 장비 슬롯 정보 (3개)
+    private static EquipmentSlotData[] equippedSlots = new EquipmentSlotData[3];
+
+    // 기타 게임 데이터
     public static int BestScore { get; private set; } = 0;
     public static int Coin { get; private set; } = 1000;
     public static int Gem { get; private set; } = 1000;
     public static bool IsDataLoaded { get; private set; } = false;
 
-    private static EquipmentSlotData[] equippedSlots = new EquipmentSlotData[3];
-
-    public static void EquipCharacter(string characterName, int level)
+    /*** 캐릭터 정보 저장 및 불러오기 ***/
+    public static void EquipCharacter(
+        string id, string name, int level, int hp, int cost, int upgradeCost, int explainID, int value, string image)
     {
-        EquippedCharacterName = characterName;
-        EquippedCharacterLevel = level;
-        SetCharacterLevel(characterName, level);
+        characterId = id;
+        characterName = name;
+        characterLevel = level;
+        characterHp = hp;
+        characterCost = cost;
+        characterUpgradeCost = upgradeCost;
+        characterExplain_ID = explainID;
+        characterValue = value;
+        characterImage = image;
         SaveGameData();
     }
 
-    public static void SetCharacterLevel(string characterName, int level)
-    {
-        if (CharacterLevels.ContainsKey(characterName))
-            CharacterLevels[characterName] = level;
-        else
-            CharacterLevels.Add(characterName, level);
-    }
-
-    public static int GetCharacterLevel(string characterName)
-    {
-        return CharacterLevels.ContainsKey(characterName) ? CharacterLevels[characterName] : 1;
-    }
-
-    public static void SetEquipmentSlot(int slotIndex, string itemId)
+    /*** 장비 슬롯 저장 및 불러오기 ***/
+    public static void SetEquipmentSlot(int slotIndex, EquipmentSlotData data)
     {
         if (slotIndex < 0 || slotIndex >= equippedSlots.Length) return;
-        equippedSlots[slotIndex] = new EquipmentSlotData(itemId);
+        equippedSlots[slotIndex] = data;
         SaveGameData();
     }
 
-    public static string GetEquipmentSlot(int slotIndex)
+    public static EquipmentSlotData GetEquipmentSlot(int slotIndex)
     {
-        return (slotIndex >= 0 && slotIndex < equippedSlots.Length) ? equippedSlots[slotIndex].ItemId : "None";
+        return (slotIndex >= 0 && slotIndex < equippedSlots.Length) ? equippedSlots[slotIndex] : new EquipmentSlotData("None", "", 0, 0f, 0f, "");
     }
 
+    /*** 게임 데이터 저장 ***/
     public static void SaveGameData()
     {
-        PlayerPrefs.SetString("EquippedCharacterName", EquippedCharacterName);
-        PlayerPrefs.SetInt("EquippedCharacterLevel", EquippedCharacterLevel);
-
-        foreach (var entry in CharacterLevels)
-        {
-            PlayerPrefs.SetInt($"CharacterLevel_{entry.Key}", entry.Value);
-        }
+        PlayerPrefs.SetString("Character_ID", characterId);
+        PlayerPrefs.SetString("Character_Name", characterName);
+        PlayerPrefs.SetInt("Character_Level", characterLevel);
+        PlayerPrefs.SetInt("Character_Hp", characterHp);
+        PlayerPrefs.SetInt("Character_Cost", characterCost);
+        PlayerPrefs.SetInt("Character_UpgradeCost", characterUpgradeCost);
+        PlayerPrefs.SetInt("Character_Explain_ID", characterExplain_ID);
+        PlayerPrefs.SetInt("Character_Value", characterValue);
+        PlayerPrefs.SetString("Character_Image", characterImage);
 
         for (int i = 0; i < equippedSlots.Length; i++)
         {
-            PlayerPrefs.SetString($"EquipmentSlot_{i}", string.IsNullOrEmpty(equippedSlots[i].ItemId) ? "None" : equippedSlots[i].ItemId);
+            PlayerPrefs.SetString($"EquipmentSlot_{i}_ID", equippedSlots[i].treasureID);
+            PlayerPrefs.SetString($"EquipmentSlot_{i}_Name", equippedSlots[i].treasureName);
+            PlayerPrefs.SetInt($"EquipmentSlot_{i}_Value", equippedSlots[i].treasureValue);
+            PlayerPrefs.SetFloat($"EquipmentSlot_{i}_Radius", equippedSlots[i].treasureRadius);
+            PlayerPrefs.SetFloat($"EquipmentSlot_{i}_Speed", equippedSlots[i].treasureSpeed);
+            PlayerPrefs.SetString($"EquipmentSlot_{i}_Path", equippedSlots[i].treasurePath);
         }
 
         PlayerPrefs.SetInt("BestScore", BestScore);
@@ -79,138 +103,53 @@ public static class GameData
         PlayerPrefs.SetInt("Gem", Gem);
         PlayerPrefs.Save();
 
-        Debug.Log("[GameData] 데이터 저장 완료.");
-
-        SaveGameDataToCSV(); // CSV 저장 추가
+        SaveGameDataToCSV();
     }
 
-
+    /*** CSV 파일 저장 ***/
     public static void SaveGameDataToCSV()
     {
         string savePath = Application.persistentDataPath + "/Save/GameData.csv";
-        List<string> csvLines = new List<string>();
-
-        // 캐릭터 정보 저장
-        csvLines.Add("EquippedCharacterName,EquippedCharacterLevel");
-        csvLines.Add($"{EquippedCharacterName},{EquippedCharacterLevel}");
-
-        // 각 캐릭터의 레벨 저장
-        foreach (var entry in CharacterLevels)
+        List<string> csvLines = new List<string>
         {
-            csvLines.Add($"{entry.Key},{entry.Value}");
-        }
+            "CharacterID,CharacterName,CharacterLevel,CharacterHp,CharacterCost,CharacterUpgradeCost,CharacterExplainID,CharacterValue,CharacterImage",
+            $"{characterId},{characterName},{characterLevel},{characterHp},{characterCost},{characterUpgradeCost},{characterExplain_ID},{characterValue},{characterImage}",
 
-        // 점수 및 자원 저장
-        csvLines.Add("BestScore,Coin,Gem");
-        csvLines.Add($"{BestScore},{Coin},{Gem}");
+            "BestScore,Coin,Gem",
+            $"{BestScore},{Coin},{Gem}",
 
-        // 장착 슬롯 저장
-        csvLines.Add("EquipmentSlot1,EquipmentSlot2,EquipmentSlot3");
-        csvLines.Add(
-            $"{(string.IsNullOrEmpty(equippedSlots[0].ItemId) ? "None" : equippedSlots[0].ItemId)}," +
-            $"{(string.IsNullOrEmpty(equippedSlots[1].ItemId) ? "None" : equippedSlots[1].ItemId)}," +
-            $"{(string.IsNullOrEmpty(equippedSlots[2].ItemId) ? "None" : equippedSlots[2].ItemId)}"
-        );
+            "EquipmentSlot1,EquipmentSlot2,EquipmentSlot3",
+            $"{equippedSlots[0].treasureID},{equippedSlots[1].treasureID},{equippedSlots[2].treasureID}"
+        };
 
-        try
-        {
-            File.WriteAllLines(savePath, csvLines);
-            Debug.Log($"[GameData] CSV 저장 완료: {savePath}");
-        }
-        catch (Exception ex)
-        {
-            Debug.LogError($"[GameData] CSV 저장 중 오류 발생: {ex.Message}");
-        }
+        File.WriteAllLines(savePath, csvLines);
     }
 
-
-
-
+    /*** 게임 데이터 불러오기 ***/
     public static void LoadGameData()
     {
-        Debug.Log("[GameData] 저장된 데이터를 불러오는 중...");
-
-        LoadGameDataFromCSV(); // CSV 데이터 먼저 로드
-
-        EquippedCharacterName = PlayerPrefs.GetString("EquippedCharacterName", "BraveCookie");
-        EquippedCharacterLevel = PlayerPrefs.GetInt("EquippedCharacterLevel", 1);
-
-        string[] characterNames = { "BraveCookie", "AngelCookie", "ZombieCookie" };
-        foreach (string name in characterNames)
-        {
-            int savedLevel = PlayerPrefs.GetInt($"CharacterLevel_{name}", -1);
-            if (savedLevel >= 1)
-                SetCharacterLevel(name, savedLevel);
-            else
-                SetCharacterLevel(name, 1);
-        }
+        characterId = PlayerPrefs.GetString("Character_ID", "1");
+        characterName = PlayerPrefs.GetString("Character_Name", "BraveCookie");
+        characterLevel = PlayerPrefs.GetInt("Character_Level", 1);
+        characterHp = PlayerPrefs.GetInt("Character_Hp", 100);
+        characterCost = PlayerPrefs.GetInt("Character_Cost", 1000);
+        characterUpgradeCost = PlayerPrefs.GetInt("Character_UpgradeCost", 500);
+        characterExplain_ID = PlayerPrefs.GetInt("Character_Explain_ID", 1);
+        characterValue = PlayerPrefs.GetInt("Character_Value", 10);
+        characterImage = PlayerPrefs.GetString("Character_Image", "Character/BraveCookie");
 
         for (int i = 0; i < equippedSlots.Length; i++)
-            equippedSlots[i] = new EquipmentSlotData(PlayerPrefs.GetString($"EquipmentSlot_{i}", "None"));
+        {
+            equippedSlots[i] = new EquipmentSlotData(
+                PlayerPrefs.GetString($"EquipmentSlot_{i}_ID", "None"),
+                PlayerPrefs.GetString($"EquipmentSlot_{i}_Name", ""),
+                PlayerPrefs.GetInt($"EquipmentSlot_{i}_Value", 0),
+                PlayerPrefs.GetFloat($"EquipmentSlot_{i}_Radius", 0f),
+                PlayerPrefs.GetFloat($"EquipmentSlot_{i}_Speed", 0f),
+                PlayerPrefs.GetString($"EquipmentSlot_{i}_Path", "")
+            );
+        }
 
-        Debug.Log("[GameData] 모든 저장된 데이터 로드 완료.");
         IsDataLoaded = true;
     }
-
-
-    public static void LoadGameDataFromCSV()
-    {
-        string loadPath = Application.persistentDataPath + "/Save/GameData.csv";
-        if (!File.Exists(loadPath))
-        {
-            Debug.LogWarning("[GameData] CSV 파일이 존재하지 않음. 새 파일을 생성합니다.");
-            return;
-        }
-
-        string[] lines = File.ReadAllLines(loadPath);
-        if (lines.Length < 2)
-        {
-            Debug.LogError("[GameData] CSV 데이터가 올바르지 않음.");
-            return;
-        }
-
-        // 캐릭터 데이터 로드
-        string[] charData = lines[1].Split(',');
-        if (charData.Length >= 2)
-        {
-            EquippedCharacterName = charData[0].Trim();
-            EquippedCharacterLevel = int.TryParse(charData[1].Trim(), out int level) ? level : 1;
-        }
-
-        // 캐릭터 레벨 로드
-        for (int i = 2; i < lines.Length; i++)
-        {
-            string[] parts = lines[i].Split(',');
-            if (parts.Length == 2 && int.TryParse(parts[1], out int charLevel))
-            {
-                SetCharacterLevel(parts[0].Trim(), charLevel);
-            }
-        }
-
-        // 점수 및 자원 로드
-        if (lines.Length >= 6)
-        {
-            string[] scoreData = lines[5].Split(',');
-            if (scoreData.Length == 3)
-            {
-                BestScore = int.TryParse(scoreData[0], out int bestScore) ? bestScore : 0;
-                Coin = int.TryParse(scoreData[1], out int coin) ? coin : 1000;
-                Gem = int.TryParse(scoreData[2], out int gem) ? gem : 1000;
-            }
-        }
-
-        // 장비 슬롯 로드
-        if (lines.Length >= 8)
-        {
-            string[] slots = lines[7].Split(',');
-            for (int i = 0; i < slots.Length && i < equippedSlots.Length; i++)
-            {
-                equippedSlots[i] = new EquipmentSlotData(slots[i].Trim() == "None" ? "" : slots[i].Trim());
-            }
-        }
-
-        Debug.Log("[GameData] CSV 데이터 로드 완료.");
-    }
-
-
 }

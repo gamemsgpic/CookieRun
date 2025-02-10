@@ -13,6 +13,7 @@ TagManager:
   - Giantization
   - DeadZone
   - DropArea
+  - MapManager
   layers:
   - Default
   - TransparentFX

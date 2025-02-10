@@ -43,13 +43,11 @@ public class EquipmentSlot : MonoBehaviour
     }
 
 
-
-
     public void OnSlotClicked()
     {
         if (inventoryUI != null)
         {
-            inventoryUI.OpenInventoryForSlot(this); // 슬롯을 선택하면 InventoryUI의 selectedSlot을 설정
+            inventoryUI.OpenInventoryForSlot(this);
             Debug.Log($"[EquipmentSlot] 슬롯 {slotIndex} 선택됨");
         }
     }
@@ -65,22 +63,82 @@ public class EquipmentSlot : MonoBehaviour
             equipmentTreasure.ApplyTreasureData(treasureData);
         }
 
+        // 자식 오브젝트의 Treasure 스크립트에도 데이터 적용
+        Treasure childTreasure = equipmentTreasure.GetComponent<Treasure>();
+        if (childTreasure != null)
+        {
+            ApplyTreasureDataToChild(childTreasure, treasureData);
+        }
+        else
+        {
+            Debug.LogError($"[EquipmentSlot] 슬롯 {slotIndex}에서 EquipmentTreasure의 자식 Treasure 컴포넌트를 찾을 수 없음!");
+        }
+
         GameData.SetEquipmentSlot(slotIndex, treasureData.treasureID.ToString());
         GameData.SaveGameData();
     }
 
+    private void ApplyTreasureDataToChild(Treasure childTreasure, Treasure data)
+    {
+        childTreasure.treasureID = data.treasureID;
+        childTreasure.treasureName = data.treasureName;
+        childTreasure.treasureVelue = data.treasureVelue;
+        childTreasure.treasureRadius = data.treasureRadius;
+        childTreasure.treasureSpeed = data.treasureSpeed;
+        childTreasure.treasurePath = data.treasurePath;
+        childTreasure.treasureIcon = data.treasureIcon;
+
+        Debug.Log($"[EquipmentSlot] 슬롯 {slotIndex}의 자식 Treasure 오브젝트에 데이터 적용 완료.");
+    }
+
+
+    private void ApplyTreasureDataToChild(Treasure childTreasure, Treasure data)
+    {
+        childTreasure.treasureID = data.treasureID;
+        childTreasure.treasureName = data.treasureName;
+        childTreasure.treasureVelue = data.treasureVelue;
+        childTreasure.treasureRadius = data.treasureRadius;
+        childTreasure.treasureSpeed = data.treasureSpeed;
+        childTreasure.treasurePath = data.treasurePath;
+        childTreasure.treasureIcon = data.treasureIcon;
+
+        Debug.Log($"[EquipmentSlot] 슬롯 {slotIndex}의 자식 Treasure 오브젝트에 데이터 적용 완료.");
+    }
 
     public void ClearSlot()
     {
         equippedTreasureData = null;
-        equipmentTreasure.ClearTreasure();
+        if (equipmentTreasure != null)
+        {
+            equipmentTreasure.ClearTreasure();
+
+            // 자식 오브젝트의 Treasure 정보 초기화
+            Treasure childTreasure = equipmentTreasure.GetComponent<Treasure>();
+            if (childTreasure != null)
+            {
+                ClearChildTreasureData(childTreasure);
+            }
+        }
+
         GameData.SetEquipmentSlot(slotIndex, "None");
         GameData.SaveGameData();
+    }
+
+    private void ClearChildTreasureData(Treasure childTreasure)
+    {
+        childTreasure.treasureID = 0;
+        childTreasure.treasureName = "";
+        childTreasure.treasureVelue = 0;
+        childTreasure.treasureRadius = 0f;
+        childTreasure.treasureSpeed = 0f;
+        childTreasure.treasurePath = "";
+        childTreasure.treasureIcon = null;
+
+        Debug.Log($"[EquipmentSlot] 슬롯 {slotIndex}의 자식 Treasure 오브젝트 데이터 초기화 완료.");
     }
 
     public Treasure GetEquippedItem()
     {
         return equippedTreasureData;
     }
-
 }
