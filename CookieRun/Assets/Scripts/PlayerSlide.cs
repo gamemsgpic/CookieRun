@@ -53,7 +53,6 @@ public class PlayerSlide : MonoBehaviour
 
     private void StartSlide()
     {
-        playerMovement.SetGrounded(true);
         isSlide = true;
         animator.SetBool("Slide", isSlide);
         if (!playerItemEffects.giant)
@@ -68,10 +67,10 @@ public class PlayerSlide : MonoBehaviour
         }
     }
 
-    private void StopSlide()
+    public void StopSlide()
     {
         isSlide = false;
-        animator.SetBool("Slide", isSlide);
+        animator.SetBool("Slide", false); // 애니메이션 상태 변경
         boxCollider2D.size = normalSize;
         boxCollider2D.offset = normalColliderOffset;
     }
@@ -81,10 +80,11 @@ public class PlayerSlide : MonoBehaviour
         if (collision.gameObject.CompareTag("Ground"))
         {
             // 착지 시, 슬라이드 버튼이 눌린 상태라면 자동으로 슬라이드 실행
-            if (slideKeyHeld && !playerState.onDeath && !uiManager.pause)
+            if (slideKeyHeld && playerMovement.isGrounded && !playerState.onDeath && !uiManager.pause)
             {
                 StartSlide();
             }
         }
     }
+
 }

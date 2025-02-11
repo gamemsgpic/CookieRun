@@ -5,6 +5,8 @@ public class ApplyItemMagnet : MonoBehaviour
 {
     public int score = 0;
     public int coins = 0;
+    public int heal = 0;
+    public float Crystal = 0;
     public bool onItmeEffect = false;
     public float plusHp = 0f;
     public Vector3 giantization;
@@ -56,10 +58,9 @@ public class ApplyItemMagnet : MonoBehaviour
         {
             score = data.Score;
             coins = data.Coin;
-            if (image != null)
-            {
-                image.sprite = Resources.Load<Sprite>(data.Path);
-            }
+            heal = data.Heal;
+            Crystal = data.Value;
+           
         }
 
     }
@@ -70,10 +71,8 @@ public class ApplyItemMagnet : MonoBehaviour
         {
             score = data.Score;
             coins = data.Coin;
-            if (image != null)
-            {
-                image.sprite = Resources.Load<Sprite>(data.Path);
-            }
+            heal = data.Heal;
+            Crystal = data.Value;
         }
     }
 

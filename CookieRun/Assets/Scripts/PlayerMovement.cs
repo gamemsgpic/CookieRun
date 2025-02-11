@@ -24,8 +24,7 @@ public class PlayerMovement : MonoBehaviour
 
     private Coroutine currentJumpRoutine;
 
-    private bool jumpKeyHeld = false; // 점프 키가 눌린 상태 저장
-    private bool jumpKeyUsed = false;
+    private bool jumpKeyHeld; // 점프 키가 눌린 상태 저장
 
     private bool oneCall = true;
 
@@ -40,13 +39,11 @@ public class PlayerMovement : MonoBehaviour
         jumpCount = maxJumpCount;
 
         jumpKeyHeld = false;
-        jumpKeyUsed = false;
     }
 
     public void ResetJumpKeyHeld()
     {
         jumpKeyHeld = false;
-        jumpKeyUsed = true;
     }
 
     private void Update()
@@ -103,8 +100,14 @@ public class PlayerMovement : MonoBehaviour
 
     public void ButtonJump()
     {
+        if (playerSlide.isSlide) // 슬라이드 중이라면 슬라이드 해제 후 점프 실행
+        {
+            playerSlide.StopSlide();
+        }
+
         if (jumpCount > 0 && !playerSlide.isSlide)
         {
+            jumpKeyHeld = true;  // 버튼을 누를 때만 true
             PerformJump();
         }
     }
@@ -116,6 +119,7 @@ public class PlayerMovement : MonoBehaviour
             StopCoroutine(currentJumpRoutine);
             ResetJumpState();
         }
+        jumpKeyHeld = false; // 점프 실행 후 키 입력 초기화
         currentJumpRoutine = StartCoroutine(JumpRoutine());
     }
 
@@ -176,11 +180,9 @@ public class PlayerMovement : MonoBehaviour
             fallingSpeed = startFallingSpeed;
             ResetJumpState();
 
-            // 버튼 또는 키보드가 눌린 상태라면 자동으로 점프
-            if (jumpKeyHeld && !jumpKeyUsed)
+            if (jumpKeyHeld)
             {
                 PerformJump();
-                jumpKeyUsed = true;
             }
         }
     }
@@ -189,7 +191,7 @@ public class PlayerMovement : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("DropArea"))
         {
-            if (jumpCount == 2 && !isGrounded && !isJumping && !playerItemEffects.giant )
+            if (jumpCount == 2 && !isGrounded && !isJumping && !playerItemEffects.giant)
             {
                 rb.isKinematic = true;
                 fallingSpeed += fallingSpeed * Time.deltaTime;
@@ -224,7 +226,6 @@ public class PlayerMovement : MonoBehaviour
         if (collision.gameObject.CompareTag("Ground"))
         {
             isGrounded = false;
-            jumpKeyUsed = true;
         }
     }
 
@@ -234,16 +235,9 @@ public class PlayerMovement : MonoBehaviour
         isJumping = false;
         currentJumpRoutine = null;
     }
-
     // 버튼 누를 때 호출 (UI 버튼에 연결)
     public void SetJumpKeyHeld(bool isHeld)
     {
         jumpKeyHeld = isHeld;
-        jumpKeyUsed = false;
-    }
-
-    public void SetGrounded(bool isGround)
-    {
-        isGrounded = isGround;
     }
 }
