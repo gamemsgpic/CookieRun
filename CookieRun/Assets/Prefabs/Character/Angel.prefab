@@ -218,10 +218,10 @@ MonoBehaviour:
   jumpCount: 2
   maxJumpCount: 2
   jumpHeight: 8
-  JumpSpeed: 23
-  deceleration: 100
-  startFallingSpeed: 2
-  fallingSpeed: 4
+  JumpSpeed: 22
+  deceleration: 80
+  startFallingSpeed: 3
+  fallingSpeed: 2
   fallingPlus: 3
   fallingWaitTime: 0.2
 --- !u!114 &2030026848129091530
@@ -239,7 +239,6 @@ MonoBehaviour:
   magnet: {fileID: 6258357431784894151}
   mapManager: {fileID: 0}
   itemEffectTime: 3
-  maxHp: 100
   upWave: 30
   resurrection: 0
   speedUpControl: 0.1
