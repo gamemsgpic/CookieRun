@@ -99,19 +99,42 @@ public static class GameData
 
     public static void SaveGameDataToCSV()
     {
-        string savePath = Application.persistentDataPath + "/Save/GameData.csv";
-        List<string> csvLines = new List<string>
+        string directoryPath = Path.Combine(Application.persistentDataPath, "Save");
+        string filePath = Path.Combine(directoryPath, "GameData.csv");
+
+        // 디렉터리 확인 및 생성
+        if (!Directory.Exists(directoryPath))
+        {
+            Directory.CreateDirectory(directoryPath);
+        }
+
+        try
+        {
+            List<string> csvLines = new List<string>
         {
             "CharacterId,CharacterName,CharacterLevel,CharacterHp,CharacterCost,CharacterUpgradeCost,CharacterExplainID,CharacterValue,CharacterImage",
             $"{characterId},{characterName},{characterLevel},{characterHp},{characterCost},{characterUpgradeCost},{characterExplain_ID},{characterValue},{characterImage}"
         };
 
-        csvLines.Add("EquipmentSlot1,EquipmentSlot2,EquipmentSlot3");
-        csvLines.Add(
-            $"{equippedSlots[0].treasureID},{equippedSlots[1].treasureID},{equippedSlots[2].treasureID}"
-        );
+            // 장비 슬롯 데이터 추가 (장비 슬롯 개수 확인 후 추가)
+            if (equippedSlots.Length >= 3)
+            {
+                csvLines.Add("EquipmentSlot1,EquipmentSlot2,EquipmentSlot3");
+                csvLines.Add(
+                    $"{equippedSlots[0].treasureID},{equippedSlots[1].treasureID},{equippedSlots[2].treasureID}"
+                );
+            }
+            else
+            {
+                Debug.LogError("장비 슬롯 개수가 부족합니다.");
+            }
 
-        File.WriteAllLines(savePath, csvLines);
+            File.WriteAllLines(filePath, csvLines);
+        }
+        catch (Exception ex)
+        {
+            Debug.LogError("파일 저장 중 오류 발생: " + ex.Message);
+        }
     }
 
     public static void LoadGameData()
