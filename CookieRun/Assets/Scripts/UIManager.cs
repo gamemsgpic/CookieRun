@@ -224,12 +224,19 @@ public class UIManager : MonoBehaviour
 
     public void ShowGameOver()
     {
-        if (gameOverWindow != null) gameOverWindow.SetActive(true);
+        if (gameOverWindow != null)
+        {
+
+            gameOverWindow.SetActive(true);
+        }
     }
 
     public void HideGameOver()
     {
-        if (gameOverWindow != null) gameOverWindow.SetActive(false);
+        if (gameOverWindow != null)
+        {
+            gameOverWindow.SetActive(false);
+        }
     }
 
     public void OnClickReStart()
@@ -240,6 +247,8 @@ public class UIManager : MonoBehaviour
 
     public void ChangeMainMenuScene()
     {
+        GameData.UpdateBestScore(targetScore);
+        GameData.AddCoin(targetCoins);
         SceneManager.LoadScene(0);
     }
 

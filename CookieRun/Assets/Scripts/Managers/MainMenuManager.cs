@@ -1,12 +1,22 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class MainMenuManager : MonoBehaviour
 {
+    public TextMeshProUGUI bestScoreText;
+    public TextMeshProUGUI coinText;
+    private int bestScore;
+    private int coin;
+
     private void Start()
     {
+        bestScore = GameData.bestScore;
+        bestScoreText.text = bestScore.ToString();
+        coin = GameData.coin;
+        coinText.text = coin.ToString();
         Inventory.SetActive(false);
         GameData.LoadGameData(); // 게임 시작 시 데이터 불러오기
         SceneManager.sceneUnloaded += OnSceneChanged; // 씬 변경 시 자동 저장
@@ -57,5 +67,11 @@ public class MainMenuManager : MonoBehaviour
     public void OnResetSave()
     {
         //GameData.ResetSaveGameData();
+    }
+
+    public void UpdateCoinText()
+    {
+        coin = GameData.coin;
+        coinText.text = coin.ToString();
     }
 }

@@ -3,6 +3,8 @@ using UnityEngine;
 
 public class CharacterInfo : MonoBehaviour
 {
+    public MainMenuManager mainMenuManager;
+
     public int currentCharacterId;
     public string currentCharacterName;
     public int currentCharacterLevel;
@@ -81,7 +83,7 @@ public class CharacterInfo : MonoBehaviour
         {
             currentCharacterLevel++;
         }
-        if (GameData.SpendCoin(GameData.coin))
+        if (GameData.SpendCoin(currentCharacterUpgradeCost))
         {
             // 캐릭터 데이터 갱신
             var upgradedCharacter = CharacterTableObjectSC.GetCharacterData(currentCharacterName, currentCharacterLevel);
@@ -105,6 +107,8 @@ public class CharacterInfo : MonoBehaviour
             }
 
             Debug.Log($"[CharacterInfo] {currentCharacterName}이(가) 레벨 {currentCharacterLevel}로 업그레이드됨.");
+
+            mainMenuManager.UpdateCoinText();
         }
     }
 
