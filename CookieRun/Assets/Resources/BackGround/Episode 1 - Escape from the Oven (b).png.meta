@@ -134,9 +134,9 @@ TextureImporter:
       name: Episode 1 - Escape from the Oven (b)_1
       rect:
         serializedVersion: 2
-        x: 579
+        x: 581
         y: 4384
-        width: 848
+        width: 567
         height: 318
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -157,7 +157,7 @@ TextureImporter:
         serializedVersion: 2
         x: 3
         y: 3710
-        width: 588
+        width: 567
         height: 318
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -178,7 +178,7 @@ TextureImporter:
         serializedVersion: 2
         x: 624
         y: 4047
-        width: 860
+        width: 567
         height: 318
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -199,7 +199,7 @@ TextureImporter:
         serializedVersion: 2
         x: 3
         y: 4047
-        width: 617
+        width: 567
         height: 318
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -218,9 +218,9 @@ TextureImporter:
       name: Episode 1 - Escape from the Oven (b)_5
       rect:
         serializedVersion: 2
-        x: 609
+        x: 580
         y: 3710
-        width: 775
+        width: 567
         height: 318
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -231,6 +231,48 @@ TextureImporter:
       bones: []
       spriteID: efc56619a4e4c454d8c5f2603503ddfb
       internalID: -1455195446
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Episode 1 - Escape from the Oven (b)_6
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 3373
+        width: 567
+        height: 318
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cbde5bf69fc069542b070ed53a563d21
+      internalID: 712884083
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Episode 1 - Escape from the Oven (b)_7
+      rect:
+        serializedVersion: 2
+        x: 582
+        y: 3373
+        width: 567
+        height: 318
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e6cb00aa344c67f44ab1d5939f10dd18
+      internalID: 924517407
       vertices: []
       indices: 
       edges: []
