@@ -260,7 +260,7 @@ GameObject:
   - component: {fileID: 71637774}
   - component: {fileID: 71637773}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: BestScoreText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2396,7 +2396,7 @@ GameObject:
   - component: {fileID: 375400630}
   - component: {fileID: 375400629}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: CoinText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9617,6 +9617,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6cb7b8bf8a6f1f14fb88db0440cbee80, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mainMenuManager: {fileID: 1702535791}
   currentCharacterId: 0
   currentCharacterName: 
   currentCharacterLevel: 0
@@ -10237,6 +10238,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13fcab9142f7f7a488833db1f6c07a66, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bestScoreText: {fileID: 71637773}
+  coinText: {fileID: 375400629}
   Inventory: {fileID: 555871139}
 --- !u!4 &1702535792
 Transform:

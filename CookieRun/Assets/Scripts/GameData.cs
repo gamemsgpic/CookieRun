@@ -507,6 +507,8 @@ public static class GameData
         characterValue = 0;
         characterAbility = "";
         characterImage = "";
+        bestScore = 0;
+        coin = 1000;
         equippedSlots = new EquipmentSlotData[3];
 
         SaveGameData();
@@ -528,6 +530,8 @@ public static class GameData
             characterValue = defaultCharacter.Value;
             characterAbility = defaultCharacter.Ability;
             characterImage = defaultCharacter.Image;
+            bestScore = 0;
+            coin = 1000;
         }
         else
         {

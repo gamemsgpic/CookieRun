@@ -452,7 +452,7 @@ public class MapManager : MonoBehaviour
         }
     }
 
-    void ChangeAllTilemapSprites(GameObject prefab, Sprite newSprite)
+    private void ChangeAllTilemapSprites(GameObject prefab, Sprite newSprite)
     {
         Tilemap[] tilemaps = prefab.GetComponentsInChildren<Tilemap>();
 
@@ -461,25 +461,21 @@ public class MapManager : MonoBehaviour
             BoundsInt bounds = tilemap.cellBounds;
             TileBase[] allTiles = tilemap.GetTilesBlock(bounds);
 
-            Tile[] newTiles = new Tile[allTiles.Length];
+            Vector3Int position = new Vector3Int();
 
             for (int i = 0; i < allTiles.Length; i++)
             {
+                if (allTiles[i] == null) continue; // 비어 있는 타일 건너뛰기
+
+                position.x = bounds.xMin + (i % bounds.size.x);
+                position.y = bounds.yMin + (i / bounds.size.x);
+
                 if (allTiles[i] is Tile oldTile)
                 {
-                    Tile newTile = ScriptableObject.CreateInstance<Tile>(); // 새로운 타일 객체 생성
-                    newTile.sprite = newSprite; // 스프라이트 변경
-                    newTiles[i] = newTile;
-                }
-                else
-                {
-                    newTiles[i] = null;
+                    oldTile.sprite = newSprite;
+                    tilemap.RefreshTile(position);
                 }
             }
-
-            tilemap.SetTilesBlock(bounds, newTiles); // 한 번에 변경
         }
     }
-
-
 }
