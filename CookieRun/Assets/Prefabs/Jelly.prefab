@@ -98,7 +98,7 @@ Animator:
   m_GameObject: {fileID: 5167474813277576234}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: eaec995fb9b35d04aa3b7276d5ebfd74, type: 2}
+  m_Controller: {fileID: 0}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -171,8 +171,12 @@ PrefabInstance:
     m_TransformParent: {fileID: 7074479457313033380}
     m_Modifications:
     - target: {fileID: 1914485622034053674, guid: a7a1df89ec6275140ba151b7a91030b2, type: 3}
+      propertyPath: Id
+      value: 102
+      objectReference: {fileID: 0}
+    - target: {fileID: 1914485622034053674, guid: a7a1df89ec6275140ba151b7a91030b2, type: 3}
       propertyPath: Coin
-      value: 3.3
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1914485622034053674, guid: a7a1df89ec6275140ba151b7a91030b2, type: 3}
       propertyPath: Name
@@ -180,11 +184,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1914485622034053674, guid: a7a1df89ec6275140ba151b7a91030b2, type: 3}
       propertyPath: Path
-      value: ss
+      value: Item/Cookie Run - Jelly_135
       objectReference: {fileID: 0}
     - target: {fileID: 1914485622034053674, guid: a7a1df89ec6275140ba151b7a91030b2, type: 3}
       propertyPath: Score
-      value: 500
+      value: 400
       objectReference: {fileID: 0}
     - target: {fileID: 4663999451304257584, guid: a7a1df89ec6275140ba151b7a91030b2, type: 3}
       propertyPath: m_Name

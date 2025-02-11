@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 614960181926216120}
   - component: {fileID: -8171477780591938174}
   - component: {fileID: 6795086298870930163}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: LowObstacle
   m_TagString: Trap
   m_Icon: {fileID: 0}

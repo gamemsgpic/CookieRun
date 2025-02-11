@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 
 public class ApplyItemMagnet : MonoBehaviour
 {
@@ -11,6 +12,7 @@ public class ApplyItemMagnet : MonoBehaviour
     public bool isMovingToPlayer { get; private set; } = false; // Player로 이동 여부
     private Vector3 magnetStartPosition;
     private Transform targetTransform; // 목표 위치 (플레이어 Transform)
+    private Image image;
 
     private float currentTime = 0f;
     public float moveDuration = 0.05f; // 이동 시간 (Lerp 속도)
@@ -20,6 +22,7 @@ public class ApplyItemMagnet : MonoBehaviour
 
     private void Awake()
     {
+        image = GetComponent<Image>();
         // Awake에서 아이템의 초기 로컬 위치를 저장
         initialLocalPosition = transform.localPosition;
 
@@ -38,19 +41,39 @@ public class ApplyItemMagnet : MonoBehaviour
         ResetItem();
     }
 
+    private void OnValidate()
+    {
+        SetItem(); // 에디터에서 값이 변경되면 자동 업데이트
+    }
+
     public void ResetItem()
     {
-        // 기본적으로 모든 프리팹을 활성화
-        isMovingToPlayer = false; // 이동 상태 초기화
-        transform.localPosition = initialLocalPosition; // 저장된 초기 로컬 위치로 복원
-        gameObject.SetActive(true); // 프리팹 활성화 (TableObjectSC가 없어도 실행됨)
+        isMovingToPlayer = false;
+        transform.localPosition = initialLocalPosition;
+        gameObject.SetActive(true);
 
-        // TableObjectSC가 있는 경우에만 데이터를 적용
         if (data != null)
         {
             score = data.Score;
-            coins = (int)data.Coin;
-            gameObject.GetComponentInChildren<SampleTableObjectSC>().gameObject.SetActive(true);
+            coins = data.Coin;
+            if (image != null)
+            {
+                image.sprite = Resources.Load<Sprite>(data.Path);
+            }
+        }
+
+    }
+
+    public void SetItem()
+    {
+        if (data != null)
+        {
+            score = data.Score;
+            coins = data.Coin;
+            if (image != null)
+            {
+                image.sprite = Resources.Load<Sprite>(data.Path);
+            }
         }
     }
 

@@ -110,7 +110,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 1
-      m_TileSpriteIndex: 1
+      m_TileSpriteIndex: 0
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -120,7 +120,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 1
-      m_TileSpriteIndex: 1
+      m_TileSpriteIndex: 0
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -130,7 +130,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 1
-      m_TileSpriteIndex: 1
+      m_TileSpriteIndex: 0
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -140,7 +140,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 1
-      m_TileSpriteIndex: 1
+      m_TileSpriteIndex: 0
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -150,7 +150,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 1
-      m_TileSpriteIndex: 1
+      m_TileSpriteIndex: 0
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -160,7 +160,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 1
-      m_TileSpriteIndex: 1
+      m_TileSpriteIndex: 0
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -173,10 +173,10 @@ Tilemap:
   - m_RefCount: 6
     m_Data: {fileID: 11400000, guid: 9ee4d2d5fc8f4d84db1526b04a446d6a, type: 2}
   m_TileSpriteArray:
+  - m_RefCount: 6
+    m_Data: {fileID: 21300000, guid: 59eb47d2187fe93439a5aff3aca49682, type: 3}
   - m_RefCount: 0
     m_Data: {fileID: 0}
-  - m_RefCount: 6
-    m_Data: {fileID: 21300000, guid: 1d442b90649621f478e940e3b002c3c2, type: 3}
   m_TileMatrixArray:
   - m_RefCount: 6
     m_Data:
@@ -329,13 +329,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a68975e9b87ea9346b4a02dcbd39877c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tile: {fileID: 11400000, guid: 9ee4d2d5fc8f4d84db1526b04a446d6a, type: 2}
-  sprite:
-  - {fileID: 21300000, guid: 1d442b90649621f478e940e3b002c3c2, type: 3}
-  - {fileID: 21300000, guid: 59ca8759621157f40b8d0373a2259eac, type: 3}
-  - {fileID: 21300000, guid: 59eb47d2187fe93439a5aff3aca49682, type: 3}
-  - {fileID: 21300000, guid: 993c6e90293ced144a89a46d4b9985de, type: 3}
-  playerState: {fileID: 2030026848129091530, guid: 1127ee61c1e64124fb028e1ab6ac7349, type: 3}
 --- !u!1 &6386800705398459538
 GameObject:
   m_ObjectHideFlags: 0
@@ -521,6 +514,26 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Jelly
       objectReference: {fileID: 0}
+    - target: {fileID: 5758913247659495576, guid: 5b11548cf15dfd1458fdc740a2a6fe6d, type: 3}
+      propertyPath: Id
+      value: 102
+      objectReference: {fileID: 0}
+    - target: {fileID: 5758913247659495576, guid: 5b11548cf15dfd1458fdc740a2a6fe6d, type: 3}
+      propertyPath: Coin
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5758913247659495576, guid: 5b11548cf15dfd1458fdc740a2a6fe6d, type: 3}
+      propertyPath: Name
+      value: Jelly
+      objectReference: {fileID: 0}
+    - target: {fileID: 5758913247659495576, guid: 5b11548cf15dfd1458fdc740a2a6fe6d, type: 3}
+      propertyPath: Path
+      value: Item/Cookie Run - Jelly_135
+      objectReference: {fileID: 0}
+    - target: {fileID: 5758913247659495576, guid: 5b11548cf15dfd1458fdc740a2a6fe6d, type: 3}
+      propertyPath: Score
+      value: 400
+      objectReference: {fileID: 0}
     - target: {fileID: 7074479457313033380, guid: 5b11548cf15dfd1458fdc740a2a6fe6d, type: 3}
       propertyPath: m_LocalPosition.x
       value: 21
@@ -586,6 +599,26 @@ PrefabInstance:
     - target: {fileID: 5167474813277576234, guid: 5b11548cf15dfd1458fdc740a2a6fe6d, type: 3}
       propertyPath: m_TagString
       value: Jelly
+      objectReference: {fileID: 0}
+    - target: {fileID: 5758913247659495576, guid: 5b11548cf15dfd1458fdc740a2a6fe6d, type: 3}
+      propertyPath: Id
+      value: 102
+      objectReference: {fileID: 0}
+    - target: {fileID: 5758913247659495576, guid: 5b11548cf15dfd1458fdc740a2a6fe6d, type: 3}
+      propertyPath: Coin
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5758913247659495576, guid: 5b11548cf15dfd1458fdc740a2a6fe6d, type: 3}
+      propertyPath: Name
+      value: Jelly
+      objectReference: {fileID: 0}
+    - target: {fileID: 5758913247659495576, guid: 5b11548cf15dfd1458fdc740a2a6fe6d, type: 3}
+      propertyPath: Path
+      value: Item/Cookie Run - Jelly_135
+      objectReference: {fileID: 0}
+    - target: {fileID: 5758913247659495576, guid: 5b11548cf15dfd1458fdc740a2a6fe6d, type: 3}
+      propertyPath: Score
+      value: 400
       objectReference: {fileID: 0}
     - target: {fileID: 7074479457313033380, guid: 5b11548cf15dfd1458fdc740a2a6fe6d, type: 3}
       propertyPath: m_LocalPosition.x
@@ -715,6 +748,26 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Jelly
       objectReference: {fileID: 0}
+    - target: {fileID: 5758913247659495576, guid: 5b11548cf15dfd1458fdc740a2a6fe6d, type: 3}
+      propertyPath: Id
+      value: 102
+      objectReference: {fileID: 0}
+    - target: {fileID: 5758913247659495576, guid: 5b11548cf15dfd1458fdc740a2a6fe6d, type: 3}
+      propertyPath: Coin
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5758913247659495576, guid: 5b11548cf15dfd1458fdc740a2a6fe6d, type: 3}
+      propertyPath: Name
+      value: Jelly
+      objectReference: {fileID: 0}
+    - target: {fileID: 5758913247659495576, guid: 5b11548cf15dfd1458fdc740a2a6fe6d, type: 3}
+      propertyPath: Path
+      value: Item/Cookie Run - Jelly_135
+      objectReference: {fileID: 0}
+    - target: {fileID: 5758913247659495576, guid: 5b11548cf15dfd1458fdc740a2a6fe6d, type: 3}
+      propertyPath: Score
+      value: 400
+      objectReference: {fileID: 0}
     - target: {fileID: 7074479457313033380, guid: 5b11548cf15dfd1458fdc740a2a6fe6d, type: 3}
       propertyPath: m_LocalPosition.x
       value: 18
@@ -777,9 +830,25 @@ PrefabInstance:
       propertyPath: m_Name
       value: Jelly (8)
       objectReference: {fileID: 0}
-    - target: {fileID: 5167474813277576234, guid: 5b11548cf15dfd1458fdc740a2a6fe6d, type: 3}
-      propertyPath: m_TagString
+    - target: {fileID: 5758913247659495576, guid: 5b11548cf15dfd1458fdc740a2a6fe6d, type: 3}
+      propertyPath: Id
+      value: 102
+      objectReference: {fileID: 0}
+    - target: {fileID: 5758913247659495576, guid: 5b11548cf15dfd1458fdc740a2a6fe6d, type: 3}
+      propertyPath: Coin
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5758913247659495576, guid: 5b11548cf15dfd1458fdc740a2a6fe6d, type: 3}
+      propertyPath: Name
       value: Jelly
+      objectReference: {fileID: 0}
+    - target: {fileID: 5758913247659495576, guid: 5b11548cf15dfd1458fdc740a2a6fe6d, type: 3}
+      propertyPath: Path
+      value: Item/Cookie Run - Jelly_135
+      objectReference: {fileID: 0}
+    - target: {fileID: 5758913247659495576, guid: 5b11548cf15dfd1458fdc740a2a6fe6d, type: 3}
+      propertyPath: Score
+      value: 400
       objectReference: {fileID: 0}
     - target: {fileID: 7074479457313033380, guid: 5b11548cf15dfd1458fdc740a2a6fe6d, type: 3}
       propertyPath: m_LocalPosition.x
@@ -847,6 +916,26 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Jelly
       objectReference: {fileID: 0}
+    - target: {fileID: 5758913247659495576, guid: 5b11548cf15dfd1458fdc740a2a6fe6d, type: 3}
+      propertyPath: Id
+      value: 102
+      objectReference: {fileID: 0}
+    - target: {fileID: 5758913247659495576, guid: 5b11548cf15dfd1458fdc740a2a6fe6d, type: 3}
+      propertyPath: Coin
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5758913247659495576, guid: 5b11548cf15dfd1458fdc740a2a6fe6d, type: 3}
+      propertyPath: Name
+      value: Jelly
+      objectReference: {fileID: 0}
+    - target: {fileID: 5758913247659495576, guid: 5b11548cf15dfd1458fdc740a2a6fe6d, type: 3}
+      propertyPath: Path
+      value: Item/Cookie Run - Jelly_135
+      objectReference: {fileID: 0}
+    - target: {fileID: 5758913247659495576, guid: 5b11548cf15dfd1458fdc740a2a6fe6d, type: 3}
+      propertyPath: Score
+      value: 400
+      objectReference: {fileID: 0}
     - target: {fileID: 7074479457313033380, guid: 5b11548cf15dfd1458fdc740a2a6fe6d, type: 3}
       propertyPath: m_LocalPosition.x
       value: 20
@@ -912,6 +1001,26 @@ PrefabInstance:
     - target: {fileID: 5167474813277576234, guid: 5b11548cf15dfd1458fdc740a2a6fe6d, type: 3}
       propertyPath: m_TagString
       value: Jelly
+      objectReference: {fileID: 0}
+    - target: {fileID: 5758913247659495576, guid: 5b11548cf15dfd1458fdc740a2a6fe6d, type: 3}
+      propertyPath: Id
+      value: 102
+      objectReference: {fileID: 0}
+    - target: {fileID: 5758913247659495576, guid: 5b11548cf15dfd1458fdc740a2a6fe6d, type: 3}
+      propertyPath: Coin
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5758913247659495576, guid: 5b11548cf15dfd1458fdc740a2a6fe6d, type: 3}
+      propertyPath: Name
+      value: Jelly
+      objectReference: {fileID: 0}
+    - target: {fileID: 5758913247659495576, guid: 5b11548cf15dfd1458fdc740a2a6fe6d, type: 3}
+      propertyPath: Path
+      value: Item/Cookie Run - Jelly_135
+      objectReference: {fileID: 0}
+    - target: {fileID: 5758913247659495576, guid: 5b11548cf15dfd1458fdc740a2a6fe6d, type: 3}
+      propertyPath: Score
+      value: 400
       objectReference: {fileID: 0}
     - target: {fileID: 7074479457313033380, guid: 5b11548cf15dfd1458fdc740a2a6fe6d, type: 3}
       propertyPath: m_LocalPosition.x
@@ -982,6 +1091,26 @@ PrefabInstance:
     - target: {fileID: 5167474813277576234, guid: 5b11548cf15dfd1458fdc740a2a6fe6d, type: 3}
       propertyPath: m_TagString
       value: Jelly
+      objectReference: {fileID: 0}
+    - target: {fileID: 5758913247659495576, guid: 5b11548cf15dfd1458fdc740a2a6fe6d, type: 3}
+      propertyPath: Id
+      value: 102
+      objectReference: {fileID: 0}
+    - target: {fileID: 5758913247659495576, guid: 5b11548cf15dfd1458fdc740a2a6fe6d, type: 3}
+      propertyPath: Coin
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5758913247659495576, guid: 5b11548cf15dfd1458fdc740a2a6fe6d, type: 3}
+      propertyPath: Name
+      value: Jelly
+      objectReference: {fileID: 0}
+    - target: {fileID: 5758913247659495576, guid: 5b11548cf15dfd1458fdc740a2a6fe6d, type: 3}
+      propertyPath: Path
+      value: Item/Cookie Run - Jelly_135
+      objectReference: {fileID: 0}
+    - target: {fileID: 5758913247659495576, guid: 5b11548cf15dfd1458fdc740a2a6fe6d, type: 3}
+      propertyPath: Score
+      value: 400
       objectReference: {fileID: 0}
     - target: {fileID: 7074479457313033380, guid: 5b11548cf15dfd1458fdc740a2a6fe6d, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1111,6 +1240,26 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Jelly
       objectReference: {fileID: 0}
+    - target: {fileID: 5758913247659495576, guid: 5b11548cf15dfd1458fdc740a2a6fe6d, type: 3}
+      propertyPath: Id
+      value: 102
+      objectReference: {fileID: 0}
+    - target: {fileID: 5758913247659495576, guid: 5b11548cf15dfd1458fdc740a2a6fe6d, type: 3}
+      propertyPath: Coin
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5758913247659495576, guid: 5b11548cf15dfd1458fdc740a2a6fe6d, type: 3}
+      propertyPath: Name
+      value: Jelly
+      objectReference: {fileID: 0}
+    - target: {fileID: 5758913247659495576, guid: 5b11548cf15dfd1458fdc740a2a6fe6d, type: 3}
+      propertyPath: Path
+      value: Item/Cookie Run - Jelly_135
+      objectReference: {fileID: 0}
+    - target: {fileID: 5758913247659495576, guid: 5b11548cf15dfd1458fdc740a2a6fe6d, type: 3}
+      propertyPath: Score
+      value: 400
+      objectReference: {fileID: 0}
     - target: {fileID: 7074479457313033380, guid: 5b11548cf15dfd1458fdc740a2a6fe6d, type: 3}
       propertyPath: m_LocalPosition.x
       value: 25
@@ -1177,6 +1326,26 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Jelly
       objectReference: {fileID: 0}
+    - target: {fileID: 5758913247659495576, guid: 5b11548cf15dfd1458fdc740a2a6fe6d, type: 3}
+      propertyPath: Id
+      value: 102
+      objectReference: {fileID: 0}
+    - target: {fileID: 5758913247659495576, guid: 5b11548cf15dfd1458fdc740a2a6fe6d, type: 3}
+      propertyPath: Coin
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5758913247659495576, guid: 5b11548cf15dfd1458fdc740a2a6fe6d, type: 3}
+      propertyPath: Name
+      value: Jelly
+      objectReference: {fileID: 0}
+    - target: {fileID: 5758913247659495576, guid: 5b11548cf15dfd1458fdc740a2a6fe6d, type: 3}
+      propertyPath: Path
+      value: Item/Cookie Run - Jelly_135
+      objectReference: {fileID: 0}
+    - target: {fileID: 5758913247659495576, guid: 5b11548cf15dfd1458fdc740a2a6fe6d, type: 3}
+      propertyPath: Score
+      value: 400
+      objectReference: {fileID: 0}
     - target: {fileID: 7074479457313033380, guid: 5b11548cf15dfd1458fdc740a2a6fe6d, type: 3}
       propertyPath: m_LocalPosition.x
       value: 19
@@ -1242,6 +1411,26 @@ PrefabInstance:
     - target: {fileID: 5167474813277576234, guid: 5b11548cf15dfd1458fdc740a2a6fe6d, type: 3}
       propertyPath: m_TagString
       value: Jelly
+      objectReference: {fileID: 0}
+    - target: {fileID: 5758913247659495576, guid: 5b11548cf15dfd1458fdc740a2a6fe6d, type: 3}
+      propertyPath: Id
+      value: 102
+      objectReference: {fileID: 0}
+    - target: {fileID: 5758913247659495576, guid: 5b11548cf15dfd1458fdc740a2a6fe6d, type: 3}
+      propertyPath: Coin
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5758913247659495576, guid: 5b11548cf15dfd1458fdc740a2a6fe6d, type: 3}
+      propertyPath: Name
+      value: Jelly
+      objectReference: {fileID: 0}
+    - target: {fileID: 5758913247659495576, guid: 5b11548cf15dfd1458fdc740a2a6fe6d, type: 3}
+      propertyPath: Path
+      value: Item/Cookie Run - Jelly_135
+      objectReference: {fileID: 0}
+    - target: {fileID: 5758913247659495576, guid: 5b11548cf15dfd1458fdc740a2a6fe6d, type: 3}
+      propertyPath: Score
+      value: 400
       objectReference: {fileID: 0}
     - target: {fileID: 7074479457313033380, guid: 5b11548cf15dfd1458fdc740a2a6fe6d, type: 3}
       propertyPath: m_LocalPosition.x

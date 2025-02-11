@@ -1,5 +1,5 @@
-Id,Name,Score,Coin,Flag,Path
-100,Cookie,10000,1.0,True,ss
-101,Lemon,23000,2.23,False,ss
-102,Jelly,500,3.3,False,ss
-103,Coin,1023,4.4,True,ss
+Id,Name,Score,Coin,Path
+100,Cookie,10000,1,ss
+101,Lemon,23000,2,ss
+102,Jelly,400,0,Item/Cookie Run - Jelly_135
+103,Coin,260,10,Item/Cookie Run - Jelly_155

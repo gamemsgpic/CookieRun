@@ -81,29 +81,31 @@ public class CharacterInfo : MonoBehaviour
         {
             currentCharacterLevel++;
         }
-
-        // 캐릭터 데이터 갱신
-        var upgradedCharacter = CharacterTableObjectSC.GetCharacterData(currentCharacterName, currentCharacterLevel);
-        if (upgradedCharacter == null)
+        if (GameData.SpendCoin(GameData.coin))
         {
-            Debug.LogError($"[CharacterInfo] {currentCharacterName} (레벨 {currentCharacterLevel}) 데이터를 찾을 수 없습니다.");
-            return;
+            // 캐릭터 데이터 갱신
+            var upgradedCharacter = CharacterTableObjectSC.GetCharacterData(currentCharacterName, currentCharacterLevel);
+            if (upgradedCharacter == null)
+            {
+                Debug.LogError($"[CharacterInfo] {currentCharacterName} (레벨 {currentCharacterLevel}) 데이터를 찾을 수 없습니다.");
+                return;
+            }
+
+            // GameData에 업데이트
+            GameData.EquipCharacter(
+                upgradedCharacter.ID, upgradedCharacter.Name, upgradedCharacter.Level,
+                upgradedCharacter.Hp, upgradedCharacter.Cost, upgradedCharacter.UpgradeCost,
+                upgradedCharacter.Explain_ID, upgradedCharacter.Value, upgradedCharacter.Ability, upgradedCharacter.Image
+            );
+
+            // UI 갱신
+            if (characterSelectionUI != null)
+            {
+                characterSelectionUI.UpdateCharacterUI();
+            }
+
+            Debug.Log($"[CharacterInfo] {currentCharacterName}이(가) 레벨 {currentCharacterLevel}로 업그레이드됨.");
         }
-
-        // GameData에 업데이트
-        GameData.EquipCharacter(
-            upgradedCharacter.ID, upgradedCharacter.Name, upgradedCharacter.Level,
-            upgradedCharacter.Hp, upgradedCharacter.Cost, upgradedCharacter.UpgradeCost,
-            upgradedCharacter.Explain_ID, upgradedCharacter.Value, upgradedCharacter.Ability, upgradedCharacter.Image
-        );
-
-        // UI 갱신
-        if (characterSelectionUI != null)
-        {
-            characterSelectionUI.UpdateCharacterUI();
-        }
-
-        Debug.Log($"[CharacterInfo] {currentCharacterName}이(가) 레벨 {currentCharacterLevel}로 업그레이드됨.");
     }
 
 

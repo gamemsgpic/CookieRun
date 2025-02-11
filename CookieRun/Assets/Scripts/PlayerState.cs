@@ -8,8 +8,8 @@ public class PlayerState : MonoBehaviour
     public MapManager mapManager;
     private Animator animator;
     public float itemEffectTime = 3f;
-    public float maxHp = 100f;
-    public float upWave = 30f;
+    private float maxHp;
+    public float upWave;
     public float hp { get; set; }
     private float wave = 0f;
     private bool oneCall = true;
@@ -40,8 +40,7 @@ public class PlayerState : MonoBehaviour
         itemEffects.InitializeEffects(magnet);
 
         SetGameDataToPlayerState();
-
-        hp = maxHp;
+        Debug.Log($"{hp}");
         wave = 0f;
         currentWave = 1;
         maxWave = false;
@@ -199,6 +198,7 @@ public class PlayerState : MonoBehaviour
         if (oneCall2)
         {
             uiManager.ShowScoreBoardWindow();
+
             Debug.Log("µÈ´Ù");
             oneCall2 = false;
         }
@@ -211,6 +211,7 @@ public class PlayerState : MonoBehaviour
 
     private void SetGameDataToPlayerState()
     {
-        maxHp = GameData.characterHp;
+        hp = GameData.characterHp;
+        maxHp = 200;
     }
 }

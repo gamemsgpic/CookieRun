@@ -113,6 +113,12 @@ public class CharacterSelectionUI : MonoBehaviour
 
     public void UpdateCharacterUI()
     {
+        if (GameData.characterLevel <= 0)
+        {
+            Debug.LogWarning("[CharacterSelectionUI] 잘못된 레벨 값 감지, 1로 보정");
+            GameData.characterLevel = 1;
+        }
+
         var currentCharacter = CharacterTableObjectSC.GetCharacterData(characterInfo.currentCharacterName, characterInfo.currentCharacterLevel);
         if (currentCharacter == null)
         {

@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 using System.Collections.Generic;
+using static GameData;
 
 public class InventoryUI : MonoBehaviour
 {
@@ -118,6 +119,7 @@ public class InventoryUI : MonoBehaviour
         selectedSlot.equipmentTreasure.ApplyTreasureData(selectedItem.treasureData);
 
         Debug.Log($"[InventoryUI] {selectedItem.treasureData.treasureName} ภๅย๘ตส");
+        SetEquipmentSlot(selectedSlot.slotIndex, ConvertTreasureToSlotData(selectedItem.treasureData));
     }
 
     public void OpenInventoryForSlot(EquipmentSlot slot)
