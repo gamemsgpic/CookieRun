@@ -90,6 +90,7 @@ public class SelectCharacters : MonoBehaviour
     public void UpJumpButton(bool isHeld)
     {
         currentCharacter.GetComponent<PlayerMovement>().SetJumpKeyHeld(false);
+
     }
 
     public void ButtonDown()

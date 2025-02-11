@@ -361,22 +361,22 @@ public class MapManager : MonoBehaviour
         }
 
         activePrefabs.Add(prefabToActivate);
-        if (currentWave == 0)
-        {
-            ChangeAllTilemapSprites(prefabToActivate, tileSprite[0]);
-        }
-        else if (currentWave == 1)
-        {
-            ChangeAllTilemapSprites(prefabToActivate, tileSprite[1]);
-        }
-        else if (currentWave == 2)
-        {
-            ChangeAllTilemapSprites(prefabToActivate, tileSprite[2]);
-        }
-        else if (currentWave == 3)
-        {
-            ChangeAllTilemapSprites(prefabToActivate, tileSprite[3]);
-        }
+       // if (currentWave == 0)
+       // {
+       //     ChangeAllTilemapSprites(prefabToActivate, tileSprite[0]);
+       // }
+       // else if (currentWave == 1)
+       // {
+       //     ChangeAllTilemapSprites(prefabToActivate, tileSprite[1]);
+       // }
+       // else if (currentWave == 2)
+       // {
+       //     ChangeAllTilemapSprites(prefabToActivate, tileSprite[2]);
+       // }
+       // else if (currentWave == 3)
+       // {
+       //     ChangeAllTilemapSprites(prefabToActivate, tileSprite[3]);
+       // }
     }
 
 
@@ -452,30 +452,34 @@ public class MapManager : MonoBehaviour
         }
     }
 
-    private void ChangeAllTilemapSprites(GameObject prefab, Sprite newSprite)
-    {
-        Tilemap[] tilemaps = prefab.GetComponentsInChildren<Tilemap>();
+    //private void ChangeAllTilemapSprites(GameObject prefab, Sprite newSprite)
+    //{
+    //    Tilemap[] tilemaps = prefab.GetComponentsInChildren<Tilemap>();
+    //
+    //    foreach (Tilemap tilemap in tilemaps)
+    //    {
+    //        BoundsInt bounds = tilemap.cellBounds;
+    //        TileBase[] allTiles = tilemap.GetTilesBlock(bounds);
+    //
+    //        Tile[] newTiles = new Tile[allTiles.Length];
+    //
+    //        for (int i = 0; i < allTiles.Length; i++)
+    //        {
+    //            if (allTiles[i] is Tile oldTile)
+    //            {
+    //                Tile newTile = ScriptableObject.CreateInstance<Tile>(); // 새로운 타일 객체 생성
+    //                newTile.sprite = newSprite; // 스프라이트 변경
+    //                newTiles[i] = newTile;
+    //            }
+    //            else
+    //            {
+    //                newTiles[i] = null;
+    //            }
+    //        }
+    //
+    //        tilemap.SetTilesBlock(bounds, newTiles); // 한 번에 변경
+    //    }
+    //}
 
-        foreach (Tilemap tilemap in tilemaps)
-        {
-            BoundsInt bounds = tilemap.cellBounds;
-            TileBase[] allTiles = tilemap.GetTilesBlock(bounds);
 
-            Vector3Int position = new Vector3Int();
-
-            for (int i = 0; i < allTiles.Length; i++)
-            {
-                if (allTiles[i] == null) continue; // 비어 있는 타일 건너뛰기
-
-                position.x = bounds.xMin + (i % bounds.size.x);
-                position.y = bounds.yMin + (i / bounds.size.x);
-
-                if (allTiles[i] is Tile oldTile)
-                {
-                    oldTile.sprite = newSprite;
-                    tilemap.RefreshTile(position);
-                }
-            }
-        }
-    }
 }
