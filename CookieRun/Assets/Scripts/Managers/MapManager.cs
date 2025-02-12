@@ -172,6 +172,12 @@ public class MapManager : MonoBehaviour
     public int maxActivePrefabs = 5; // 최대 활성 프리팹 개수
     public int currentWave { get; private set; } = 0; // 현재 웨이브
 
+    private GameObject lastPrefab;
+    private GameObject newPrefab;
+    private Transform lastRightPivot;
+    private Transform newLeftPivot;
+    private Vector3 offset;
+
     void Start()
     {
         InitializePrefabPools();
@@ -432,21 +438,21 @@ public class MapManager : MonoBehaviour
     {
         if (activePrefabs.Count < 2) return;
 
-        GameObject lastPrefab = activePrefabs[activePrefabs.Count - 2]; // 마지막에서 두 번째 프리팹
-        GameObject newPrefab = activePrefabs[activePrefabs.Count - 1]; // 가장 최근 추가된 프리팹
+        lastPrefab = activePrefabs[activePrefabs.Count - 2]; // 마지막에서 두 번째 프리팹
+        newPrefab = activePrefabs[activePrefabs.Count - 1]; // 가장 최근 추가된 프리팹
 
-        Transform lastRightPivot = lastPrefab.transform.Find("RightPivot");
-        Transform newLeftPivot = newPrefab.transform.Find("LeftPivot");
+        lastRightPivot = lastPrefab.transform.Find("RightPivot");
+        newLeftPivot = newPrefab.transform.Find("LeftPivot");
 
         if (lastRightPivot != null && newLeftPivot != null)
         {
             // 위치 보정: 마지막 프리팹의 RightPivot과 새로운 프리팹의 LeftPivot을 정확히 맞춤
-            Vector3 offset = newLeftPivot.position - newPrefab.transform.position;
+            offset = newLeftPivot.position - newPrefab.transform.position;
             newPrefab.transform.position = lastRightPivot.position - offset;
         }
 
         // 활성화된 맵 개수가 부족하면 추가 배치
-        while (activePrefabs.Count < maxActivePrefabs)
+        if (activePrefabs.Count < maxActivePrefabs)
         {
             ActivatePrefab();
         }

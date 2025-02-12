@@ -38,34 +38,10 @@ public class PlayerMovement : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
 
         jumpCount = maxJumpCount;
-
-        jumpKeyHeld = false;
-        jumpKeyUsed = true;
-    }
-
-    public void ResetJumpKeyHeld()
-    {
-        jumpKeyHeld = false;
-        jumpKeyUsed = true;
     }
 
     private void Update()
     {
-        //// 키보드 입력도 감지하여 유지
-        //jumpKeyHeld = Input.GetKey(KeyCode.Space) || jumpKeyHeld;
-
-        //// 점프 처리
-        //if (Input.GetKeyDown(KeyCode.Space) && jumpCount > 0 && !playerSlide.isSlide)
-        //{
-        //    PerformJump();
-        //    jumpKeyUsed = false;
-
-        //}
-        //else if (Input.GetKeyUp(KeyCode.Space))
-        //{
-        //    jumpKeyUsed = true;
-        //}
-
         float rayLength = 0.2f;
         Vector2 rayOrigin = new Vector2(transform.position.x, transform.position.y - 0.5f);
         RaycastHit2D hit = Physics2D.Raycast(rayOrigin, Vector2.down, rayLength, LayerMask.GetMask("Ground"));
@@ -119,7 +95,6 @@ public class PlayerMovement : MonoBehaviour
         if (currentJumpRoutine != null)
         {
             StopCoroutine(currentJumpRoutine);
-            ResetJumpState();
         }
         currentJumpRoutine = StartCoroutine(JumpRoutine());
     }
@@ -179,18 +154,18 @@ public class PlayerMovement : MonoBehaviour
             isfalling = false;
             jumpCount = maxJumpCount;
             fallingSpeed = startFallingSpeed;
+            rb.velocity = Vector2.zero;
+            currentJumpRoutine = null;
 
 
-            if (jumpKeyHeld && !jumpKeyUsed)
+            if (jumpKeyHeld && !jumpKeyUsed && !playerSlide.isSlide)
             {
                 PerformJump();
                 jumpKeyUsed = true; // 추가 점프 1회 제한
             }
 
-            // 버튼을 떼면 다시 점프 가능
             if (!jumpKeyHeld)
             {
-                ResetJumpState();
                 jumpKeyUsed = false; // 추가 점프 가능 상태로 변경
             }
         }
@@ -203,7 +178,7 @@ public class PlayerMovement : MonoBehaviour
             if (jumpCount == 2 && !isGrounded && !isJumping && !playerItemEffects.giant)
             {
                 rb.isKinematic = true;
-                fallingSpeed += fallingSpeed * Time.deltaTime;
+                fallingSpeed += fallingSpeed * Time.unscaledDeltaTime;
                 rb.velocity = Vector2.down * fallingSpeed * (fallingPlus + fallingPlus);
                 isJumping = false;
                 isfalling = true;
@@ -238,15 +213,15 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-    private void ResetJumpState()
-    {
-        rb.velocity = Vector2.zero;
-        isJumping = false;
-        currentJumpRoutine = null;
-    }
     // 버튼 누를 때 호출 (UI 버튼에 연결)
-    public void SetJumpKeyHeld(bool isHeld)
+    public void SetJumpKeyHeldDown()
     {
-        jumpKeyHeld = isHeld;
+        jumpKeyHeld = true;
+    }
+
+    public void SetJumpKeyHeldUp()
+    {
+        jumpKeyHeld = false;
+
     }
 }

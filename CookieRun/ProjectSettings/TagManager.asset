@@ -15,6 +15,7 @@ TagManager:
   - DropArea
   - MapManager
   - Crystal
+  - SpeedUp
   layers:
   - Default
   - TransparentFX

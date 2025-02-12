@@ -315,8 +315,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 1271.5642, y: -201.519}
-  m_SizeDelta: {x: 2343.1284, y: 0}
+  m_AnchoredPosition: {x: 1233.9077, y: -201.519}
+  m_SizeDelta: {x: 2267.8154, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &58796458
 MonoBehaviour:
@@ -1083,8 +1083,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 1271.5642, y: -85.25317}
-  m_SizeDelta: {x: 2343.1284, y: 90.50633}
+  m_AnchoredPosition: {x: 1233.9077, y: -85.25317}
+  m_SizeDelta: {x: 2267.8154, y: 90.50633}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &260386766
 MonoBehaviour:
@@ -1203,7 +1203,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 100, y: -55.253166}
-  m_SizeDelta: {x: 2040.5272, y: 0}
+  m_SizeDelta: {x: 1968.691, y: 0}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!114 &296792550
 MonoBehaviour:
@@ -6216,7 +6216,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 2323.1284, y: -777.4683}
+  m_AnchoredPosition: {x: 2247.8154, y: -777.4683}
   m_SizeDelta: {x: 372, y: 0}
   m_Pivot: {x: 1, y: 0}
 --- !u!114 &1202902610
@@ -6982,7 +6982,7 @@ MonoBehaviour:
   StartMapPos: {fileID: 1914284202}
   startGroundRightPos: {fileID: 1227756685}
   clearPivot: {fileID: 296078774}
-  maxActivePrefabs: 5
+  maxActivePrefabs: 7
 --- !u!4 &1395935400
 Transform:
   m_ObjectHideFlags: 0
@@ -7403,7 +7403,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 2343.1287, y: -55.253166}
+  m_AnchoredPosition: {x: 2267.8152, y: -55.253166}
   m_SizeDelta: {x: 120, y: 0}
   m_Pivot: {x: 1, y: 0.5}
 --- !u!114 &1592962412
@@ -10147,6 +10147,10 @@ PrefabInstance:
       propertyPath: waveSlider
       value: 
       objectReference: {fileID: 617330717}
+    - target: {fileID: 2030026848129091530, guid: 408cfe2c3b7fbc64ea5ab9bbf3c5fe59, type: 3}
+      propertyPath: speedUpControl
+      value: 0.4
+      objectReference: {fileID: 0}
     - target: {fileID: 4713746603498425777, guid: 408cfe2c3b7fbc64ea5ab9bbf3c5fe59, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1.1856441
@@ -10240,6 +10244,10 @@ PrefabInstance:
       propertyPath: waveSlider
       value: 
       objectReference: {fileID: 617330717}
+    - target: {fileID: 2030026848129091530, guid: 1127ee61c1e64124fb028e1ab6ac7349, type: 3}
+      propertyPath: speedUpControl
+      value: 0.4
+      objectReference: {fileID: 0}
     - target: {fileID: 4713746603498425777, guid: 1127ee61c1e64124fb028e1ab6ac7349, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1.2156444
@@ -10329,6 +10337,10 @@ PrefabInstance:
       propertyPath: waveSlider
       value: 
       objectReference: {fileID: 617330717}
+    - target: {fileID: 2030026848129091530, guid: bc43d80b51e1e6f45bfe5addf2f36e39, type: 3}
+      propertyPath: speedUpControl
+      value: 0.4
+      objectReference: {fileID: 0}
     - target: {fileID: 4713746603498425777, guid: bc43d80b51e1e6f45bfe5addf2f36e39, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1.2156444
