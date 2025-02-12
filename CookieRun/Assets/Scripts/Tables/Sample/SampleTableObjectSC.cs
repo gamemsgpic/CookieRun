@@ -12,7 +12,7 @@ public class SampleTableObjectSC : MonoBehaviour
     public int Coin;
     public int Path;
     public int Heal;
-    public float Value;
+    public int Value;
 
     private void Start()
     {
@@ -29,7 +29,7 @@ public class SampleTableObjectSC : MonoBehaviour
         ApplyItemMagnet parent = GetComponentInParent<ApplyItemMagnet>();
         if (parent != null)
         {
-            parent.SetItem();
+            //parent.SetItem();
         }
     }
 
@@ -56,7 +56,7 @@ public class SampleTableObjectSC : MonoBehaviour
         ApplyItemMagnet parent = GetComponentInParent<ApplyItemMagnet>();
         if (parent != null)
         {
-            parent.SetItem();
+            //parent.SetItem();
         }
     }
 

@@ -25,6 +25,7 @@ public class PlayerMovement : MonoBehaviour
     private Coroutine currentJumpRoutine;
 
     private bool jumpKeyHeld; // 점프 키가 눌린 상태 저장
+    private bool jumpKeyUsed; // 점프 키가 눌린 상태 저장
 
     private bool oneCall = true;
 
@@ -39,11 +40,13 @@ public class PlayerMovement : MonoBehaviour
         jumpCount = maxJumpCount;
 
         jumpKeyHeld = false;
+        jumpKeyUsed = true;
     }
 
     public void ResetJumpKeyHeld()
     {
         jumpKeyHeld = false;
+        jumpKeyUsed = true;
     }
 
     private void Update()
@@ -107,7 +110,6 @@ public class PlayerMovement : MonoBehaviour
 
         if (jumpCount > 0 && !playerSlide.isSlide)
         {
-            jumpKeyHeld = true;  // 버튼을 누를 때만 true
             PerformJump();
         }
     }
@@ -119,7 +121,6 @@ public class PlayerMovement : MonoBehaviour
             StopCoroutine(currentJumpRoutine);
             ResetJumpState();
         }
-        jumpKeyHeld = false; // 점프 실행 후 키 입력 초기화
         currentJumpRoutine = StartCoroutine(JumpRoutine());
     }
 
@@ -178,11 +179,19 @@ public class PlayerMovement : MonoBehaviour
             isfalling = false;
             jumpCount = maxJumpCount;
             fallingSpeed = startFallingSpeed;
-            ResetJumpState();
 
-            if (jumpKeyHeld)
+
+            if (jumpKeyHeld && !jumpKeyUsed)
             {
                 PerformJump();
+                jumpKeyUsed = true; // 추가 점프 1회 제한
+            }
+
+            // 버튼을 떼면 다시 점프 가능
+            if (!jumpKeyHeld)
+            {
+                ResetJumpState();
+                jumpKeyUsed = false; // 추가 점프 가능 상태로 변경
             }
         }
     }

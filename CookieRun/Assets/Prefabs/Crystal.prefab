@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 115354410031442567}
   m_Layer: 6
   m_Name: Crystal
-  m_TagString: Coin
+  m_TagString: Crystal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -82,7 +82,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   score: 100
-  coins: 100
+  coins: 0
+  heal: 0
+  Crystal: 1
   onItmeEffect: 0
   plusHp: 0
   giantization: {x: 0, y: 0, z: 0}

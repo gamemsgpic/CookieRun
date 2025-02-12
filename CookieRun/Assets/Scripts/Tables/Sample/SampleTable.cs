@@ -7,5 +7,5 @@ public class SampleTable
     public int Coin { get; set; }
     public int Path { get; set; }
     public int Heal { get; set; }
-    public float Value { get; set; }
+    public int Value { get; set; }
 };

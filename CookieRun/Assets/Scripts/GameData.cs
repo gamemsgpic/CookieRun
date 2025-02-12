@@ -41,6 +41,7 @@ public static class GameData
 
     public static int bestScore = 0; // 최고 점수
     public static int coin = 0; // 누적 코인
+    public static int crystal = 0; // 누적 코인
 
 
     public static EquipmentSlotData[] equippedSlots = new EquipmentSlotData[3];
@@ -61,6 +62,7 @@ public static class GameData
         public string characterImage;
         public int bestScore;
         public int coin;
+        public int crystal;
         public EquipmentSlotData[] equippedSlots;
     }
 
@@ -117,7 +119,8 @@ public static class GameData
                 characterImage = characterImage,
                 equippedSlots = equippedSlots,
                 bestScore = bestScore,
-                coin = coin
+                coin = coin,
+                crystal = crystal
             };
 
             string json = JsonUtility.ToJson(dto, true);
@@ -192,6 +195,7 @@ public static class GameData
                 equippedSlots = dto.equippedSlots;
                 bestScore = dto.bestScore;
                 coin = dto.coin;
+                crystal = dto.crystal;
 
                 Debug.Log("게임 데이터 불러오기 완료.");
             }
@@ -222,6 +226,7 @@ public static class GameData
         characterImage = "";
         bestScore = 0;
         coin = 1000;
+        crystal = 0;
         equippedSlots = new EquipmentSlotData[3];
 
         SaveGameData();
@@ -245,6 +250,7 @@ public static class GameData
             characterImage = defaultCharacter.Image;
             bestScore = 0;
             coin = 1000;
+            crystal = 0;
         }
         else
         {
@@ -280,6 +286,13 @@ public static class GameData
     {
         coin += amount;
         Debug.Log($"[GameData] 코인 추가: {amount}, 현재 코인: {coin}");
+        SaveGameData(); // 코인 저장
+    }
+
+    public static void AddCrystal(int amount)
+    {
+        crystal += amount;
+        Debug.Log($"[GameData] 코인 추가: {amount}, 현재 코인: {crystal}");
         SaveGameData(); // 코인 저장
     }
 
