@@ -6,10 +6,13 @@ using UnityEngine.SceneManagement;
 
 public class MainMenuManager : MonoBehaviour
 {
+    public GameObject tutorWindow;
     public TextMeshProUGUI bestScoreText;
     public TextMeshProUGUI coinText;
+    public TextMeshProUGUI crystalText;
     private int bestScore;
     private int coin;
+    private int crystal;
 
     private void Start()
     {
@@ -17,6 +20,8 @@ public class MainMenuManager : MonoBehaviour
         bestScoreText.text = bestScore.ToString();
         coin = GameData.coin;
         coinText.text = coin.ToString();
+        crystal = GameData.crystal;
+        crystalText.text = crystal.ToString();
         Inventory.SetActive(false);
         GameData.LoadGameData(); // 게임 시작 시 데이터 불러오기
         SceneManager.sceneUnloaded += OnSceneChanged; // 씬 변경 시 자동 저장
@@ -73,5 +78,15 @@ public class MainMenuManager : MonoBehaviour
     {
         coin = GameData.coin;
         coinText.text = coin.ToString();
+    }
+
+    public void OnTutorWindow()
+    {
+        tutorWindow.SetActive(true);
+    }
+
+    public void OffTutorWindow()
+    {
+        tutorWindow.SetActive(false);
     }
 }

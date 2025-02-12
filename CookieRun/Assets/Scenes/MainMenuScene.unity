@@ -398,7 +398,7 @@ GameObject:
   - component: {fileID: 80573810}
   - component: {fileID: 80573809}
   m_Layer: 5
-  m_Name: Button (3)
+  m_Name: ExitButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -796,7 +796,7 @@ GameObject:
   - component: {fileID: 96291894}
   - component: {fileID: 96291899}
   m_Layer: 5
-  m_Name: Button (2)
+  m_Name: TutorButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1982,7 +1982,7 @@ GameObject:
   - component: {fileID: 335020771}
   - component: {fileID: 335020772}
   m_Layer: 5
-  m_Name: GamaStartButton (3)
+  m_Name: EquipmentSlots
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3647,7 +3647,7 @@ GameObject:
   - component: {fileID: 571180800}
   - component: {fileID: 571180805}
   m_Layer: 5
-  m_Name: InventoryButton
+  m_Name: TBDButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3827,7 +3827,7 @@ GameObject:
   - component: {fileID: 574036683}
   - component: {fileID: 574036682}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: TutorText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5116,7 +5116,7 @@ GameObject:
   - component: {fileID: 802459471}
   - component: {fileID: 802459470}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: TBDText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5383,7 +5383,7 @@ GameObject:
   - component: {fileID: 946878768}
   - component: {fileID: 946878767}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: GameStartText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8777,7 +8777,7 @@ GameObject:
   - component: {fileID: 1485851515}
   - component: {fileID: 1485851514}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: CrystalText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9670,6 +9670,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bestScoreText: {fileID: 71637773}
   coinText: {fileID: 375400629}
+  crystalText: {fileID: 1485851514}
   Inventory: {fileID: 555871139}
 --- !u!4 &1702535792
 Transform:
@@ -10354,7 +10355,7 @@ GameObject:
   - component: {fileID: 1862177612}
   - component: {fileID: 1862177611}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: ExitText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10814,7 +10815,7 @@ GameObject:
   - component: {fileID: 1922327158}
   - component: {fileID: 1922327157}
   m_Layer: 5
-  m_Name: GamaStartButton (4)
+  m_Name: CrystalTextArea
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

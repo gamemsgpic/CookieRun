@@ -250,7 +250,7 @@ public class UIManager : MonoBehaviour
         if (player != null)
         {
             var playerState = player.GetComponent<PlayerState>();
-            GameData.AddCoin(playerState.crystal);
+            GameData.AddCrystal(playerState.crystal);
         }
         GameData.UpdateBestScore(targetScore);
         GameData.AddCoin(targetCoins);
