@@ -35,7 +35,7 @@ public class ApplyItemMagnet : MonoBehaviour
         transform.localPosition = initialLocalPosition;
         gameObject.SetActive(true);
     }
-   
+
 
 
     // Magnet과 충돌 시 호출
@@ -75,11 +75,39 @@ public class ApplyItemMagnet : MonoBehaviour
         if (collision.CompareTag("Player"))
         {
             PlayerCrash playerCrash = collision.GetComponent<PlayerCrash>();
+            //PlayerState playerState = collision.GetComponent<PlayerState>();
+            //PlayerItemEffects playerItemEffects = collision.GetComponent<PlayerItemEffects>();
             if (playerCrash != null)
             {
                 playerCrash.ApplyItemEffect(this);
             }
             gameObject.SetActive(false);
+
+
+            //if (isMovingToPlayer && gameObject.tag == "Potion")
+            //{
+            //    if (playerState != null)
+            //    {
+            //        playerState.PlusHp(this.plusHp);
+            //    }
+            //}
+
+            //if (isMovingToPlayer && gameObject.tag == "Crystal")
+            //{
+            //    PlayerState playerState = gameObject.GetComponent<PlayerState>();
+            //    if (playerState != null)
+            //    {
+            //        playerState.PlusCrystal(this.Crystal);
+            //    }
+            //}
+
+            //if (isMovingToPlayer && gameObject.tag == "Giantization")
+            //{
+            //    if (playerItemEffects != null)
+            //    {
+            //        playerItemEffects.ChangeScale(this.giantization, true);
+            //    }
+            //}
         }
     }
 }

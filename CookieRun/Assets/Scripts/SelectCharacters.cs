@@ -26,6 +26,10 @@ public class SelectCharacters : MonoBehaviour
         }
 
         SetCurrentPlayer();
+        if (currentCharacter == null)
+        {
+            return;
+        }
         characterPlayerMovement = currentCharacter.GetComponent<PlayerMovement>();
         characterPlayerSlide = currentCharacter.GetComponent<PlayerSlide>();
 

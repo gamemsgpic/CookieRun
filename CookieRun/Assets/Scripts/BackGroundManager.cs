@@ -65,21 +65,16 @@ public class BackGroundManager : MonoBehaviour
 
     public void ChangeBackGroundSprite(int wave)
     {
-        if (wave >= backGroundBottomSprites.Length)
+        int index = wave - 1; // wave가 1부터 시작한다고 가정
+
+        if (index < 0 || index >= backGroundSprites.Length || index >= backGroundBottomSprites.Length)
         {
+            //Debug.LogWarning("ChangeBackGroundSprite: Index out of range. Wave: " + wave);
             return;
         }
 
-        if (wave != 0)
-        {
-            backGroundRenderer.sprite = backGroundSprites[wave - 1];
-            backGroundBottomRenderer.sprite = backGroundBottomSprites[wave - 1];
-        }
-        else
-        {
-            backGroundRenderer.sprite = backGroundSprites[wave];
-            backGroundBottomRenderer.sprite = backGroundBottomSprites[wave];
-        }
+        backGroundRenderer.sprite = backGroundSprites[index];
+        backGroundBottomRenderer.sprite = backGroundBottomSprites[index];
     }
 
     public void StartLight()

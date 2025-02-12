@@ -215,6 +215,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3643cd577a4d45347835b15100575af8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  audioManager: {fileID: 0}
   jumpCount: 2
   maxJumpCount: 2
   jumpHeight: 8
@@ -284,12 +285,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0535ddd735e4c0845af3a6fa8314a3d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  audioManager: {fileID: 0}
   magnet: {fileID: 6258357431784894151}
+  backGroundManager: {fileID: 0}
   mapManager: {fileID: 0}
   itemEffectTime: 3
   upWave: 30
   resurrection: 2
-  speedUpControl: 0.1
+  resurrectionHp: 40
+  speedUpControl: 0.2
   uiManager: {fileID: 0}
   hpSlider: {fileID: 0}
   waveSlider: {fileID: 0}
@@ -305,12 +309,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 12ba416bb5918ac47b6f87278bfb0c2d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  audioManager: {fileID: 0}
   uiManager: {fileID: 0}
   damageEffectPanel: {fileID: 0}
   blinkEndTime: 0.1
   blinkReEndTime: 0.2
   inviEndTime: 2.4
-  damage: 5
+  damage: 8
   damageEftEndTime: 0.1
   color: {r: 1, g: 1, b: 1, a: 0.39215687}
   originalColor: {r: 1, g: 1, b: 1, a: 1}
@@ -326,6 +331,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 78fefb0c796871345abd2daa0ecd8e67, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  audioManager: {fileID: 0}
   uiManager: {fileID: 0}
 --- !u!70 &1330209005149062940
 CapsuleCollider2D:

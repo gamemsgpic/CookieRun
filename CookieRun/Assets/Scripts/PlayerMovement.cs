@@ -4,6 +4,7 @@ using UnityEngine.EventSystems; // UI 이벤트 처리를 위해 필요
 
 public class PlayerMovement : MonoBehaviour
 {
+    public AudioManager audioManager;
     private Rigidbody2D rb;
     private Animator animator;
     private SpriteRenderer rbSprite;
@@ -29,6 +30,8 @@ public class PlayerMovement : MonoBehaviour
 
     private bool oneCall = true;
 
+    private bool previousIsGrounded = false; // 이전 프레임에서의 isGrounded 상태
+
     private void Start()
     {
         playerItemEffects = GetComponent<PlayerItemEffects>();
@@ -42,7 +45,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void Update()
     {
-        float rayLength = 0.2f;
+        float rayLength = 0.1f;
         Vector2 rayOrigin = new Vector2(transform.position.x, transform.position.y - 0.5f);
         RaycastHit2D hit = Physics2D.Raycast(rayOrigin, Vector2.down, rayLength, LayerMask.GetMask("Ground"));
 
@@ -76,16 +79,14 @@ public class PlayerMovement : MonoBehaviour
             animator.SetTrigger("Falling");
         }
 
-
-        // **점프 키가 눌려있고, 추가 점프가 사용되지 않았을 때만 실행**
-        if (jumpKeyHeld && !jumpKeyUsed && !playerSlide.isSlide)
+        // **isGrounded가 처음 true가 될 때만 실행 (계속 호출 방지)**
+        if (isGrounded && !previousIsGrounded)
         {
-            if (isGrounded)
-            {
-                SingleJump();
-                jumpKeyUsed = true; // 추가 점프 1회 제한 (중복 방지)
-            }
+            HandleGroundedState();
         }
+
+        // 이전 프레임의 isGrounded 상태 저장
+        previousIsGrounded = isGrounded;
 
     }
 
@@ -98,6 +99,7 @@ public class PlayerMovement : MonoBehaviour
 
         if (jumpCount > 0 && !playerSlide.isSlide)
         {
+            audioManager.PlayerJumpSound();
             PerformJump();
         }
     }
@@ -167,6 +169,7 @@ public class PlayerMovement : MonoBehaviour
         }
 
         currentJumpRoutine = StartCoroutine(SingleJumpRoutine());
+       
     }
 
     private IEnumerator SingleJumpRoutine()
@@ -217,7 +220,12 @@ public class PlayerMovement : MonoBehaviour
             rb.velocity = Vector2.zero;
             currentJumpRoutine = null;
 
-
+            //// **점프 키가 눌려있고, 추가 점프가 사용되지 않았을 때만 실행**
+            //if (jumpKeyHeld && !jumpKeyUsed && !playerSlide.isSlide)
+            //{
+            //    SingleJump();
+            //    jumpKeyUsed = true; // 추가 점프 1회 제한 (중복 방지)
+            //}
         }
     }
 
@@ -260,6 +268,23 @@ public class PlayerMovement : MonoBehaviour
         if (collision.gameObject.CompareTag("Ground"))
         {
             isGrounded = false;
+        }
+    }
+
+    private void HandleGroundedState()
+    {
+        isJumping = false;
+        isfalling = false;
+        jumpCount = maxJumpCount;
+        fallingSpeed = startFallingSpeed;
+        rb.velocity = new Vector2(rb.velocity.x, Mathf.Lerp(rb.velocity.y, 0f, Time.deltaTime * 5f)); // 속도를 점진적으로 줄이기
+        currentJumpRoutine = null;
+
+        // **버튼이 눌려있고, 추가 점프가 사용되지 않았을 때만 실행**
+        if (jumpKeyHeld && !jumpKeyUsed && !playerSlide.isSlide)
+        {
+            SingleJump();
+            jumpKeyUsed = true;  // 추가 점프 1회 제한
         }
     }
 

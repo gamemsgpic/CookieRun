@@ -3,6 +3,7 @@ using UnityEngine;
 
 public class PlayerItemEffects : MonoBehaviour
 {
+    public AudioManager audioManager;
     public GameObject magnet;
     private Animator animator;
     public float itemEffectTime = 3f;
@@ -165,6 +166,7 @@ public class PlayerItemEffects : MonoBehaviour
 
     public void ChangeScale(Vector3 setScale, bool setBool)
     {
+        audioManager.PlayerItemClipSound();
         transform.localScale = setScale;
         giant = setBool;
         giantEffectTime = 0f;

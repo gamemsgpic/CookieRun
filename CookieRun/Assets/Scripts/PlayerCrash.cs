@@ -3,6 +3,7 @@ using UnityEngine.SocialPlatforms.Impl;
 
 public class PlayerCrash : MonoBehaviour
 {
+    public AudioManager audioManager;
     public UIManager uiManager;
     public GameObject damageEffectPanel;
     private PlayerItemEffects playerItemEffcts;
@@ -82,8 +83,14 @@ public class PlayerCrash : MonoBehaviour
 
             if (item != null)
             {
+                //if (collision.CompareTag("Jelly")) // 자석 아이템 태그 확인
+                //{
+                //    audioManager.PlayerJellySound();
+                //}
+
                 if (collision.CompareTag("Magnet")) // 자석 아이템 태그 확인
                 {
+                    audioManager.PlayerItemClipSound();
                     playerItemEffcts.OnOffMagnet(item.onItmeEffect, playerItemEffcts.maxMagnetRadius, true); // 자석 효과 활성화
                     ApplyItemEffect(item);
                 }
@@ -102,24 +109,20 @@ public class PlayerCrash : MonoBehaviour
                 }
 
 
-                if (collision.CompareTag("Potion"))
-                {
-                    playerState.PlusHp(item.plusHp);
-                }
-
-                if (collision.CompareTag("Crystal"))
-                {
-                    playerState.PlusCrystal(item.Crystal);
-                }
-
-                if (collision.CompareTag("Giantization"))
-                {
-                    playerItemEffcts.ChangeScale(item.giantization, true);
-                }
-
                 //if (collision.CompareTag("Potion"))
                 //{
-                //    playerItemEffects.PlusHp(item.plusHp);
+                //    playerState.PlusHp(item.plusHp);
+                //}
+
+                //if (collision.CompareTag("Crystal"))
+                //{
+                //    playerItemEffcts.ChangeScale(item.giantization, true);
+
+                //}
+
+                //if (collision.CompareTag("Giantization"))
+                //{
+                //    playerItemEffcts.ChangeScale(item.giantization, true);
                 //}
             }
         }
@@ -142,17 +145,34 @@ public class PlayerCrash : MonoBehaviour
 
     public void ApplyItemEffect(ApplyItemMagnet item)
     {
+        if (item.tag == "Jelly" || item.tag == "Coin")
+        {
+            audioManager.PlayerJellySound();
+        }
 
         if (item.score == 0 && item.coins == 0)
         {
             Debug.LogError($"[오류] 아이템 {item.gameObject.name}의 점수 및 코인이 0입니다. 아이템 속성을 확인하세요!");
         }
 
+
         int previousScore = playerState.score;
         int previousCoins = playerState.coins;
 
         playerState.AddScore(item.score);
         playerState.AddCoins(item.coins);
+        if (item.tag == "Potion")
+        {
+            playerState.PlusHp(item.plusHp);
+        }
+        else if (item.tag == "Crystal")
+        {
+            playerState.PlusCrystal(item.Crystal);
+        }
+        else if(item.tag == "Giantization")
+        {
+            playerItemEffcts.ChangeScale(item.giantization, true);
+        }
         uiManager.UpdateScoreText(playerState.score);
         uiManager.UpdateCoinText(playerState.coins);
 

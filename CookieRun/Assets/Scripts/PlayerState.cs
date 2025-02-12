@@ -4,6 +4,7 @@ using UnityEngine.UI;
 
 public class PlayerState : MonoBehaviour
 {
+    public AudioManager audioManager;
     public GameObject magnet;
     public BackGroundManager backGroundManager;
     public MapManager mapManager;
@@ -25,7 +26,7 @@ public class PlayerState : MonoBehaviour
     public bool DamageEffect { get; private set; } = false;
 
 
-    public float speedUpControl = 0.4f;
+    public float speedUpControl = 0.2f;
 
     private float normalTimeScale = 0.8f;
     public float currentTimeScale { get; private set; } = 0.8f;
@@ -150,12 +151,14 @@ public class PlayerState : MonoBehaviour
         if (hp > maxHp)
         {
             hp = maxHp;
+            audioManager.PlayerPotionSound();
         }
         UpdateHpSlider();
     }
 
     public void PlusCrystal(int amount)
     {
+        audioManager.PlayerItemClipSound();
         crystal += amount;
         Debug.Log("다이아 먹음");
     }

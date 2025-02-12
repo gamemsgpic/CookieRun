@@ -51,7 +51,7 @@ public class CharacterTableObjectSC : MonoBehaviour
     {
         if (characterBaseTable == null || characterBaseTable.Count == 0)
         {
-            Debug.LogWarning("[CharacterTableObjectSC] 기본 캐릭터 테이블이 초기화되지 않아 초기화 시도.");
+            //Debug.LogWarning("[CharacterTableObjectSC] 기본 캐릭터 테이블이 초기화되지 않아 초기화 시도.");
             Init();
         }
 

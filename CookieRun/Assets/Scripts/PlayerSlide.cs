@@ -5,6 +5,7 @@ using UnityEngine.Playables;
 
 public class PlayerSlide : MonoBehaviour
 {
+    public AudioManager audioManager;
     private PlayerMovement playerMovement;
     private PlayerItemEffects playerItemEffects;
     private PlayerState playerState;
@@ -53,6 +54,7 @@ public class PlayerSlide : MonoBehaviour
 
     private void StartSlide()
     {
+        audioManager.PlayerSlideSound();
         isSlide = true;
         animator.SetBool("Slide", isSlide);
         if (!playerItemEffects.giant)
@@ -86,5 +88,4 @@ public class PlayerSlide : MonoBehaviour
             }
         }
     }
-
 }

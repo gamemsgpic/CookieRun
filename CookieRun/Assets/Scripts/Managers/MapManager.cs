@@ -192,7 +192,7 @@ public class MapManager : MonoBehaviour
     void Start()
     {
         InitializePrefabPools();
-        StartWave(0); // 첫 웨이브 시작
+        StartWave(1); // 첫 웨이브 시작
     }
 
     private void InitializePrefabPools()
@@ -226,15 +226,18 @@ public class MapManager : MonoBehaviour
 
     public void StartWave(int wave)
     {
-        if (wave < 0 || wave >= wavePrefabs.Count)
+        currentWave = wave;
+        int index = currentWave - 1;
+
+        if (index < 0 || index >= wavePrefabs.Count)
         {
             return;
         }
 
-        currentWave = wave;
         ClearOldPrefabs();
         AddTransitionPrefabs();
         SpawnInitialWavePrefabs();
+
     }
 
     private void ClearOldPrefabs()
@@ -390,7 +393,8 @@ public class MapManager : MonoBehaviour
 
     private List<GameObject> GetCurrentWavePrefabs()
     {
-        if (currentWave == wavePrefabs.Count - 1)
+        int wave = currentWave - 1;
+        if (wave == wavePrefabs.Count - 1)
         {
             List<GameObject> allPrefabs = new List<GameObject>();
             foreach (var waveList in wavePrefabs)
@@ -401,7 +405,7 @@ public class MapManager : MonoBehaviour
         }
         else
         {
-            return wavePrefabs[currentWave].prefabs;
+            return wavePrefabs[wave].prefabs;
         }
     }
 
@@ -461,66 +465,71 @@ public class MapManager : MonoBehaviour
 
     private void ChangeObjectSprites(GameObject prefab)
     {
-        if (currentWave < groundSprites.Length)
-        {
-            groundSprite = groundSprites[currentWave]; // 현재 웨이브에 맞는 스프라이트 가져오기
-            foreach (Transform child in prefab.transform)
-            {
-                if (child.CompareTag("Ground") && child.gameObject.layer == LayerMask.NameToLayer("Ground"))
-                {
-                    SpriteRenderer sr = child.GetComponent<SpriteRenderer>();
-                    if (sr != null) sr.sprite = groundSprite; // 스프라이트 변경
-                }
-            }
-        }
+        int index = currentWave - 1; // 1-based -> 0-based 변환
 
-        if (currentWave < lowTrapSprites.Length)
+        if (index >= 0 && index < groundSprites.Length) // 모든 배열의 길이가 같으므로 하나만 체크
         {
-            lowTrapSprite = lowTrapSprites[currentWave];
-            foreach (Transform child in prefab.transform)
+
+            if (index < groundSprites.Length)
             {
-                foreach (Transform child2 in child)
+                groundSprite = groundSprites[index]; // 현재 웨이브에 맞는 스프라이트 가져오기
+                foreach (Transform child in prefab.transform)
                 {
-                    if (child2.CompareTag("Trap") && child2.gameObject.layer == LayerMask.NameToLayer("LowTrap"))
+                    if (child.CompareTag("Ground") && child.gameObject.layer == LayerMask.NameToLayer("Ground"))
                     {
-                        SpriteRenderer sr = child2.GetComponent<SpriteRenderer>();
-                        if (sr != null) sr.sprite = lowTrapSprite;
+                        SpriteRenderer sr = child.GetComponent<SpriteRenderer>();
+                        if (sr != null) sr.sprite = groundSprite; // 스프라이트 변경
                     }
                 }
             }
-        }
-        if (currentWave < highTrapSprites.Length)
-        {
-            highTrapSprite = highTrapSprites[currentWave];
-            foreach (Transform child in prefab.transform)
+
+            if (index < lowTrapSprites.Length)
             {
-                foreach (Transform child2 in child)
+                lowTrapSprite = lowTrapSprites[index];
+                foreach (Transform child in prefab.transform)
                 {
-                    if (child2.CompareTag("Trap") && child2.gameObject.layer == LayerMask.NameToLayer("HighTrap"))
+                    foreach (Transform child2 in child)
                     {
-                        SpriteRenderer sr = child2.GetComponent<SpriteRenderer>();
-                        if (sr != null) sr.sprite = highTrapSprite;
+                        if (child2.CompareTag("Trap") && child2.gameObject.layer == LayerMask.NameToLayer("LowTrap"))
+                        {
+                            SpriteRenderer sr = child2.GetComponent<SpriteRenderer>();
+                            if (sr != null) sr.sprite = lowTrapSprite;
+                        }
                     }
                 }
             }
-        }
-
-        if (currentWave < slideTrapSprites.Length)
-        {
-            slideTrapSprite = slideTrapSprites[currentWave];
-            foreach (Transform child in prefab.transform)
+            if (index < highTrapSprites.Length)
             {
-                foreach (Transform child2 in child)
+                highTrapSprite = highTrapSprites[index];
+                foreach (Transform child in prefab.transform)
                 {
-                    if (child2.CompareTag("Trap") && child2.gameObject.layer == LayerMask.NameToLayer("SlideTrap"))
+                    foreach (Transform child2 in child)
                     {
-                        SpriteRenderer sr = child2.GetComponent<SpriteRenderer>();
-                        if (sr != null) sr.sprite = slideTrapSprite;
+                        if (child2.CompareTag("Trap") && child2.gameObject.layer == LayerMask.NameToLayer("HighTrap"))
+                        {
+                            SpriteRenderer sr = child2.GetComponent<SpriteRenderer>();
+                            if (sr != null) sr.sprite = highTrapSprite;
+                        }
                     }
                 }
             }
+
+            if (index < slideTrapSprites.Length)
+            {
+                slideTrapSprite = slideTrapSprites[index];
+                foreach (Transform child in prefab.transform)
+                {
+                    foreach (Transform child2 in child)
+                    {
+                        if (child2.CompareTag("Trap") && child2.gameObject.layer == LayerMask.NameToLayer("SlideTrap"))
+                        {
+                            SpriteRenderer sr = child2.GetComponent<SpriteRenderer>();
+                            if (sr != null) sr.sprite = slideTrapSprite;
+                        }
+                    }
+                }
+            }
+
         }
-
-
     }
 }

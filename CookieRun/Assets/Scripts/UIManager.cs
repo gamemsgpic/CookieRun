@@ -105,6 +105,8 @@ using UnityEngine.Playables;
 
 public class UIManager : MonoBehaviour
 {
+    public AudioManager audioManager;
+
     // 기존 UI 변수
     public TextMeshProUGUI scoreText;
     public TextMeshProUGUI coinText;
@@ -218,6 +220,7 @@ public class UIManager : MonoBehaviour
         if (ScoreBoardWindow != null)
         {
             ScoreBoardWindow.SetActive(true);
+            audioManager.PlayerScoreBoardSound();
             AnimateFinalStats(targetScore, targetCoins);
         }
     }

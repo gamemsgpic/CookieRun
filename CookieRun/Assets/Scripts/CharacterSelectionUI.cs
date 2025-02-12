@@ -115,14 +115,14 @@ public class CharacterSelectionUI : MonoBehaviour
     {
         if (GameData.characterLevel <= 0)
         {
-            Debug.LogWarning("[CharacterSelectionUI] 잘못된 레벨 값 감지, 1로 보정");
+            //Debug.LogWarning("[CharacterSelectionUI] 잘못된 레벨 값 감지, 1로 보정");
             GameData.characterLevel = 1;
         }
 
         var currentCharacter = CharacterTableObjectSC.GetCharacterData(characterInfo.currentCharacterName, characterInfo.currentCharacterLevel);
         if (currentCharacter == null)
         {
-            Debug.LogError($"[CharacterSelectionUI] {characterInfo.currentCharacterName} (레벨 {characterInfo.currentCharacterLevel}) 데이터를 찾을 수 없습니다.");
+            //Debug.LogError($"[CharacterSelectionUI] {characterInfo.currentCharacterName} (레벨 {characterInfo.currentCharacterLevel}) 데이터를 찾을 수 없습니다.");
             return;
         }
 
