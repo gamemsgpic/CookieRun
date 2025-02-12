@@ -112,7 +112,7 @@ Transform:
   m_GameObject: {fileID: 6386800705398459538}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 0.4827317, z: -0, w: 0.8757683}
-  m_LocalPosition: {x: 41.5, y: -1, z: 0}
+  m_LocalPosition: {x: 49.5, y: -1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -143,7 +143,7 @@ Transform:
   m_GameObject: {fileID: 9103678912888890347}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 11.5, y: -1, z: 0}
+  m_LocalPosition: {x: 3.5, y: -1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1014,11 +1014,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6310570658691569880, guid: 532b4c1ed0baefa4b8e65e1bd595b6c7, type: 3}
       propertyPath: m_SpriteTilingProperty.newSize.x
-      value: 30
+      value: 46
       objectReference: {fileID: 0}
     - target: {fileID: 6400438733279243324, guid: 532b4c1ed0baefa4b8e65e1bd595b6c7, type: 3}
       propertyPath: m_Size.x
-      value: 30
+      value: 46
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

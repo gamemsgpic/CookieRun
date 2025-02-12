@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 8652581052045266363}
   - component: {fileID: 5466823699444135551}
   m_Layer: 0
-  m_Name: EasyMap11
+  m_Name: EasyMap9
   m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
