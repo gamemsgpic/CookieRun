@@ -158,8 +158,6 @@ public class MapManager : MonoBehaviour
         public List<GameObject> prefabs;
     }
 
-    public Sprite[] tileSprite;
-
     public List<WavePrefabList> wavePrefabs = new List<WavePrefabList>(); // 웨이브별 프리팹 리스트
     public List<GameObject> clearMapPrefabs = new List<GameObject>(); // 클리어맵 프리팹 리스트
     public List<GameObject> startMapPrefabs = new List<GameObject>(); // 스타트맵 프리팹 리스트
@@ -172,8 +170,21 @@ public class MapManager : MonoBehaviour
     public int maxActivePrefabs = 5; // 최대 활성 프리팹 개수
     public int currentWave { get; private set; } = 0; // 현재 웨이브
 
+    public Sprite[] groundSprites;
+    private Sprite groundSprite;
+
+    public Sprite[] lowTrapSprites;
+    private Sprite lowTrapSprite;
+
+    public Sprite[] highTrapSprites;
+    private Sprite highTrapSprite;
+
+    public Sprite[] slideTrapSprites;
+    private Sprite slideTrapSprite;
+
     private GameObject lastPrefab;
     private GameObject newPrefab;
+    private GameObject startPrefab;
     private Transform lastRightPivot;
     private Transform newLeftPivot;
     private Vector3 offset;
@@ -259,6 +270,7 @@ public class MapManager : MonoBehaviour
         GameObject clearPrefab = Instantiate(clearMapPrefabs[Random.Range(0, clearMapPrefabs.Count)]);
         Transform clearLeftPivot = clearPrefab.transform.Find("LeftPivot");
         clearPrefab.transform.position = lastRightPivot.position - (clearLeftPivot ? clearLeftPivot.localPosition : Vector3.zero);
+        ChangeObjectSprites(clearPrefab);
         clearPrefab.SetActive(true);
         activePrefabs.Add(clearPrefab);
 
@@ -270,6 +282,7 @@ public class MapManager : MonoBehaviour
         {
             startPrefab.transform.position = clearRightPivot.position - (startLeftPivot ? startLeftPivot.localPosition : Vector3.zero);
             startPrefab.SetActive(true);
+            ChangeObjectSprites(startPrefab);
             activePrefabs.Add(startPrefab);
         }
     }
@@ -280,6 +293,7 @@ public class MapManager : MonoBehaviour
         for (int i = 0; i < 3; i++)
         {
             ActivatePrefab();
+
         }
     }
 
@@ -348,6 +362,9 @@ public class MapManager : MonoBehaviour
             }
         }
 
+        ChangeObjectSprites(prefabToActivate);
+
+
         // 모든 자식 오브젝트 활성화
         foreach (Transform child in prefabToActivate.transform)
         {
@@ -367,22 +384,6 @@ public class MapManager : MonoBehaviour
         }
 
         activePrefabs.Add(prefabToActivate);
-       // if (currentWave == 0)
-       // {
-       //     ChangeAllTilemapSprites(prefabToActivate, tileSprite[0]);
-       // }
-       // else if (currentWave == 1)
-       // {
-       //     ChangeAllTilemapSprites(prefabToActivate, tileSprite[1]);
-       // }
-       // else if (currentWave == 2)
-       // {
-       //     ChangeAllTilemapSprites(prefabToActivate, tileSprite[2]);
-       // }
-       // else if (currentWave == 3)
-       // {
-       //     ChangeAllTilemapSprites(prefabToActivate, tileSprite[3]);
-       // }
     }
 
 
@@ -458,34 +459,68 @@ public class MapManager : MonoBehaviour
         }
     }
 
-    //private void ChangeAllTilemapSprites(GameObject prefab, Sprite newSprite)
-    //{
-    //    Tilemap[] tilemaps = prefab.GetComponentsInChildren<Tilemap>();
-    //
-    //    foreach (Tilemap tilemap in tilemaps)
-    //    {
-    //        BoundsInt bounds = tilemap.cellBounds;
-    //        TileBase[] allTiles = tilemap.GetTilesBlock(bounds);
-    //
-    //        Tile[] newTiles = new Tile[allTiles.Length];
-    //
-    //        for (int i = 0; i < allTiles.Length; i++)
-    //        {
-    //            if (allTiles[i] is Tile oldTile)
-    //            {
-    //                Tile newTile = ScriptableObject.CreateInstance<Tile>(); // 새로운 타일 객체 생성
-    //                newTile.sprite = newSprite; // 스프라이트 변경
-    //                newTiles[i] = newTile;
-    //            }
-    //            else
-    //            {
-    //                newTiles[i] = null;
-    //            }
-    //        }
-    //
-    //        tilemap.SetTilesBlock(bounds, newTiles); // 한 번에 변경
-    //    }
-    //}
+    private void ChangeObjectSprites(GameObject prefab)
+    {
+        if (currentWave < groundSprites.Length)
+        {
+            groundSprite = groundSprites[currentWave]; // 현재 웨이브에 맞는 스프라이트 가져오기
+            foreach (Transform child in prefab.transform)
+            {
+                if (child.CompareTag("Ground") && child.gameObject.layer == LayerMask.NameToLayer("Ground"))
+                {
+                    SpriteRenderer sr = child.GetComponent<SpriteRenderer>();
+                    if (sr != null) sr.sprite = groundSprite; // 스프라이트 변경
+                }
+            }
+        }
+
+        if (currentWave < lowTrapSprites.Length)
+        {
+            lowTrapSprite = lowTrapSprites[currentWave];
+            foreach (Transform child in prefab.transform)
+            {
+                foreach (Transform child2 in child)
+                {
+                    if (child2.CompareTag("Trap") && child2.gameObject.layer == LayerMask.NameToLayer("LowTrap"))
+                    {
+                        SpriteRenderer sr = child2.GetComponent<SpriteRenderer>();
+                        if (sr != null) sr.sprite = lowTrapSprite;
+                    }
+                }
+            }
+        }
+        if (currentWave < highTrapSprites.Length)
+        {
+            highTrapSprite = highTrapSprites[currentWave];
+            foreach (Transform child in prefab.transform)
+            {
+                foreach (Transform child2 in child)
+                {
+                    if (child2.CompareTag("Trap") && child2.gameObject.layer == LayerMask.NameToLayer("HighTrap"))
+                    {
+                        SpriteRenderer sr = child2.GetComponent<SpriteRenderer>();
+                        if (sr != null) sr.sprite = highTrapSprite;
+                    }
+                }
+            }
+        }
+
+        if (currentWave < slideTrapSprites.Length)
+        {
+            slideTrapSprite = slideTrapSprites[currentWave];
+            foreach (Transform child in prefab.transform)
+            {
+                foreach (Transform child2 in child)
+                {
+                    if (child2.CompareTag("Trap") && child2.gameObject.layer == LayerMask.NameToLayer("SlideTrap"))
+                    {
+                        SpriteRenderer sr = child2.GetComponent<SpriteRenderer>();
+                        if (sr != null) sr.sprite = slideTrapSprite;
+                    }
+                }
+            }
+        }
 
 
+    }
 }

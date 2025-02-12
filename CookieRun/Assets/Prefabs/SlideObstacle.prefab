@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4350921660095565504}
   - component: {fileID: -8773236464113092998}
   - component: {fileID: 5180958016506063356}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: SlideObstacle
   m_TagString: Trap
   m_Icon: {fileID: 0}
@@ -102,9 +102,9 @@ GameObject:
   m_Component:
   - component: {fileID: 5098325555850614914}
   - component: {fileID: 2156355965591269380}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: SlideObstacleRenderer
-  m_TagString: Untagged
+  m_TagString: Trap
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

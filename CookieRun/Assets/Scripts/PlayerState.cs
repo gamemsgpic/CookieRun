@@ -5,6 +5,7 @@ using UnityEngine.UI;
 public class PlayerState : MonoBehaviour
 {
     public GameObject magnet;
+    public BackGroundManager backGroundManager;
     public MapManager mapManager;
     private Animator animator;
     public float itemEffectTime = 3f;
@@ -71,7 +72,7 @@ public class PlayerState : MonoBehaviour
 
 
 
-        if (currentWave <= 3)
+        if (currentWave <= 4)
         {
 
             wave += Time.deltaTime;
@@ -79,12 +80,13 @@ public class PlayerState : MonoBehaviour
             if (wave >= upWave)
             {
                 currentWave++;
-                if (currentWave > 3)
+                if (currentWave > 4)
                 {
-                    currentWave = 3;
+                    currentWave = 4;
                 }
                 mapManager.StartWave(currentWave);
-
+                backGroundManager.SaveWave(currentWave);
+                backGroundManager.StartLight();
 
                 wave = 0f;
             }
@@ -189,7 +191,6 @@ public class PlayerState : MonoBehaviour
         if (hpSlider != null)
         {
             hpSlider.value = hp;
-            Debug.Log($"{hp}");
         }
     }
 

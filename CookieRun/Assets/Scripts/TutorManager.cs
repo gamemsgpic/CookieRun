@@ -21,7 +21,7 @@ public class TutorManager : MonoBehaviour
         currentIndex++;
         if (currentIndex >= TutorSprites.Length)
         {
-            currentIndex = 0;
+            currentIndex = TutorSprites.Length - 1;
         }
 
         image.sprite = TutorSprites[currentIndex];
@@ -32,7 +32,7 @@ public class TutorManager : MonoBehaviour
         currentIndex--;
         if (currentIndex < 0)
         {
-            currentIndex = TutorSprites.Length - 1;
+            currentIndex = 0;
         }
 
         image.sprite = TutorSprites[currentIndex];

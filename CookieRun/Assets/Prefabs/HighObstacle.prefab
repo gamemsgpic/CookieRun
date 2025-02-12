@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 798934701900313706}
   - component: {fileID: 6334394101808977690}
   - component: {fileID: 6936170333963028128}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: HighObstacle
   m_TagString: Trap
   m_Icon: {fileID: 0}
@@ -102,9 +102,9 @@ GameObject:
   m_Component:
   - component: {fileID: 4236823632280512754}
   - component: {fileID: 9008127750795783724}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: highObstacleRenderer
-  m_TagString: Untagged
+  m_TagString: Trap
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

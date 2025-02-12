@@ -75,6 +75,18 @@ public class PlayerMovement : MonoBehaviour
         {
             animator.SetTrigger("Falling");
         }
+
+
+        // **점프 키가 눌려있고, 추가 점프가 사용되지 않았을 때만 실행**
+        if (jumpKeyHeld && !jumpKeyUsed && !playerSlide.isSlide)
+        {
+            if (isGrounded)
+            {
+                SingleJump();
+                jumpKeyUsed = true; // 추가 점프 1회 제한 (중복 방지)
+            }
+        }
+
     }
 
     public void ButtonJump()
@@ -145,6 +157,54 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
+    public void SingleJump()
+    {
+        if (isJumping || jumpCount <= 0) return; // 이미 점프 중이거나 점프 횟수가 0이면 실행하지 않음
+
+        if (currentJumpRoutine != null)
+        {
+            StopCoroutine(currentJumpRoutine);
+        }
+
+        currentJumpRoutine = StartCoroutine(SingleJumpRoutine());
+    }
+
+    private IEnumerator SingleJumpRoutine()
+    {
+        fallingSpeed = startFallingSpeed;
+        rb.gravityScale = 0f;
+        rb.velocity = Vector2.zero;
+        isJumping = true;
+        isfalling = false;
+        jumpCount--;
+
+        float currentSpeed = JumpSpeed;
+        float startY = transform.position.y;
+        float targetY = startY + jumpHeight;
+
+        while (currentSpeed > 0)
+        {
+            float nextY = rb.position.y + currentSpeed * Time.fixedDeltaTime;
+
+            if (nextY >= targetY)
+            {
+                rb.position = new Vector2(rb.position.x, targetY);
+                break;
+            }
+
+            rb.position += new Vector2(0, currentSpeed * Time.fixedDeltaTime);
+            currentSpeed -= deceleration * Time.fixedDeltaTime;
+
+            yield return new WaitForFixedUpdate();
+        }
+
+        fallingSpeed += fallingSpeed * Time.deltaTime;
+        rb.velocity = Vector2.down * fallingSpeed * fallingPlus;
+        isJumping = false;
+        isfalling = true;
+        currentJumpRoutine = null;
+    }
+
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Ground"))
@@ -158,16 +218,6 @@ public class PlayerMovement : MonoBehaviour
             currentJumpRoutine = null;
 
 
-            // 점프 키를 누르고 있는 경우 추가 점프 1회 허용
-            if (jumpKeyHeld && !jumpKeyUsed && !playerSlide.isSlide)
-            {
-                PerformJump();
-                jumpKeyUsed = true; // 추가 점프 1회 제한
-            }
-            else
-            {
-                jumpKeyUsed = false; // 버튼을 떼면 추가 점프 초기화
-            }
         }
     }
 
