@@ -17,6 +17,7 @@ public class PlayerState : MonoBehaviour
     public int resurrection = 0;
     public int score { get; private set; }
     public int coins { get; private set; }
+    public int crystal { get; private set; } = 0;
     public int currentWave { get; private set; } = 1;
     public bool onDeath { get; private set; } = false;
     public bool DamageEffect { get; private set; } = false;
@@ -144,6 +145,12 @@ public class PlayerState : MonoBehaviour
             hp = maxHp;
         }
         UpdateHpSlider();
+    }
+    
+    public void PlusCrystal(int amount)
+    {
+        crystal += amount;
+        Debug.Log("¥Ÿ¿Ãæ∆ ∏‘¿Ω");
     }
 
     public void SetOnDeath(bool death)

@@ -106,6 +106,11 @@ public class PlayerCrash : MonoBehaviour
                 {
                     playerState.PlusHp(item.plusHp);
                 }
+                
+                if (collision.CompareTag("Crystal"))
+                {
+                    playerState.PlusCrystal(item.Crystal);
+                }
 
                 if (collision.CompareTag("Giantization"))
                 {

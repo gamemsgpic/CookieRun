@@ -247,6 +247,11 @@ public class UIManager : MonoBehaviour
 
     public void ChangeMainMenuScene()
     {
+        if (player != null)
+        {
+            var playerState = player.GetComponent<PlayerState>();
+            GameData.AddCoin(playerState.crystal);
+        }
         GameData.UpdateBestScore(targetScore);
         GameData.AddCoin(targetCoins);
         SceneManager.LoadScene(0);
