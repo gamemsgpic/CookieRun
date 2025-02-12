@@ -158,15 +158,15 @@ public class PlayerMovement : MonoBehaviour
             currentJumpRoutine = null;
 
 
+            // 점프 키를 누르고 있는 경우 추가 점프 1회 허용
             if (jumpKeyHeld && !jumpKeyUsed && !playerSlide.isSlide)
             {
                 PerformJump();
                 jumpKeyUsed = true; // 추가 점프 1회 제한
             }
-
-            if (!jumpKeyHeld)
+            else
             {
-                jumpKeyUsed = false; // 추가 점프 가능 상태로 변경
+                jumpKeyUsed = false; // 버튼을 떼면 추가 점프 초기화
             }
         }
     }
@@ -222,6 +222,6 @@ public class PlayerMovement : MonoBehaviour
     public void SetJumpKeyHeldUp()
     {
         jumpKeyHeld = false;
-
+        jumpKeyUsed = false; // 버튼을 떼면 추가 점프 가능하도록 초기화
     }
 }
