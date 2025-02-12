@@ -15,6 +15,7 @@ public class PlayerState : MonoBehaviour
     private bool oneCall = true;
     private bool oneCall2 = true;
     public int resurrection = 0;
+    public int resurrectionHp = 40;
     public int score { get; private set; }
     public int coins { get; private set; }
     public int crystal { get; private set; } = 0;
@@ -23,16 +24,18 @@ public class PlayerState : MonoBehaviour
     public bool DamageEffect { get; private set; } = false;
 
 
-    private bool maxWave = false;
-    public float speedUpControl = 0.1f;
+    public float speedUpControl = 0.4f;
 
-    private float normalTimeScale = 1f;
-    public float timeScale { get; private set; } = 1f;
+    private float normalTimeScale = 0.8f;
+    public float currentTimeScale { get; private set; } = 0.8f;
     public UIManager uiManager;
     [SerializeField] private Slider hpSlider;
     [SerializeField] private Slider waveSlider;
 
     private PlayerItemEffects itemEffects;
+
+    private float baseHpDecreaseRate;
+    private float adjustedDeltaTime;
 
     private void Start()
     {
@@ -44,7 +47,6 @@ public class PlayerState : MonoBehaviour
         Debug.Log($"{hp}");
         wave = 0f;
         currentWave = 1;
-        maxWave = false;
 
         if (hpSlider != null)
         {
@@ -58,7 +60,6 @@ public class PlayerState : MonoBehaviour
             waveSlider.value = wave;
         }
 
-        timeScale = 1f;
         Time.timeScale = normalTimeScale;
 
         animator.updateMode = AnimatorUpdateMode.UnscaledTime;
@@ -66,37 +67,32 @@ public class PlayerState : MonoBehaviour
 
     private void Update()
     {
-        itemEffects.UpdateItemEffects(timeScale);
+        itemEffects.UpdateItemEffects(currentTimeScale);
 
-        if (currentWave <= 4 && !maxWave)
+
+
+        if (currentWave <= 3)
         {
+
             wave += Time.deltaTime;
             UpdateWaveSlider();
             if (wave >= upWave)
             {
-                mapManager.StartWave(currentWave);
-                timeScale += speedUpControl;
-                Time.timeScale = timeScale;
-                if (currentWave >= 4)
-                {
-                    maxWave = true;
-                    return;
-                }
                 currentWave++;
+                if (currentWave > 3)
+                {
+                    currentWave = 3;
+                }
+                mapManager.StartWave(currentWave);
+
+
                 wave = 0f;
             }
-        }
-        else
-        {
-            wave = upWave;
         }
 
         if (hp > -1f && Time.timeScale > 0f) // 타임스케일이 0이면 HP 감소 중지
         {
-            float baseHpDecreaseRate = 1f; // 기본 HP 감소 속도
-            float adjustedDeltaTime = Time.unscaledDeltaTime * (1f / Time.timeScale); // 보정된 DeltaTime
-
-            hp -= baseHpDecreaseRate * adjustedDeltaTime;
+            hp -= Time.unscaledDeltaTime * 2f;
             UpdateHpSlider();
         }
 
@@ -106,7 +102,7 @@ public class PlayerState : MonoBehaviour
             {
                 resurrection--;
                 itemEffects.ResurrectionWait(true);
-                hp = maxHp;
+                hp = resurrectionHp;
                 UpdateHpSlider();
                 return;
             }
@@ -114,17 +110,17 @@ public class PlayerState : MonoBehaviour
             {
                 if (oneCall)
                 {
-                    Time.timeScale = 1f;
+                    Time.timeScale = currentTimeScale;
                     oneCall = false;
                 }
-                    SetOnDeath(true);
+                SetOnDeath(true);
                 Time.timeScale -= Time.deltaTime;
                 animator.SetTrigger("Dead");
 
                 if (Time.timeScale <= 0f)
                 {
-                   
-                        Time.timeScale = 0f;
+
+                    Time.timeScale = 0f;
                 }
             }
         }
@@ -133,8 +129,17 @@ public class PlayerState : MonoBehaviour
     public void MinusHp(float amount)
     {
         hp -= amount;
-        if (hp < 0) hp = 0;
+        if (hp < 0)
+        {
+            hp = 0;
+        }
         UpdateHpSlider();
+    }
+
+    public void SpeedUP()
+    {
+        currentTimeScale += speedUpControl;
+        Time.timeScale = currentTimeScale;
     }
 
     public void PlusHp(float amount)
@@ -146,7 +151,7 @@ public class PlayerState : MonoBehaviour
         }
         UpdateHpSlider();
     }
-    
+
     public void PlusCrystal(int amount)
     {
         crystal += amount;
@@ -184,6 +189,7 @@ public class PlayerState : MonoBehaviour
         if (hpSlider != null)
         {
             hpSlider.value = hp;
+            Debug.Log($"{hp}");
         }
     }
 

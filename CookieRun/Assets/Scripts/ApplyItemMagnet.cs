@@ -27,54 +27,15 @@ public class ApplyItemMagnet : MonoBehaviour
         image = GetComponent<Image>();
         // Awake에서 아이템의 초기 로컬 위치를 저장
         initialLocalPosition = transform.localPosition;
-
-        //// TableObjectSC가 존재하는지 확인
-        //data = GetComponentInChildren<SampleTableObjectSC>();
-        //
-        //// TableObjectSC가 없는 경우에도 오류 없이 진행되도록 처리
-        //if (data == null)
-        //{
-        //    //Debug.Log($"[ApplyItemMagnet] No TableObjectSC attached to {gameObject.name}, skipping table initialization.", gameObject);
-        //}
     }
 
-    //private void OnEnable()
-    //{
-    //    ResetItem();
-    //}
-    //
-    //private void OnValidate()
-    //{
-    //    SetItem(); // 에디터에서 값이 변경되면 자동 업데이트
-    //}
-    //
     public void ResetItem()
     {
         isMovingToPlayer = false;
         transform.localPosition = initialLocalPosition;
         gameObject.SetActive(true);
-    
-        //if (data != null)
-        //{
-        //    score = data.Score;
-        //    coins = data.Coin;
-        //    heal = data.Heal;
-        //    Crystal = data.Value;
-        //   
-        //}
-    
     }
-    //
-    //public void SetItem()
-    //{
-    //    if (data != null)
-    //    {
-    //        score = data.Score;
-    //        coins = data.Coin;
-    //        heal = data.Heal;
-    //        Crystal = data.Value;
-    //    }
-    //}
+   
 
 
     // Magnet과 충돌 시 호출

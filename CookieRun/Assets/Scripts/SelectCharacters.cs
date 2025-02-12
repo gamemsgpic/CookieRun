@@ -6,6 +6,8 @@ public class SelectCharacters : MonoBehaviour
 {
     public GameObject[] characters;
     public GameObject currentCharacter;
+    private PlayerMovement characterPlayerMovement;
+    private PlayerSlide characterPlayerSlide;
     public UIManager uiManager;
 
     private void Start()
@@ -24,6 +26,8 @@ public class SelectCharacters : MonoBehaviour
         }
 
         SetCurrentPlayer();
+        characterPlayerMovement = currentCharacter.GetComponent<PlayerMovement>();
+        characterPlayerSlide = currentCharacter.GetComponent<PlayerSlide>();
 
     }
     private void Update()
@@ -83,24 +87,24 @@ public class SelectCharacters : MonoBehaviour
 
     public void Jump()
     {
-        currentCharacter.GetComponent<PlayerMovement>().ButtonJump();
-        currentCharacter.GetComponent<PlayerMovement>().SetJumpKeyHeld(true);
+        characterPlayerMovement.ButtonJump();
+        characterPlayerMovement.SetJumpKeyHeldDown();
     }
 
     public void UpJumpButton(bool isHeld)
     {
-        currentCharacter.GetComponent<PlayerMovement>().SetJumpKeyHeld(false);
+        characterPlayerMovement.SetJumpKeyHeldUp();
 
     }
 
     public void ButtonDown()
     {
-        currentCharacter.GetComponent<PlayerSlide>().OnSlideButtonDown();
+        characterPlayerSlide.OnSlideButtonDown();
     }
 
     public void ButtonUp()
     {
-        currentCharacter.GetComponent<PlayerSlide>().OnSlideButtonUp();
+        characterPlayerSlide.OnSlideButtonUp();
     }
 
     private void SetCurrentPlayer()

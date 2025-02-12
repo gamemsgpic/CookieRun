@@ -49,7 +49,7 @@
 //    // 일시 정지 해제
 //    public void PauseOff()
 //    {
-//        Time.timeScale = 1;
+//        Time.currentTimeScale = 1;
 //        pause = false;
 //        HideGameOver();
 //    }
@@ -57,7 +57,7 @@
 //    // 재시작 버튼 클릭 처리
 //    public void OnClickReStart()
 //    {
-//        Time.timeScale = 1; // 시간 재개
+//        Time.currentTimeScale = 1; // 시간 재개
 //        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex); // 현재 씬 재로드
 //    }
 
@@ -65,7 +65,7 @@
 //    {
 //        ShowGameOver();
 //        pause = true;
-//        Time.timeScale = 0;
+//        Time.currentTimeScale = 0;
 //    }
 
 //    // GameOver 창 표시
@@ -276,7 +276,6 @@ public class UIManager : MonoBehaviour
             var playerState = player.GetComponent<PlayerState>();
             var playerMovement = player.GetComponent<PlayerMovement>();
             playerState.StopAllAni(1f);
-            playerMovement.ResetJumpKeyHeld();
         }
         Time.timeScale = 1;
         pause = false;

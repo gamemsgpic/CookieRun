@@ -106,7 +106,7 @@ public class PlayerCrash : MonoBehaviour
                 {
                     playerState.PlusHp(item.plusHp);
                 }
-                
+
                 if (collision.CompareTag("Crystal"))
                 {
                     playerState.PlusCrystal(item.Crystal);
@@ -129,6 +129,11 @@ public class PlayerCrash : MonoBehaviour
             playerState.SetOnDeath(true);
             uiManager.ShowScoreBoardWindow();
             Time.timeScale = 0f;
+        }
+
+        if (collision.CompareTag("SpeedUp"))
+        {
+            playerState.SpeedUP();
         }
     }
 
@@ -158,27 +163,30 @@ public class PlayerCrash : MonoBehaviour
 
     private void HandleDamageEffect()
     {
-        damageEftStartTime += Time.unscaledDeltaTime;
-        if (!playerState.onDeath)
+        if (!uiManager.pause)
         {
+            damageEftStartTime += Time.unscaledDeltaTime;
+            if (!playerState.onDeath)
+            {
 
-            if (damageEftStartTime < damageEftEndTime)
-            {
-                damageEffectPanel.SetActive(true);
-                Time.timeScale = 0;
-                Time.timeScale += Time.unscaledDeltaTime;
-            }
-            else
-            {
-                damageEffectPanel.SetActive(false);
-                Time.timeScale += Time.unscaledDeltaTime;
-            }
+                if (damageEftStartTime < damageEftEndTime)
+                {
+                    damageEffectPanel.SetActive(true);
+                    Time.timeScale = 0;
+                    Time.timeScale += Time.unscaledDeltaTime;
+                }
+                else
+                {
+                    damageEffectPanel.SetActive(false);
+                    Time.timeScale += Time.unscaledDeltaTime;
+                }
 
-            if (damageEftStartTime > damageEftEndTime * 5f)
-            {
-                playerState.OnDamageEffect(false);
-                Time.timeScale = playerState.timeScale;
-                damageEftStartTime = 0f;
+                if (damageEftStartTime > damageEftEndTime * 5f)
+                {
+                    playerState.OnDamageEffect(false);
+                    Time.timeScale = playerState.currentTimeScale;
+                    damageEftStartTime = 0f;
+                }
             }
         }
     }
@@ -186,28 +194,31 @@ public class PlayerCrash : MonoBehaviour
 
     private void HandleInvincibility()
     {
-        inviStartTime += Time.unscaledDeltaTime;
-        blinkStartTime += Time.unscaledDeltaTime;
+        if (!uiManager.pause)
+        {
+            inviStartTime += Time.unscaledDeltaTime;
+            blinkStartTime += Time.unscaledDeltaTime;
 
-        if (blinkStartTime < blinkEndTime)
-        {
-            rbSprite.color = color; // 깜빡이는 색상 적용
-        }
-        else if (blinkStartTime > blinkEndTime && blinkStartTime < blinkReEndTime)
-        {
-            rbSprite.color = originalColor; // 원래 색상 복원
-        }
-        else
-        {
-            blinkStartTime = 0f; // 깜빡임 리셋
-        }
+            if (blinkStartTime < blinkEndTime)
+            {
+                rbSprite.color = color; // 깜빡이는 색상 적용
+            }
+            else if (blinkStartTime > blinkEndTime && blinkStartTime < blinkReEndTime)
+            {
+                rbSprite.color = originalColor; // 원래 색상 복원
+            }
+            else
+            {
+                blinkStartTime = 0f; // 깜빡임 리셋
+            }
 
-        if (inviStartTime > inviEndTime)
-        {
-            rbSprite.color = originalColor; // 원래 색상 복원
-            playerState.Oninvincibility(false); // 무적 상태 종료
-            inviStartTime = 0f;
-            blinkStartTime = 0f;
+            if (inviStartTime > inviEndTime)
+            {
+                rbSprite.color = originalColor; // 원래 색상 복원
+                playerState.Oninvincibility(false); // 무적 상태 종료
+                inviStartTime = 0f;
+                blinkStartTime = 0f;
+            }
         }
     }
 }
