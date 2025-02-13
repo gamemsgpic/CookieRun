@@ -55,6 +55,7 @@ public class PlayerCrash : MonoBehaviour
 
             if (!playerItemEffcts.invincibility && collision.CompareTag("Trap"))
             {
+                audioManager.PlayerhitSound();
                 playerState.PlayHitAni();
                 playerState.Oninvincibility(true);
                 playerItemEffcts.OnDamageEffect(true);
@@ -88,25 +89,26 @@ public class PlayerCrash : MonoBehaviour
                 //    audioManager.PlayerJellySound();
                 //}
 
-                if (collision.CompareTag("Magnet")) // 자석 아이템 태그 확인
-                {
-                    audioManager.PlayerItemClipSound();
-                    playerItemEffcts.OnOffMagnet(item.onItmeEffect, playerItemEffcts.maxMagnetRadius, true); // 자석 효과 활성화
-                    ApplyItemEffect(item);
-                }
+                //if (collision.CompareTag("Magnet")) // 자석 아이템 태그 확인
+                //{
+                //    audioManager.PlayerItemClipSound();
+                //    playerItemEffcts.OnOffMagnet(item.onItmeEffect, playerItemEffcts.maxMagnetRadius, true); // 자석 효과 활성화
+                //    ApplyItemEffect(item);
+                //}
 
                 if (playerItemEffcts.onMagnet)
                 {
                     item.MoveTowardsPlayer(transform, item.moveDuration);
+                    ApplyItemEffect(item);
                 }
-                else if (!playerItemEffcts.onMagnet) // 자석이 비활성화된 상태에서도 효과 적용
+                else //(!playerItemEffcts.onMagnet) // 자석이 비활성화된 상태에서도 효과 적용
                 {
                     ApplyItemEffect(item);
                 }
-                else
-                {
-                    item.MoveTowardsPlayer(transform, 5f);
-                }
+                //else
+                //{
+                //    item.MoveTowardsPlayer(transform, item.moveDuration);
+                //}
 
 
                 //if (collision.CompareTag("Potion"))
@@ -145,9 +147,14 @@ public class PlayerCrash : MonoBehaviour
 
     public void ApplyItemEffect(ApplyItemMagnet item)
     {
-        if (item.tag == "Jelly" || item.tag == "Coin")
+        if (item.tag == "Jelly")
         {
             audioManager.PlayerJellySound();
+        }
+
+        if (item.tag == "Coin")
+        {
+            audioManager.PlayerCoinSound();
         }
 
         if (item.score == 0 && item.coins == 0)
@@ -161,6 +168,13 @@ public class PlayerCrash : MonoBehaviour
 
         playerState.AddScore(item.score);
         playerState.AddCoins(item.coins);
+
+        if (item.tag == "Magnet") // 자석 아이템 태그 확인
+        {
+            audioManager.PlayerItemClipSound();
+            playerItemEffcts.OnOffMagnet(item.onItmeEffect, playerItemEffcts.maxMagnetRadius, true); // 자석 효과 활성화
+        }
+
         if (item.tag == "Potion")
         {
             playerState.PlusHp(item.plusHp);
@@ -242,116 +256,3 @@ public class PlayerCrash : MonoBehaviour
         }
     }
 }
-
-
-
-
-//using UnityEngine;
-
-//public class PlayerCrash : MonoBehaviour
-//{
-//    private GameManager gm;
-//    private PlayerState playerItemEffects;
-
-//    private bool invincibility = false;
-//    private float inviStartTime = 0f;
-//    private float blinkStartTime = 0f;
-//    public float blinkEndTime = 0.1f;
-//    public float blinkReEndTime = 0.2f;
-//    public float inviEndTime = 2.4f;
-//    public float damage = 5f;
-//    public Color color;
-//    public Color originalColor;
-//    private SpriteRenderer rbSprite;
-
-//    private void Start()
-//    {
-//        gm = GameManager.Instance;
-//        playerItemEffects = GetComponent<PlayerState>();
-//        rbSprite = GetComponent<SpriteRenderer>();
-
-//        if (playerItemEffects == null)
-//        {
-//            Debug.LogError("PlayerState가 연결되지 않았습니다.");
-//        }
-//        originalColor = rbSprite.color;
-//    }
-
-//    private void Update()
-//    {
-//        if (invincibility)
-//        {
-//            HandleInvincibility();
-//        }
-//    }
-
-//    private void OnTriggerEnter2D(Collider2D collision)
-//    {
-//        if (!invincibility && collision.CompareTag("Trap"))
-//        {
-//            Debug.Log("데미지 받았다!");
-//            invincibility = true;
-//            playerItemEffects.MinusHp(damage);
-//        }
-
-//        if (collision.gameObject.layer == LayerMask.NameToLayer("Item"))
-//        {
-//            ApplyItemMagnet item = collision.GetComponent<ApplyItemMagnet>();
-
-//            if (item != null)
-//            {
-//                if (collision.CompareTag("Magnet"))
-//                {
-//                    Debug.Log("Magnet 아이템 획득! 자석 활성화!");
-//                    playerItemEffects.OnOffMagnet(item.onItmeEffect);
-//                    item.gameObject.SetActive(false);
-//                }
-//                else if (!playerItemEffects.onMagnet) // 자석이 비활성화된 경우 즉시 효과 적용
-//                {
-//                    ApplyItemEffect(item);
-//                }
-//                else
-//                {
-//                    item.MoveTowardsPlayer(transform, 5f); // 자석 효과로 이동
-//                }
-//            }
-//        }
-//    }
-
-//    public void ApplyItemEffect(ApplyItemMagnet item)
-//    {
-//        playerItemEffects.AddScore(item.score);
-//        playerItemEffects.AddCoins(item.coins);
-//        gm.UpdateScore(playerItemEffects.score);
-//        gm.UpdateCoin(playerItemEffects.coins);
-
-//        item.gameObject.SetActive(false);
-//    }
-
-//    private void HandleInvincibility()
-//    {
-//        inviStartTime += Time.deltaTime;
-//        blinkStartTime += Time.deltaTime;
-
-//        if (blinkStartTime < blinkEndTime)
-//        {
-//            rbSprite.color = color;
-//        }
-//        else if (blinkStartTime > blinkEndTime && blinkStartTime < blinkReEndTime)
-//        {
-//            rbSprite.color = originalColor;
-//        }
-//        else
-//        {
-//            blinkStartTime = 0f;
-//        }
-
-//        if (inviStartTime > inviEndTime)
-//        {
-//            rbSprite.color = originalColor;
-//            invincibility = false;
-//            inviStartTime = 0f;
-//            blinkStartTime = 0f;
-//        }
-//    }
-//}

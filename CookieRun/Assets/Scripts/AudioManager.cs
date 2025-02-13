@@ -13,6 +13,8 @@ public class AudioManager : MonoBehaviour
     public AudioClip potionEatClip;
     public AudioClip itemEatClip;
     public AudioClip ButtonSoundClip;
+    public AudioClip CoinClip;
+    public AudioClip hitClip;
 
     private float normalVolume = 1f;
 
@@ -21,6 +23,16 @@ public class AudioManager : MonoBehaviour
     private void Start()
     {
         sfxSource = GetComponent<AudioSource>();
+    }
+
+    public void PlayerCoinSound()
+    {
+        sfxSource.PlayOneShot(CoinClip, normalVolume);
+    }
+
+    public void PlayerhitSound()
+    {
+        sfxSource.PlayOneShot(hitClip, normalVolume);
     }
 
     public void PlayerJumpSound()
