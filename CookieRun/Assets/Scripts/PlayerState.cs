@@ -111,7 +111,7 @@ public class PlayerState : MonoBehaviour
 
         if (hp <= 0)
         {
-            if (resurrection > 0 && !uiManager.pause)
+            if (resurrection > 0)
             {
                 resurrection--;
                 itemEffects.ResurrectionWait(true);

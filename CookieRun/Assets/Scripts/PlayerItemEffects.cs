@@ -50,17 +50,21 @@ public class PlayerItemEffects : MonoBehaviour
 
     public void UpdateItemEffects(float timescale)
     {
-        if (resurrectionWait && uIManager.pause)
+        if (resurrectionWait)
         {
             PlayUnscaledAnimation("Resurrection");
-            resurrectionWaitTime += Time.unscaledDeltaTime * 0.5f;
-            Time.timeScale = resurrectionWaitTime;
-            if (resurrectionWaitTime >= 1f)
+            if (Time.timeScale != 0)
             {
-                Time.timeScale = timescale;
-                Oninvincibility(true);
-                resurrectionWaitTime = 0f;
-                resurrectionWait = false;
+                resurrectionWaitTime += Time.unscaledDeltaTime * 0.5f;
+
+                Time.timeScale = resurrectionWaitTime;
+                if (resurrectionWaitTime >= 1f)
+                {
+                    Time.timeScale = timescale;
+                    Oninvincibility(true);
+                    resurrectionWaitTime = 0f;
+                    resurrectionWait = false;
+                }
             }
         }
 

@@ -42,6 +42,12 @@ public class PlayerSlide : MonoBehaviour
 
     private void Update()
     {
+        if (playerMovement.isJumping)
+        {
+            StopSlide();
+            return;
+        }
+
         if (playerMovement.isGrounded)
         {
             // 착지 시, 슬라이드 버튼이 눌린 상태라면 자동으로 슬라이드 실행

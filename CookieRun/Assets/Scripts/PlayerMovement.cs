@@ -14,6 +14,8 @@ public class PlayerMovement : MonoBehaviour
     public int maxJumpCount = 2;
     public float jumpHeight = 5f;
     public float JumpSpeed = 8f;
+    public float currentSpeed;
+    public float maxJumpSpeed;
     public float deceleration = 20f;
     public float startFallingSpeed = 8f;
     public float fallingSpeed = 8f;
@@ -41,12 +43,14 @@ public class PlayerMovement : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
 
         jumpCount = maxJumpCount;
+
+        maxJumpSpeed = JumpSpeed * 8f;
     }
 
     private void Update()
     {
-        float rayLength = 0.1f;
-        Vector2 rayOrigin = new Vector2(transform.position.x, transform.position.y - 0.5f);
+        float rayLength = 0.01f;
+        Vector2 rayOrigin = new Vector2(transform.position.x, transform.position.y - 0.1f);
         RaycastHit2D hit = Physics2D.Raycast(rayOrigin, Vector2.down, rayLength, LayerMask.GetMask("Ground"));
 
         isGrounded = hit.collider != null;
@@ -114,20 +118,24 @@ public class PlayerMovement : MonoBehaviour
 
     private IEnumerator JumpRoutine()
     {
-        animator.SetBool("Slide", false);
         fallingSpeed = startFallingSpeed;
         rb.gravityScale = 0f;
-        rb.velocity = Vector2.zero;
+        rb.velocity = new Vector2(rb.velocity.x, 0f); // 기존 하강 속도 제거
         isJumping = true;
         isfalling = false;
         jumpCount--;
-        float currentSpeed = JumpSpeed;
+        currentSpeed = JumpSpeed;
         float startY = transform.position.y;
         float targetY = startY + jumpHeight;
 
         while (currentSpeed > 0)
         {
             float nextY = rb.position.y + currentSpeed * Time.fixedDeltaTime;
+
+            if (currentSpeed > maxJumpSpeed)
+            {
+                currentSpeed = Mathf.Lerp(currentSpeed, JumpSpeed, Time.fixedDeltaTime * 100f);
+            }
 
             if (nextY >= targetY)
             {
@@ -177,18 +185,23 @@ public class PlayerMovement : MonoBehaviour
     {
         fallingSpeed = startFallingSpeed;
         rb.gravityScale = 0f;
-        rb.velocity = Vector2.zero;
+        rb.velocity = new Vector2(rb.velocity.x, 0f); // 기존 하강 속도 제거
         isJumping = true;
         isfalling = false;
         jumpCount--;
 
-        float currentSpeed = JumpSpeed;
+        currentSpeed = JumpSpeed;
         float startY = transform.position.y;
         float targetY = startY + jumpHeight;
 
         while (currentSpeed > 0)
         {
             float nextY = rb.position.y + currentSpeed * Time.fixedDeltaTime;
+
+            if (currentSpeed > maxJumpSpeed)
+            {
+                currentSpeed = Mathf.Lerp(currentSpeed, maxJumpSpeed, Time.fixedDeltaTime * 100f);
+            }
 
             if (nextY >= targetY)
             {
@@ -275,11 +288,12 @@ public class PlayerMovement : MonoBehaviour
 
     private void HandleGroundedState()
     {
+        
         isJumping = false;
         isfalling = false;
         jumpCount = maxJumpCount;
         fallingSpeed = startFallingSpeed;
-        rb.velocity = new Vector2(rb.velocity.x, Mathf.Lerp(rb.velocity.y, 0f, Time.deltaTime * 5f)); // 속도를 점진적으로 줄이기
+        rb.velocity = new Vector2(rb.velocity.x, 0f); // 기존 하강 속도 제거
         currentJumpRoutine = null;
 
         if (jumpKeyHeld && !jumpKeyUsed && !playerSlide.isSlide)

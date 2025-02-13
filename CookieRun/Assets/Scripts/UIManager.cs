@@ -279,8 +279,8 @@ public class UIManager : MonoBehaviour
             var playerState = player.GetComponent<PlayerState>();
             var playerMovement = player.GetComponent<PlayerMovement>();
             playerState.StopAllAni(1f);
+            Time.timeScale = playerState.currentTimeScale;
         }
-        Time.timeScale = 1;
         pause = false;
         HideGameOver();
     }

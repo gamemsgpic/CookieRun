@@ -202,7 +202,7 @@ public class PlayerCrash : MonoBehaviour
         {
             damageEftStartTime += Time.unscaledDeltaTime;
         }
-        if (!playerState.onDeath)
+        if (!playerState.onDeath && Time.timeScale != 0)
         {
 
             if (damageEftStartTime < damageEftEndTime)
