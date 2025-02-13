@@ -324,8 +324,10 @@ public class MapManager : MonoBehaviour
     public void ActivatePrefab()
     {
         List<GameObject> availablePrefabs = GetCurrentWavePrefabs();
+
         if (availablePrefabs.Count == 0)
         {
+            Debug.LogWarning($"[MapManager] 웨이브 {currentWave}에 사용할 프리팹이 없습니다.");
             return;
         }
 
@@ -393,20 +395,14 @@ public class MapManager : MonoBehaviour
 
     private List<GameObject> GetCurrentWavePrefabs()
     {
-        int wave = currentWave - 1;
-        if (wave == wavePrefabs.Count - 1)
+        int waveIndex = currentWave - 1; // 1-based to 0-based
+
+        if (waveIndex >= 0 && waveIndex < wavePrefabs.Count)
         {
-            List<GameObject> allPrefabs = new List<GameObject>();
-            foreach (var waveList in wavePrefabs)
-            {
-                allPrefabs.AddRange(waveList.prefabs);
-            }
-            return allPrefabs;
+            return wavePrefabs[waveIndex].prefabs; // 해당 웨이브의 프리팹 리스트만 반환
         }
-        else
-        {
-            return wavePrefabs[wave].prefabs;
-        }
+
+        return new List<GameObject>(); // 예외 처리
     }
 
     private void ResetPrefab(GameObject prefab)
@@ -498,6 +494,7 @@ public class MapManager : MonoBehaviour
                     }
                 }
             }
+
             if (index < highTrapSprites.Length)
             {
                 highTrapSprite = highTrapSprites[index];

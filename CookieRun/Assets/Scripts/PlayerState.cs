@@ -26,6 +26,7 @@ public class PlayerState : MonoBehaviour
     public bool onDeath { get; private set; } = false;
     public bool DamageEffect { get; private set; } = false;
 
+    private bool oneCallSpeedUp = true;
 
     public float speedUpControl = 0.2f;
 
@@ -90,6 +91,7 @@ public class PlayerState : MonoBehaviour
                 if (currentWave > 4)
                 {
                     currentWave = 4;
+                    oneCallSpeedUp = false;
                 }
                 mapManager.StartWave(currentWave);
                 backGroundManager.SaveWave(currentWave);
@@ -181,8 +183,11 @@ public class PlayerState : MonoBehaviour
 
     public void SpeedUP()
     {
-        currentTimeScale += speedUpControl;
-        Time.timeScale = currentTimeScale;
+        if (oneCallSpeedUp)
+        {
+            currentTimeScale += speedUpControl;
+            Time.timeScale = currentTimeScale;
+        }
     }
 
     public void PlusHp(float amount)

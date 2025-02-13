@@ -114,6 +114,7 @@ public class PlayerMovement : MonoBehaviour
 
     private IEnumerator JumpRoutine()
     {
+        animator.SetBool("Slide", false);
         fallingSpeed = startFallingSpeed;
         rb.gravityScale = 0f;
         rb.velocity = Vector2.zero;

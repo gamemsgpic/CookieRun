@@ -32,12 +32,12 @@ public class AudioManager : MonoBehaviour
 
     public void PlayerCoinSound()
     {
-        PlaySoundWithCooldown(CoinClip, 0.8f, 0.4f);
+        PlaySoundWithCooldown(CoinClip, 1f, 0.4f);
     }
 
     public void PlayerhitSound()
     {
-        PlaySoundWithCooldown(hitClip, 0.8f, 0.5f);
+        PlaySoundWithCooldown(hitClip, 1f, 0.5f);
     }
 
     public void PlayerJumpSound()
@@ -47,7 +47,7 @@ public class AudioManager : MonoBehaviour
 
     public void PlayerSlideSound()
     {
-        PlaySoundWithCooldown(slideClip, 0.8f, 1f);
+        PlaySoundWithCooldown(slideClip, 1f, 1f);
     }
 
     public void PlayerScoreBoardSound()
@@ -57,7 +57,7 @@ public class AudioManager : MonoBehaviour
 
     public void PlayerJellySound()
     {
-        PlaySoundWithCooldown(jellyEatClip, 0.8f, 0.4f); // 40% 지나면 다시 재생 가능
+        PlaySoundWithCooldown(jellyEatClip, 1f, 0.4f); // 40% 지나면 다시 재생 가능
     }
 
     public void PlayerPotionSound()

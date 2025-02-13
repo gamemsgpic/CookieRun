@@ -15,6 +15,7 @@ public class BackGroundManager : MonoBehaviour
 
     private bool shutDownSprite = false;
     private bool shutUpSprite = false;
+    private bool oneCall = true;
 
     private float shutDownTime = 0f;
     private float shutUpTime = 0f;
@@ -22,6 +23,7 @@ public class BackGroundManager : MonoBehaviour
 
     private void Start()
     {
+        oneCall = true;
         backGroundRenderer = backGround.GetComponent<SpriteRenderer>();
         backGroundBottomRenderer = backGroundBottom.GetComponent<SpriteRenderer>();
         ChangeBackGroundSprite(0);
@@ -29,31 +31,38 @@ public class BackGroundManager : MonoBehaviour
 
     private void Update()
     {
-        if (shutDownSprite)
+        if (oneCall)
         {
-            shutDownTime += Time.unscaledDeltaTime;
-            backGroundRenderer.color = Color.Lerp(Color.white, Color.black, shutDownTime / successTime);
-            backGroundBottomRenderer.color = Color.Lerp(Color.white, Color.black, shutDownTime / successTime);
-            if (shutDownTime > successTime)
+            if (shutDownSprite)
             {
-                shutUpSprite = true;
+                shutDownTime += Time.unscaledDeltaTime;
+                backGroundRenderer.color = Color.Lerp(Color.white, Color.black, shutDownTime / successTime);
+                backGroundBottomRenderer.color = Color.Lerp(Color.white, Color.black, shutDownTime / successTime);
+                if (shutDownTime > successTime)
+                {
+                    shutUpSprite = true;
+                }
             }
-        }
 
-        if (shutUpSprite)
-        {
-            ChangeBackGroundSprite(currentWave);
-            shutUpTime += Time.unscaledDeltaTime;
-            backGroundRenderer.color = Color.Lerp(Color.black, Color.white, shutUpTime / successTime);
-            backGroundBottomRenderer.color = Color.Lerp(Color.black, Color.white, shutUpTime / successTime);
-            if (shutUpTime > successTime)
+            if (shutUpSprite)
             {
-                shutDownTime = 0;
-                shutUpTime = 0;
-                shutDownSprite = false;
-                shutUpSprite = false;
-                backGroundRenderer.color = Color.white;
-                backGroundBottomRenderer.color = Color.white;
+                ChangeBackGroundSprite(currentWave);
+                shutUpTime += Time.unscaledDeltaTime;
+                backGroundRenderer.color = Color.Lerp(Color.black, Color.white, shutUpTime / successTime);
+                backGroundBottomRenderer.color = Color.Lerp(Color.black, Color.white, shutUpTime / successTime);
+                if (shutUpTime > successTime)
+                {
+                    shutDownTime = 0;
+                    shutUpTime = 0;
+                    shutDownSprite = false;
+                    shutUpSprite = false;
+                    backGroundRenderer.color = Color.white;
+                    backGroundBottomRenderer.color = Color.white;
+                    if (currentWave == 4)
+                    {
+                        oneCall = false;
+                    }
+                }
             }
         }
     }
