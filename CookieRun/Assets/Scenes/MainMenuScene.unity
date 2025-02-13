@@ -10472,6 +10472,8 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 705a1ba0c6d9f704fb3cfe7395721b90, type: 3}
   - {fileID: 21300000, guid: c315894f98198d24a92953f056ebe1a2, type: 3}
   - {fileID: 21300000, guid: 5f6e47d43c12f3446b71166cb2f59b61, type: 3}
+  nextButtonText: {fileID: 293061717}
+  priviousButtonText: {fileID: 938174273}
 --- !u!114 &1555942528
 MonoBehaviour:
   m_ObjectHideFlags: 0
