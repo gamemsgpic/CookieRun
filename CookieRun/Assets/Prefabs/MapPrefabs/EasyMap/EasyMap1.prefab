@@ -42,12 +42,19 @@ Transform:
   - {fileID: 7622773102966364389}
   - {fileID: 7705930693953347354}
   - {fileID: 837948188652856765}
+  - {fileID: 5131606343693667221}
   - {fileID: 3043462659980507140}
+  - {fileID: 6579973557525457519}
   - {fileID: 2200942479684661688}
+  - {fileID: 3172718133805554079}
   - {fileID: 133501922126447384}
+  - {fileID: 4553555591962786399}
   - {fileID: 6872376255608212076}
+  - {fileID: 318599107764125951}
   - {fileID: 6342494485005811265}
+  - {fileID: 5199136740468431988}
   - {fileID: 5707687066425813418}
+  - {fileID: 4837700330235603406}
   - {fileID: 4556241284830743679}
   - {fileID: 746533211047510126}
   m_Father: {fileID: 0}
@@ -486,6 +493,264 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1689666972514869073, guid: 532b4c1ed0baefa4b8e65e1bd595b6c7, type: 3}
   m_PrefabInstance: {fileID: 1405353878157734798}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &2382245066800014698
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 8652581052045266363}
+    m_Modifications:
+    - target: {fileID: 5758913247659495576, guid: 5b11548cf15dfd1458fdc740a2a6fe6d, type: 3}
+      propertyPath: Id
+      value: 102
+      objectReference: {fileID: 0}
+    - target: {fileID: 5758913247659495576, guid: 5b11548cf15dfd1458fdc740a2a6fe6d, type: 3}
+      propertyPath: Coin
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5758913247659495576, guid: 5b11548cf15dfd1458fdc740a2a6fe6d, type: 3}
+      propertyPath: Name
+      value: Jelly
+      objectReference: {fileID: 0}
+    - target: {fileID: 5758913247659495576, guid: 5b11548cf15dfd1458fdc740a2a6fe6d, type: 3}
+      propertyPath: Path
+      value: Item/Cookie Run - Jelly_135
+      objectReference: {fileID: 0}
+    - target: {fileID: 5758913247659495576, guid: 5b11548cf15dfd1458fdc740a2a6fe6d, type: 3}
+      propertyPath: Score
+      value: 400
+      objectReference: {fileID: 0}
+    - target: {fileID: 5167474813277576234, guid: c6526009289ae1141b6e134086b549c1, type: 3}
+      propertyPath: m_Name
+      value: GomJelly (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5167474813277576234, guid: c6526009289ae1141b6e134086b549c1, type: 3}
+      propertyPath: m_TagString
+      value: Jelly
+      objectReference: {fileID: 0}
+    - target: {fileID: 7074479457313033380, guid: c6526009289ae1141b6e134086b549c1, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 7074479457313033380, guid: c6526009289ae1141b6e134086b549c1, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 3.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7074479457313033380, guid: c6526009289ae1141b6e134086b549c1, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.86537033
+      objectReference: {fileID: 0}
+    - target: {fileID: 7074479457313033380, guid: c6526009289ae1141b6e134086b549c1, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7074479457313033380, guid: c6526009289ae1141b6e134086b549c1, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7074479457313033380, guid: c6526009289ae1141b6e134086b549c1, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7074479457313033380, guid: c6526009289ae1141b6e134086b549c1, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7074479457313033380, guid: c6526009289ae1141b6e134086b549c1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7074479457313033380, guid: c6526009289ae1141b6e134086b549c1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7074479457313033380, guid: c6526009289ae1141b6e134086b549c1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: c6526009289ae1141b6e134086b549c1, type: 3}
+--- !u!4 &4837700330235603406 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7074479457313033380, guid: c6526009289ae1141b6e134086b549c1, type: 3}
+  m_PrefabInstance: {fileID: 2382245066800014698}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &2673653092598253361
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 8652581052045266363}
+    m_Modifications:
+    - target: {fileID: 5758913247659495576, guid: 5b11548cf15dfd1458fdc740a2a6fe6d, type: 3}
+      propertyPath: Id
+      value: 102
+      objectReference: {fileID: 0}
+    - target: {fileID: 5758913247659495576, guid: 5b11548cf15dfd1458fdc740a2a6fe6d, type: 3}
+      propertyPath: Coin
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5758913247659495576, guid: 5b11548cf15dfd1458fdc740a2a6fe6d, type: 3}
+      propertyPath: Name
+      value: Jelly
+      objectReference: {fileID: 0}
+    - target: {fileID: 5758913247659495576, guid: 5b11548cf15dfd1458fdc740a2a6fe6d, type: 3}
+      propertyPath: Path
+      value: Item/Cookie Run - Jelly_135
+      objectReference: {fileID: 0}
+    - target: {fileID: 5758913247659495576, guid: 5b11548cf15dfd1458fdc740a2a6fe6d, type: 3}
+      propertyPath: Score
+      value: 400
+      objectReference: {fileID: 0}
+    - target: {fileID: 5167474813277576234, guid: c6526009289ae1141b6e134086b549c1, type: 3}
+      propertyPath: m_Name
+      value: GomJelly
+      objectReference: {fileID: 0}
+    - target: {fileID: 5167474813277576234, guid: c6526009289ae1141b6e134086b549c1, type: 3}
+      propertyPath: m_TagString
+      value: Jelly
+      objectReference: {fileID: 0}
+    - target: {fileID: 7074479457313033380, guid: c6526009289ae1141b6e134086b549c1, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 17
+      objectReference: {fileID: 0}
+    - target: {fileID: 7074479457313033380, guid: c6526009289ae1141b6e134086b549c1, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 3.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7074479457313033380, guid: c6526009289ae1141b6e134086b549c1, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.86537033
+      objectReference: {fileID: 0}
+    - target: {fileID: 7074479457313033380, guid: c6526009289ae1141b6e134086b549c1, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7074479457313033380, guid: c6526009289ae1141b6e134086b549c1, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7074479457313033380, guid: c6526009289ae1141b6e134086b549c1, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7074479457313033380, guid: c6526009289ae1141b6e134086b549c1, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7074479457313033380, guid: c6526009289ae1141b6e134086b549c1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7074479457313033380, guid: c6526009289ae1141b6e134086b549c1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7074479457313033380, guid: c6526009289ae1141b6e134086b549c1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: c6526009289ae1141b6e134086b549c1, type: 3}
+--- !u!4 &5131606343693667221 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7074479457313033380, guid: c6526009289ae1141b6e134086b549c1, type: 3}
+  m_PrefabInstance: {fileID: 2673653092598253361}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &3029395070772875472
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 8652581052045266363}
+    m_Modifications:
+    - target: {fileID: 5758913247659495576, guid: 5b11548cf15dfd1458fdc740a2a6fe6d, type: 3}
+      propertyPath: Id
+      value: 102
+      objectReference: {fileID: 0}
+    - target: {fileID: 5758913247659495576, guid: 5b11548cf15dfd1458fdc740a2a6fe6d, type: 3}
+      propertyPath: Coin
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5758913247659495576, guid: 5b11548cf15dfd1458fdc740a2a6fe6d, type: 3}
+      propertyPath: Name
+      value: Jelly
+      objectReference: {fileID: 0}
+    - target: {fileID: 5758913247659495576, guid: 5b11548cf15dfd1458fdc740a2a6fe6d, type: 3}
+      propertyPath: Path
+      value: Item/Cookie Run - Jelly_135
+      objectReference: {fileID: 0}
+    - target: {fileID: 5758913247659495576, guid: 5b11548cf15dfd1458fdc740a2a6fe6d, type: 3}
+      propertyPath: Score
+      value: 400
+      objectReference: {fileID: 0}
+    - target: {fileID: 5167474813277576234, guid: c6526009289ae1141b6e134086b549c1, type: 3}
+      propertyPath: m_Name
+      value: GomJelly (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5167474813277576234, guid: c6526009289ae1141b6e134086b549c1, type: 3}
+      propertyPath: m_TagString
+      value: Jelly
+      objectReference: {fileID: 0}
+    - target: {fileID: 7074479457313033380, guid: c6526009289ae1141b6e134086b549c1, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 18
+      objectReference: {fileID: 0}
+    - target: {fileID: 7074479457313033380, guid: c6526009289ae1141b6e134086b549c1, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 3.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7074479457313033380, guid: c6526009289ae1141b6e134086b549c1, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.86537033
+      objectReference: {fileID: 0}
+    - target: {fileID: 7074479457313033380, guid: c6526009289ae1141b6e134086b549c1, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7074479457313033380, guid: c6526009289ae1141b6e134086b549c1, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7074479457313033380, guid: c6526009289ae1141b6e134086b549c1, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7074479457313033380, guid: c6526009289ae1141b6e134086b549c1, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7074479457313033380, guid: c6526009289ae1141b6e134086b549c1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7074479457313033380, guid: c6526009289ae1141b6e134086b549c1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7074479457313033380, guid: c6526009289ae1141b6e134086b549c1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: c6526009289ae1141b6e134086b549c1, type: 3}
+--- !u!4 &5199136740468431988 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7074479457313033380, guid: c6526009289ae1141b6e134086b549c1, type: 3}
+  m_PrefabInstance: {fileID: 3029395070772875472}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &3249451245392880910
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -571,6 +836,92 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 7074479457313033380, guid: 5b11548cf15dfd1458fdc740a2a6fe6d, type: 3}
   m_PrefabInstance: {fileID: 3249451245392880910}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &4142566751209891531
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 8652581052045266363}
+    m_Modifications:
+    - target: {fileID: 5758913247659495576, guid: 5b11548cf15dfd1458fdc740a2a6fe6d, type: 3}
+      propertyPath: Id
+      value: 102
+      objectReference: {fileID: 0}
+    - target: {fileID: 5758913247659495576, guid: 5b11548cf15dfd1458fdc740a2a6fe6d, type: 3}
+      propertyPath: Coin
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5758913247659495576, guid: 5b11548cf15dfd1458fdc740a2a6fe6d, type: 3}
+      propertyPath: Name
+      value: Jelly
+      objectReference: {fileID: 0}
+    - target: {fileID: 5758913247659495576, guid: 5b11548cf15dfd1458fdc740a2a6fe6d, type: 3}
+      propertyPath: Path
+      value: Item/Cookie Run - Jelly_135
+      objectReference: {fileID: 0}
+    - target: {fileID: 5758913247659495576, guid: 5b11548cf15dfd1458fdc740a2a6fe6d, type: 3}
+      propertyPath: Score
+      value: 400
+      objectReference: {fileID: 0}
+    - target: {fileID: 5167474813277576234, guid: c6526009289ae1141b6e134086b549c1, type: 3}
+      propertyPath: m_Name
+      value: GomJelly (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5167474813277576234, guid: c6526009289ae1141b6e134086b549c1, type: 3}
+      propertyPath: m_TagString
+      value: Jelly
+      objectReference: {fileID: 0}
+    - target: {fileID: 7074479457313033380, guid: c6526009289ae1141b6e134086b549c1, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 7074479457313033380, guid: c6526009289ae1141b6e134086b549c1, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 3.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7074479457313033380, guid: c6526009289ae1141b6e134086b549c1, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.86537033
+      objectReference: {fileID: 0}
+    - target: {fileID: 7074479457313033380, guid: c6526009289ae1141b6e134086b549c1, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7074479457313033380, guid: c6526009289ae1141b6e134086b549c1, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7074479457313033380, guid: c6526009289ae1141b6e134086b549c1, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7074479457313033380, guid: c6526009289ae1141b6e134086b549c1, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7074479457313033380, guid: c6526009289ae1141b6e134086b549c1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7074479457313033380, guid: c6526009289ae1141b6e134086b549c1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7074479457313033380, guid: c6526009289ae1141b6e134086b549c1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: c6526009289ae1141b6e134086b549c1, type: 3}
+--- !u!4 &6579973557525457519 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7074479457313033380, guid: c6526009289ae1141b6e134086b549c1, type: 3}
+  m_PrefabInstance: {fileID: 4142566751209891531}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &4190749763690574565
 PrefabInstance:
@@ -998,6 +1349,92 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7074479457313033380, guid: 5b11548cf15dfd1458fdc740a2a6fe6d, type: 3}
   m_PrefabInstance: {fileID: 5403646588761844961}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &5632415167227270459
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 8652581052045266363}
+    m_Modifications:
+    - target: {fileID: 5758913247659495576, guid: 5b11548cf15dfd1458fdc740a2a6fe6d, type: 3}
+      propertyPath: Id
+      value: 102
+      objectReference: {fileID: 0}
+    - target: {fileID: 5758913247659495576, guid: 5b11548cf15dfd1458fdc740a2a6fe6d, type: 3}
+      propertyPath: Coin
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5758913247659495576, guid: 5b11548cf15dfd1458fdc740a2a6fe6d, type: 3}
+      propertyPath: Name
+      value: Jelly
+      objectReference: {fileID: 0}
+    - target: {fileID: 5758913247659495576, guid: 5b11548cf15dfd1458fdc740a2a6fe6d, type: 3}
+      propertyPath: Path
+      value: Item/Cookie Run - Jelly_135
+      objectReference: {fileID: 0}
+    - target: {fileID: 5758913247659495576, guid: 5b11548cf15dfd1458fdc740a2a6fe6d, type: 3}
+      propertyPath: Score
+      value: 400
+      objectReference: {fileID: 0}
+    - target: {fileID: 5167474813277576234, guid: c6526009289ae1141b6e134086b549c1, type: 3}
+      propertyPath: m_Name
+      value: GomJelly (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5167474813277576234, guid: c6526009289ae1141b6e134086b549c1, type: 3}
+      propertyPath: m_TagString
+      value: Jelly
+      objectReference: {fileID: 0}
+    - target: {fileID: 7074479457313033380, guid: c6526009289ae1141b6e134086b549c1, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 7074479457313033380, guid: c6526009289ae1141b6e134086b549c1, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 3.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7074479457313033380, guid: c6526009289ae1141b6e134086b549c1, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.86537033
+      objectReference: {fileID: 0}
+    - target: {fileID: 7074479457313033380, guid: c6526009289ae1141b6e134086b549c1, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7074479457313033380, guid: c6526009289ae1141b6e134086b549c1, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7074479457313033380, guid: c6526009289ae1141b6e134086b549c1, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7074479457313033380, guid: c6526009289ae1141b6e134086b549c1, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7074479457313033380, guid: c6526009289ae1141b6e134086b549c1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7074479457313033380, guid: c6526009289ae1141b6e134086b549c1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7074479457313033380, guid: c6526009289ae1141b6e134086b549c1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: c6526009289ae1141b6e134086b549c1, type: 3}
+--- !u!4 &3172718133805554079 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7074479457313033380, guid: c6526009289ae1141b6e134086b549c1, type: 3}
+  m_PrefabInstance: {fileID: 5632415167227270459}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &6014318475358361955
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1236,6 +1673,92 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7074479457313033380, guid: 5b11548cf15dfd1458fdc740a2a6fe6d, type: 3}
   m_PrefabInstance: {fileID: 6707721161351839963}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &6709487387084224251
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 8652581052045266363}
+    m_Modifications:
+    - target: {fileID: 5758913247659495576, guid: 5b11548cf15dfd1458fdc740a2a6fe6d, type: 3}
+      propertyPath: Id
+      value: 102
+      objectReference: {fileID: 0}
+    - target: {fileID: 5758913247659495576, guid: 5b11548cf15dfd1458fdc740a2a6fe6d, type: 3}
+      propertyPath: Coin
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5758913247659495576, guid: 5b11548cf15dfd1458fdc740a2a6fe6d, type: 3}
+      propertyPath: Name
+      value: Jelly
+      objectReference: {fileID: 0}
+    - target: {fileID: 5758913247659495576, guid: 5b11548cf15dfd1458fdc740a2a6fe6d, type: 3}
+      propertyPath: Path
+      value: Item/Cookie Run - Jelly_135
+      objectReference: {fileID: 0}
+    - target: {fileID: 5758913247659495576, guid: 5b11548cf15dfd1458fdc740a2a6fe6d, type: 3}
+      propertyPath: Score
+      value: 400
+      objectReference: {fileID: 0}
+    - target: {fileID: 5167474813277576234, guid: c6526009289ae1141b6e134086b549c1, type: 3}
+      propertyPath: m_Name
+      value: GomJelly (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5167474813277576234, guid: c6526009289ae1141b6e134086b549c1, type: 3}
+      propertyPath: m_TagString
+      value: Jelly
+      objectReference: {fileID: 0}
+    - target: {fileID: 7074479457313033380, guid: c6526009289ae1141b6e134086b549c1, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 19
+      objectReference: {fileID: 0}
+    - target: {fileID: 7074479457313033380, guid: c6526009289ae1141b6e134086b549c1, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 3.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7074479457313033380, guid: c6526009289ae1141b6e134086b549c1, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.86537033
+      objectReference: {fileID: 0}
+    - target: {fileID: 7074479457313033380, guid: c6526009289ae1141b6e134086b549c1, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7074479457313033380, guid: c6526009289ae1141b6e134086b549c1, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7074479457313033380, guid: c6526009289ae1141b6e134086b549c1, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7074479457313033380, guid: c6526009289ae1141b6e134086b549c1, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7074479457313033380, guid: c6526009289ae1141b6e134086b549c1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7074479457313033380, guid: c6526009289ae1141b6e134086b549c1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7074479457313033380, guid: c6526009289ae1141b6e134086b549c1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: c6526009289ae1141b6e134086b549c1, type: 3}
+--- !u!4 &4553555591962786399 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7074479457313033380, guid: c6526009289ae1141b6e134086b549c1, type: 3}
+  m_PrefabInstance: {fileID: 6709487387084224251}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &7203457988430712764
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1321,6 +1844,92 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 7074479457313033380, guid: 5b11548cf15dfd1458fdc740a2a6fe6d, type: 3}
   m_PrefabInstance: {fileID: 7203457988430712764}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &7369715995846937691
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 8652581052045266363}
+    m_Modifications:
+    - target: {fileID: 5758913247659495576, guid: 5b11548cf15dfd1458fdc740a2a6fe6d, type: 3}
+      propertyPath: Id
+      value: 102
+      objectReference: {fileID: 0}
+    - target: {fileID: 5758913247659495576, guid: 5b11548cf15dfd1458fdc740a2a6fe6d, type: 3}
+      propertyPath: Coin
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5758913247659495576, guid: 5b11548cf15dfd1458fdc740a2a6fe6d, type: 3}
+      propertyPath: Name
+      value: Jelly
+      objectReference: {fileID: 0}
+    - target: {fileID: 5758913247659495576, guid: 5b11548cf15dfd1458fdc740a2a6fe6d, type: 3}
+      propertyPath: Path
+      value: Item/Cookie Run - Jelly_135
+      objectReference: {fileID: 0}
+    - target: {fileID: 5758913247659495576, guid: 5b11548cf15dfd1458fdc740a2a6fe6d, type: 3}
+      propertyPath: Score
+      value: 400
+      objectReference: {fileID: 0}
+    - target: {fileID: 5167474813277576234, guid: c6526009289ae1141b6e134086b549c1, type: 3}
+      propertyPath: m_Name
+      value: GomJelly (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5167474813277576234, guid: c6526009289ae1141b6e134086b549c1, type: 3}
+      propertyPath: m_TagString
+      value: Jelly
+      objectReference: {fileID: 0}
+    - target: {fileID: 7074479457313033380, guid: c6526009289ae1141b6e134086b549c1, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 7074479457313033380, guid: c6526009289ae1141b6e134086b549c1, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 3.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7074479457313033380, guid: c6526009289ae1141b6e134086b549c1, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.86537033
+      objectReference: {fileID: 0}
+    - target: {fileID: 7074479457313033380, guid: c6526009289ae1141b6e134086b549c1, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7074479457313033380, guid: c6526009289ae1141b6e134086b549c1, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7074479457313033380, guid: c6526009289ae1141b6e134086b549c1, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7074479457313033380, guid: c6526009289ae1141b6e134086b549c1, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7074479457313033380, guid: c6526009289ae1141b6e134086b549c1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7074479457313033380, guid: c6526009289ae1141b6e134086b549c1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7074479457313033380, guid: c6526009289ae1141b6e134086b549c1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: c6526009289ae1141b6e134086b549c1, type: 3}
+--- !u!4 &318599107764125951 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7074479457313033380, guid: c6526009289ae1141b6e134086b549c1, type: 3}
+  m_PrefabInstance: {fileID: 7369715995846937691}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &7386902206880978230
 PrefabInstance:

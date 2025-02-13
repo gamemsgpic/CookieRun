@@ -156,7 +156,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   score: 100
-  coins: 10
+  coins: 100
   heal: 0
   Crystal: 0
   onItmeEffect: 0

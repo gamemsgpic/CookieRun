@@ -30,6 +30,8 @@ public class PlayerState : MonoBehaviour
 
     public float speedUpControl = 0.2f;
 
+    public float minusHpValue;
+
     private float normalTimeScale = 0.8f;
     public float currentTimeScale { get; private set; } = 0.8f;
     public UIManager uiManager;
@@ -105,7 +107,7 @@ public class PlayerState : MonoBehaviour
 
         if (hp > -1f && Time.timeScale > 0f) // 타임스케일이 0이면 HP 감소 중지
         {
-            hp -= Time.unscaledDeltaTime * 2f;
+            hp -= Time.unscaledDeltaTime * minusHpValue;
             UpdateHpSlider();
         }
 
