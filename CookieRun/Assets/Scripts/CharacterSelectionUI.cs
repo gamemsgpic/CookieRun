@@ -147,7 +147,7 @@ public class CharacterSelectionUI : MonoBehaviour
         }
 
         upgradeCostText.text = $"{currentCharacter.UpgradeCost:N0}";
-        equipButtonText.text = (GameData.characterName == currentCharacter.Name) ? "ТјПыСп" : "ТјПы";
+        equipButtonText.text = (GameData.characterName == currentCharacter.Name) ? "Equip" : "UnEquip";
     }
 
 }
