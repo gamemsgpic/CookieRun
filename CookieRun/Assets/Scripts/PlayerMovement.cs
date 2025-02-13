@@ -87,7 +87,6 @@ public class PlayerMovement : MonoBehaviour
 
         // 이전 프레임의 isGrounded 상태 저장
         previousIsGrounded = isGrounded;
-
     }
 
     public void ButtonJump()
@@ -208,26 +207,6 @@ public class PlayerMovement : MonoBehaviour
         currentJumpRoutine = null;
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (collision.gameObject.CompareTag("Ground"))
-        {
-            isGrounded = true;
-            isJumping = false;
-            isfalling = false;
-            jumpCount = maxJumpCount;
-            fallingSpeed = startFallingSpeed;
-            rb.velocity = Vector2.zero;
-            currentJumpRoutine = null;
-
-            //// **점프 키가 눌려있고, 추가 점프가 사용되지 않았을 때만 실행**
-            //if (jumpKeyHeld && !jumpKeyUsed && !playerSlide.isSlide)
-            //{
-            //    SingleJump();
-            //    jumpKeyUsed = true; // 추가 점프 1회 제한 (중복 방지)
-            //}
-        }
-    }
 
     private void OnTriggerStay2D(Collider2D collision)
     {
@@ -263,13 +242,34 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-    private void OnCollisionExit2D(Collision2D collision)
-    {
-        if (collision.gameObject.CompareTag("Ground"))
-        {
-            isGrounded = false;
-        }
-    }
+    //private void OnCollisionEnter2D(Collision2D collision)
+    //{
+    //    if (collision.gameObject.CompareTag("Ground"))
+    //    {
+    //        isGrounded = true;
+    //        isJumping = false;
+    //        isfalling = false;
+    //        jumpCount = maxJumpCount;
+    //        fallingSpeed = startFallingSpeed;
+    //        rb.velocity = Vector2.zero;
+    //        currentJumpRoutine = null;
+
+    //        //// **점프 키가 눌려있고, 추가 점프가 사용되지 않았을 때만 실행**
+    //        //if (jumpKeyHeld && !jumpKeyUsed && !playerSlide.isSlide)
+    //        //{
+    //        //    SingleJump();
+    //        //    jumpKeyUsed = true; // 추가 점프 1회 제한 (중복 방지)
+    //        //}
+    //    }
+    //}
+
+    //private void OnCollisionExit2D(Collision2D collision)
+    //{
+    //    if (collision.gameObject.CompareTag("Ground"))
+    //    {
+    //        isGrounded = false;
+    //    }
+    //}
 
     private void HandleGroundedState()
     {
@@ -280,11 +280,15 @@ public class PlayerMovement : MonoBehaviour
         rb.velocity = new Vector2(rb.velocity.x, Mathf.Lerp(rb.velocity.y, 0f, Time.deltaTime * 5f)); // 속도를 점진적으로 줄이기
         currentJumpRoutine = null;
 
-        // **버튼이 눌려있고, 추가 점프가 사용되지 않았을 때만 실행**
         if (jumpKeyHeld && !jumpKeyUsed && !playerSlide.isSlide)
         {
             SingleJump();
             jumpKeyUsed = true;  // 추가 점프 1회 제한
+            jumpKeyHeld = false; // 강제로 입력 초기화 (불필요한 점프 방지)
+        }
+        else
+        {
+            jumpKeyUsed = false; // 땅에 닿았을 때 점프 다시 가능하도록 초기화
         }
     }
 
