@@ -54,7 +54,6 @@ public class SelectCharacters : MonoBehaviour
     {
         if (!uiManager.pause)
         {
-            Time.timeScale = 1f;
             characters[0].SetActive(true);
             characters[1].SetActive(false);
             characters[2].SetActive(false);
@@ -67,7 +66,6 @@ public class SelectCharacters : MonoBehaviour
     {
         if (!uiManager.pause)
         {
-            Time.timeScale = 1f;
             characters[0].SetActive(false);
             characters[1].SetActive(true);
             characters[2].SetActive(false);
@@ -80,7 +78,6 @@ public class SelectCharacters : MonoBehaviour
     {
         if (!uiManager.pause)
         {
-            Time.timeScale = 1f;
             characters[0].SetActive(false);
             characters[1].SetActive(false);
             characters[2].SetActive(true);

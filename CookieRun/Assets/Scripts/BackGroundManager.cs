@@ -18,7 +18,7 @@ public class BackGroundManager : MonoBehaviour
 
     private float shutDownTime = 0f;
     private float shutUpTime = 0f;
-    private float successTime = 2f;
+    private float successTime = 4f;
 
     private void Start()
     {
@@ -49,7 +49,7 @@ public class BackGroundManager : MonoBehaviour
             if (shutUpTime > successTime)
             {
                 shutDownTime = 0;
-                shutDownTime = 0;
+                shutUpTime = 0;
                 shutDownSprite = false;
                 shutUpSprite = false;
                 backGroundRenderer.color = Color.white;

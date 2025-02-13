@@ -5,6 +5,7 @@ public class PlayerItemEffects : MonoBehaviour
 {
     public AudioManager audioManager;
     public GameObject magnet;
+    public UIManager uIManager;
     private Animator animator;
     public float itemEffectTime = 3f;
     public float giantEffectTime = 0f;
@@ -49,7 +50,7 @@ public class PlayerItemEffects : MonoBehaviour
 
     public void UpdateItemEffects(float timescale)
     {
-        if (resurrectionWait)
+        if (resurrectionWait && uIManager.pause)
         {
             PlayUnscaledAnimation("Resurrection");
             resurrectionWaitTime += Time.unscaledDeltaTime * 0.5f;

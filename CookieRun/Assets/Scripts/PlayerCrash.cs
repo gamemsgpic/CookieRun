@@ -37,12 +37,12 @@ public class PlayerCrash : MonoBehaviour
     private void Update()
     {
         // 무적 상태 처리
-        if (playerItemEffcts.invincibility)
+        if (playerItemEffcts.invincibility && !uiManager.pause)
         {
             HandleInvincibility();
         }
 
-        if (playerItemEffcts.DamageEffect)
+        if (playerItemEffcts.DamageEffect && !uiManager.pause)
         {
             HandleDamageEffect();
         }
@@ -66,6 +66,7 @@ public class PlayerCrash : MonoBehaviour
         {
             if (collision.CompareTag("Trap"))
             {
+                audioManager.PlayerhitSound();
                 Trap trapScript = collision.GetComponent<Trap>();
                 if (trapScript != null)
                 {
@@ -183,7 +184,7 @@ public class PlayerCrash : MonoBehaviour
         {
             playerState.PlusCrystal(item.Crystal);
         }
-        else if(item.tag == "Giantization")
+        else if (item.tag == "Giantization")
         {
             playerItemEffcts.ChangeScale(item.giantization, true);
         }
@@ -197,62 +198,64 @@ public class PlayerCrash : MonoBehaviour
 
     private void HandleDamageEffect()
     {
-        if (!uiManager.pause)
+        if (Time.timeScale != 0)
         {
             damageEftStartTime += Time.unscaledDeltaTime;
-            if (!playerState.onDeath)
+        }
+        if (!playerState.onDeath)
+        {
+
+            if (damageEftStartTime < damageEftEndTime)
             {
+                damageEffectPanel.SetActive(true);
+                Time.timeScale = 0;
+                Time.timeScale += Time.unscaledDeltaTime;
+            }
+            else
+            {
+                damageEffectPanel.SetActive(false);
+                Time.timeScale += Time.unscaledDeltaTime;
+            }
 
-                if (damageEftStartTime < damageEftEndTime)
-                {
-                    damageEffectPanel.SetActive(true);
-                    Time.timeScale = 0;
-                    Time.timeScale += Time.unscaledDeltaTime;
-                }
-                else
-                {
-                    damageEffectPanel.SetActive(false);
-                    Time.timeScale += Time.unscaledDeltaTime;
-                }
-
-                if (damageEftStartTime > damageEftEndTime * 5f)
-                {
-                    playerState.OnDamageEffect(false);
-                    Time.timeScale = playerState.currentTimeScale;
-                    damageEftStartTime = 0f;
-                }
+            if (damageEftStartTime > damageEftEndTime * 5f)
+            {
+                playerState.OnDamageEffect(false);
+                Time.timeScale = playerState.currentTimeScale;
+                damageEftStartTime = 0f;
             }
         }
     }
 
 
+
     private void HandleInvincibility()
     {
-        if (!uiManager.pause)
+        if (Time.timeScale != 0)
         {
             inviStartTime += Time.unscaledDeltaTime;
             blinkStartTime += Time.unscaledDeltaTime;
-
-            if (blinkStartTime < blinkEndTime)
-            {
-                rbSprite.color = color; // 깜빡이는 색상 적용
-            }
-            else if (blinkStartTime > blinkEndTime && blinkStartTime < blinkReEndTime)
-            {
-                rbSprite.color = originalColor; // 원래 색상 복원
-            }
-            else
-            {
-                blinkStartTime = 0f; // 깜빡임 리셋
-            }
-
-            if (inviStartTime > inviEndTime)
-            {
-                rbSprite.color = originalColor; // 원래 색상 복원
-                playerState.Oninvincibility(false); // 무적 상태 종료
-                inviStartTime = 0f;
-                blinkStartTime = 0f;
-            }
         }
+
+        if (blinkStartTime < blinkEndTime)
+        {
+            rbSprite.color = color; // 깜빡이는 색상 적용
+        }
+        else if (blinkStartTime > blinkEndTime && blinkStartTime < blinkReEndTime)
+        {
+            rbSprite.color = originalColor; // 원래 색상 복원
+        }
+        else
+        {
+            blinkStartTime = 0f; // 깜빡임 리셋
+        }
+
+        if (inviStartTime > inviEndTime)
+        {
+            rbSprite.color = originalColor; // 원래 색상 복원
+            playerState.Oninvincibility(false); // 무적 상태 종료
+            inviStartTime = 0f;
+            blinkStartTime = 0f;
+        }
+
     }
 }

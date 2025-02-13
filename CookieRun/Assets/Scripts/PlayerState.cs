@@ -11,7 +11,8 @@ public class PlayerState : MonoBehaviour
     private Animator animator;
     public float itemEffectTime = 3f;
     private float maxHp;
-    public float upWave;
+    public float[] upWave;
+    public float waveLength;
     public float hp { get; set; }
     private float wave = 0f;
     private bool oneCall = true;
@@ -58,13 +59,18 @@ public class PlayerState : MonoBehaviour
 
         if (waveSlider != null)
         {
-            waveSlider.maxValue = upWave;
+            waveLength = upWave[0];
+            waveSlider.maxValue = waveLength;
             waveSlider.value = wave;
         }
 
-        Time.timeScale = normalTimeScale;
 
         animator.updateMode = AnimatorUpdateMode.UnscaledTime;
+    }
+
+    private void Awake()
+    {
+        Time.timeScale = normalTimeScale;
     }
 
     private void Update()
@@ -78,7 +84,7 @@ public class PlayerState : MonoBehaviour
 
             wave += Time.deltaTime;
             UpdateWaveSlider();
-            if (wave >= upWave)
+            if (wave >= waveLength)
             {
                 currentWave++;
                 if (currentWave > 4)
@@ -90,6 +96,8 @@ public class PlayerState : MonoBehaviour
                 backGroundManager.StartLight();
 
                 wave = 0f;
+                SetWaveLength(currentWave);
+                waveSlider.maxValue = waveLength;
             }
         }
 
@@ -101,7 +109,7 @@ public class PlayerState : MonoBehaviour
 
         if (hp <= 0)
         {
-            if (resurrection > 0)
+            if (resurrection > 0 && !uiManager.pause)
             {
                 resurrection--;
                 itemEffects.ResurrectionWait(true);
@@ -117,7 +125,10 @@ public class PlayerState : MonoBehaviour
                     oneCall = false;
                 }
                 SetOnDeath(true);
-                Time.timeScale -= Time.deltaTime;
+                if (Time.timeScale != 0f)
+                {
+                    Time.timeScale -= Time.deltaTime;
+                }
                 animator.SetTrigger("Dead");
 
                 if (Time.timeScale <= 0f)
@@ -126,6 +137,35 @@ public class PlayerState : MonoBehaviour
                     Time.timeScale = 0f;
                 }
             }
+        }
+    }
+
+    private void SetWaveLength(int wave)
+    {
+        if (wave < 1)
+        {
+            wave = 1;
+        }
+
+        if (wave == 1)
+        {
+            waveLength = upWave[0];
+        }
+        else if (wave == 2)
+        {
+            waveLength = upWave[1];
+        }
+        else if (wave == 3)
+        {
+            waveLength = upWave[2];
+        }
+        else if (wave == 4)
+        {
+            waveLength = upWave[3];
+        }
+        else if (wave > 4)
+        {
+            wave = 4;
         }
     }
 

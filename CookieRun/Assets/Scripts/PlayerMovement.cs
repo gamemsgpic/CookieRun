@@ -168,7 +168,8 @@ public class PlayerMovement : MonoBehaviour
         }
 
         currentJumpRoutine = StartCoroutine(SingleJumpRoutine());
-       
+        jumpKeyHeld = false;
+        jumpKeyUsed = false;
     }
 
     private IEnumerator SingleJumpRoutine()

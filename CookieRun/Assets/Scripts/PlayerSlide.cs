@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.SceneTemplate;
 using UnityEngine;
 using UnityEngine.Playables;
 
@@ -20,6 +21,7 @@ public class PlayerSlide : MonoBehaviour
     public bool isSlide { get; private set; } = false;
 
     private bool slideKeyHeld = false; // 슬라이드 버튼이 눌린 상태인지 저장
+    private bool oneCall = true; // 슬라이드 버튼이 눌린 상태인지 저장
 
     private void Start()
     {
@@ -36,11 +38,34 @@ public class PlayerSlide : MonoBehaviour
         slideColliderOffset = new Vector2(0f, 0.25f);
     }
 
+    private void Update()
+    {
+        if (playerMovement.isGrounded)
+        {
+            // 착지 시, 슬라이드 버튼이 눌린 상태라면 자동으로 슬라이드 실행
+            if (slideKeyHeld && playerMovement.isGrounded && !playerState.onDeath && !uiManager.pause)
+            {
+                StartSlide();
+            }
+            else
+            {
+                StopSlide();
+            }
+        }
+    }
+
     public void OnSlideButtonDown()
     {
         slideKeyHeld = true; // 슬라이드 버튼을 누른 상태 저장
 
-        if (playerMovement.isGrounded && !playerState.onDeath && !uiManager.pause)
+        if (oneCall)
+        {
+            audioManager.PlayerSlideSound();
+            oneCall = false;
+        }
+
+        // 착지 시, 슬라이드 버튼이 눌린 상태라면 자동으로 슬라이드 실행
+        if (slideKeyHeld && playerMovement.isGrounded && !playerState.onDeath && !uiManager.pause)
         {
             StartSlide();
         }
@@ -49,12 +74,12 @@ public class PlayerSlide : MonoBehaviour
     public void OnSlideButtonUp()
     {
         slideKeyHeld = false; // 슬라이드 버튼을 뗀 상태 저장
+        oneCall = true;
         StopSlide();
     }
 
     private void StartSlide()
     {
-        audioManager.PlayerSlideSound();
         isSlide = true;
         animator.SetBool("Slide", isSlide);
         if (!playerItemEffects.giant)
@@ -81,11 +106,11 @@ public class PlayerSlide : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Ground"))
         {
-            // 착지 시, 슬라이드 버튼이 눌린 상태라면 자동으로 슬라이드 실행
-            if (slideKeyHeld && playerMovement.isGrounded && !playerState.onDeath && !uiManager.pause)
-            {
-                StartSlide();
-            }
+            //// 착지 시, 슬라이드 버튼이 눌린 상태라면 자동으로 슬라이드 실행
+            //if (slideKeyHeld && playerMovement.isGrounded && !playerState.onDeath && !uiManager.pause)
+            //{
+            //    StartSlide();
+            //}
         }
     }
 }

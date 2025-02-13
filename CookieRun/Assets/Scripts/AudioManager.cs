@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class AudioManager : MonoBehaviour
 {
-    //public AudioSource bgmSource;
+    public AudioSource bgmSource;
     private AudioSource sfxSource;
     public AudioClip jumpClip;
     public AudioClip slideClip;
@@ -23,16 +23,21 @@ public class AudioManager : MonoBehaviour
     private void Start()
     {
         sfxSource = GetComponent<AudioSource>();
+        if (bgmSource != null)
+        {
+            bgmSource.loop = true;  // BGM 무한 반복
+            bgmSource.Play();
+        }
     }
 
     public void PlayerCoinSound()
     {
-        sfxSource.PlayOneShot(CoinClip, normalVolume);
+        PlaySoundWithCooldown(CoinClip, 0.8f, 0.4f);
     }
 
     public void PlayerhitSound()
     {
-        sfxSource.PlayOneShot(hitClip, normalVolume);
+        PlaySoundWithCooldown(hitClip, 0.8f, 0.5f);
     }
 
     public void PlayerJumpSound()
@@ -42,7 +47,7 @@ public class AudioManager : MonoBehaviour
 
     public void PlayerSlideSound()
     {
-        sfxSource.PlayOneShot(slideClip, 0.3f);
+        PlaySoundWithCooldown(slideClip, 0.8f, 1f);
     }
 
     public void PlayerScoreBoardSound()
@@ -52,7 +57,7 @@ public class AudioManager : MonoBehaviour
 
     public void PlayerJellySound()
     {
-        PlaySoundWithCooldown(jellyEatClip, 0.5f, 0.35f); // 35% 지나면 다시 재생 가능
+        PlaySoundWithCooldown(jellyEatClip, 0.8f, 0.4f); // 40% 지나면 다시 재생 가능
     }
 
     public void PlayerPotionSound()
