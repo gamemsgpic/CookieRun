@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
+#if UNITY_EDITOR
 using UnityEditor.SceneTemplate;
+#endif
 using UnityEngine;
 using UnityEngine.Playables;
 
